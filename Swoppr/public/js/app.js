@@ -16,8 +16,16 @@ config(['$routeProvider', '$locationProvider', function ($routeProvider, $locati
   $routeProvider.
       when('/', {
         templateUrl: 'partials/index',
-        controller: 'IndexCtrl'
+        controller: 'AnimateCtrl'
       }).
+      when('/toRent', {
+          templateUrl: 'partials/toRent',
+          controller: 'IndexCtrl'
+      }).
+        when('/placeArticle', {
+          templateUrl: 'partials/placeArticle',
+          controller: 'IndexCtrl'
+        }).
       when('/addPost', {
         templateUrl: 'partials/addPost',
         controller: 'AddPostCtrl'

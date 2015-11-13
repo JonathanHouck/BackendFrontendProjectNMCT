@@ -41,7 +41,6 @@ angular.module('angular-scroll-animate', []).directive('whenVisible', ['$documen
       restrict: 'A',
       scope: {
         whenVisible: '&',
-        whenNotVisible: '&?',
         delayPercent: '=?'
       },
 
@@ -80,8 +79,8 @@ angular.module('angular-scroll-animate', []).directive('whenVisible', ['$documen
         var unbindDocumentEvents = $document.on('scroll', onScroll);
         var unbindWindowEvents = angular.element($window).on('resize orientationchange', onScroll);
 
-        scope.$on('$destroy', unbindDocumentEvents);
-        scope.$on('$destroy', unbindWindowEvents);
+        /*scope.$on('$destroy', unbindDocumentEvents);
+        scope.$on('$destroy', unbindWindowEvents);*/
 
         // initialise
         el.data('hidden', true);

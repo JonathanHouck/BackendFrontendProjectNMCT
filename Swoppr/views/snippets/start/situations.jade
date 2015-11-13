@@ -1,0 +1,15 @@
+//
+   Created by jonah on 11/13/2015.
+
+section
+    div(class="container")
+        div(class="row hide-for-animation", when-visible="fadeInUp")
+            div(class="col-sm-12 text-center")
+                h2 Herkent u deze situaties?
+                span(class="title-sep")
+        div(class="row hide-for-animation", when-visible="fadeInLeft")
+            div(class="col-sm-12", ng-controller="CarouselCtrl")
+                uib-carousel(interval="myInterval")
+                    uib-slide(ng-repeat="slide in slides", active="slide.active")
+                        img(src="images/ongebruikteGoederen.png", ng-src="{{slide.image}}")
+                        div: h3 {{slide.text}}

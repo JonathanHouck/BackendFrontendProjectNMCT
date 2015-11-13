@@ -1,15 +1,14 @@
 extends layout
 
 block body
-  div
-    h2 My Blog
-    ul
-      li
-        a(href='/') Home
-      li
-        a(href='/addPost') Add a new post
+  include snippets/navigation
 
-    div(ng-view)
+  div(ng-view)
+  script(src='js/ext/angular.js')
+  script(src='js/ext/angular-route.js')
+  script(src='js/ext/angular-animate.min.js')
+  script(src='js/ext/angular-scroll-animate.js')
+  script(src='js/ext/ui-bootstrap-tpls.min.js')
 
   script(src='js/app.js')
   script(src='js/services.js')

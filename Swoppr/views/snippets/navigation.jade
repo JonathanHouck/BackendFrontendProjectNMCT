@@ -1,0 +1,25 @@
+//
+   Created by jonah on 11/13/2015.
+
+nav(ng-controller="NavBarCtrl", class="navbar navbar-default")
+    div(class="container")
+        div(class="navbar-header")
+            button(type="button", class="navbar-toggle collapsed", ng-click="isCollapsed = !isCollapsed", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+                span(class="sr-only") Toggle navigation
+                span(class="icon-bar")
+                span(class="icon-bar")
+                span(class="icon-bar")
+            a(class="navbar-brand", href="#")
+                img(src="images/logo_swoppr.png")
+            a(href="#", class="navbar-title") Swoppr
+        div(id="navbar", class="navbar-collapse collapse", uib-collapse="isCollapsed")
+            ul(class="nav navbar-nav")
+                li: a(href="/", class="active") Start
+                    i(class="underline")
+                li: a(href="/toRent") te verhuren
+                    i(class="underline")
+                li: a(href="/placeArticle") Plaats artikel
+                    i(class="underline")
+            ul(class="nav navbar-nav navbar-right")
+                li: a(href="#") Inloggen
+                    i(class="underline")
