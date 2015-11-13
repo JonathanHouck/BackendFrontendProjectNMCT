@@ -94,8 +94,19 @@ controller('DeletePostCtrl', function($scope, $http, $location, $routeParams) {
     $scope.zoomIn = function($el) {
         animate($el, "zoomIn");
     };
-}).controller('NavBarCtrl', function($scope) {
+}).controller('NavBarCtrl', function($scope, $location) {
+
+    //https://jsfiddle.net/xv7tws10/5/
     $scope.isCollapsed = true;
+
+    //http://stackoverflow.com/questions/12592472/how-to-highlight-a-current-menu-item
+    $scope.getClass = function (path) {
+        if ($location.path() === path) {
+            return 'active';
+        } else {
+            return '';
+        }
+    }
 });
 
 function animate($el, animation) {

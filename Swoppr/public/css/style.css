@@ -250,6 +250,10 @@ header .container {
     color: #1595a3;
 }
 
+.active {
+    color: #1595a3;
+}
+
 .carousel-control {
     display: none;
 }
