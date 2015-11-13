@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html ng-app="swoppr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swoppr</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" >
+    <link rel="stylesheet" href="styles/animate.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="scripts/ext/angular.min.js"></script>
+    <script src="scripts/ext/angular-animate.min.js"></script>
+    <script src="scripts/ext/angular-scroll-animate.js"></script>
+    <script src="scripts/ext/ui-bootstrap-tpls.min.js"></script>
+</head>
+<body ng-controller="AnimateCtrl">
+    <nav class="navbar navbar-default" ng-controller="NavBarCtrl">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" ng-click="isCollapsed = !isCollapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo_swoppr.png" />
+                </a>
+
+                <a href="#" class="navbar-title">
+                    Swoppr
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" uib-collapse="isCollapsed">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" class="active">Start <i class="underline"></i> </a></li>
+                    <li><a href="#" >Te verhuren<i class="underline"></i></a></li>
+                    <li><a href="#">Plaats artikel<i class="underline"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Inloggen</a><i class="underline"></i></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row hide-for-animation" when-visible="fadeIn">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Swoppr</h1>
+                        <p class="intro-text">Online consumer to consumer verhuurplatform</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row hide-for-animation" when-visible="fadeInUp">
+                    <div class="col-sm-12 text-center">
+                        <h2>Herkent u deze situaties?</h2>
+                        <span class="title-sep"></span>
+                    </div>
+                </div>
+                <div class="row hide-for-animation" when-visible="fadeInLeft">
+                    <div class="col-sm-12" ng-controller="CarouselCtrl">
+                        <uib-carousel interval="myInterval">
+                            <uib-slide ng-repeat="slide in slides" active="slide.active">
+                                <img src="images/ongebruikteGoederen.png" ng-src="{{slide.image}}">
+                                <div>
+                                    <h3>{{slide.text}}</h3>
+                                </div>
+                            </uib-slide>
+                        </uib-carousel>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row hide-for-animation" when-visible="fadeInUp">
+                    <div class="col-sm-12 text-center">
+                        <h2>Onze oplossing</h2>
+                        <span class="title-sep"></span>
+                    </div>
+                </div>
+                <div class="row hide-for-animation" when-visible="fadeInUp">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <p>
+                            Swoppr heeft twee doelinstellingen. Aan de ene kant bieden we onze gebruikers de mogelijkheid om goederen te verhuren die ze op dit moment niet nodig hebben. Aan de andere kant maken we het mogelijk om producten te gebruiken zonder de noodzaak deze daadwerkelijk te komen.
+                        </p>
+                        <p>
+                            In tegenstelling tot Kapaza of 2dehands zijn wij geen gewone website met vraag en aanbod. Wij zijn een innovatief verhuurplatform voor iedere bewuste consument.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row features">
+                    <div class="col-sm-offset-2 col-sm-4 left hide-for-animation" when-visible="fadeInLeft">
+                        <div class="row">
+                            <i class="fa fa-leaf"></i>
+                            <h3>Ecologisch</h3>
+                        </div>
+
+                        <div class="row">
+                            <i class="fa fa-credit-card"></i>
+                            <h3>Makkelijk betalen</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 right hide-for-animation" when-visible="fadeInRight">
+                        <div class="row">
+                            <i class="fa fa-filter"></i>
+                            <h3>Handige filters</h3>
+                        </div>
+
+                        <div class="row">
+                            <i class="fa fa-map-marker"></i>
+                            <h3>Locatie gebaseerd</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row hide-for-animation" when-visible="fadeInUp">
+                    <div class="col-sm-12 text-center">
+                        <h2>Ons team</h2>
+                        <span class="title-sep"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 hide-for-animation" when-visible="zoomIn">
+                        <div class="team-member text-center">
+                            <div class="picture">
+                                <img src="images/ward.png" class="img-responsive" alt="">
+                                <div class="mask">
+                                    <div class="team-member-icons">
+                                        <a target="_blank" href="https://www.facebook.com/ward.baert.5">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a target="_blank" href="https://twitter.com/baertward">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Ward Baert</h4>
+                            <p class="text-muted">Sales coordinator</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 hide-for-animation" when-visible="zoomIn">
+                        <div class="team-member text-center">
+                            <div class="picture">
+                                <img src="images/lienert.png" class="img-responsive" alt="">
+                                <div class="mask">
+                                    <div class="team-member-icons">
+                                        <a target="_blank" href="https://www.facebook.com/lienertd">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a target="_blank" href="https://be.linkedin.com/pub/lienert-deprez/100/158/905">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Lienert Deprez</h4>
+                            <p class="text-muted">Marketing strategist</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 hide-for-animation" when-visible="zoomIn">
+                        <div class="team-member text-center">
+                            <div class="picture">
+                                <img src="images/thibault.png" class="img-responsive" alt="">
+                                <div class="mask">
+                                    <div class="team-member-icons">
+                                        <a target="_blank" href="https://www.facebook.com/thibault.vanluchene">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a target="_blank" href="https://be.linkedin.com/pub/thibault-vanluchene/ba/129/192">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Thibault Vanluchene</h4>
+                            <p class="text-muted">Managing director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-2 hide-for-animation" when-visible="zoomIn">
+                        <div class="team-member text-center">
+                            <div class="picture">
+                                <img src="images/jonathan.png" class="img-responsive" alt="">
+                                <div class="mask">
+                                    <div class="team-member-icons">
+                                        <a target="_blank" href="https://www.facebook.com/jona.houck">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a target="_blank" href="https://be.linkedin.com/pub/jonathan-houck/100/55/418">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Jonathan Houck</h4>
+                            <p class="text-muted">Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 hide-for-animation" when-visible="zoomIn">
+                        <div class="team-member text-center">
+                            <div class="picture">
+                                <img src="images/gregoire.png" class="img-responsive" alt="">
+                                <div class="mask">
+                                    <div class="team-member-icons">
+                                        <a target="_blank" href="https://www.facebook.com/gregoire.ameye">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a target="_blank" href="https://be.linkedin.com/pub/grégoire-ameye/108/836/1a0/en">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Grégoire Ameye</h4>
+                            <p class="text-muted">External developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/CarouselCtrl.js"></script>
+    <script src="scripts/controllers/AnimateCtrl.js"></script>
+</body>
+</html>
