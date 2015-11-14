@@ -1,0 +1,61 @@
+.sansSerif (@size: 16px) {
+  font-family: 'Lato', sans-serif;
+  font-size: @size;
+}
+
+.fontSize(@size: 16px) {
+  font-size: @size;
+}
+
+.centered(@topandbottom: 0) {
+  margin: @topandbottom auto;
+}
+
+.easeInOut(@seconds: 0.4s) {
+  -webkit-transition: all @seconds ease-in-out;
+  -moz-transition: all @seconds ease-in-out;
+  -o-transition: all @seconds ease-in-out;
+  -ms-transition: all @seconds ease-in-out;
+  transition: all @seconds ease-in-out;
+}
+
+.transformScale(@value) {
+  -moz-transform: (@value);
+  -o-transform: (@value);
+  -ms-transform: scale(@value);
+  -webkit-transform: scale(@value);
+  transform: scale(@value);
+}
+
+.shadow(@defValue: 0, @hShadow: 1px, @vShadow: 15px, @opacity: 0.1) {
+  -moz-box-shadow: @defValue @hShadow @vShadow rgba(0, 0, 0, @opacity);
+  -o-box-shadow: @defValue @hShadow @vShadow rgba(0, 0, 0, @opacity);
+  -webkit-box-shadow: @defValue @hShadow @vShadow rgba(0, 0, 0, @opacity);
+  box-shadow: @defValue @hShadow @vShadow rgba(0, 0, 0, @opacity);
+}
+
+.underlineBezier(@miliseconds: 300ms, @x1: 0.175, @x2: 0.885, @y1: 0.32, @y2: 1.275) {
+  -webkit-transition: all @miliseconds cubic-bezier(@x1, @x2, @y1, @y2) 0s;
+  -moz-transition: all @miliseconds cubic-bezier(@x1, @x2, @y1, @y2) 0s;
+  -ms-transition: all @miliseconds cubic-bezier(@x1, @x2, @y1, @y2) 0s;
+  -o-transition: all @miliseconds cubic-bezier(@x1, @x2, @y1, @y2) 0s;
+  transition: all @miliseconds cubic-bezier(@x1, @x2, @y1, @y2) 0s;
+}
+
+.cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.borderBox() {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.square(@value) {
+  width: @value;
+  height: @value;
+}
