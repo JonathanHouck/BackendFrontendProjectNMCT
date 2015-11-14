@@ -5097,7 +5097,7 @@ var $AnimateProvider = ['$provide', function($provide) {
        *
        * The arguments present in the callback function are:
        * * `element` - The captured DOM element that the animation was fired on.
-       * * `phase` - The phase of the animation. The two possible phases are **snippets** (when the animation starts) and **close** (when it ends).
+       * * `phase` - The phase of the animation. The two possible phases are **start** (when the animation starts) and **close** (when it ends).
        */
       on: $$animateQueue.on,
 
@@ -7817,7 +7817,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
     }
 
     /**
-     * Given a node with an directive-snippets it collects all of the siblings until it finds
+     * Given a node with an directive-start it collects all of the siblings until it finds
      * directive-end.
      * @param node
      * @param attrStart
@@ -8127,7 +8127,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           var inheritType = match[1] || match[3];
           var optional = match[2] === '?';
 
-          //If only parents then snippets at the parent element
+          //If only parents then start at the parent element
           if (inheritType === '^^') {
             $element = $element.parent();
           //Otherwise attempt getting the controller from elementControllers in case
@@ -8365,7 +8365,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
     /**
      * looks up the directive and returns true if it is a multi-element directive,
-     * and therefore requires DOM nodes between -snippets and -end markers to be grouped
+     * and therefore requires DOM nodes between -start and -end markers to be grouped
      * together.
      *
      * @param {string} name name of the directive to look up.
@@ -10838,7 +10838,7 @@ function $InterpolateProvider() {
    * @ngdoc method
    * @name $interpolateProvider#startSymbol
    * @description
-   * Symbol to denote snippets of expression in the interpolated string. Defaults to `{{`.
+   * Symbol to denote start of expression in the interpolated string. Defaults to `{{`.
    *
    * @param {string=} value new value to set the starting symbol to.
    * @returns {string|self} Returns the symbol when used as getter and self if used as setter.
@@ -11102,12 +11102,12 @@ function $InterpolateProvider() {
      * @ngdoc method
      * @name $interpolate#startSymbol
      * @description
-     * Symbol to denote the snippets of expression in the interpolated string. Defaults to `{{`.
+     * Symbol to denote the start of expression in the interpolated string. Defaults to `{{`.
      *
      * Use {@link ng.$interpolateProvider#startSymbol `$interpolateProvider.startSymbol`} to change
      * the symbol.
      *
-     * @returns {string} snippets symbol.
+     * @returns {string} start symbol.
      */
     $interpolate.startSymbol = function() {
       return startSymbol;

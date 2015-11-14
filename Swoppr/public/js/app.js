@@ -4,17 +4,13 @@
         'ngRoute',
         'ngAnimate',
         'angular-scroll-animate',
-        'ui.bootstrap',
-        'swoppr.controllers'
-        //'swoppr.filters',
-        //'swoppr.services',
-        //'swoppr.directives'
+        'ui.bootstrap'
     ]).
     config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider.
         when('/', {
             templateUrl: 'partials/index',
-            controller: 'AnimateCtrl'
+            controller: 'IndexCtrl'
         }).
         when('/toRent', {
             templateUrl: 'partials/toRent',
@@ -24,7 +20,7 @@
             templateUrl: 'partials/placeArticle',
             controller: 'IndexCtrl'
         }).
-        when('/addPost', {
+        /*when('/addPost', {
             templateUrl: 'partials/addPost',
             controller: 'AddPostCtrl'
         }).
@@ -39,7 +35,7 @@
         when('/deletePost/:id', {
             templateUrl: 'partials/deletePost',
             controller: 'DeletePostCtrl'
-        }).
+        }).*/
         otherwise({
             redirectTo: '/'
         });

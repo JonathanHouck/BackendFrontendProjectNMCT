@@ -28,14 +28,18 @@ gulp.task("default", function() {
         console.log(event.path + " changed");
     });
 
-    var jsWatcher = gulp.watch(['./public/js/**/*.js'], ['js']);
+    var jsWatcher = gulp.watch(['./public/js/scroll-animate/**/*.js',
+                                './public/js/app.js',
+                                './public/js/controllers/**/*.js'], ['js']);
     jsWatcher.on('change', function(event) {
         console.log(event.path + " changed");
     });
 });
 
 gulp.task("js",function (){
-    gulp.src(['./public/js/dev/**/*.js'])
+    gulp.src(['./public/js/scroll-animate/**/*.js',
+            './public/js/app.js',
+            './public/js/controllers/**/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
         //.pipe(sourcemaps.init())
