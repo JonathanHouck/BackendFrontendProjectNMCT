@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var partials = require('./routes/partials');
 var api = require('./routes/api');
-var apiMongoose = require('./routes/apiMongoose.js')
+var apiProduct = require('./routes/apiProduct.js');
+var apiUser = require('./routes/apiUser.js');
 
 var app = express();
 
@@ -34,7 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', index);
 app.use('/partials', partials);
 
-app.use('/api', apiMongoose);
+app.use('/api/product', apiProduct);
+app.use('/api/user', apiUser);
 
 app.get('/api/posts', api.posts);
 app.get('/api/post/:id', api.post);
