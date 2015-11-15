@@ -1,9 +1,16 @@
-module.exports.index = function(req, res, next) {
+/*module.exports = function(req, res, next) {
   res.render('index', { title: 'Express' });
 };
 
-module.exports.partials = function(req, res, next) {
-  var name = req.params.name;
-  res.render('partials/' + name);
-};
+var express = require('express');
+var router = express.Router();
 
+router.get('/', function(req, res) {
+  res.render('index', { title: 'Swoppr' });
+});
+
+module.exports = router;*/
+
+module.exports = function(req, res, next) {
+  res.render('index', { title: 'Swoppr' });
+};

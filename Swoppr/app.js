@@ -5,10 +5,19 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
+var index = require('./routes/index');
+var partials = require('./routes/partials');
 var api = require('./routes/api');
+var apiMongoose = require('./routes/apiMongoose.js')
 
 var app = express();
+
+// Mongoose ODM...
+var mongoose = require('mongoose');
+
+// Connect to MongoDB...
+//mongoose.connect('mongodb://demo:standup123@ds052827.mongolab.com:52827/standupmeetingnotes');
+mongoose.connect('mongodb://johna:swoppr@ds053774.mongolab.com:53774/swoppr');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,8 +31,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', routes.index);
-app.get('/partials/:name', routes.partials);
+app.get('/', index);
+app.use('/partials', partials);
+
+app.use('/api', apiMongoose);
 
 app.get('/api/posts', api.posts);
 app.get('/api/post/:id', api.post);
@@ -31,7 +42,7 @@ app.post('/api/post', api.addPost);
 app.put('/api/post/:id', api.editPost);
 app.delete('/api/post/:id', api.deletePost);
 
-app.get('*', routes.index);
+app.get('*', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
