@@ -7,9 +7,11 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var partials = require('./routes/partials');
+
 var api = require('./routes/api');
 var apiProduct = require('./routes/apiProduct.js');
 var apiUser = require('./routes/apiUser.js');
+var apiRenting = require('./routes/apiRenting.js');
 
 var app = express();
 
@@ -37,6 +39,7 @@ app.use('/partials', partials);
 
 app.use('/api/product', apiProduct);
 app.use('/api/user', apiUser);
+app.use('/api/renting', apiRenting);
 
 app.get('/api/posts', api.posts);
 app.get('/api/post/:id', api.post);

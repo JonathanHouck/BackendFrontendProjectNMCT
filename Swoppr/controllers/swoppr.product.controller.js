@@ -20,47 +20,10 @@ exports.getProductById = function(req, res, id) {
     });
 };
 
-exports.addProduct = function(req, res) {
-     swoppr.userModel.findById(req.body.userId, function(err, user) {
-         if (err) {
-             res.json({"error": "id not found"});
-             return ;
-         }
-
-         var entry = new swoppr.productModel( {
-             userId: user._id,
-             productName: req.body.productName,
-             pricePerDay: req.body.pricePerDay,
-             description: req.body.description
-         });
-
-         entry.save(function(err2) {
-             if (err2) {
-                 res.json({"error": "adding product failed"});
-             }
-         });
-
-         res.json({"ok": "product added"})
-     })
- };
-
-/*exports.createProduct = function(req, res) {
-    var entry = new swoppr.productModel({
-        productName: req.body.productName,
-        pricePerDay: req.body.pricePerDay,
-        description: req.body.description
-    });
-
-    entry.save();
-
-    // Redirect to the home page...
-    res.redirect(301, '/');
-};*/
-
-/*exports.addProductUser = function(req, res) {
+exports.addProductUser = function(req, res) {
     swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
         if (err) {
-            console.log(err);
+            res.json({"error": "id not found"});
             return ;
         }
 
@@ -74,11 +37,34 @@ exports.addProduct = function(req, res) {
 
         user.save(function(err2) {
             if (err2) {
-                console.log(err2);
+                res.json({"error": "adding product to user failed"});
             }
         });
 
-        // Redirect to the home page...
-        res.redirect(301, '/');
+        res.json({"ok": "product added"})
+    })
+};
+
+/*exports.addProduct = function(req, res) {
+    swoppr.userModel.findById(req.body.userId, function(err, user) {
+        if (err) {
+            res.json({"error": "id not found"});
+            return ;
+        }
+
+        var entry = new swoppr.productModel( {
+            userId: user._id,
+            productName: req.body.productName,
+            pricePerDay: req.body.pricePerDay,
+            description: req.body.description
+        });
+
+        entry.save(function(err2) {
+            if (err2) {
+                res.json({"error": "adding product failed"});
+            }
+        });
+
+        res.json({"ok": "product added"})
     })
 };*/

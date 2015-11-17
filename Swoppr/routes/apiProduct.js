@@ -11,7 +11,7 @@ router.get('/getById/:id', function(req, res) {
 });
 
 router.post('/newProduct', function(req, res) {
-    return swopprCtrl.addProduct(req, res);
+    return swopprCtrl.addProductUser(req, res);
 });
 
 module.exports = router;
