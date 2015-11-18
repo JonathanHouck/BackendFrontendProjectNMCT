@@ -14,7 +14,7 @@ exports.createUser = function(req, res) {
         if (err2) {
             res.json({"error": "adding user failed"});
         }
-    });
 
-    res.json({"ok": "user added"})
+        res.json({"ok": "user added"})
+    });
 };

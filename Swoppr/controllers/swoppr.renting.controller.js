@@ -7,18 +7,17 @@ var async = require('async');
 exports.addRentingUser = function(req, res) {
 
     var productExists = false;
-    var renterExist = false;
 
     //controle product van de renter bestaat
-
     async.series([
         function(callback) {
             swoppr.userModel.findById(req.body.userId)
-                .select("products._id")
+                //.select("products._id")
                 .lean()
                 .exec(function(err, products) {
-
                     if(err) callback("userId bestaat niet", "checkProduct");
+
+                    console.log(products);
 
                     async.each(products.products, function(product, callback2) {
                         if (product._id == req.body.productId) {
@@ -47,20 +46,24 @@ exports.addRentingUser = function(req, res) {
     ], function(err, results) {
         if (err) {
             res.json({"error": "Ingevoerde id's bestaan niet"});
+            console.log(err);
             return ;
         }
 
-        console.log(results);
-    });
+        var entry = new swoppr.rentingModel( {
+            _renterFrom: req.body.userId,
+            _renterTo: req.body.renterId,
+            _product: req.body.productId,
+            daysToRent: req.body.daysToRent
+        });
 
+        entry.save(function(err) {
+            if (err) {
+                res.json({"error": "Renting toevoegen mislukt"});
+            }
 
-    swoppr.userModel.findById(req.body.renterId, function(err, user) {
-        if (err) {
-            res.json({"error": "Renter doesn't exist"});
-            return ;
-        }
-
-        renterExist = true;
+            res.json({"ok": "Renting toegevoegd"})
+        });
     });
 
     /*swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {

@@ -11,7 +11,7 @@ var rentingSchema = new Schema({
     //fromDate: { type: Date},
     daysToRent: Number//,
     //Approved: Boolean
-});
+}, {collection: 'Rentings'});
 
 var productSchema = new Schema({
     productName: String,
@@ -26,7 +26,7 @@ var userSchema = new Schema({
     emailadres: String,
     products: [productSchema],
     createdOn: { type: Date, default: Date.now }
-});
+}, {collection: 'Users'});
 
 module.exports.rentingModel = mongoose.model('Renting', rentingSchema);
 module.exports.productModel = mongoose.model( 'Product', productSchema );
