@@ -14,4 +14,9 @@ router.post('/newRenting', function(req, res) {
     return swopprCtrl.addRentingUser(req, res);
 });
 
+router.get('/getAllRentingsRenterFrom/:id', function(req, res) {
+    var id = req.params.id;
+    return swopprCtrl.getAllRentingsRenterFrom(req,res, id);
+});
+
 module.exports = router;
