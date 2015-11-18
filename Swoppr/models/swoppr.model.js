@@ -31,3 +31,10 @@ var userSchema = new Schema({
 module.exports.rentingModel = mongoose.model('Renting', rentingSchema);
 module.exports.productModel = mongoose.model( 'Product', productSchema );
 module.exports.userModel = mongoose.model( 'User', userSchema );
+
+/*var replySchema = new Schema({
+    username: String,
+    timestamp: { type: Date, default: Date.now },
+    body: String,
+    replies: [replySchema]
+}, {_id: true});*/

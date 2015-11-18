@@ -18,3 +18,17 @@ exports.createUser = function(req, res) {
         res.json({"ok": "user added"})
     });
 };
+
+exports.getUserById = function(req, res, id) {
+    swoppr.userModel
+        .findById(id)
+        .lean()
+        .exec(function(err, user) {
+            if (err) {
+                res.json({"error": "id not found"});
+                return ;
+            }
+
+            res.json(user);
+    });
+};

@@ -1,29 +1,27 @@
 /**
  * Created by jonah on 11/15/2015.
  */
+//var mongoose = require( 'mongoose' );
 var swoppr = require('../models/swoppr.model.js');
+var async = require('async');
 
 exports.getProductById = function(req, res, id) {
-    swoppr.productModel.findById(id, function(err, product) {
-        if (err) {
-            res.json({"error": "id not found"});
-            return ;
-        }
+    swoppr.userModel.findOne({"products._id": id})
+        .exec(function(err, userWithProducts) {
+            if (err) {
+                res.json({"error": "productId not found"});
+                return ;
+            }
 
-        var productJson = {"_id": product.id,
-            "userId": product.userId,
-            "productName": product.productName,
-            "pricePerDay": product.pricePerDay,
-            "description": product.description};
-
-        res.json(productJson);
+            var product = userWithProducts.products.id(id);
+            res.json(product);
     });
 };
 
 exports.addProductUser = function(req, res) {
     swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
         if (err) {
-            res.json({"error": "id not found"});
+            res.json({"error": "userId not found"});
             return ;
         }
 

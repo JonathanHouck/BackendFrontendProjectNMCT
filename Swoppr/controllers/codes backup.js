@@ -21,7 +21,15 @@ exports.getAllRentingsRenterFrom = function (req, res, id) {
             //ALLE RENTINGS OVERLOPEN
             /////////////////////////
 
-            async.each(rentings, function(renting, callback) {
+            async.each(rentings, iteratorRentings, function(err) {
+                if (err) {
+                    res.json({"error": "Ophalen rentings mislukt"});
+                }
+
+                res.json(rentingsOutput);
+            });
+
+            function iteratorRentings(renting, callback) {
                 //voor elke renting: renterFrom, product en renterTo zoeken
 
                 async.series([
@@ -33,44 +41,59 @@ exports.getAllRentingsRenterFrom = function (req, res, id) {
                     function(callback2) {
                         swoppr.userModel.findById(renting._renterFrom)
                             .lean()
-                            .exec(function(err, user) {
-                                if(err) callback2("userId bestaat niet", "getRenterFrom");
+                            .exec(cbRenterFromEnProduct);
 
-                                ///////////////////
-                                //PRODUCT OPHALEN//
-                                ///////////////////
+                        function cbRenterFromEnProduct(err, user) {
+                            if(err) callback2("renterFrom bestaat niet", "getRenterFrom");
 
-                                async.each(user.products, function(product, callback3) {
+                            ///////////////////
+                            //PRODUCT OPHALEN//
+                            ///////////////////
 
-                                    if (product._id.equals(renting._product)) {
-                                        user.product = product;
-                                    }
-                                    callback3();
+                            async.each(user.products, function(product, callback3) {
 
-                                }, function(err) {
-                                    if (err) { callback2("probleem bij loopen doorheen producten", "getProductFrom")}
+                                if (product._id.equals(renting._product)) {
+                                    user.product = product;
+                                }
+                                callback3();
 
-                                    if (user.product) {
+                            }, function(err) {
+                                if (err) { callback2("probleem bij loopen doorheen producten", "getProductFrom")}
 
-                                        delete user.products;
-                                        renting.renterFrom = user;
+                                if (user.product) {
 
-                                        callback2(null, "getProductFrom");
+                                    delete user.products;
+                                    renting.renterFrom = user;
 
-                                    } else {
-                                        callback2("productId bestaat niet", "getProductFrom")
-                                    }
-                                });
+                                    callback2(null, "getProductFrom");
+
+                                } else {
+                                    callback2("productId bestaat niet", "getProductFrom")
+                                }
                             });
+                        }
                     },
 
-                    //////////////////////
-                    //RENTER TO OPHALEN//
                     /////////////////////
+                    //RENTERTO OPHALEN//
+                    ////////////////////
 
                     function(callback2) {
-                        renting.renterTo = "Hello";
-                        callback2(null, "getRenterTo");
+
+                        swoppr.userModel.findById(renting._renterTo)
+                            .lean()
+                            .exec(cbRenterTo);
+
+                        function cbRenterTo(err, user) {
+                            if(err) callback2("renterTo bestaat niet", "getRenterFrom");
+
+                            if (user.products) {
+                                delete user.products;
+                            }
+
+                            renting.renterTo = user;
+                            callback2(null, "getRenterTo");
+                        }
                     }
 
                     //////////////////////////////////////////////////////////
@@ -78,21 +101,13 @@ exports.getAllRentingsRenterFrom = function (req, res, id) {
                     //////////////////////////////////////////////////////////
 
                 ], function(err, results) {
-                    if (!err) {
-                        rentingsOutput.push(renting);
-                        callback();
+                    if (err) {
+                        res.json({"error": "Ophalen renting met rentingFrom, product en rentingTo mislukt"});
                     }
+
+                    rentingsOutput.push(renting);
+                    callback();
                 });
-                ///////////////////////////
-                //ALLE RENTINGS OPGEHAALD//
-                ///////////////////////////
-
-            }, function(err) {
-                if (err) {
-                    res.json({"error": "Ophalen renting met rentingFrom en rentingTo mislukt"});
-                }
-
-                res.json(rentingsOutput);
-            });
+            }
         });
 };
