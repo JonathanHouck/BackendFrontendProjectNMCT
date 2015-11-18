@@ -23,7 +23,7 @@ exports.getAllRentingsRenterFrom = function (req, res, id) {
 
         async.each(rentings, iteratorRentings, function(err) {
             if (err) {
-                res.json({"error": "Ophalen renting met rentingFrom en rentingTo mislukt"});
+                res.json({"error": "Ophalen rentings mislukt"});
             }
 
             res.json(rentingsOutput);
@@ -44,7 +44,7 @@ exports.getAllRentingsRenterFrom = function (req, res, id) {
                         .exec(cbRenterFromEnProduct);
 
                     function cbRenterFromEnProduct(err, user) {
-                        if(err) callback2("userId bestaat niet", "getRenterFrom");
+                        if(err) callback2("renterFrom bestaat niet", "getRenterFrom");
 
                         ///////////////////
                         //PRODUCT OPHALEN//
@@ -74,24 +74,39 @@ exports.getAllRentingsRenterFrom = function (req, res, id) {
                     }
                 },
 
-                //////////////////////
-                //RENTER TO OPHALEN//
                 /////////////////////
+                //RENTERTO OPHALEN//
+                ////////////////////
 
                 function(callback2) {
-                    renting.renterTo = "Hello";
-                    callback2(null, "getRenterTo");
+
+                    swoppr.userModel.findById(renting._renterTo)
+                        .lean()
+                        .exec(cbRenterTo);
+
+                    function cbRenterTo(err, user) {
+                        if(err) callback2("renterTo bestaat niet", "getRenterFrom");
+
+                        if (user.products) {
+                            delete user.products;
+                        }
+
+                        renting.renterTo = user;
+                        callback2(null, "getRenterTo");
+                    }
                 }
 
-                //////////////////////////////////////////////////////////
-                //INFO RENTING OPGEHAALD, RENTING TOEVOEGEN AAN RENTINGS//
-                //////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////
+            //INFO RENTING OPGEHAALD, RENTING TOEVOEGEN AAN RENTINGS//
+            //////////////////////////////////////////////////////////
 
             ], function(err, results) {
-                if (!err) {
-                    rentingsOutput.push(renting);
-                    callback();
+                if (err) {
+                    res.json({"error": "Ophalen renting met rentingFrom, product en rentingTo mislukt"});
                 }
+
+                rentingsOutput.push(renting);
+                callback();
             });
         }
     });
@@ -157,29 +172,4 @@ exports.addRentingUser = function(req, res) {
             res.json({"ok": "Renting toegevoegd"})
         });
     });
-
-    /*swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
-        if (err) {
-            res.json({"error": "Person that has products to rent not found"});
-            return ;
-        }
-
-        swoppr.userModel.findOne
-
-        var entry = new swoppr.productModel( {
-            productName: req.body.productName,
-            pricePerDay: req.body.pricePerDay,
-            description: req.body.description
-        });
-
-        user.products.push(entry);
-
-        user.save(function(err2) {
-            if (err2) {
-                res.json({"error": "adding product to user failed"});
-            }
-        });
-
-        res.json({"ok": "product added"})
-    })*/
 };
