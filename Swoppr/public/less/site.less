@@ -1,12 +1,24 @@
 @import "variables.less";
 @import "mixins.less";
 
-html, body, div[ng-view] {
+html, body {
   height: 100%;
+}
+
+div[ng-view] {
+  height: ~"calc(100% - 75px)";
 }
 
 body {
   .sansSerif();
+}
+
+input[type="submit"] {
+  background-color: @primary-light;
+}
+
+input[type="submit"]:hover {
+  background-color: @primary-light-darker;
 }
 
 main section {
@@ -63,12 +75,10 @@ main section {
 .intro {
   display: table;
   width: 100%;
-  height: ~"calc(100% - 52px)";
+  height: 100%;
   padding: 0;
   text-align: center;
   color: @light;
-  background: @neigbourhoodImg no-repeat bottom center;
-  background-color: @dark;
   .cover();
 
   .intro-body {
@@ -78,8 +88,8 @@ main section {
 
     .container {
       margin-bottom: 150px;
+      margin-top: 50px;
       padding-bottom: 20px;
-      width: 80%;
 
       .intro-text {
         .fontSize(22px);
@@ -99,6 +109,28 @@ main section {
         -moz-border-radius: 10px;
         border-radius: 10px;
       }
+    }
+  }
+}
+
+.intro-header {
+  background: @neigbourhoodImg no-repeat bottom center;
+}
+
+.intro-authorize {
+  background: @neigbourhoodImgBlur no-repeat bottom center;
+
+  .intro-body {
+    vertical-align: top;
+    color: @dark-lighter;
+
+    .container {
+        margin-top: 50px;
+        .panel {
+          text-align: left;
+          border: 1px solid @secondary-light;
+
+        }
     }
   }
 }
@@ -150,7 +182,6 @@ main section {
     background-color: @primary;
   }
 }
-
 
 .team-member {
   .picture {
@@ -277,14 +308,20 @@ main section {
   }
 
   .intro {
-    height: ~"calc(100% - 75px)";
-
     .intro-body .container {
       .brand-heading {
         display: block;
       }
       .intro-text {
         .fontSize(25px);
+      }
+    }
+  }
+
+  .intro-authorize {
+    .intro-body {
+      .container {
+        margin-top: 150px;
       }
     }
   }

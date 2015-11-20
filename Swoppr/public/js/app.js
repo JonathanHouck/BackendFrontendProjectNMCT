@@ -20,6 +20,14 @@
             templateUrl: 'partials/placeArticle',
             controller: 'IndexCtrl'
         }).
+        when('/login', {
+            templateUrl: 'partials/login',
+            controller: 'IndexCtrl'
+        }).
+        when('/register', {
+            templateUrl: 'partials/register',
+            controller: 'IndexCtrl'
+        }).
         /*when('/addPost', {
             templateUrl: 'partials/addPost',
             controller: 'AddPostCtrl'
