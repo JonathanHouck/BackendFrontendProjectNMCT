@@ -43,26 +43,6 @@ exports.addProductUser = function(req, res) {
     })
 };
 
-/*exports.addProduct = function(req, res) {
-    swoppr.userModel.findById(req.body.userId, function(err, user) {
-        if (err) {
-            res.json({"error": "id not found"});
-            return ;
-        }
+exports.editProductUser = function(req, res) {
 
-        var entry = new swoppr.productModel( {
-            userId: user._id,
-            productName: req.body.productName,
-            pricePerDay: req.body.pricePerDay,
-            description: req.body.description
-        });
-
-        entry.save(function(err2) {
-            if (err2) {
-                res.json({"error": "adding product failed"});
-            }
-        });
-
-        res.json({"ok": "product added"})
-    })
-};*/
+}
