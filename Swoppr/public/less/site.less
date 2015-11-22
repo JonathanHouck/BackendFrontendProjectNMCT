@@ -5,12 +5,12 @@ html, body {
   height: 100%;
 }
 
-div[ng-view] {
-  height: ~"calc(100% - 75px)";
-}
-
 body {
   .sansSerif();
+}
+
+div[ng-view] {
+  height: ~"calc(100% - 75px)";
 }
 
 input[type="submit"] {
@@ -19,6 +19,12 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: @primary-light-darker;
+}
+
+form p {
+  margin-left: 20px;
+  line-height: 35px;
+  font-size: 14px;
 }
 
 main section {

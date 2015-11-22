@@ -2,6 +2,7 @@
  * Created by jonah on 11/15/2015.
  */
 var mongoose = require( 'mongoose' );
+var bcrypt   = require('bcrypt-nodejs');
 var Schema = mongoose.Schema;
 
 var rentingSchema = new Schema({
@@ -25,16 +26,42 @@ var userSchema = new Schema({
     surname: String,
     emailadres: String,
     products: [productSchema],
-    createdOn: { type: Date, default: Date.now }
+    createdOn: { type: Date, default: Date.now },
+
+    local            : {
+        email        : String,
+        password     : String
+    },
+    facebook         : {
+        id           : String,
+        token        : String,
+        email        : String,
+        name         : String
+    },
+    twitter          : {
+        id           : String,
+        token        : String,
+        displayName  : String,
+        username     : String
+    },
+    google           : {
+        id           : String,
+        token        : String,
+        email        : String,
+        name         : String
+    }
 }, {collection: 'Users'});
+
+// generating a hash
+userSchema.methods.generateHash = function(password) {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
+
+// checking if password is valid
+userSchema.methods.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.local.password);
+};
 
 module.exports.rentingModel = mongoose.model('Renting', rentingSchema);
 module.exports.productModel = mongoose.model( 'Product', productSchema );
 module.exports.userModel = mongoose.model( 'User', userSchema );
-
-/*var replySchema = new Schema({
-    username: String,
-    timestamp: { type: Date, default: Date.now },
-    body: String,
-    replies: [replySchema]
-}, {_id: true});*/

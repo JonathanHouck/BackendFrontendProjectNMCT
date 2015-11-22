@@ -5,15 +5,18 @@ div(class="intro intro-authorize")
                 div(class="panel")
                     div(class="panel-heading"): h3 Inloggen
                     div(class="panel-body")
-                        form(class="form-horizontal")
-                            div(class="form-group")
-                                label(for=email, class="col-sm-3 control-label") Emailadres
-                                div(class="col-sm-9")
-                                    input(type="email", name="email", id="email", class="form-control", placeholder="Bv. jonathan@swoppr.be")
-                            div(class="form-group")
-                                label(for="password", class="col-sm-3 control-label") Wachtwoord
-                                div(class="col-sm-9")
-                                    input(name="password", id="password" class="form-control", placeholder="Bv. swoppr01")
-                            div(class="form-group")
-                                div(class="col-sm-offset-3 col-sm-9")
-                                    input(type="submit", value="Log in" class="btn")
+                        div(growl)
+                        form(class="form-horizontal", ng-submit="login()" ng-controller="LoginFormCtrl")
+                                div(class="form-group")
+                                    label(for=email, class="col-sm-3 control-label") Emailadres
+                                    div(class="col-sm-9")
+                                        input(type="email", name="email", id="email", class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email")
+                                div(class="form-group")
+                                    label(for="password", class="col-sm-3 control-label") Wachtwoord
+                                    div(class="col-sm-9")
+                                        input(type="password", name="password", id="password" class="form-control", placeholder="Bv. swoppr01", ng-model="password")
+                                div(class="form-group")
+                                    div(class="col-sm-offset-3 col-sm-1")
+                                        input(type="submit", value="Log in" class="btn")
+                                    div(class="col-sm-6")
+                                        p: a(href="/register") Geen account? Registreer nu.

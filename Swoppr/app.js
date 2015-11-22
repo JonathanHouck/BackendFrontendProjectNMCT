@@ -4,22 +4,24 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
-var partials = require('./routes/partials');
+var passport = require('passport');
+var flash    = require('connect-flash');
+var session = require('express-session');
 
-var api = require('./routes/api');
+var partials = require('./routes/partials')(passport);
+
 var apiProduct = require('./routes/apiProduct.js');
 var apiUser = require('./routes/apiUser.js');
 var apiRenting = require('./routes/apiRenting.js');
 
 var app = express();
 
-// Mongoose ODM...
-var mongoose = require('mongoose');
-
-// Connect to MongoDB...
-//mongoose.connect('mongodb://demo:standup123@ds052827.mongolab.com:52827/standupmeetingnotes');
+//Connect to MongoDB
 mongoose.connect('mongodb://johna:swoppr@ds053774.mongolab.com:53774/swoppr');
+
+require('./config/passport')(passport); // pass passport for configuration
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,17 +35,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({ secret: 'gregsteristheboss', resave: true, saveUninitialized: true })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
 app.use('/partials', partials);
 
 app.use('/api/product', apiProduct);
 app.use('/api/user', apiUser);
 app.use('/api/renting', apiRenting);
-
-/*app.get('/api/posts', api.posts);
-app.get('/api/post/:id', api.post);
-app.post('/api/post', api.addPost);
-app.put('/api/post/:id', api.editPost);
-app.delete('/api/post/:id', api.deletePost);*/
 
 app.use('*', partials);
 

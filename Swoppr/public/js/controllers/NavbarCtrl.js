@@ -5,7 +5,7 @@
     'use strict';
 
     angular.module('swoppr')
-        .controller('NavbarCtrl', NavbarCtrl);
+        .controller('NavbarCtrl', ['$scope', '$location', NavbarCtrl]);
 
     function NavbarCtrl($scope, $location) {
         //https://jsfiddle.net/xv7tws10/5/

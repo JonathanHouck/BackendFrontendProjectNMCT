@@ -14,4 +14,12 @@ router.post('/newUser', function(req, res) {
     return swopprCtrl.createUser(req, res);
 });
 
+router.get('/userDataNavbar', function(req, res) {
+    if(req.isAuthenticated()) {
+        return res.json(req.user);
+    } else {
+        return res.json("error");
+    }
+});
+
 module.exports = router;

@@ -30,7 +30,10 @@ gulp.task("default", function() {
 
     var jsWatcher = gulp.watch(['./public/js/scroll-animate/**/*.js',
                                 './public/js/app.js',
-                                './public/js/controllers/**/*.js'], ['js']);
+                                './public/js/controllers/**/*.js',
+                                './public/js/controllers/**/*.js',
+                                './public/js/directives/**/*'], ['js']
+                                );
     jsWatcher.on('change', function(event) {
         console.log(event.path + " changed");
     });
@@ -39,7 +42,8 @@ gulp.task("default", function() {
 gulp.task("js",function (){
     gulp.src(['./public/js/scroll-animate/**/*.js',
             './public/js/app.js',
-            './public/js/controllers/**/*.js'])
+            './public/js/controllers/**/*.js',
+            './public/js/directives/**/*'])
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
         //.pipe(sourcemaps.init())

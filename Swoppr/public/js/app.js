@@ -4,8 +4,12 @@
         'ngRoute',
         'ngAnimate',
         'angular-scroll-animate',
-        'ui.bootstrap'
-    ]).
+        'ui.bootstrap',
+        'httpFactory',
+        'angular-growl'
+
+    ])
+    .
     config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider.
         when('/', {
@@ -14,39 +18,51 @@
         }).
         when('/toRent', {
             templateUrl: 'partials/toRent',
-            controller: 'IndexCtrl'
+            controller: 'IndexCtrl',
+            auth: true
         }).
         when('/placeArticle', {
             templateUrl: 'partials/placeArticle',
-            controller: 'IndexCtrl'
+            controller: 'RegisterCtrl'
+        }).
+        when('/logout', {
+            templateUrl: 'partials/logout',
+            controller: 'RegisterCtrl'
         }).
         when('/login', {
             templateUrl: 'partials/login',
-            controller: 'IndexCtrl'
+            controller: 'RegisterCtrl'
         }).
         when('/register', {
             templateUrl: 'partials/register',
-            controller: 'IndexCtrl'
+            controller: 'RegisterCtrl'
         }).
-        /*when('/addPost', {
-            templateUrl: 'partials/addPost',
-            controller: 'AddPostCtrl'
+        when('/profile', {
+            templateUrl: '/partials/profile',
+            controller: 'ProfileCtrl'
         }).
-        when('/readPost/:id', {
-            templateUrl: 'partials/readPost',
-            controller: 'ReadPostCtrl'
-        }).
-        when('/editPost/:id', {
-            templateUrl: 'partials/editPost',
-            controller: 'EditPostCtrl'
-        }).
-        when('/deletePost/:id', {
-            templateUrl: 'partials/deletePost',
-            controller: 'DeletePostCtrl'
-        }).*/
         otherwise({
             redirectTo: '/'
         });
         $locationProvider.html5Mode(true);
-    }]);
+    }])
+    .
+    run(function($rootScope, $location, $http, $route) {
+        $rootScope.$on( "$routeChangeStart", function(next) {
+
+            //userdata ophalen voor navbar
+            $http.get('/api/user/userDataNavbar')
+                .success(function(data) {
+                    $rootScope.user = data;
+                });
+
+            var nextPath = $location.path();
+            var nextRoute = $route.routes[nextPath];
+
+            //als pagina geauthorizeerd moet zijn en er geen user ingelogd is --> naar loginpagina
+            if (nextRoute.auth && $rootScope.user == "error") {
+                $location.path("/login");
+            }
+        });
+    });
 }());
