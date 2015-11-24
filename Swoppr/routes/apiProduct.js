@@ -10,8 +10,17 @@ router.get('/getById/:id', function(req, res) {
     return swopprCtrl.getProductById(req, res, id);
 });
 
+router.get('/getByIdUser/:id', function(req, res) {
+    var id = req.params.id;
+    return swopprCtrl.getProductByIdUser(req, res, id);
+});
+
 router.post('/newProduct', function(req, res) {
     return swopprCtrl.addProductUser(req, res);
+});
+
+router.get('/getAll', function(req, res) {
+   return swopprCtrl.getAllProducts(req, res);
 });
 
 module.exports = router;

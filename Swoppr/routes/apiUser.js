@@ -10,6 +10,14 @@ router.get('/getById/:id', function(req, res) {
     return swopprCtrl.getUserById(req, res, id);
 });
 
+router.get('/getAll', function(req, res) {
+    return swopprCtrl.getAll(req, res);
+});
+
+router.get('/getAllUsersWithProducts', function(req, res) {
+    return swopprCtrl.getAllUsersWithProducts(req, res);
+});
+
 router.post('/newUser', function(req, res) {
     return swopprCtrl.createUser(req, res);
 });
