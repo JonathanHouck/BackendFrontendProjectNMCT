@@ -5,11 +5,25 @@
 var swoppr = require('../models/swoppr.model.js');
 var async = require('async');
 
+exports.getProductByName = function(req, res, name) {
+    swoppr.userModel.findOne({"products._id": id})
+        .exec(function(err, userWithProducts) {
+            if (err) {
+                res.json({"error": "productId niet gevonden"});
+                return ;
+            }
+
+            var product = userWithProducts.products.id(id);
+            res.json(product);
+    });
+};
+
+
 exports.getProductById = function(req, res, id) {
     swoppr.userModel.findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
             if (err) {
-                res.json({"error": "productId not found"});
+                res.json({"error": "productId niet gevonden"});
                 return ;
             }
 
@@ -23,7 +37,7 @@ exports.getProductByIdUser = function(req, res, id) {
         .findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
             if (err) {
-                res.json({"error": "productId not found"});
+                res.json({"error": "productId niet gevonden"});
                 return ;
             }
 
@@ -38,9 +52,10 @@ exports.getProductByIdUser = function(req, res, id) {
 };
 
 exports.addProductUser = function(req, res) {
+
     swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
         if (err) {
-            res.json({"error": "userId not found"});
+            res.json({"error": "userId niet gevonden"});
             return ;
         }
 
@@ -54,11 +69,11 @@ exports.addProductUser = function(req, res) {
 
         user.save(function(err2) {
             if (err2) {
-                res.json({"error": "adding product to user failed"});
+                res.json({"error": "Product toevoegen aan gebruiker mislukt"});
             }
         });
 
-        res.json({"ok": "product added"})
+        res.json({"ok": "Product toegevoegd"})
     })
 };
 
@@ -107,5 +122,44 @@ exports.getAllProducts = function(req, res) {
 };
 
 exports.editProductUser = function(req, res) {
+    swoppr.userModel.findOne({"products._id": req.body.id}).exec(function(err, userWithProduct) {
 
+        if (err || userWithProduct == null) {
+            res.json({"error": "productId niet gevonden"});
+            return ;
+        }
+
+        if (req.body.pricePerDay) userWithProduct.products.id(req.body.id).pricePerDay = req.body.pricePerDay;
+        if (req.body.productName) userWithProduct.products.id(req.body.id).productName = req.body.productName;
+
+        userWithProduct.save(function(err) {
+            if (err) {
+                res.json({"error": "Fout bij opslaan product van de gebruiker"});
+            }
+
+            res.json({"ok": "Product gewijzigd"})
+        });
+    });
+};
+
+exports.removeProductUser = function(req, res, id) {
+    console.log("hello");
+
+    swoppr.userModel.findOne({"products._id": id}).exec(function(err, userWithProduct) {
+        if (err || userWithProduct == null) {
+            res.json({"error": "productId niet gevonden"});
+            return ;
+        }
+
+        userWithProduct.products.id(id).remove();
+
+        userWithProduct.save(function(err) {
+            if (err) {
+                res.json({"error": "Fout bij verwijderen product van de gebruiker"});
+            }
+
+            res.json({"ok": "Product verwijderd"})
+        });
+
+    });
 };

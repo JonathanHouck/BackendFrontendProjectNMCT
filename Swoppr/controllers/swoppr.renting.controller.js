@@ -8,102 +8,149 @@ var async = require('async');
 // --> indien renterFrom --> _renterFrom finden
 // --> indien renterTo --> _renterTo finden
 
-exports.getAllRentingsRenterFrom = function (req, res, id) {
-    swoppr.rentingModel.find({_renterFrom: id})
+exports.getRentingById = function (req, res, id) {
+    swoppr.rentingModel
+        .findById(id)
         .lean()
-        .exec(function(err, rentings) {
-
-        if(err) {
-            res.json({"error": "Geen rentings gevonden voor het id"});
-            return ;
-        }
-
-        var rentingsOutput = [];
-
-        /////////////////////////
-        //ALLE RENTINGS OVERLOPEN
-        /////////////////////////
-
-        async.each(rentings, iteratorRentings, function(err) {
+        .exec(function(err, renting) {
             if (err) {
-                res.json({"error": "Ophalen rentings mislukt"});
+                res.json({"error": "RentingId niet gevonden"});
+                return ;
             }
-
-            res.json(rentingsOutput);
-        });
-
-        function iteratorRentings(renting, callback) {
-            //voor elke renting: renterFrom, product en renterTo zoeken
 
             async.series([
 
-                /////////////////////////////////
-                //RENTERFROM EN PRODUCT OPHALEN//
-                /////////////////////////////////
-
-                function(callback2) {
-                    swoppr.userModel.findById(renting._renterFrom)
-                        .exec(cbProductWithRenterFrom);
-
-                    function cbProductWithRenterFrom(err, renterFrom) {
-
-                        if(err) callback2("renterFrom bestaat niet", "getRenterFromWithProduct");
-
-                        product = renterFrom.products.id(renting._product);
-
-                        if (!product) {
-                            if(err) callback2("product bestaat niet", "getRenterFromWithProduct");
-                        }
-
-                        renterFrom = renterFrom.toObject();
-                        delete renterFrom.products;
-
-                        renterFrom.product = product;
-                        renting.renterFrom = renterFrom;
-
-                        callback2(null, "getRenterFromWithProduct");
-                    }
+                //renterFrom en product ophalen
+                function(callback) {
+                    getRenterFromAndProduct(renting, callback);
                 },
 
-                /////////////////////
-                //RENTERTO OPHALEN//
-                ////////////////////
+                //renterTo ophalen
+                function(callback) {
 
-                function(callback2) {
-
-                    swoppr.userModel.findById(renting._renterTo)
-                        .lean()
-                        .exec(cbRenterTo);
-
-                    function cbRenterTo(err, user) {
-
-                        if(err) callback2("renterTo bestaat niet", "getRenterFrom");
-
-                        if (user.products) {
-                            delete user.products;
-                        }
-
-                        renting.renterTo = user;
-                        callback2(null, "getRenterTo");
-                    }
+                    getRenterTo(renting, callback);
                 }
 
-            //////////////////////////////////////////////////////////
-            //INFO RENTING OPGEHAALD, RENTING TOEVOEGEN AAN RENTINGS//
-            //////////////////////////////////////////////////////////
-
+                //info renting opgehaald, renting toevoegen aan rentings
             ], function(err, results) {
 
                 if (err) {
                     res.json({"error": "Ophalen renting met rentingFrom, product en rentingTo mislukt"});
                 }
 
-                rentingsOutput.push(renting);
-                callback();
+                res.json(renting);
             });
-        }
-    });
+        });
 };
+
+exports.getAllRentings = function (req, res, id, byWichId) {
+
+    var byWichIdObj;
+
+    switch(byWichId) {
+        case 1:
+            byWichIdObj = {_renterFrom: id};
+            break;
+        case 2:
+            byWichIdObj = {_renterTo: id};
+            break;
+        case 3:
+            byWichIdObj = {_product: id};
+            break;
+        default:
+            byWichIdObj = {_renterFrom: id};
+    }
+
+    swoppr.rentingModel.find(byWichIdObj)
+        .lean()
+        .exec(function(err, rentings) {
+
+            if(err) {
+                res.json({"error": "Geen rentings gevonden voor het id"});
+                return ;
+            }
+
+            var rentingsOutput = [];
+
+            //alle rentings overlopen
+            async.each(rentings, iteratorRentings, function(err) {
+                if (err) {
+                    res.json({"error": "Ophalen rentings mislukt"});
+                }
+
+                res.json(rentingsOutput);
+            });
+
+            function iteratorRentings(renting, callback) {
+                //voor elke renting: renterFrom, product en renterTo zoeken
+
+                async.series([
+
+                    //renterFrom en product ophalen
+                    function(callback2) {
+                        getRenterFromAndProduct(renting, callback2);
+                    },
+
+                    //renterTo ophalen
+                    function(callback2) {
+                        getRenterTo(renting, callback2);
+                    }
+
+                    //info renting opgehaald, renting toevoegen aan rentings
+                ], function(err, results) {
+
+                    if (err) {
+                        res.json({"error": "Ophalen renting met rentingFrom, product en rentingTo mislukt"});
+                    }
+
+                    rentingsOutput.push(renting);
+                    callback();
+                });
+            }
+        });
+};
+
+function getRenterFromAndProduct(renting, callback) {
+    swoppr.userModel.findById(renting._renterFrom)
+        .exec(cbProductWithRenterFrom);
+
+    function cbProductWithRenterFrom(err, renterFrom) {
+
+        if(err) callback("renterFrom bestaat niet", "getRenterFromWithProduct");
+
+        product = renterFrom.products.id(renting._product);
+
+        if (!product) {
+            if(err) callback("product bestaat niet", "getRenterFromWithProduct");
+        }
+
+        renterFrom = renterFrom.toObject();
+        delete renterFrom.products;
+
+        renterFrom.product = product;
+        renting.renterFrom = renterFrom;
+
+        callback(null, "getRenterFromWithProduct");
+    }
+}
+
+function getRenterTo(renting, callback) {
+    swoppr.userModel.findById(renting._renterTo)
+        .lean()
+        .exec(cbRenterTo);
+
+    function cbRenterTo(err, user) {
+
+        if(err) callback("renterTo bestaat niet", "getRenterFrom");
+
+        if (user.products) {
+            delete user.products;
+        }
+
+        renting.renterTo = user;
+        callback(null, "getRenterTo");
+    }
+}
 
 exports.addRentingUser = function(req, res) {
 

@@ -13,10 +13,10 @@ exports.createUser = function(req, res) {
 
     entry.save(function(err2) {
         if (err2) {
-            res.json({"error": "adding user failed"});
+            res.json({"error": "Toevoegen gebruiker mislukt"});
         }
 
-        res.json({"ok": "user added"})
+        res.json({"ok": "Gebruiker toegevoegd"})
     });
 };
 
@@ -26,7 +26,7 @@ exports.getUserById = function(req, res, id) {
         .lean()
         .exec(function(err, user) {
             if (err) {
-                res.json({"error": "id not found"});
+                res.json({"error": "UserId niet gevonden"});
                 return ;
             }
 

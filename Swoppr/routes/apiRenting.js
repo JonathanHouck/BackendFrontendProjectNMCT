@@ -5,18 +5,29 @@ var express = require('express');
 var router = express.Router();
 var swopprCtrl = require('../controllers/swoppr.renting.controller');
 
-/*router.get('/getById/:id', function(req, res) {
-    var id = req.params.id;
-    return swopprCtrl.getProductById(req, res, id);
-});*/
-
 router.post('/newRenting', function(req, res) {
     return swopprCtrl.addRentingUser(req, res);
 });
 
+//mee bezig
+router.get('/getById/:id', function(req, res) {
+    var id = req.params.id;
+    return swopprCtrl.getRentingById(req, res, id);
+});
+
 router.get('/getAllRentingsRenterFrom/:id', function(req, res) {
     var id = req.params.id;
-    return swopprCtrl.getAllRentingsRenterFrom(req,res, id);
+    return swopprCtrl.getAllRentings(req, res, id, 1);
+});
+
+router.get('/getAllRentingsRenterTo/:id', function(req, res) {
+    var id = req.params.id;
+    return swopprCtrl.getAllRentings(req, res, id, 2);
+});
+
+router.get('/getAllRentingsProduct/:id', function(req, res) {
+    var id = req.params.id;
+    return swopprCtrl.getAllRentings(req, res, id, 3);
 });
 
 module.exports = router;
