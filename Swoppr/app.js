@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var passport = require('passport');
-var flash    = require('connect-flash');
 var session = require('express-session');
 
 var partials = require('./routes/partials')(passport);
@@ -38,7 +37,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({ secret: 'gregsteristheboss', resave: true, saveUninitialized: true })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
 
 app.use('/partials', partials);
 

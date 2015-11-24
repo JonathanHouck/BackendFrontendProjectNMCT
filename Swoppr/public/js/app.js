@@ -18,7 +18,7 @@
         }).
         when('/toRent', {
             templateUrl: 'partials/toRent',
-            controller: 'IndexCtrl',
+            controller: 'RegisterCtrl',
             auth: true
         }).
         when('/placeArticle', {
@@ -54,7 +54,7 @@
             $http.get('/api/user/userDataNavbar')
                 .success(function(data) {
                     $rootScope.user = data;
-                });
+            });
 
             var nextPath = $location.path();
             var nextRoute = $route.routes[nextPath];

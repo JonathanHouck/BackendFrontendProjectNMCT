@@ -45,4 +45,4 @@ exports.addProductUser = function(req, res) {
 
 exports.editProductUser = function(req, res) {
 
-}
+};

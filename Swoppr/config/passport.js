@@ -29,7 +29,7 @@ module.exports = function(passport) {
     },
     function(req, email, password, done) {
         if (email)
-            email = email.toLowerCase();
+            email = email.toLowerCase(); // Use lower-case e-mails to avoid case-sensitive e-mail matching
 
         // asynchronous
         process.nextTick(function() {
@@ -40,10 +40,10 @@ module.exports = function(passport) {
 
                 // if no user is found, return the message
                 if (!user)
-                    return done(null, false, req.flash('loginMessage', 'No user found.'));
+                    return done(null, { error: 'Combinatie emailadres en wachtwoord is verkeerd.' });
 
                 if (!user.validPassword(password))
-                    return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
+                    return done(null, { error: 'Combinatie emailadres en wachtwoord is verkeerd.' });
 
                 // all is well, return user
                 else
@@ -60,7 +60,7 @@ module.exports = function(passport) {
         },
         function(req, email, password, done) {
             if (email)
-                email = email.toLowerCase();
+                email = email.toLowerCase(); // Use lower-case e-mails to avoid case-sensitive e-mail matching
 
             // asynchronous
             process.nextTick(function() {
@@ -71,9 +71,10 @@ module.exports = function(passport) {
                         if (err)
                             return done(err);
 
+                        console.log(user);
                         // check to see if theres already a user with that email
                         if (user) {
-                            return done(null, false, req.flash('signupMessage', 'That email is already taken.'));
+                            return done(null, { error: 'Emailadres reeds in gebruik' });
                         } else {
 
                             // create the user
@@ -106,8 +107,6 @@ module.exports = function(passport) {
                     // user is logged in and already has a local account. Ignore signup. (You should log out before trying to create a new account, user!)
                     return done(null, req.user);
                 }
-
             });
-
         }));
 };

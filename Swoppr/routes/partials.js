@@ -20,7 +20,7 @@ module.exports = function(passport) {
     });
 
     router.get('/placeArticle', function(req, res) {
-        res.render("partials/toRent");
+        res.render("partials/placeArticle");
     });
 
     router.get('/logout', function(req, res) {
