@@ -7,32 +7,48 @@ div(class="intro intro-authorize")
                     div(class="panel-body")
                         div(growl)
                         form(class="form-horizontal", name="registerForm" ng-submit="register()", ng-controller="RegisterFormCtrl")
-                            div(class="form-group")
+                            div(class="form-group", ng-class="{'has-error': registerForm.surname.$dirty && registerForm.surname.$invalid, 'has-success': registerForm.surname.$dirty && !registerForm.surname.$invalid}")
                                 label(for=surname, class="col-sm-3 control-label") Voornaam
                                 div(class="col-sm-9")
                                     input(type="text", name="surname", id="surname", class="form-control", placeholder="Bv. Jonathan", ng-model="surname", ng-minlength="2", ng-maxlength="50", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.surname.$error", ng-if="registerForm.surname.$touched")
-                                    p(ng-message="minlength")   Voornaam is te kort
-                                    p(ng-message="maxlength")   Voornaam is te lang
-                                    p(ng-message="required")    Voornaam is verplicht in te vullen
-                            div(class="form-group")
+                                    p(ng-message="required") Voornaam is verplicht in te vullen
+                                    p(ng-message="minlength") Voornaam is te kort
+                                    p(ng-message="maxlength") Voornaam is te lang
+                            div(class="form-group", ng-class="{'has-error': registerForm.lastname.$dirty && registerForm.lastname.$invalid, 'has-success': registerForm.lastname.$dirty && !registerForm.lastname.$invalid}")
                                 label(for=lastname, class="col-sm-3 control-label") Achternaam
                                 div(class="col-sm-9")
                                     input(type="text", name="lastname", id="lastname", class="form-control", placeholder="Bv. Jonathan", ng-model="lastname", ng-minlength="2", ng-maxlength="50", ng-required="true")
-                            div(class="form-group")
+                                div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.lastname.$error", ng-if="registerForm.lastname.$touched")
+                                    p(ng-message="required") Familienaam is verplicht in te vullen
+                                    p(ng-message="minlength") Familienaam is te kort
+                                    p(ng-message="maxlength") Familienaam is te lang
+                            div(class="form-group", ng-class="{'has-error': registerForm.email.$dirty && registerForm.email.$invalid, 'has-success': registerForm.email.$dirty && !registerForm.email.$invalid}")
                                 label(for=email, class="col-sm-3 control-label") Emailadres
                                 div(class="col-sm-9")
-                                    input(type="email", name="email", id="email", class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email" ng-required="true")
-                            div(class="form-group")
+                                    input(type="email", name="email", id="email", class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email", ng-required="true")
+                                div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.email.$error", ng-if="registerForm.email.$touched")
+                                    p(ng-message="required") Emailadres is verplicht in te vullen
+                                    p(ng-message="email") Gelieve een correct emailadres op te geven
+                            div(class="form-group", ng-class="{'has-error': registerForm.password.$dirty && registerForm.password.$invalid, 'has-success': registerForm.password.$dirty && !registerForm.password.$invalid}")
                                 label(for="password", class="col-sm-3 control-label") Wachtwoord
                                 div(class="col-sm-9")
-                                    input(type="password" name="password", id="password" class="form-control", placeholder="Bv. swoppr01", ng-model="password")
-                            div(class="form-group")
+                                    input(type="password" name="password", id="password" class="form-control", placeholder="Bv. swoppr01", ng-model="password", ng-minlength="7", ng-maxlength="50", ng-required="true")
+                                div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.password.$error", ng-if="registerForm.password.$touched")
+                                    p(ng-message="required") Wachtwoord is verplicht in te vullen
+                                    p(ng-message="minlength") Wachtwoord moet minimaal uit 7 karakters bestaan
+                                    p(ng-message="maxlength") Wachtwoord moet maximaal uit 50 karakters bestaan
+                            div(class="form-group", ng-class="{'has-error': registerForm.passwordAgain.$dirty && registerForm.passwordAgain.$invalid, 'has-success': registerForm.passwordAgain.$dirty && !registerForm.passwordAgain.$invalid}")
                                 label(for="passwordAgain", class="col-sm-3 control-label") Wachtwoord hertypen
                                 div(class="col-sm-9")
-                                    input(type="text", name="passwordAgain", id="passwordAgain" class="form-control", placeholder="Bv. swoppr01")
+                                    input(type="password", name="passwordAgain", id="passwordAgain", class="form-control", placeholder="Bv. swoppr01", ng-model="passwordAgain", ng-minlength="7", ng-maxlength="50", ng-required="true", compare-to="password")
+                                div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.passwordAgain.$error", ng-if="registerForm.passwordAgain.$touched")
+                                    p(ng-message="required") Wachtwoord is verplicht in te vullen
+                                    p(ng-message="minlength") Wachtwoord moet minimaal uit 7 karakters bestaan
+                                    p(ng-message="maxlength") Wachtwoord moet maximaal uit 50 karakters bestaan
+                                    p(ng-message="compareTo") Herhaalde wachtwoord is niet gelijk aan het wachtwoord
                             div(class="form-group")
                                 div(class="col-sm-offset-3 col-sm-2")
-                                    input(type="submit", ng-disabled="registerForm.$invalid" value="Registreer" class="btn")
+                                    input(type="submit", ng-disabled="registerForm.$invalid", value="Registreer" class="btn")
                                 div(class="col-sm-6 otherAction")
                                     p: a(href="/login") Reeds geregistreerd? Log in.

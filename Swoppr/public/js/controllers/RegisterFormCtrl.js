@@ -7,6 +7,8 @@
         .controller('RegisterFormCtrl', ['$scope', '$http', RegisterFormCtrl]);
     function RegisterFormCtrl ($scope, $http) {
         $scope.register = function() {
+
+            $scope.formErrors = {};
             $http
                 .post('/partials/register', {
                     surname: this.surname,
@@ -15,13 +17,6 @@
                     password: this.password
                 })
                 .success(function(data) {
-                    if (data.error) {
-                        $scope.registerForm.general.$setValidity('server', false);
-                    }
-
-                    if (data.errorEmail) {
-                        $scope.registerForm.email.$setValidity('server', false);
-                    }
                 });
         };
     }

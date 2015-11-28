@@ -73,7 +73,7 @@ module.exports = function(passport) {
 
                         // check to see if theres already a user with that email
                         if (user) {
-                            return done(null, { errorEmail: 'Emailadres reeds in gebruik' });
+                            return done(null, { error: 'Emailadres reeds in gebruik' });
                         } else {
 
                             // create the user
