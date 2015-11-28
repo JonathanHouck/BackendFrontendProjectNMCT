@@ -7,14 +7,21 @@
         .controller('RegisterFormCtrl', ['$scope', '$http', RegisterFormCtrl]);
     function RegisterFormCtrl ($scope, $http) {
         $scope.register = function() {
-            console.log("Boom");
             $http
                 .post('/partials/register', {
+                    surname: this.surname,
+                    lastname: this.lastname,
                     email: this.email,
                     password: this.password
                 })
                 .success(function(data) {
-                    console.log(data);
+                    if (data.error) {
+                        $scope.registerForm.general.$setValidity('server', false);
+                    }
+
+                    if (data.errorEmail) {
+                        $scope.registerForm.email.$setValidity('server', false);
+                    }
                 });
         };
     }

@@ -15,11 +15,6 @@
                 })
                 .success(function(data) {
                     console.log(data);
-
-                    /*$http.get('/api/user/userData')
-                        .success(function(userdata) {
-                            $scope.parentobj.user = userdata; //Expose the user data to your angular scope
-                    });*/
                 });
         };
     }

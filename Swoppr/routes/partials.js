@@ -61,8 +61,8 @@ module.exports = function(passport) {
     });
 
     router.post('/register', function(req, res) {
-        if (!req.body.email || !req.body.password) {
-            return res.json({ error: 'Email and Password required' });
+        if (!req.body.email || !req.body.password || !req.body.surname || !req.body.lastname) {
+            return res.json({ error: 'Fill in all fields' });
         }
         passport.authenticate('local-signup', function(err, user, info) {
             if (err) {

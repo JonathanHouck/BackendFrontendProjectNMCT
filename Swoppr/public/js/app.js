@@ -2,12 +2,12 @@
     'use strict';
     angular.module('swoppr', [
         'ngRoute',
+        'ngMessages',
         'ngAnimate',
         'angular-scroll-animate',
         'ui.bootstrap',
         'httpFactory',
         'angular-growl'
-
     ])
     .
     config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {

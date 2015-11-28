@@ -71,15 +71,16 @@ module.exports = function(passport) {
                         if (err)
                             return done(err);
 
-                        console.log(user);
                         // check to see if theres already a user with that email
                         if (user) {
-                            return done(null, { error: 'Emailadres reeds in gebruik' });
+                            return done(null, { errorEmail: 'Emailadres reeds in gebruik' });
                         } else {
 
                             // create the user
                             var newUser            = new User();
 
+                            newUser.surname = req.body.surname;
+                            newUser.lastname = req.body.lastname;
                             newUser.local.email    = email;
                             newUser.local.password = newUser.generateHash(password);
 
