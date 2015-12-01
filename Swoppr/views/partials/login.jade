@@ -6,17 +6,27 @@ div(class="intro intro-authorize")
                     div(class="panel-heading"): h3 Inloggen
                     div(class="panel-body")
                         div(growl)
-                        form(class="form-horizontal", ng-submit="login()" ng-controller="LoginFormCtrl")
-                                div(class="form-group")
-                                    label(for=email, class="col-sm-3 control-label") Emailadres
-                                    div(class="col-sm-9")
-                                        input(type="email", name="email", id="email", class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email")
-                                div(class="form-group")
-                                    label(for="password", class="col-sm-3 control-label") Wachtwoord
-                                    div(class="col-sm-9")
-                                        input(type="password", name="password", id="password" class="form-control", placeholder="Bv. swoppr01", ng-model="password")
-                                div(class="form-group")
-                                    div(class="col-sm-offset-3 col-sm-1")
-                                        input(type="submit", value="Log in" class="btn")
-                                    div(class="col-sm-6 otherAction notRegistered")
-                                        p: a(href="/register") Geen account? Registreer nu.
+                        form(class="form-horizontal", name="loginForm" ng-submit="login()")
+                            div(class="form-group", ng-class="{'has-error': loginForm.email.$dirty && loginForm.email.$invalid, 'has-success': loginForm.email.$dirty && !loginForm.email.$invalid}")
+                                label(for=email, class="col-sm-3 control-label") Emailadres
+                                div(class="col-sm-9")
+                                    input(type="email", name="email", id="email", class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email", ng-required="true")
+                                div(class="col-sm-9 col-sm-offset-3", ng-messages="loginForm.email.$error", ng-if="loginForm.email.$touched")
+                                    p(ng-message="required") Emailadres is verplicht in te vullen
+                                    p(ng-message="email") Gelieve een correct emailadres op te geven
+                            div(class="form-group", ng-class="{'has-error': loginForm.password.$dirty && loginForm.password.$invalid, 'has-success': loginForm.password.$dirty && !loginForm.password.$invalid}")
+                                label(for="password", class="col-sm-3 control-label") Wachtwoord
+                                div(class="col-sm-9")
+                                    input(type="password", name="password", id="password" class="form-control", placeholder="Bv. swoppr01", ng-model="password", ng-minlength="7", ng-maxlength="50", ng-required="true")
+                                div(class="col-sm-9 col-sm-offset-3", ng-messages="loginForm.password.$error", ng-if="loginForm.password.$touched")
+                                    p(ng-message="required") Wachtwoord is verplicht in te vullen
+                                    p(ng-message="minlength") Wachtwoord moet minimaal uit 7 karakters bestaan
+                                    p(ng-message="maxlength") Wachtwoord moet maximaal uit 50 karakters bestaan
+                            div(class="form-group")
+                                div(class="col-sm-offset-3 col-sm-1 loginbtn")
+                                    input(type="submit", value="Log in" class="btn")
+                                div(class="col-sm-6 otherAction notRegistered")
+                                    p: a(href="/register") Geen account? Registreer nu.
+                                div(class="col-sm-1")
+                                    a(redir, href='/partials/auth/google', class="googleplus")
+                                        div(class="fa fa-google-plus-square")

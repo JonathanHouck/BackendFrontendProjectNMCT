@@ -31,7 +31,7 @@
         }).
         when('/login', {
             templateUrl: 'partials/login',
-            controller: 'RegisterCtrl'
+            controller: 'LoginCtrl'
         }).
         when('/register', {
             templateUrl: 'partials/register',
@@ -59,9 +59,11 @@
             var nextPath = $location.path();
             var nextRoute = $route.routes[nextPath];
 
-            //als pagina geauthorizeerd moet zijn en er geen user ingelogd is --> naar loginpagina
-            if (nextRoute.auth && $rootScope.user == "error") {
-                $location.path("/login");
+            if (nextRoute) {
+                //als pagina geauthorizeerd moet zijn en er geen user ingelogd is --> naar loginpagina
+                if (nextRoute.auth && $rootScope.user == "error") {
+                    $location.path("/login");
+                }
             }
         });
     });

@@ -1,10 +1,27 @@
-div(class="page-header text-center")
-    h1.
-        Profile page
-div(class="row")
-    div(class="col-sm-6")
-        h3 Local
-        container(ng-show="$root.user.local.email")
-            p {{$root.user._id}}
-            p email: {{$root.user.local.email}}
-            p password: {{$root.user.local.password}}
+main
+    div(class="container")
+        div(class="row col-sm-12")
+            h1(class="authorized") Mijn profiel
+        div(class="row")
+            div(class="col-sm-6")
+                h2(class="authorized2") Gebruikersgegevens
+                table(class="table")
+                    tr
+                        td Emailadres
+                        td {{$root.user.local.email}}
+                    tr
+                        td Naam
+                        td {{$root.user.surname}} {{$root.user.lastname}}
+            div(class="col-sm-6")
+                h2(class="authorized2") Inloggen met Google+
+                div(ng-show="$root.user.google.token")
+                    table(class="table")
+                        tr
+                            td Emailadres
+                            td {{ $root.user.google.email }}
+                        tr
+                            td Name
+                            td {{ $root.user.google.name }}
+                    a(redir, href="/partials/unlink/google", class="btn btn-danger") Ontkoppel login
+                div(ng-hide="$root.user.google.token")
+                    a(redir, href="/partials/connect/google", class="btn btn-primary") Koppel login

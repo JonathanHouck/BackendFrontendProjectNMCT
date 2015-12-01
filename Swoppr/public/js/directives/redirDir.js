@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .directive('redirDir', redirDir);
+        .directive('redir', redirDir);
 
     function redirDir() {
         return {

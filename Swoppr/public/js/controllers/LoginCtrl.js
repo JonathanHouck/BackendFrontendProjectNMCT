@@ -4,9 +4,9 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('LoginFormCtrl', ['$scope', '$http', LoginFormCtrl]);
+        .controller('LoginCtrl', ['$scope', '$http', LoginCtrl]);
 
-    function LoginFormCtrl ($scope, $http) {
+    function LoginCtrl ($scope, $http) {
         $scope.login = function() {
             $http
                 .post('/partials/login', {
