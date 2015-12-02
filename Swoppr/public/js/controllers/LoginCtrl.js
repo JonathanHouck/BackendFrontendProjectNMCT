@@ -4,9 +4,9 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('LoginCtrl', ['$scope', '$http', LoginCtrl]);
+        .controller('LoginCtrl', ['$rootScope', '$scope', '$http', LoginCtrl]);
 
-    function LoginCtrl ($scope, $http) {
+    function LoginCtrl ($rootScope, $scope, $http) {
         $scope.login = function() {
             $http
                 .post('/partials/login', {
@@ -14,7 +14,10 @@
                     password: this.password
                 })
                 .success(function(data) {
-                    console.log(data);
+                    $http.get('/api/user/userDataNavbar')
+                        .success(function(data) {
+                            $rootScope.user = data;
+                    });
                 });
         };
     }

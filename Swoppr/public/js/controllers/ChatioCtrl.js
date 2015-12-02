@@ -11,8 +11,9 @@
 
         $scope.messages = [];
 
+        var name = "";
         if ($rootScope.user) {
-            var name = $rootScope.user.firstname + $rootScope.user.surname;
+            name = $rootScope.user.firstname + $rootScope.user.surname;
         }
         $scope.newMessage = createBlankMessage(name);
 
