@@ -45,3 +45,4 @@ Temporary Items
 # custom
 Swoppr/node_modules/
 Swoppr/Procfile
+*.xml
