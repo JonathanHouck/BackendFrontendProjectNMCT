@@ -11,7 +11,9 @@
 
         $scope.messages = [];
 
-        var name = $rootScope.user.firstname + $rootScope.user.surname;
+        if ($rootScope.user) {
+            var name = $rootScope.user.firstname + $rootScope.user.surname;
+        }
         $scope.newMessage = createBlankMessage(name);
 
         //alle messages ophalen van het id in de url
@@ -34,7 +36,7 @@
         $scope.save = function() {
             $http.post('/api/chat/' + $scope.rentid, $scope.newMessage).then(function(result) {
                 $scope.messages.push(result.data);
-                $scope.newNote = createBlankMessage();
+                $scope.newNote = createBlankMessage(name);
                 socket.emit("newMessage", {rentid: $scope.rentid, message: result.data});
             }, function(err) {
                 alert(err);

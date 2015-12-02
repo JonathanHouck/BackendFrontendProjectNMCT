@@ -55,10 +55,13 @@
         $rootScope.$on( "$routeChangeStart", function(next) {
 
             //userdata ophalen voor navbar
-            $http.get('/api/user/userDataNavbar')
-                .success(function(data) {
-                    $rootScope.user = data;
-            });
+
+            if (!$rootScope.user) {
+                $http.get('/api/user/userDataNavbar')
+                    .success(function(data) {
+                        $rootScope.user = data;
+                    });
+            }
 
             var nextPath = $location.path();
             var nextRoute = $route.routes[nextPath];
