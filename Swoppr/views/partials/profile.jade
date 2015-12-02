@@ -11,9 +11,9 @@ main
                         td {{$root.user.local.email}}
                     tr
                         td Naam
-                        td {{$root.user.surname}} {{$root.user.lastname}}
+                        td {{$root.user.firstname}} {{$root.user.surname}}
             div(class="col-sm-6")
-                h2(class="authorized2") Inloggen met Google+
+                h2(class="authorized2") Login met Google+
                 div(ng-show="$root.user.google.token")
                     table(class="table")
                         tr

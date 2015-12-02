@@ -6,7 +6,7 @@ var async = require('async');
 
 exports.createUser = function(req, res) {
     var entry = new swoppr.userModel({
-        lastname: req.body.lastname,
+        firstname: req.body.firstname,
         surname: req.body.surname,
         emailadres: req.body.emailadres
     });
@@ -14,6 +14,7 @@ exports.createUser = function(req, res) {
     entry.save(function(err2) {
         if (err2) {
             res.json({"error": "Toevoegen gebruiker mislukt"});
+            return;
         }
 
         res.json({"ok": "Gebruiker toegevoegd"})

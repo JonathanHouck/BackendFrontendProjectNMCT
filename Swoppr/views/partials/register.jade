@@ -1,25 +1,25 @@
 div(class="intro intro-authorize")
     div(class="intro-body")
         div(class="container")
-            div(class="col-sm-12 col-sm-offset-0 col-md-9 col-md-offset-3 col-lg-7 col-lg-offset-5")
+            div(class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2")
                 div(class="panel")
                     div(class="panel-heading"): h3 Sluit u bij ons aan
                     div(class="panel-body")
                         div(growl)
                         form(class="form-horizontal", name="registerForm" ng-submit="register()")
-                            div(class="form-group", ng-class="{'has-error': registerForm.surname.$dirty && registerForm.surname.$invalid, 'has-success': registerForm.surname.$dirty && !registerForm.surname.$invalid}")
-                                label(for=surname, class="col-sm-3 control-label") Voornaam
+                            div(class="form-group", ng-class="{'has-error': registerForm.firstname.$dirty && registerForm.firstname.$invalid, 'has-success': registerForm.firstname.$dirty && !registerForm.firstname.$invalid}")
+                                label(for=firstname, class="col-sm-3 control-label") Voornaam
                                 div(class="col-sm-9")
-                                    input(type="text", name="surname", id="surname", class="form-control", placeholder="Bv. Jonathan", ng-model="surname", ng-minlength="2", ng-maxlength="50", ng-required="true")
-                                div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.surname.$error", ng-if="registerForm.surname.$touched")
+                                    input(type="text", name="firstname", id="firstname", class="form-control", placeholder="Bv. Jonathan", ng-model="firstname", ng-minlength="2", ng-maxlength="50", ng-required="true")
+                                div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.firstname.$error", ng-if="registerForm.firstname.$touched")
                                     p(ng-message="required") Voornaam is verplicht in te vullen
                                     p(ng-message="minlength") Voornaam is te kort
                                     p(ng-message="maxlength") Voornaam is te lang
-                            div(class="form-group", ng-class="{'has-error': registerForm.lastname.$dirty && registerForm.lastname.$invalid, 'has-success': registerForm.lastname.$dirty && !registerForm.lastname.$invalid}")
-                                label(for=lastname, class="col-sm-3 control-label") Achternaam
+                            div(class="form-group", ng-class="{'has-error': registerForm.surname.$dirty && registerForm.surname.$invalid, 'has-success': registerForm.surname.$dirty && !registerForm.surname.$invalid}")
+                                label(for=surname, class="col-sm-3 control-label") Achternaam
                                 div(class="col-sm-9")
-                                    input(type="text", name="lastname", id="lastname", class="form-control", placeholder="Bv. Jonathan", ng-model="lastname", ng-minlength="2", ng-maxlength="50", ng-required="true")
-                                div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.lastname.$error", ng-if="registerForm.lastname.$touched")
+                                    input(type="text", name="surname", id="surname", class="form-control", placeholder="Bv. Jonathan", ng-model="surname", ng-minlength="2", ng-maxlength="50", ng-required="true")
+                                div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.surname.$error", ng-if="registerForm.surname.$touched")
                                     p(ng-message="required") Familienaam is verplicht in te vullen
                                     p(ng-message="minlength") Familienaam is te kort
                                     p(ng-message="maxlength") Familienaam is te lang
@@ -48,7 +48,7 @@ div(class="intro intro-authorize")
                                     p(ng-message="maxlength") Wachtwoord moet maximaal uit 50 karakters bestaan
                                     p(ng-message="compareTo") Herhaalde wachtwoord is niet gelijk aan het wachtwoord
                             div(class="form-group")
-                                div(class="col-sm-offset-3 col-sm-2")
+                                div(class="col-sm-offset-3 col-sm-2 authenticatebtn")
                                     input(type="submit", ng-disabled="registerForm.$invalid", value="Registreer" class="btn")
                                 div(class="col-sm-6 otherAction")
                                     p: a(href="/login") Reeds geregistreerd? Log in.

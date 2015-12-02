@@ -8,12 +8,12 @@ var mongoose = require('mongoose');
 
 var passport = require('passport');
 var session = require('express-session');
-
 var partials = require('./routes/partials')(passport);
 
 var apiProduct = require('./routes/apiProduct.js');
 var apiUser = require('./routes/apiUser.js');
 var apiRenting = require('./routes/apiRenting.js');
+var apiChat = require('./routes/apiChat.js');
 
 var app = express();
 
@@ -43,6 +43,7 @@ app.use('/partials', partials);
 app.use('/api/product', apiProduct);
 app.use('/api/user', apiUser);
 app.use('/api/renting', apiRenting);
+app.use('/api/chat', apiChat);
 
 app.use('*', partials);
 

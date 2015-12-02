@@ -22,7 +22,7 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                     i(class="underline")
             ul(class="nav navbar-nav navbar-right")
                 li(ng-show="$root.user.local.email")
-                    a(href="/profile") {{$root.user.local.email}}
+                    a(href="/profile") {{$root.user.firstname}}
                 li(ng-show="$root.user.local.email")
                     a(href="/logout", logout) Uitloggen
                 li(ng-hide="$root.user.local.email")

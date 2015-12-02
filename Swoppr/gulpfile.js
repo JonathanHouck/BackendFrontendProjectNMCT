@@ -32,7 +32,8 @@ gulp.task("default", function() {
                                 './public/js/app.js',
                                 './public/js/controllers/**/*.js',
                                 './public/js/controllers/**/*.js',
-                                './public/js/directives/**/*'], ['js']
+                                './public/js/directives/**/*',
+                                './public/js/factories/**/*'], ['js']
                                 );
     jsWatcher.on('change', function(event) {
         console.log(event.path + " changed");
@@ -43,7 +44,8 @@ gulp.task("js",function (){
     gulp.src(['./public/js/scroll-animate/**/*.js',
             './public/js/app.js',
             './public/js/controllers/**/*.js',
-            './public/js/directives/**/*'])
+            './public/js/directives/**/*.js',
+            './public/js/factories/**/*'])
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
         //.pipe(sourcemaps.init())

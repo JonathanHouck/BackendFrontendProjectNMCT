@@ -18,16 +18,20 @@
         }).
         when('/toRent', {
             templateUrl: 'partials/toRent',
-            controller: 'RegisterCtrl',
+            controller: '',
             auth: true
+        }).
+        when('/chat/:id?', {
+            templateUrl: 'partials/chat',
+            controller: 'ChatioCtrl'
         }).
         when('/placeArticle', {
             templateUrl: 'partials/placeArticle',
-            controller: 'RegisterCtrl'
+            controller: ''
         }).
         when('/logout', {
             templateUrl: 'partials/logout',
-            controller: 'RegisterCtrl'
+            controller: ''
         }).
         when('/login', {
             templateUrl: 'partials/login',

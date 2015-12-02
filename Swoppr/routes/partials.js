@@ -61,7 +61,7 @@ module.exports = function(passport) {
     });
 
     router.post('/register', function(req, res) {
-        if (!req.body.email || !req.body.password || !req.body.surname || !req.body.lastname) {
+        if (!req.body.email || !req.body.password || !req.body.firstname || !req.body.surname) {
             return res.json({ error: 'Fill in all fields' });
         }
         passport.authenticate('local-signup', function(err, user, info) {
@@ -114,6 +114,10 @@ module.exports = function(passport) {
         user.save(function(err) {
             res.redirect('/profile');
         });
+    });
+
+    router.get('/chat/:id?', function(req, res) {
+        res.render("partials/chat");
     });
 
     return router;

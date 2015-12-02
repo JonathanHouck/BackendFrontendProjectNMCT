@@ -22,7 +22,7 @@ var productSchema = new Schema({
 });
 
 var userSchema = new Schema({
-    lastname: String,
+    firstname: String,
     surname: String,
     emailadres: String,
     products: [productSchema],
@@ -52,6 +52,14 @@ var userSchema = new Schema({
     }
 }, {collection: 'Users'});
 
+var messageSchema = new Schema({
+    //_renting: {type: Schema.Types.ObjectId, ref: 'Renting'},
+    _renting: String,
+    content: String,
+    name: String,
+    createdOn: { type: Date, default: Date.now }
+}, {collection: 'Messages'});
+
 // generating a hash
 userSchema.methods.generateHash = function(password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
@@ -63,5 +71,6 @@ userSchema.methods.validPassword = function(password) {
 };
 
 module.exports.rentingModel = mongoose.model('Renting', rentingSchema);
-module.exports.productModel = mongoose.model( 'Product', productSchema );
-module.exports.userModel = mongoose.model( 'User', userSchema );
+module.exports.productModel = mongoose.model('Product', productSchema );
+module.exports.userModel = mongoose.model('User', userSchema );
+module.exports.messageModel = mongoose.model('Message', messageSchema);

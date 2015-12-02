@@ -12,8 +12,8 @@
             $scope.formErrors = {};
             $http
                 .post('/partials/register', {
+                    firstname: this.firstname,
                     surname: this.surname,
-                    lastname: this.lastname,
                     email: this.email,
                     password: this.password
                 })

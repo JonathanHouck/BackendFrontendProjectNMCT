@@ -1,7 +1,7 @@
 div(class="intro intro-authorize")
     div(class="intro-body")
         div(class="container")
-            div(class="col-sm-12 col-sm-offset-0 col-md-9 col-md-offset-3 col-lg-7 col-lg-offset-5")
+            div(class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2")
                 div(class="panel")
                     div(class="panel-heading"): h3 Inloggen
                     div(class="panel-body")
@@ -23,8 +23,8 @@ div(class="intro intro-authorize")
                                     p(ng-message="minlength") Wachtwoord moet minimaal uit 7 karakters bestaan
                                     p(ng-message="maxlength") Wachtwoord moet maximaal uit 50 karakters bestaan
                             div(class="form-group")
-                                div(class="col-sm-offset-3 col-sm-1 loginbtn")
-                                    input(type="submit", value="Log in" class="btn")
+                                div(class="col-sm-offset-3 col-sm-1 authenticatebtn")
+                                    input(type="submit", ng-disabled="loginForm.$invalid", value="Log in" class="btn")
                                 div(class="col-sm-6 otherAction notRegistered")
                                     p: a(href="/register") Geen account? Registreer nu.
                                 div(class="col-sm-1")
