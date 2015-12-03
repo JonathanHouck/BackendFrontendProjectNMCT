@@ -4,9 +4,9 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('RegisterCtrl', ['$scope', '$http', RegisterCtrl]);
+        .controller('RegisterCtrl', ['$rootScope', '$scope', '$http', RegisterCtrl]);
 
-    function RegisterCtrl ($scope, $http) {
+    function RegisterCtrl ($rootScope, $scope, $http) {
         $scope.register = function() {
 
             $scope.formErrors = {};
@@ -18,6 +18,10 @@
                     password: this.password
                 })
                 .success(function(data) {
+                    $http.get('/api/user/userDataNavbar')
+                        .success(function(data) {
+                            $rootScope.user = data;
+                    });
                 });
         };
     }

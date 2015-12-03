@@ -3,7 +3,6 @@
 
 html, body {
   height: 100%;
-  .fontSize(14px);
 }
 
 body {
@@ -98,13 +97,11 @@ main section {
       padding-bottom: 20px;
 
       .intro-text {
-        .fontSize(20px);
         padding: 15px 0;
       }
 
       .brand-heading {
         text-transform: uppercase;
-        .fontSize(70px);
         display: none;
       }
 
@@ -151,7 +148,6 @@ main section {
     .square(50px);
     text-align: center;
     padding-top: 12px;
-    font-size: 20px;
 
     &:hover {
       background-color: @secondary-light;
@@ -318,7 +314,7 @@ main section {
       .brand-heading {
         display: block;
       }
-      .intro-text {
+      .smallFont {
         .fontSize(25px);
       }
     }
@@ -355,13 +351,13 @@ main section {
   }
 }
 
-.authorized {
-    font-size: 25px;
-    text-transform: uppercase;
+h1 {
+  .fontSize(25px);
+  text-transform: uppercase;
 }
 
-.authorized2 {
-  font-size: 20px;
+h2 {
+  font-size:(20px);
 }
 
 .authenticatebtn {
@@ -389,6 +385,25 @@ main section {
 
   div {
     transition: all .5s;
-    .fontSize(50px);
   }
+}
+
+.smallFont {
+  .fontSize(20px);
+}
+
+.smallFontBigger {
+  .fontSize(25px);
+}
+
+.mediumFont {
+  .fontSize(35px);
+}
+
+.largeFont {
+  .fontSize(50px);
+}
+
+.largestFont {
+  .fontSize(70px);
 }
