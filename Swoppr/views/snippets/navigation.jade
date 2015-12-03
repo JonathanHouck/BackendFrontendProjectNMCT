@@ -11,7 +11,9 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                 span(class="icon-bar")
             a(class="navbar-brand", href="#")
                 img(src="images/logo_swoppr.png")
-            a(href="#", class="navbar-title") Swoppr
+            a(href="#", class="navbar-title")
+                img(src="images/logo_swoppr.png")
+                p Swoppr
         div(id="navbar", class="navbar-collapse collapse", uib-collapse="isCollapsed")
             ul(class="nav navbar-nav")
                 li: a(href="/", ng-class="getClass('/')") Start
@@ -20,14 +22,20 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                     i(class="underline")
                 li: a(href="/placeArticle", ng-class="getClass('/placeArticle')") Plaats artikel
                     i(class="underline")
-            ul(class="nav navbar-nav navbar-right")
-                li(ng-show="$root.user.local.email")
-                    a(href="/profile", class="fa fa-user mediumFont")
-                li(ng-show="$root.user.local.email")
-                    a(href="/logout", logout) Uitloggen
-                li(ng-hide="$root.user.local.email")
+            ul(class="nav navbar-nav navbar-right", ng-show="$root.user.local.email")
+                li(class="dropdown")
+                    a(href="/profile", class="fa fa-user mediumFont dropdown-toggle")
+                    ul(class="dropdown-menu")
+                        li: a(href="/profile") Mijn profiel
+                        li: a(href="/logout", logout) Uitloggen
+                li(class="mobile-only")
+                    a(href="/profile") Mijn profiel
+                li(class="mobile-only")
+                    a(href="/logout") Uitloggen
+            ul(class="nav navbar-nav navbar-right", ng-hide="$root.user.local.email")
+                li
                     a(href="/login") Inloggen
                         i(class="underline")
-                li(ng-hide="$root.user.local.email")
+                li
                     a(href="/register") Registreer
                     i(class="underline")

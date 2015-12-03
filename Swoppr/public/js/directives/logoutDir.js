@@ -12,8 +12,10 @@
             link: function(scope, element, attrs) {
                 element.on('click', function(e) {
                     e.preventDefault();
-                    $http.post('partials/logout');
-                    $rootScope.user = "";
+                    $http.post('partials/logout')
+                        .success(function(data) {
+                            $rootScope.user = "";
+                        });
                 });
             }
         };

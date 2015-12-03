@@ -23,13 +23,9 @@ module.exports = function(passport) {
         res.render("partials/placeArticle");
     });
 
-    router.get('/logout', function(req, res) {
-       res.render("partials/logout");
-    });
-
     router.post('/logout', function(req, res) {
         req.logout();
-        res.json({ redirect: '/logout' });
+        res.json({ redirect: '/login' });
     });
 
     router.get('/login', function(req, res) {

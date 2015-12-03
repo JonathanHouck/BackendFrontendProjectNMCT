@@ -29,10 +29,6 @@
             templateUrl: 'partials/placeArticle',
             controller: ''
         }).
-        when('/logout', {
-            templateUrl: 'partials/logout',
-            controller: ''
-        }).
         when('/login', {
             templateUrl: 'partials/login',
             controller: 'LoginCtrl'

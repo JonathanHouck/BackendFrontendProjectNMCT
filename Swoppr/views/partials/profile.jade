@@ -2,7 +2,7 @@ main
     div(class="container")
         div(class="row col-sm-12")
             h1 Mijn profiel
-        div(class="row")
+        div(class="row" ng-show="$root.user")
             div(class="col-sm-6")
                 h2 Gebruikersgegevens
                 table(class="table")
