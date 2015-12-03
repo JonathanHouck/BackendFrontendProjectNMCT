@@ -2,7 +2,7 @@
  * Created by jonah on 11/15/2015.
  */
 //var mongoose = require( 'mongoose' );
-var swoppr = require('../models/swoppr.model.js');
+var swoppr = require('../schemas/swoppr.schema.js');
 var async = require('async');
 
 exports.getProductByName = function(req, res, name) {
@@ -15,9 +15,8 @@ exports.getProductByName = function(req, res, name) {
 
             var product = userWithProducts.products.id(id);
             res.json(product);
-    });
+        });
 };
-
 
 exports.getProductById = function(req, res, id) {
     swoppr.userModel.findOne({"products._id": id})
@@ -29,7 +28,7 @@ exports.getProductById = function(req, res, id) {
 
             var product = userWithProducts.products.id(id);
             res.json(product);
-    });
+        });
 };
 
 exports.getProductByIdUser = function(req, res, id) {
@@ -143,8 +142,6 @@ exports.editProductUser = function(req, res) {
 };
 
 exports.removeProductUser = function(req, res, id) {
-    console.log("hello");
-
     swoppr.userModel.findOne({"products._id": id}).exec(function(err, userWithProduct) {
         if (err || userWithProduct == null) {
             res.json({"error": "productId niet gevonden"});

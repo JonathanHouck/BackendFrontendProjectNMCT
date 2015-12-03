@@ -6,7 +6,7 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 var TwitterStrategy  = require('passport-twitter').Strategy;
 var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
 
-var User = require('../models/swoppr.model.js').userModel;
+var User = require('../data/schemas/swoppr.schema').userModel;
 
 var configAuth = require('./auth'); // use this one for testing
 

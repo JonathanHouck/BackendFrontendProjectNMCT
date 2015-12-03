@@ -5,7 +5,7 @@
     "use strict";
 
     var ProductService = function($http){
-        var Renting = require("../models/swoppr.model.js").rentingModel;
+        var Renting = require("../models/swoppr.schema.js").rentingModel;
 
         var byId = function(id){
             var url =   '/api/renting/getById/'+id;

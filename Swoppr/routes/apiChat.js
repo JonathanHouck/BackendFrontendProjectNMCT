@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var swopprCtrl = require('../controllers/swoppr.message.controller');
+var swopprCtrl = require('../data/models/message.model');
 
 router.get('/:rentingid', function(req, res) {
     var rentingid = req.params.rentingid;

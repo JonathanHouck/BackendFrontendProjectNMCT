@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
 
 var passport = require('passport');
 var session = require('express-session');
@@ -16,9 +15,6 @@ var apiRenting = require('./routes/apiRenting.js');
 var apiChat = require('./routes/apiChat.js');
 
 var app = express();
-
-//Connect to MongoDB
-mongoose.connect('mongodb://johna:swoppr@ds053774.mongolab.com:53774/swoppr');
 
 require('./config/passport')(passport); // pass passport for configuration
 

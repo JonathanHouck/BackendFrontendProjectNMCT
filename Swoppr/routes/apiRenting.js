@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var swopprCtrl = require('../controllers/swoppr.renting.controller');
+var swopprCtrl = require('../data/models/renting.model');
 
 router.post('/newRenting', function(req, res) {
     return swopprCtrl.addRentingUser(req, res);

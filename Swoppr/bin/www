@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('swoppr');
 var http = require('http');
+var mongoose = require('mongoose');
 
 /**
  * Get port from environment and store in Express.
@@ -18,6 +19,9 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
+
+//Connect to MongoDB
+mongoose.connect('mongodb://johna:swoppr@ds053774.mongolab.com:53774/swoppr');
 
 var server = http.createServer(app);
 

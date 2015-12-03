@@ -4,8 +4,8 @@
 (function(){
     "use strict";
     var ProductService = function($http){
-        var Product = require("../models/swoppr.model.js").productModel;
-        var User = require("../models/swoppr.model.js").userModel;
+        var Product = require("../models/swoppr.schema.js").productModel;
+        var User = require("../models/swoppr.schema.js").userModel;
 
         var byId = function(id){
             var url =   '/api/product/getById/'+id;

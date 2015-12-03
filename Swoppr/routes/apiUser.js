@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var swopprCtrl = require('../controllers/swoppr.user.controller');
+var swopprCtrl = require('../data/models/user.model');
 
 router.get('/getById/:id', function(req, res) {
     var id = req.params.id;

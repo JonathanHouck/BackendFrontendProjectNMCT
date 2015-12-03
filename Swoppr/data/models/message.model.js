@@ -2,7 +2,7 @@
  * Created by jonah on 12/2/2015.
  */
 
-var swoppr = require('../models/swoppr.model.js');
+var swoppr = require('../schemas/swoppr.schema.js');
 
 exports.getMessagesByRentingId = function(req, res, rentingid) {
     swoppr.messageModel.find({"_renting": rentingid})
