@@ -6,11 +6,10 @@
     "use strict";
 
     var UserService = function($http){
-        var User = require("../models/swoppr.schema.js").userModel;
 
         var byId = function(id){
             var url =   '/api/user/getById/'+id;
-            $http.get(url)
+            return $http.get(url)
                 .then(function(response) {
                     var u = response.data;
                     return new User(
@@ -24,7 +23,7 @@
         };
 
         var AllWithProducts = function($http){
-            var url = '/api/user/getAllUsersWithProducts';
+            return var url = '/api/user/getAllUsersWithProducts';
             $http.get(url)
                 .then(function(response) {
                     var users = [];
@@ -44,7 +43,7 @@
 
         var all = function(){
             var url =   '/api/user/getAll/'+id;
-            $http.get(url)
+            return $http.get(url)
                 .then(function(response) {
                     var users = [];
                     angular.forEach(response.data, function(u){
@@ -76,5 +75,6 @@
             add : add,
             all : all
         }
-    }
+    };
+    angular.module("swoppr").factory("UserService", ["$http", UserService]);
 })();

@@ -4,12 +4,11 @@
 (function(){
     "use strict";
 
-    var ProductService = function($http){
-        var Renting = require("../models/swoppr.schema.js").rentingModel;
+    var RentingService = function($http){
 
         var byId = function(id){
             var url =   '/api/renting/getById/'+id;
-            $http.get(url).then(function(response) {
+            return $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
@@ -27,7 +26,7 @@
 
         var byUser = function(userId){
             var url =   '/api/renting/getAllRentingsRenterFrom/'+userId;
-            $http.get(url).then(function(response) {
+            return $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
@@ -45,7 +44,7 @@
 
         var byRenter = function(userId){
             var url =   '/api/renting/getAllRentingsRenterTo/'+userId;
-            $http.get(url).then(function(response) {
+            return $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
@@ -63,7 +62,7 @@
 
         var byProduct = function(){
             var url =   '/api/renting/getAllRentingsProduct/';
-            $http.get(url).then(function(response) {
+            return $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
@@ -81,7 +80,7 @@
 
         var add = function(renting){
             var url =   '/api/renting/newRenting/';
-            $http.put(url, renting).then(function(response) {
+            $http.post(url, renting).then(function(response) {
                 return response; //Expose the user data to your angular scope
             });
         };
@@ -108,10 +107,11 @@
             byUser : byUser,
             byRenter : byRenter,
             byProduct : byProduct,
-            add : add,
+            add : add
             //remove : remove,
             //update : update
         }
-    }
+    };
+    angular.module("swoppr").factory("RentingService", ["$http", RentingService]);
 })();
 
