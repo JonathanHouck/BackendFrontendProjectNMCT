@@ -15,23 +15,23 @@
                     return new User(
                         u.lastname,
                         u.firstname,
-                        u.emailadres,
+                        u.local.email,
                         u.products,
                         u.createdOn
                     );
                 });
         };
 
-        var AllWithProducts = function($http){
-            return var url = '/api/user/getAllUsersWithProducts';
-            $http.get(url)
+        var AllWithProducts = function(){
+            var url = '/api/user/getAllUsersWithProducts';
+            return $http.get(url)
                 .then(function(response) {
                     var users = [];
                     angular.forEach(response.data, function(u){
                         var user = new User(
                             u.lastname,
                             u.firstname,
-                            u.emailadres,
+                            u.local.email,
                             u.products,
                             u.createdOn
                         );
@@ -42,7 +42,7 @@
         };
 
         var all = function(){
-            var url =   '/api/user/getAll/'+id;
+            var url =   '/api/user/getAll/';
             return $http.get(url)
                 .then(function(response) {
                     var users = [];
@@ -50,7 +50,7 @@
                         var user = new User(
                             u.lastname,
                             u.firstname,
-                            u.emailadres,
+                            u.local.email,
                             u.products,
                             u.createdOn
                         );
@@ -62,7 +62,7 @@
 
         var add = function(user){
             var url =   '/api/user/newUser/';
-            $http.put(url, user)
+            $http.post(url, user)
                 .then(function(response) {
                     return response; //Expose the user data to your angular scope
                 });
@@ -74,7 +74,7 @@
             AllWithProducts : AllWithProducts,
             add : add,
             all : all
-        }
+        };
     };
     angular.module("swoppr").factory("UserService", ["$http", UserService]);
 })();
