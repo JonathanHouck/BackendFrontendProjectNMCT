@@ -116,6 +116,10 @@ module.exports = function(passport) {
         res.render("partials/chat");
     });
 
+    router.get('/fileUpload', function(req, res) {
+        res.render("partials/fileUpload");
+    });
+
     return router;
 };
 

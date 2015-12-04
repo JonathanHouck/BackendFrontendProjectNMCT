@@ -7,15 +7,15 @@ var bodyParser = require('body-parser');
 
 var passport = require('passport');
 var session = require('express-session');
-var partials = require('./routes/partials')(passport);
 
+var partials = require('./routes/partials')(passport);
 var apiProduct = require('./routes/apiProduct.js');
 var apiUser = require('./routes/apiUser.js');
 var apiRenting = require('./routes/apiRenting.js');
 var apiChat = require('./routes/apiChat.js');
+var apiFileUpload = require('./routes/apiFileUpload');
 
 var app = express();
-
 require('./config/passport')(passport); // pass passport for configuration
 
 // view engine setup
@@ -40,6 +40,7 @@ app.use('/api/product', apiProduct);
 app.use('/api/user', apiUser);
 app.use('/api/renting', apiRenting);
 app.use('/api/chat', apiChat);
+app.use('/api/fileUpload', apiFileUpload);
 
 app.use('*', partials);
 

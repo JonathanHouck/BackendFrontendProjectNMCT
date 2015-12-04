@@ -5,6 +5,9 @@
 var swoppr = require('../schemas/swoppr.schema.js');
 var async = require('async');
 
+var cloudinary = require('cloudinary');
+cloudinary.config({cloud_name: 'swoppr', api_key: '574615225534372', api_secret: 'mNUyKP0jlRPHTgGs_yUeiTod5dw'});
+
 exports.getProductByName = function(req, res, name) {
     swoppr.userModel.findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
@@ -50,7 +53,47 @@ exports.getProductByIdUser = function(req, res, id) {
         });
 };
 
-exports.addProductUser = function(req, res) {
+exports.addProductWithPictureUser = function(req, res) {
+
+    swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
+        if (err) {
+            res.json({"error": "userId niet gevonden"});
+            return ;
+        }
+
+        var file = req.files.file;
+
+        if (file) {
+            cloudinary.uploader.upload(file.path, function(result) {
+                if (result) {
+
+                    var entry = new swoppr.productModel( {
+                        productName: req.body.productName,
+                        pricePerDay: req.body.pricePerDay,
+                        description: req.body.description,
+                        publicImageId: result.public_id
+                    });
+
+                    user.products.push(entry);
+
+                    user.save(function(err2) {
+                        if (err2) {
+                            res.json({"error": "Product toevoegen aan gebruiker mislukt"});
+                        }
+                    });
+                } else {
+                    res.json({"error": "Afbeelding uploaden mislukt"});
+                }
+            });
+        } else {
+            res.json({"error": "Afbeelding niet geovnden"});
+        }
+
+        res.json({"ok": "Product toegevoegd"})
+    })
+};
+
+/*exports.addProductUser = function(req, res) {
 
     swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
         if (err) {
@@ -74,7 +117,7 @@ exports.addProductUser = function(req, res) {
 
         res.json({"ok": "Product toegevoegd"})
     })
-};
+};*/
 
 exports.getAllProducts = function(req, res) {
 
