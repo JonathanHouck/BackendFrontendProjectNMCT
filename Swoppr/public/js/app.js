@@ -7,7 +7,8 @@
         'angular-scroll-animate',
         'ui.bootstrap',
         'httpFactory',
-        'angular-growl'
+        'angular-growl',
+        'ngFileUpload'
     ])
     .
     config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
@@ -24,6 +25,10 @@
         when('/chat/:id?', {
             templateUrl: 'partials/chat',
             controller: 'ChatioCtrl'
+        }).
+        when('/fileUpload', {
+            templateUrl: 'partials/fileUpload',
+            controller: "FileUploadCtrl"
         }).
         when('/placeArticle', {
             templateUrl: 'partials/placeArticle',

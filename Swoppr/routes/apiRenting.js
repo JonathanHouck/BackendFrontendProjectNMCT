@@ -9,7 +9,6 @@ router.post('/newRenting', function(req, res) {
     return swopprCtrl.addRentingUser(req, res);
 });
 
-//mee bezig
 router.get('/getById/:id', function(req, res) {
     var id = req.params.id;
     return swopprCtrl.getRentingById(req, res, id);
