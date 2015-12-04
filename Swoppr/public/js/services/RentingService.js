@@ -9,18 +9,14 @@
         var byId = function(id){
             var url =   '/api/renting/getById/'+id;
             return $http.get(url).then(function(response) {
-                var rentings = [];
-                angular.forEach(response.data, function(r){
-                    var renting = new Renting(
-                        r.renterFrom,
-                        r.renterTo,
-                        r.product,
-                        r.daysToRent
-                    );
+                var r = response.data;
+                var renting = new Renting(
+                    r.renterFrom,
+                    r.renterTo,
+                    r.product,
+                    r.daysToRent);
 
-                    rentings.push(renting);
-                });
-                return rentings;
+                return renting;
             });
         };
 
@@ -80,7 +76,7 @@
 
         var add = function(renting){
             var url =   '/api/renting/newRenting/';
-            $http.post(url, renting).then(function(response) {
+            $http.pos(url, renting).then(function(response) {
                 return response; //Expose the user data to your angular scope
             });
         };
