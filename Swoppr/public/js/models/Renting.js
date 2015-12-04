@@ -1,10 +1,10 @@
 /**
  * Created by Greg on 04-Dec-15.
  */
-function Renting(lastname, firstname,emailadres, daysToRent){
-    this.renterFrom = lastname;
-    this.renterTo = firstname;
-    this.product = emailadres;
+function Renting(renterId, userId,productId, daysToRent){
+    this.renterFrom = renterId;
+    this.renterTo = userId;
+    this.product = productId;
     this.daysToRent = daysToRent;
 }
 
