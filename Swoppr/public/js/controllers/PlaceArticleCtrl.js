@@ -19,8 +19,7 @@
         //var newProduct = new Product("test", 5, "description", Date.now());
         //ProductService.add(userId, newProduct);
 
-        ProductService.remove(productToDeleteId);
+        //ProductService.remove(productToDeleteId);
 
-        ProductService.update();
     }
 }());
