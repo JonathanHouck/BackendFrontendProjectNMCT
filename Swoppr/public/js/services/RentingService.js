@@ -4,8 +4,7 @@
 (function(){
     "use strict";
 
-    var ProductService = function($http){
-        var Renting = require("../models/swoppr.schema.js").rentingModel;
+    var RentingService = function($http){
 
         var byId = function(id){
             var url =   '/api/renting/getById/'+id;
@@ -112,6 +111,7 @@
             //remove : remove,
             //update : update
         }
-    }
+    };
+    angular.module("swoppr").factory("RentingService", ["$http", RentingService]);
 })();
 

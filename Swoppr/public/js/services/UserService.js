@@ -6,7 +6,6 @@
     "use strict";
 
     var UserService = function($http){
-        var User = require("../models/swoppr.schema.js").userModel;
 
         var byId = function(id){
             var url =   '/api/user/getById/'+id;
@@ -76,5 +75,6 @@
             add : add,
             all : all
         }
-    }
+    };
+    angular.module("swoppr").factory("UserService", ["$http", UserService]);
 })();

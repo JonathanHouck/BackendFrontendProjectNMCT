@@ -36,6 +36,7 @@ app.use(passport.session()); // persistent login sessions
 
 app.use('/partials', partials);
 
+
 app.use('/api/product', apiProduct);
 app.use('/api/user', apiUser);
 app.use('/api/renting', apiRenting);
