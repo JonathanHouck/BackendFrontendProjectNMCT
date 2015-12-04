@@ -4,25 +4,30 @@
 (function(){
     "use strict";
 
-    var RentingService = function($http){
+    var ProductService = function($http){
+        var Renting = require("../models/swoppr.schema.js").rentingModel;
 
         var byId = function(id){
             var url =   '/api/renting/getById/'+id;
-            return $http.get(url).then(function(response) {
-                var r = response.data;
-                var renting = new Renting(
-                    r.renterFrom,
-                    r.renterTo,
-                    r.product,
-                    r.daysToRent);
+            $http.get(url).then(function(response) {
+                var rentings = [];
+                angular.forEach(response.data, function(r){
+                    var renting = new Renting(
+                        r.renterFrom,
+                        r.renterTo,
+                        r.product,
+                        r.daysToRent
+                    );
 
-                return renting;
+                    rentings.push(renting);
+                });
+                return rentings;
             });
         };
 
         var byUser = function(userId){
             var url =   '/api/renting/getAllRentingsRenterFrom/'+userId;
-            return $http.get(url).then(function(response) {
+            $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
@@ -40,7 +45,7 @@
 
         var byRenter = function(userId){
             var url =   '/api/renting/getAllRentingsRenterTo/'+userId;
-            return $http.get(url).then(function(response) {
+            $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
@@ -58,7 +63,7 @@
 
         var byProduct = function(){
             var url =   '/api/renting/getAllRentingsProduct/';
-            return $http.get(url).then(function(response) {
+            $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
@@ -76,7 +81,7 @@
 
         var add = function(renting){
             var url =   '/api/renting/newRenting/';
-            $http.pos(url, renting).then(function(response) {
+            $http.put(url, renting).then(function(response) {
                 return response; //Expose the user data to your angular scope
             });
         };
@@ -103,11 +108,10 @@
             byUser : byUser,
             byRenter : byRenter,
             byProduct : byProduct,
-            add : add
+            add : add,
             //remove : remove,
             //update : update
         }
-    };
-    angular.module("swoppr").factory("RentingService", ["$http", RentingService]);
+    }
 })();
 

@@ -54,9 +54,8 @@ exports.getProductByIdUser = function(req, res, id) {
 };
 
 exports.addProductWithPictureUser = function(req, res) {
-
     swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
-        if (err) {
+        if (err || !user) {
             res.json({"error": "userId niet gevonden"});
             return ;
         }
@@ -66,12 +65,11 @@ exports.addProductWithPictureUser = function(req, res) {
         if (file) {
             cloudinary.uploader.upload(file.path, function(result) {
                 if (result) {
-
-                    var entry = new swoppr.productModel( {
+                    var entry = new swoppr.productModel({
                         productName: req.body.productName,
                         pricePerDay: req.body.pricePerDay,
                         description: req.body.description,
-                        publicImageId: result.public_id
+                        url: result.url
                     });
 
                     user.products.push(entry);
@@ -79,6 +77,8 @@ exports.addProductWithPictureUser = function(req, res) {
                     user.save(function(err2) {
                         if (err2) {
                             res.json({"error": "Product toevoegen aan gebruiker mislukt"});
+                        } else {
+                            res.json({"ok": entry})
                         }
                     });
                 } else {
@@ -88,8 +88,6 @@ exports.addProductWithPictureUser = function(req, res) {
         } else {
             res.json({"error": "Afbeelding niet geovnden"});
         }
-
-        res.json({"ok": "Product toegevoegd"})
     })
 };
 

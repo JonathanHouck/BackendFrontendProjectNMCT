@@ -18,7 +18,7 @@ var productSchema = new Schema({
     productName: String,
     pricePerDay: String,
     description: String,
-    publicImageId: String,
+    url: String,
     createdOn: { type: Date, default: Date.now }
 });
 

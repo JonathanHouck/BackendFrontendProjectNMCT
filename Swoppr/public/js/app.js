@@ -32,7 +32,7 @@
         }).
         when('/placeArticle', {
             templateUrl: 'partials/placeArticle',
-            controller: 'PlaceArticleCtrl'
+            controller: ''
         }).
         when('/login', {
             templateUrl: 'partials/login',

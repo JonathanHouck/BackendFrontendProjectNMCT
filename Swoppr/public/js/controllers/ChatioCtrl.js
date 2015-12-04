@@ -11,38 +11,42 @@
 
         $scope.messages = [];
 
-        var name = "";
-        if ($rootScope.user) {
-            name = $rootScope.user.firstname + $rootScope.user.surname;
-        }
-        $scope.newMessage = createBlankMessage(name);
+        $rootScope.$watch('user', function() {
 
-        //alle messages ophalen van het id in de url
-        $http.get("/api/chat/" + $scope.rentid).then(function (result) {
-            $scope.messages = result.data;
-        }, function(err) {
-            alert(err);
-        });
+            var name;
+            if ($rootScope.user) {
+                name = $rootScope.user.firstname + $rootScope.user.surname;
+            }
 
-        var socket = io.connect();
+            $scope.newMessage = createBlankMessage(name);
 
-        socket.emit("join renting", $scope.rentid);
-
-        socket.on("broadcast message", function(message) {
-            $scope.messages.push(message);
-            $scope.$apply();
-        });
-
-        //message saven aan de bijhorende renting
-        $scope.save = function() {
-            $http.post('/api/chat/' + $scope.rentid, $scope.newMessage).then(function(result) {
-                $scope.messages.push(result.data);
-                $scope.newNote = createBlankMessage(name);
-                socket.emit("newMessage", {rentid: $scope.rentid, message: result.data});
+            //alle messages ophalen van het id in de url
+            $http.get("/api/chat/" + $scope.rentid).then(function (result) {
+                $scope.messages = result.data;
             }, function(err) {
                 alert(err);
             });
-        };
+
+            var socket = io.connect();
+
+            socket.emit("join renting", $scope.rentid);
+
+            socket.on("broadcast message", function(message) {
+                $scope.messages.push(message);
+                $scope.$apply();
+            });
+
+            //message saven aan de bijhorende renting
+            $scope.save = function() {
+                $http.post('/api/chat/' + $scope.rentid, $scope.newMessage).then(function(result) {
+                    $scope.messages.push(result.data);
+                    $scope.newNote = createBlankMessage(name);
+                    socket.emit("newMessage", {rentid: $scope.rentid, message: result.data});
+                }, function(err) {
+                    alert(err);
+                });
+            };
+        });
     }
 }());
 
