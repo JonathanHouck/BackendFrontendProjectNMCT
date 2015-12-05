@@ -7,7 +7,7 @@
     var RentingService = function($http){
 
         var byId = function(id){
-            var url =   '/api/renting/getById/'+id;
+            var url = '/api/renting/getById/'+id;
             return $http.get(url).then(function(response) {
                 var r = response.data;
                 var renting = new Renting(
@@ -106,7 +106,7 @@
             add : add
             //remove : remove,
             //update : update
-        }
+        };
     };
     angular.module("swoppr").factory("RentingService", ["$http", RentingService]);
 })();

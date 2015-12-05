@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('PlaceArticleCtrl', ['$scope', 'ProductService', 'RentingService', 'UserService', PlaceArticleCtrl])
+        .controller('PlaceArticleCtrl', ['$scope', 'ProductService', 'RentingService', 'UserService', PlaceArticleCtrl]);
 
     function PlaceArticleCtrl ($scope, ProductService, RentingService, UserService) {
         var productId = "5661cae440d7dfb819343c88";

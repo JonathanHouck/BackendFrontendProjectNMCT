@@ -88,6 +88,6 @@
             add : add,
             remove : remove,
             update : update
-        }
-    }
+        };
+    };
 })();
