@@ -13,7 +13,7 @@ exports.getRentingById = function (req, res, id) {
         .findById(id)
         .lean()
         .exec(function(err, renting) {
-            if (err) {
+            if (err || !renting) {
                 res.json({"error": "RentingId niet gevonden"});
                 return ;
             }

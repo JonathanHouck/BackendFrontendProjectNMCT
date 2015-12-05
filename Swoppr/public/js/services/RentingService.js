@@ -21,7 +21,7 @@
         };
 
         var byUser = function(userId){
-            var url =   '/api/renting/getAllRentingsRenterFrom/'+userId;
+            var url =   '/api/renting/getAllRentingsRenterTo/'+userId;
             return $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){
@@ -39,7 +39,7 @@
         };
 
         var byRenter = function(userId){
-            var url =   '/api/renting/getAllRentingsRenterTo/'+userId;
+            var url =   '/api/renting/getAllRentingsRenterFrom/'+userId;
             return $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){

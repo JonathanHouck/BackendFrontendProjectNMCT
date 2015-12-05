@@ -10,8 +10,8 @@
         var productId = "5661cae440d7dfb819343c88";
         var productId2 = "5661da9afd0fbe340fcf50fe";
         var productToDeleteId = "5661e0a474c36f0c277234cb";
-        var idUser = "5661b52d37012fe41ebdaa05";
-        var idUser2 = "565df548facad7f403384e3b";
+        var idUser = "565df548facad7f403384e3b";
+        var idUser2 = "5661b52d37012fe41ebdaa05";
         var rentingId = "5661ec44fa9bebbc01a39e73";
 
         //Products
