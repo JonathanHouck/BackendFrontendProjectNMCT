@@ -1,14 +1,13 @@
 /**
  * Created by Greg on 04-Dec-15.
  */
-function User(lastname, firstname,emailadres, products, createdOn){
-    this.lastname = lastname;
-    this.firstname = firstname;
-    this.emailadres = emailadres;
-    this.products = products;
+function Product(productName, pricePerDay, description, createdOn){
+    this.productName = productName;
+    this.pricePerDay = pricePerDay;
+    this.description = description;
     this.createdOn = createdOn;
 }
 
-User.prototype.toString = function(){
-    return this.firstname + " " + this.lastname;
+Product.prototype.toString = function(){
+    return this.productName;
 };

@@ -4,12 +4,10 @@
 (function(){
     "use strict";
     var ProductService = function($http){
-        var Product = require("../models/swoppr.schema.js").productModel;
-        var User = require("../models/swoppr.schema.js").userModel;
 
         var byId = function(id){
             var url =   '/api/product/getById/'+id;
-            $http.get(url).then(function(response) {
+            return $http.get(url).then(function(response) {
                 var p = response.data;
                 return new Product(
                     p.productName,
@@ -22,11 +20,11 @@
 
         var byIdUser = function(userId){
             var url = '/api/product/getByIdUser/'+userId;
-            $http.get(url).then(function(response) {
+            return $http.get(url).then(function(response) {
                 var user = new User();
-                user.firstname = response.firstname;
-                user.lastname = response.lastname;
-                user.emailadres = response.local.email;
+                user.firstname = response.data.firstname;
+                user.lastname = response.data.lastname;
+                user.emailadres = response.data.local.email;
 
                 var p = response.data.product;
                 var product = new Product(
@@ -36,14 +34,14 @@
                     p.createdOn
                 );
 
-                user.products.push(product);
+                user.products = product;
                 return user;
             });
         };
 
         var all = function(){
             var url =   '/api/product/getAll/';
-            $http.get(url).then(function(response) {
+            return $http.get(url).then(function(response) {
                 var products = [];
                 angular.forEach(response.data, function(p){
                     var product = new Product(
@@ -69,14 +67,14 @@
 
         var remove = function(id){
             var url =  '/api/product/removeProductUser/'+id;
-            $http.delete(url).then(function(response) {
+            $http.get(url).then(function(response) {
                 return response;
             });
         };
 
         var update = function(){
             var url =   '/api/product/editProductUser/';
-            $http.get(url) .then(function(response) {
+            $http.post(url) .then(function(response) {
                 return response; //Expose the user data to your angular scope
             });
         };
@@ -90,4 +88,5 @@
             update : update
         };
     };
+    angular.module("swoppr").factory("ProductService", ["$http", ProductService]);
 })();
