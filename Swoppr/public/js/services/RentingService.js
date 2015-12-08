@@ -56,8 +56,8 @@
             });
         };
 
-        var byProduct = function(){
-            var url =   '/api/renting/getAllRentingsProduct/';
+        var byProduct = function(id){
+            var url =   '/api/renting/getAllRentingsProduct/' + id;
             return $http.get(url).then(function(response) {
                 var rentings = [];
                 angular.forEach(response.data, function(r){
