@@ -31,7 +31,6 @@ gulp.task("default", function() {
     var jsWatcher = gulp.watch(['./public/js/scroll-animate/**/*.js',
                                 './public/js/app.js',
                                 './public/js/controllers/**/*.js',
-                                './public/js/controllers/**/*.js',
                                 './public/js/directives/**/*',
                                 './public/js/services/**/*',
                                 './public/js/models/**/*'], ['js']

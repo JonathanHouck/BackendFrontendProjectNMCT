@@ -8,6 +8,11 @@ var async = require('async');
 var cloudinary = require('cloudinary');
 cloudinary.config({cloud_name: 'swoppr', api_key: '574615225534372', api_secret: 'mNUyKP0jlRPHTgGs_yUeiTod5dw'});
 
+cloudinary.api.delete_resources_by_tag('product',
+    function(result){
+        console.log(result);
+    });
+
 exports.getProductByName = function(req, res, name) {
     swoppr.userModel.findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
@@ -84,9 +89,9 @@ exports.addProductWithPictureUser = function(req, res) {
                 } else {
                     res.json({"error": "Afbeelding uploaden mislukt"});
                 }
-            });
+            }, {tags: "product", width: 100, height: 150, crop: 'fit'});
         } else {
-            res.json({"error": "Afbeelding niet geovnden"});
+            res.json({"error": "Afbeelding niet gevonden"});
         }
     })
 };
@@ -118,7 +123,6 @@ exports.addProductWithPictureUser = function(req, res) {
 };*/
 
 exports.getAllProducts = function(req, res) {
-
     swoppr.userModel.find().exec(function(err, users) {
 
         if(err) {
@@ -139,6 +143,8 @@ exports.getAllProducts = function(req, res) {
 
         function iteratorUsers(user, callback) {
 
+            var userid = user._id;
+
             async.each(user.products, iteratorProducts, function(err) {
 
                 //na ophalen alle producten van de user
@@ -150,9 +156,12 @@ exports.getAllProducts = function(req, res) {
             });
 
             function iteratorProducts(product, callback2) {
-                if (err) {
+                if (err || !product) {
                     callback2("Fout bij overlopen producten users", "getProductsOfUser")
                 }
+
+                product = product.toObject();
+                product.userId = userid;
 
                 products.push(product);
                 callback2(null, "getProductsUser");

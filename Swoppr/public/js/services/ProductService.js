@@ -31,7 +31,9 @@
                     p.productName,
                     p.pricePerDay,
                     p.description,
-                    p.createdOn
+                    p.url,
+                    p.createdOn,
+                    p.userId
                 );
 
                 user.products = product;
@@ -48,7 +50,9 @@
                         p.productName,
                         p.pricePerDay,
                         p.description,
-                        p.createdOn
+                        p.url,
+                        p.createdOn,
+                        p.userId
                     );
 
                     products.push(product);
