@@ -7,11 +7,5 @@
  */
 var express = require('express');
 var router = express.Router();
-var swopprCtrl = require('../data/models/product.model');
-var multiparty = require('connect-multiparty'), multipartyMiddleware = multiparty();
-
-router.post('/', multipartyMiddleware, function(req, res) {
-    return swopprCtrl.addProductWithPictureUser(req, res);
-});
 
 module.exports = router;

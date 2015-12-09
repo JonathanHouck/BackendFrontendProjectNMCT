@@ -7,7 +7,6 @@
         'angular-scroll-animate',
         'ui.bootstrap',
         'httpFactory',
-        'angular-growl',
         'ngFileUpload'
     ])
     .
@@ -16,6 +15,10 @@
         when('/', {
             templateUrl: 'partials/index',
             controller: 'IndexCtrl'
+        }).
+        when('/dashboard', {
+            templateUrl: 'partials/dashboard',
+            controller: 'DashboardCtrl'
         }).
         when('/toRent', {
             templateUrl: 'partials/toRent',
@@ -26,13 +29,18 @@
             templateUrl: 'partials/chat',
             controller: 'ChatioCtrl'
         }).
-        when('/fileUpload', {
-            templateUrl: 'partials/fileUpload',
-            controller: "FileUploadCtrl"
+        when('/ServiceTester', {
+            templateUrl: 'partials/ServiceTester',
+            controller: "ServiceTesterCtrl"
         }).
         when('/placeArticle', {
             templateUrl: 'partials/placeArticle',
-            controller: 'PlaceArticleCtrl'
+            controller: 'PlaceArticleCtrl',
+            auth: true
+        }).
+        when('/myArticles', {
+            templateUrl: 'partials/myArticles',
+            controller: ''
         }).
         when('/login', {
             templateUrl: 'partials/login',

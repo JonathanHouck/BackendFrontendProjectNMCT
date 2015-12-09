@@ -5,8 +5,8 @@ div(class="intro intro-authorize")
                 div(class="panel")
                     div(class="panel-heading"): h3 Sluit u bij ons aan
                     div(class="panel-body")
-                        div(growl)
-                        form(class="form-horizontal", name="registerForm" ng-submit="register()")
+                        uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)")   {{alert.msg}}
+                        form(class="form-horizontal", name="registerForm", ng-submit="register()")
                             div(class="form-group", ng-class="{'has-error': registerForm.firstname.$dirty && registerForm.firstname.$invalid, 'has-success': registerForm.firstname.$dirty && !registerForm.firstname.$invalid}")
                                 label(for=firstname, class="col-sm-3 control-label") Voornaam
                                 div(class="col-sm-9")

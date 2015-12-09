@@ -8,10 +8,11 @@ var async = require('async');
 var cloudinary = require('cloudinary');
 cloudinary.config({cloud_name: 'swoppr', api_key: '574615225534372', api_secret: 'mNUyKP0jlRPHTgGs_yUeiTod5dw'});
 
+/*//alle images van prodcuten uit de cloud verwijderen
 cloudinary.api.delete_resources_by_tag('product',
     function(result){
         console.log(result);
-    });
+});*/
 
 exports.getProductByName = function(req, res, name) {
     swoppr.userModel.findOne({"products._id": id})
@@ -61,7 +62,7 @@ exports.getProductByIdUser = function(req, res, id) {
 exports.addProductWithPictureUser = function(req, res) {
     swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
         if (err || !user) {
-            res.json({"error": "userId niet gevonden"});
+            res.json({"message": "userId niet gevonden"});
             return ;
         }
 

@@ -5,7 +5,7 @@ div(class="intro intro-authorize")
                 div(class="panel")
                     div(class="panel-heading"): h3 Inloggen
                     div(class="panel-body")
-                        div(growl)
+                        uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)")   {{alert.msg}}
                         form(class="form-horizontal", name="loginForm" ng-submit="login()")
                             div(class="form-group", ng-class="{'has-error': loginForm.email.$dirty && loginForm.email.$invalid, 'has-success': loginForm.email.$dirty && !loginForm.email.$invalid}")
                                 label(for=email, class="col-sm-3 control-label") Emailadres

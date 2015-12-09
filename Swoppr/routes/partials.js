@@ -15,11 +15,15 @@ module.exports = function(passport) {
         res.render("partials/index");
     });
 
+    router.get('/dashboard', function(req, res) {
+        res.render("partials/dashboard");
+    });
+
     router.get('/toRent', isLoggedIn, function(req, res) {
         res.render("partials/toRent");
     });
 
-    router.get('/placeArticle', function(req, res) {
+    router.get('/placeArticle',isLoggedIn, function(req, res) {
         res.render("partials/placeArticle");
     });
 
@@ -47,6 +51,7 @@ module.exports = function(passport) {
                  if (err) {
                      return res.json(err);
                  }
+
                  return res.json({ redirect: '/profile' });
              });
          })(req, res);
@@ -116,8 +121,8 @@ module.exports = function(passport) {
         res.render("partials/chat");
     });
 
-    router.get('/fileUpload', function(req, res) {
-        res.render("partials/fileUpload");
+    router.get('/ServiceTester', function(req, res) {
+        res.render("partials/ServiceTester");
     });
 
     return router;

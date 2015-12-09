@@ -16,14 +16,6 @@ router.get('/getByIdUser/:id', function(req, res) {
     return swopprCtrl.getProductByIdUser(req, res, id);
 });
 
-router.post('/newProduct', multipartyMiddleware, function(req, res) {
-    return swopprCtrl.addProductWithPictureUser(req, res);
-});
-
-/*router.post('/newProduct', function(req, res) {
-    return swopprCtrl.addProductUser(req, res);
-});*/
-
 router.get('/getAll', function(req, res) {
    return swopprCtrl.getAllProducts(req, res);
 });
@@ -31,6 +23,10 @@ router.get('/getAll', function(req, res) {
 router.get('/removeProductUser/:id', function(req, res) {
     var id = req.params.id;
     return swopprCtrl.removeProductUser(req, res, id);
+});
+
+router.post('/newProduct', multipartyMiddleware, function(req, res) {
+    return swopprCtrl.addProductWithPictureUser(req, res);
 });
 
 router.post('/editProductUser', function(req, res) {

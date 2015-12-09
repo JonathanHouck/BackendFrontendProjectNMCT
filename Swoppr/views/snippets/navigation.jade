@@ -9,18 +9,18 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                 span(class="icon-bar")
                 span(class="icon-bar")
                 span(class="icon-bar")
-            a(class="navbar-brand", href="#")
+            a(href="/", class="navbar-brand")
                 img(src="images/logo_swoppr.png")
-            a(href="#", class="navbar-title")
+            a(href="/", class="navbar-title")
                 img(src="images/logo_swoppr.png")
                 p Swoppr
         div(id="navbar", class="navbar-collapse collapse", uib-collapse="isCollapsed")
             ul(class="nav navbar-nav")
-                li: a(href="/", ng-class="getClass('/')") Start
+                li: a(href="/dashboard") Dasboard
                     i(class="underline")
-                li: a(href="/toRent", ng-class="getClass('/toRent')") te verhuren
+                li: a(href="/toRent") te verhuren
                     i(class="underline")
-                li: a(href="/placeArticle", ng-class="getClass('/placeArticle')") Plaats artikel
+                li: a(href="/placeArticle") Plaats artikel
                     i(class="underline")
             ul(class="nav navbar-nav navbar-right", ng-show="$root.user.local.email")
                 li(class="dropdown")

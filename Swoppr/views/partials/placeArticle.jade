@@ -1,7 +1,30 @@
 //
-   Created by jonah on 11/13/2015.
+   Created by jonah on 12/4/2015.
 
 main
     div(class="container")
         div(class="row col-sm-12")
-            div Plaats artikel
+            h1 Nieuw product toevoegen aan gebruiker {{$root.user.firstname}}
+            form
+                div(class="form-group")
+                    label(for=productName, class="col-sm-3") Naam product
+                    div(class="col-sm-9")
+                        input(type="text", name="productName", id="productName", ng-model="productName")
+                div(class="form-group")
+                    label(for=pricePerDay, class="col-sm-3") Prijs per dag
+                    div(class="col-sm-9")
+                        input(type="text", name="pricePerDay", id="pricePerDay", ng-model="pricePerDay")
+                div(class="form-group")
+                    label(for=description, class="col-sm-3") Beschrijving
+                    div(class="col-sm-9")
+                        input(type="text", name="description", id="description", ng-model="description")
+                div(class="form-group")
+                    label(for="file", class="col-sm-3") Bestand opladen
+                    div(class="col-sm-9")
+                        input(type="file", ngf-select, ng-model="picture", name="picture", id="file", accept="image/*", ngf-max-size="2MB")
+                div(class="form-group")
+                    div(class="col-sm-offset-3 col-sm-9")
+                        input(type="submit", ng-click="uploadFile(picture)")
+        div(class="row col-sm-12")
+            div(ng-repeat="p in products")
+                img(src="{{p.url}}" alt="{{p.productName}}")
