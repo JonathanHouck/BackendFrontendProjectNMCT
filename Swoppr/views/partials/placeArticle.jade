@@ -1,30 +1,46 @@
 //
    Created by jonah on 12/4/2015.
 
-main
-    div(class="container")
-        div(class="row col-sm-12")
-            h1 Nieuw product toevoegen aan gebruiker {{$root.user.firstname}}
-            form
-                div(class="form-group")
-                    label(for=productName, class="col-sm-3") Naam product
-                    div(class="col-sm-9")
-                        input(type="text", name="productName", id="productName", ng-model="productName")
-                div(class="form-group")
-                    label(for=pricePerDay, class="col-sm-3") Prijs per dag
-                    div(class="col-sm-9")
-                        input(type="text", name="pricePerDay", id="pricePerDay", ng-model="pricePerDay")
-                div(class="form-group")
-                    label(for=description, class="col-sm-3") Beschrijving
-                    div(class="col-sm-9")
-                        input(type="text", name="description", id="description", ng-model="description")
-                div(class="form-group")
-                    label(for="file", class="col-sm-3") Bestand opladen
-                    div(class="col-sm-9")
-                        input(type="file", ngf-select, ng-model="picture", name="picture", id="file", accept="image/*", ngf-max-size="2MB")
-                div(class="form-group")
-                    div(class="col-sm-offset-3 col-sm-9")
-                        input(type="submit", ng-click="uploadFile(picture)")
-        div(class="row col-sm-12")
-            div(ng-repeat="p in products")
-                img(src="{{p.url}}" alt="{{p.productName}}")
+div(class="container")
+    div(class="row col-sm-12")
+        h1 Plaats artikel
+        form(class="form-horizontal", name="placeArticleForm")
+            div(class="form-group", ng-class="{'has-error': placeArticleForm.productName.$dirty && placeArticleForm.productName.$invalid, 'has-success': placeArticleForm.productName.$dirty && !placeArticleForm.productName.$invalid}")
+                label(for=productName, class="col-sm-3 control-label text-left") Naam
+                div(class="col-sm-9")
+                    input(type="text", name="productName", id="productName", class="form-control" placeholder="Bv. Grasmaaier", ng-model="productName", ng-minlength="2", ng-maxlength="50", ng-required="true")
+                div(class="col-sm-9 col-sm-offset-3", ng-messages="placeArticleForm.productName.$error", ng-if="placeArticleForm.productName.$touched")
+                    p(ng-message="required") Voornaam is verplicht in te vullen
+                    p(ng-message="minlength") Voornaam is te kort
+                    p(ng-message="maxlength") Voornaam is te lang
+            div(class="form-group", ng-class="{'has-error': placeArticleForm.pricePerDay.$dirty && placeArticleForm.pricePerDay.$invalid, 'has-success': placeArticleForm.pricePerDay.$dirty && !placeArticleForm.pricePerDay.$invalid}")
+                label(for=pricePerDay, class="col-sm-3 control-label text-left") Swoppers per dag
+                div(class="col-sm-9")
+                    input(type="number", name="pricePerDay", id="pricePerDay", class="form-control", placeholder="Bv. 100 Swoppers kosten 10 euro", ng-model="pricePerDay", min="1", max="10000", ng-required="true")
+                div(class="col-sm-9 col-sm-offset-3", ng-messages="placeArticleForm.pricePerDay.$error", ng-if="placeArticleForm.pricePerDay.$touched")
+                    p(ng-message="required") Swoppers per dag is verplicht in te vullen
+                    p(ng-message="number") Gelieve een nummer in te voeren
+                    p(ng-message="min") Gelieve minimaal 1 Swopper per dag te vragen
+                    p(ng-message="max") Gelieve maximaal 10000 per dag te vragen
+            div(class="form-group", ng-class="{'has-error': placeArticleForm.description.$dirty && placeArticleForm.description.$invalid, 'has-success': placeArticleForm.description.$dirty && !placeArticleForm.description.$invalid}")
+                label(for=description, class="col-sm-3 control-label text-left") Beschrijving
+                div(class="col-sm-9")
+                    textarea(name="description", id="description", ng-model="description", class="form-control", placeholder="Korte, duidelijke beschrijving van het artikel", ng-minlength="20", ng-maxlength="500", ng-required="true")
+                div(class="col-sm-9 col-sm-offset-3", ng-messages="placeArticleForm.description.$error", ng-if="placeArticleForm.description.$touched")
+                    p(ng-message="required") Beschrijving is verplicht in te vullen
+                    p(ng-message="minlength") Beschrijving is te kort
+                    p(ng-message="maxlength") Beschrijving is te lang
+            div(class="form-group", ng-class="{'has-error': placeArticleForm.picture.$dirty && placeArticleForm.picture.$invalid, 'has-success': placeArticleForm.picture.$dirty && !placeArticleForm.picture.$invalid}")
+                label(for="picture", class="col-sm-3 control-label text-left") Afbeelding opladen
+                div(class="col-sm-9")
+                    input(type="file", ngf-select, ng-model="picture", name="picture", id="picture", accept="image/*", ngf-max-size="2MB", ngf-min-ratio="1:1", ngf-max-ratio="16:9")
+                div(class="col-sm-9 col-sm-offset-3", ng-messages="placeArticleForm.picture.$error", ng-if="placeArticleForm.picture.$touched")
+                    p(ng-message="maxSize") Afbeelding mag maximaal 2MB groot zijn
+                    p(ng-message="minRatio") De breedte van de afbeelding moet gelijk of hoger zijn de de hoogte
+                    p(ng-message="maxRatio") Gelieve een afbeelding te selecteren die minder breed is
+            div(class="form-group")
+                div(class="col-sm-offset-3 col-sm-9")
+                    input(type="submit", ng-click="uploadFile(picture)")
+    div(class="row col-sm-12")
+        div(ng-repeat="p in $root.user.products")
+            img(src="{{p.url}}" alt="{{p.productName}}")

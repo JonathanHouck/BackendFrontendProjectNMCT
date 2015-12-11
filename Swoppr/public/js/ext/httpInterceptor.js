@@ -10,9 +10,7 @@
                         if (response.data.redirect) {
                             $location.path(response.data.redirect);
                             return {} || $q.when(response);
-                        }/* else if (response.data.error) {
-                            growl.addErrorMessage(response.data.error);
-                        }*/
+                        }
                     }
                     return response || $q.when(response);
                 }

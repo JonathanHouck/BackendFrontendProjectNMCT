@@ -5,10 +5,10 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('PlaceArticleCtrl', ['$rootScope', '$scope', '$http', 'Upload', PlaceArticleCtrl]);
+        .controller('PlaceArticleCtrl', ['$rootScope', '$scope', 'Upload', PlaceArticleCtrl]);
 
-    function PlaceArticleCtrl ($rootScope, $scope, $http, Upload) {
-        $scope.getUsers = function() {
+    function PlaceArticleCtrl ($rootScope, $scope, Upload) {
+        /*$scope.getUsers = function() {
             if ($rootScope.user) {
                 $http.get('/api/user/getById/' + $rootScope.user._id)
                     .success(function(data) {
@@ -17,7 +17,7 @@
             }
         };
 
-        $scope.getUsers();
+        $scope.getUsers();*/
 
         $scope.uploadFile = function(file) {
             file.upload = Upload.upload({
@@ -31,18 +31,9 @@
                 }
             }).then(function(resp) {
                 if (resp.data.ok) {
-                    $scope.products.push(resp.data.ok);
+                    $rootScope.user.products.push(resp.data.ok);
                 }
             });
         };
     }
 }());
-
-function getProducts() {
-    $rootScope.$watch('user', function() {
-        $http.get('/api/user/getById/' + $rootScope.user._id)
-            .success(function(data) {
-                $scope.products = data.products;
-            });
-    });
-}
