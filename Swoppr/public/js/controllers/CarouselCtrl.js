@@ -14,7 +14,7 @@
 
         slides.push({
             image: 'images/geldVerdienen.png',
-            text: 'Iets nodig maar wil je niet teveel geld uitgeven?'
+            text: 'Geld verdienen met je aankopen?'
         });
 
         slides.push({

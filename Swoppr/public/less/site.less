@@ -16,6 +16,12 @@ h1 {
 
 h2 {
   font-size:(20px);
+  text-transform: uppercase;
+}
+
+p[ng-message] {
+  margin-top: 5px;
+  color: #a94442;
 }
 
 .smallFont {
@@ -28,6 +34,7 @@ h2 {
 
 .mediumFont {
   .fontSize(35px);
+  text-transform: none;
 }
 
 .largeFont {
@@ -38,9 +45,8 @@ h2 {
   .fontSize(70px);
 }
 
-p[ng-message] {
-  margin-top: 5px;
-  color: #a94442;
+.btn {
+  .transitionBtn();
 }
 
 div[ng-view] {
@@ -327,7 +333,7 @@ main section {
   }
 
   div {
-    transition: all .5s;
+    .transitionBtn();
   }
 }
 
@@ -473,4 +479,8 @@ main section {
 
 .form-horizontal .text-left {
   text-align: left;
+}
+
+.images-container {
+  height: 250px;
 }

@@ -3,7 +3,7 @@ div(class="intro intro-authorize")
         div(class="container")
             div(class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2")
                 div(class="panel")
-                    div(class="panel-heading"): h3 Sluit u bij ons aan
+                    div(class="panel-heading"): h2 Sluit u bij ons aan
                     div(class="panel-body")
                         uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)")   {{alert.msg}}
                         form(class="form-horizontal", name="registerForm", ng-submit="register()")
@@ -49,6 +49,6 @@ div(class="intro intro-authorize")
                                     p(ng-message="compareTo") Herhaalde wachtwoord is niet gelijk aan het wachtwoord
                             div(class="form-group")
                                 div(class="col-sm-offset-3 col-sm-2 authenticatebtn")
-                                    input(type="submit", ng-disabled="registerForm.$invalid", value="Registreer" class="btn")
+                                    input(type="submit", ng-disabled="registerForm.$invalid", value="Registreer", class="btn")
                                 div(class="col-sm-6 otherAction")
                                     p: a(href="/login") Reeds geregistreerd? Log in.

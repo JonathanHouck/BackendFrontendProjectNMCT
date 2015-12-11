@@ -66,9 +66,8 @@ exports.addProductWithPictureUser = function(req, res) {
             return ;
         }
 
-        var file = req.files.file;
-
-        if (file) {
+        if (req.files) {
+            var file = req.files.file;
             cloudinary.uploader.upload(file.path, function(result) {
                 if (result) {
                     var entry = new swoppr.productModel({
@@ -78,24 +77,37 @@ exports.addProductWithPictureUser = function(req, res) {
                         url: result.url
                     });
 
-                    user.products.push(entry);
+                    addProduct(res, user, entry);
 
-                    user.save(function(err2) {
-                        if (err2) {
-                            res.json({"error": "Product toevoegen aan gebruiker mislukt"});
-                        } else {
-                            res.json({"ok": entry});
-                        }
-                    });
                 } else {
                     res.json({"error": "Afbeelding uploaden mislukt"});
                 }
             }, {tags: "product", width: 100, height: 150, crop: 'fit'});
+        //product toevoegen zonder file
         } else {
-            res.json({"error": "Afbeelding niet gevonden"});
+
+            var entry = new swoppr.productModel({
+                productName: req.body.productName,
+                pricePerDay: req.body.pricePerDay,
+                description: req.body.description
+            });
+
+            addProduct(res, user, entry);
         }
     });
 };
+
+function addProduct(res, user, entry) {
+    user.products.push(entry);
+
+    user.save(function(err) {
+        if (err) {
+            res.json({"error": "Product toevoegen aan gebruiker mislukt"});
+        } else {
+            res.json({"ok": entry});
+        }
+    });
+}
 
 /*exports.addProductUser = function(req, res) {
 

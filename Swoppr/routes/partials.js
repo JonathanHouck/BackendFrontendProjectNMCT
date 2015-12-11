@@ -15,10 +15,6 @@ module.exports = function(passport) {
         res.render("partials/index");
     });
 
-    router.get('/dashboard', function(req, res) {
-        res.render("partials/dashboard");
-    });
-
     router.get('/toRent', isLoggedIn, function(req, res) {
         res.render("partials/toRent");
     });

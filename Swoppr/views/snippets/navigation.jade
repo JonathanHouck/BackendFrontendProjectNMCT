@@ -16,11 +16,9 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                 p Swoppr
         div(id="navbar", class="navbar-collapse collapse", uib-collapse="isCollapsed")
             ul(class="nav navbar-nav")
-                li: a(href="/dashboard") Dasboard
+                li: a(href="/toRent", ng-class="getClass('/toRent')") Te verhuren
                     i(class="underline")
-                li: a(href="/toRent") te verhuren
-                    i(class="underline")
-                li: a(href="/placeArticle") Plaats artikel
+                li: a(href="/placeArticle", ng-class="getClass('/placeArticle')") Plaats artikel
                     i(class="underline")
             ul(class="nav navbar-nav navbar-right", ng-show="$root.user.local.email")
                 li(class="dropdown")
@@ -34,8 +32,8 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                     a(href="/logout") Uitloggen
             ul(class="nav navbar-nav navbar-right", ng-hide="$root.user.local.email")
                 li
-                    a(href="/login") Inloggen
+                    a(href="/login", ng-class="getClass('/login')") Inloggen
                         i(class="underline")
                 li
-                    a(href="/register") Registreer
+                    a(href="/register", ng-class="getClass('/register')") Registreer
                     i(class="underline")

@@ -16,10 +16,6 @@
             templateUrl: 'partials/index',
             controller: 'IndexCtrl'
         }).
-        when('/dashboard', {
-            templateUrl: 'partials/dashboard',
-            controller: 'DashboardCtrl'
-        }).
         when('/toRent', {
             templateUrl: 'partials/toRent',
             controller: '',
