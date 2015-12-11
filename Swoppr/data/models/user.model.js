@@ -17,7 +17,7 @@ exports.createUser = function(req, res) {
             return;
         }
 
-        res.json({"ok": "Gebruiker toegevoegd"})
+        res.json({"ok": "Gebruiker toegevoegd"});
     });
 };
 
@@ -65,7 +65,7 @@ exports.getAllUsersWithProducts = function(req, res) {
             callback(null, "getUsers");
 
         }
-    })
+    });
 };
 
 exports.getAll = function(req, res) {
@@ -78,5 +78,5 @@ exports.getAll = function(req, res) {
             }
             console.log("hell");
             res.json(users);
-    })
+    });
 };

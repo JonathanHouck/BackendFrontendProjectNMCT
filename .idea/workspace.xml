@@ -4,15 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/Swoppr/public/js/controllers/RegisterCtrl.js" line="24" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87491fe2-1133-4208-8d80-4fe5931cfaa4" name="Default" comment="">
+    <list default="true" id="87491fe2-1133-4208-8d80-4fe5931cfaa4" name="Default" comment="number and images validation">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/app.js" afterPath="$PROJECT_DIR$/Swoppr/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/css/site.min.css" afterPath="$PROJECT_DIR$/Swoppr/public/css/site.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/app.min.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/app.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/httpInterceptor.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/ext/httpInterceptor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/less/site.less" afterPath="$PROJECT_DIR$/Swoppr/public/less/site.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/bin/www" afterPath="$PROJECT_DIR$/Swoppr/bin/www" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/config/auth.js" afterPath="$PROJECT_DIR$/Swoppr/config/auth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/data/models/product.model.js" afterPath="$PROJECT_DIR$/Swoppr/data/models/product.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/data/models/renting.model.js" afterPath="$PROJECT_DIR$/Swoppr/data/models/renting.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/data/models/user.model.js" afterPath="$PROJECT_DIR$/Swoppr/data/models/user.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/gulpfile.js" afterPath="$PROJECT_DIR$/Swoppr/gulpfile.js" />
     </list>
     <ignored path="BackendFrontendProjectNMCT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,28 +31,7 @@
     <favorites_list name="BackendFrontendProjectNMCT" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="placeArticle.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7253635">
-              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlaceArticleCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,13 +49,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Swoppr/views/snippets/start/header.jade" />
-        <option value="$PROJECT_DIR$/Swoppr/bin/www" />
-        <option value="$PROJECT_DIR$/Swoppr/controllers/swoppr.product.controller.js" />
-        <option value="$PROJECT_DIR$/Swoppr/data/schemas/swoppr.model.js" />
         <option value="$PROJECT_DIR$/Swoppr/data/models.js" />
-        <option value="$PROJECT_DIR$/Swoppr/data/models/message.model.js" />
-        <option value="$PROJECT_DIR$/Swoppr/data/models/user.model.js" />
         <option value="$PROJECT_DIR$/Swoppr/routes/apiChat.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/app.min.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/directives/logoutDir.js" />
@@ -91,10 +63,8 @@
         <option value="$PROJECT_DIR$/Swoppr/public/js/models/User.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/models/Renting.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/services/UserService.js" />
-        <option value="$PROJECT_DIR$/Swoppr/data/models/renting.model.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/services/RentingService.js" />
         <option value="$PROJECT_DIR$/Swoppr/sockets/base.js" />
-        <option value="$PROJECT_DIR$/Swoppr/gulpfile.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/models/Product.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/services/ProductService.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/myArticles.jade" />
@@ -103,25 +73,33 @@
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/FileUploadCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/fileUpload.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/ServiceTesterCtrl.js" />
-        <option value="$PROJECT_DIR$/Swoppr/routes/apiFileUpload.js" />
         <option value="$PROJECT_DIR$/Swoppr/routes/apiProduct.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/dashboard.jade" />
         <option value="$PROJECT_DIR$/Swoppr/config/passport.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/ext/growl.js" />
-        <option value="$PROJECT_DIR$/Swoppr/data/models/product.model.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/login.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/index.jade" />
-        <option value="$PROJECT_DIR$/Swoppr/routes/partials.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/RegisterCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/app.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/ext/httpInterceptor.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/LoginCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/register.jade" />
-        <option value="$PROJECT_DIR$/Swoppr/app.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/less/site.less" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade" />
+        <option value="$PROJECT_DIR$/Swoppr/config/auth.js" />
+        <option value="$PROJECT_DIR$/Swoppr/bin/www" />
+        <option value="$PROJECT_DIR$/Swoppr/data/models/message.model.js" />
+        <option value="$PROJECT_DIR$/Swoppr/data/models/user.model.js" />
+        <option value="$PROJECT_DIR$/Swoppr/data/models/renting.model.js" />
+        <option value="$PROJECT_DIR$/Swoppr/data/models/product.model.js" />
+        <option value="$PROJECT_DIR$/Swoppr/routes/apiFileUpload.js" />
+        <option value="$PROJECT_DIR$/Swoppr/app.js" />
+        <option value="$PROJECT_DIR$/Swoppr/routes/partials.js" />
+        <option value="$PROJECT_DIR$/Swoppr/node_modules/angular/angular.js" />
+        <option value="$PROJECT_DIR$/Swoppr/gulpfile.js" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js" />
       </list>
     </option>
   </component>
@@ -131,9 +109,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -160,8 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,32 +335,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackendFrontendProjectNMCT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackendFrontendProjectNMCT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swoppr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -488,6 +439,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -836,7 +789,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449668717318</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="number and images validation">
+      <created>1449845261086</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1449845261086</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -849,27 +808,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26175213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12908325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35536295" sideWeight="0.5769231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31493506" sideWeight="0.61696523" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29212254" sideWeight="0.42307693" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28896105" sideWeight="0.42307693" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3051948" sideWeight="0.7291886" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.49578503" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3051948" sideWeight="0.7291886" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -904,7 +863,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="api product get all" />
     <MESSAGE value="Rentings updated" />
     <MESSAGE value="start validatie + projectdossier aangepast" />
     <MESSAGE value="start validatie + projectdossier verder aangevult" />
@@ -929,7 +887,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="image resizer" />
     <MESSAGE value="login and errors fixed, without growl" />
-    <option name="LAST_COMMIT_MESSAGE" value="login and errors fixed, without growl" />
+    <MESSAGE value="number and images validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="number and images validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -955,39 +914,11 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Swoppr/views/error.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/ext/angular-file-upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/routes/apiChat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/routes/apiUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.846154">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1033,13 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/config/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/public/js/models/Product.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1068,20 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/data/models/message.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/profile.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47304347">
@@ -1093,13 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/routes/apiFileUpload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1142,13 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1223,59 +1119,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/data/models/product.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="185" column="22" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/data/models/renting.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/routes/partials.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="40" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/sockets/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/data/schemas/swoppr.schema.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,7 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,7 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1299,7 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9056604">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1307,7 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1315,15 +1158,118 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7465596">
           <caret line="43" column="232" selection-start-line="43" selection-start-column="232" selection-end-line="43" selection-end-column="232" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/config/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/data/models/user.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/data/models/renting.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="199" column="51" selection-start-line="199" selection-start-column="51" selection-end-line="199" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/data/models/product.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="208" column="51" selection-start-line="208" selection-start-column="51" selection-end-line="208" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/routes/apiFileUpload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21656051">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7253635">
+        <state vertical-scroll-proportion="0.0">
           <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.517516">
+          <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/data/models/message.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3789809">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9318937">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/sockets/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18949045">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/routes/partials.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6210191">
+          <caret line="128" column="2" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/node_modules/angular/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.827586">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/routes/apiUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5955414">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
         </state>
       </provider>
     </entry>

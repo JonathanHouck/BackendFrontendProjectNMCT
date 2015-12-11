@@ -38,6 +38,19 @@ gulp.task("default", function() {
     jsWatcher.on('change', function(event) {
         console.log(event.path + " changed");
     });
+
+    var backendJsWatcher = gulp.watch(['./bin/www',
+                                './config/**/*.js',
+                                './data/**/*.js',
+                                './routes/**/*.js',
+                                './sockets/**/*.js',
+                                './app.js',
+                                './gulpfile.js'], ['backendJs']
+    );
+
+    backendJsWatcher.on('change', function(event) {
+        console.log(event.path + " changed");
+    });
 });
 
 gulp.task("js",function (){
@@ -57,9 +70,21 @@ gulp.task("js",function (){
         .pipe(notify({message: 'js built'}));
 });
 
+gulp.task("backendJs", function() {
+    gulp.src(['./bin/www',
+            './config/**/*.js',
+            './data/**/*.js',
+            './routes/**/*.js',
+            './sockets/**/*.js',
+            './app.js',
+            './gulpfile.js'], ['backendJs'])
+        .pipe(jshint())
+        .pipe(jshint.reporter(jsStylish))
+        .pipe(notify({message: 'backendjs built'}));
+});
+
 gulp.task("css", function() {
     gulp.src("./public/less/**/*.less")
-
         .pipe(less())
         .pipe(csslint({
             'box-sizing': false
@@ -74,5 +99,5 @@ gulp.task("css", function() {
         .pipe(gulp.dest("./public/css"))
         .pipe(notify({
             message: "css built"
-        }))
+        }));
 });

@@ -170,13 +170,13 @@ exports.addRentingUser = function(req, res) {
                     }
 
                     callback(null, "checkRenterWithProduct");
-            })
+            });
         },
         function(callback) {
             swoppr.userModel.findById(req.body.renterId, function(err, user) {
                 if (err) callback("renterId bestaat niet", "checkRenter");
                 else callback(null, "checkRenter");
-            })
+            });
         }
 
     ], function(err, results) {
@@ -197,7 +197,7 @@ exports.addRentingUser = function(req, res) {
                 res.json({"error": "Renting toevoegen mislukt"});
             }
 
-            res.json({"ok": "Renting toegevoegd"})
+            res.json({"ok": "Renting toegevoegd"});
         });
     });
 };

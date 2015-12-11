@@ -84,7 +84,7 @@ exports.addProductWithPictureUser = function(req, res) {
                         if (err2) {
                             res.json({"error": "Product toevoegen aan gebruiker mislukt"});
                         } else {
-                            res.json({"ok": entry})
+                            res.json({"ok": entry});
                         }
                     });
                 } else {
@@ -94,7 +94,7 @@ exports.addProductWithPictureUser = function(req, res) {
         } else {
             res.json({"error": "Afbeelding niet gevonden"});
         }
-    })
+    });
 };
 
 /*exports.addProductUser = function(req, res) {
@@ -150,15 +150,15 @@ exports.getAllProducts = function(req, res) {
 
                 //na ophalen alle producten van de user
                 if (err) {
-                    callback("Fout bij bij overlopen user", "getUsers")
+                    callback("Fout bij bij overlopen user", "getUsers");
                 }
 
-                callback(null, "getUsers")
+                callback(null, "getUsers");
             });
 
             function iteratorProducts(product, callback2) {
                 if (err || !product) {
-                    callback2("Fout bij overlopen producten users", "getProductsOfUser")
+                    callback2("Fout bij overlopen producten users", "getProductsOfUser");
                 }
 
                 product = product.toObject();
@@ -168,13 +168,13 @@ exports.getAllProducts = function(req, res) {
                 callback2(null, "getProductsUser");
             }
         }
-    })
+    });
 };
 
 exports.editProductUser = function(req, res) {
     swoppr.userModel.findOne({"products._id": req.body.id}).exec(function(err, userWithProduct) {
 
-        if (err || userWithProduct == null) {
+        if (err || userWithProduct === null) {
             res.json({"error": "productId niet gevonden"});
             return ;
         }
@@ -187,14 +187,14 @@ exports.editProductUser = function(req, res) {
                 res.json({"error": "Fout bij opslaan product van de gebruiker"});
             }
 
-            res.json({"ok": "Product gewijzigd"})
+            res.json({"ok": "Product gewijzigd"});
         });
     });
 };
 
 exports.removeProductUser = function(req, res, id) {
     swoppr.userModel.findOne({"products._id": id}).exec(function(err, userWithProduct) {
-        if (err || userWithProduct == null) {
+        if (err || userWithProduct === null) {
             res.json({"error": "productId niet gevonden"});
             return ;
         }
@@ -206,7 +206,7 @@ exports.removeProductUser = function(req, res, id) {
                 res.json({"error": "Fout bij verwijderen product van de gebruiker"});
             }
 
-            res.json({"ok": "Product verwijderd"})
+            res.json({"ok": "Product verwijderd"});
         });
 
     });

@@ -22,4 +22,4 @@ module.exports = {
         'callbackURL' 	: 'http://localhost:3000/partials/auth/google/callback'
     }
 
-};;
+};
