@@ -14,12 +14,12 @@
 
         slides.push({
             image: 'images/geldVerdienen.png',
-            text: 'Geld verdienen met je aankopen?'
+            text: 'Gebruik je enkel in het weekend uw grasmaaier? Verdien nu in de weekdagen geld ermee!'
         });
 
         slides.push({
-            image: 'images/ongebruikteGoederen.png',
-            text: "Veel geld uitgegeven maar gebruikt het zelden?"
+            image: 'images/kruiwagen.png',
+            text: 'Enkel bij het verhuizen een kruiwagen nodig? Huur nu een kruiwagen voor deze periode!'
         });
     }
 }());

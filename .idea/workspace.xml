@@ -4,531 +4,18 @@
     <bookmark url="file://$PROJECT_DIR$/Swoppr/public/js/controllers/RegisterCtrl.js" line="24" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87491fe2-1133-4208-8d80-4fe5931cfaa4" name="Default" comment="html fixes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Swoppr/public/images/pruner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Swoppr/public/images/pruner_blurred.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/DashboardCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Swoppr/views/partials/dashboard.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/spinning.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_spinning.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/font-awesome/scss/font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/geldVerdienen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/gregoire-full.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/gregoire.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/jonathan-full.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/jonathan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/lienert-full.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/lienert.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/logo_swoppr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/neigbourhood.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/neigbourhood2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/ongebruikteGoederen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/thibault-full.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/thibault.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/ward-full.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/images/ward.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/scripts/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/scripts/controllers/AnimateCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/scripts/controllers/CarouselCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/scripts/ext/angular-animate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/scripts/ext/angular-scroll-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/scripts/ext/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/scripts/ext/ui-bootstrap-tpls.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/styles/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/styles/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/app/styles/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-animate/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-animate/angular-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-animate/angular-animate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-animate/angular-animate.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-animate/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-animate/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-animate/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/.bowerrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/.jsbeautifyrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular-mocks/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular-mocks/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular-mocks/angular-mocks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular-mocks/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular-mocks/ngAnimateMock.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular-mocks/ngMock.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular-mocks/ngMockE2E.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular-mocks/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/angular-csp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/angular.min.js.gzip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/angular.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/angular/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/animate-config.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/animate.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/_base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/attention_seekers/bounce.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/attention_seekers/flash.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/attention_seekers/jello.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/attention_seekers/pulse.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/attention_seekers/rubberBand.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/attention_seekers/shake.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/attention_seekers/swing.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/attention_seekers/tada.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/attention_seekers/wobble.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_entrances/bounceIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_entrances/bounceInDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_entrances/bounceInLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_entrances/bounceInRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_entrances/bounceInUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_exits/bounceOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_exits/bounceOutDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_exits/bounceOutLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_exits/bounceOutRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/bouncing_exits/bounceOutUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_entrances/fadeIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_entrances/fadeInDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_entrances/fadeInDownBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_entrances/fadeInLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_entrances/fadeInLeftBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_entrances/fadeInRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_entrances/fadeInRightBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_entrances/fadeInUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_entrances/fadeInUpBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_exits/fadeOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_exits/fadeOutDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_exits/fadeOutDownBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_exits/fadeOutLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_exits/fadeOutLeftBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_exits/fadeOutRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_exits/fadeOutRightBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_exits/fadeOutUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/fading_exits/fadeOutUpBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/flippers/flip.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/flippers/flipInX.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/flippers/flipInY.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/flippers/flipOutX.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/flippers/flipOutY.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/lightspeed/lightSpeedIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/lightspeed/lightSpeedOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_entrances/rotateIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_entrances/rotateInDownLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_entrances/rotateInDownRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_entrances/rotateInUpLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_entrances/rotateInUpRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_exits/rotateOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_exits/rotateOutDownLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_exits/rotateOutDownRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_exits/rotateOutUpLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/rotating_exits/rotateOutUpRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/sliding_entrances/slideInDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/sliding_entrances/slideInLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/sliding_entrances/slideInRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/sliding_entrances/slideInUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/sliding_exits/slideOutDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/sliding_exits/slideOutLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/sliding_exits/slideOutRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/sliding_exits/slideOutUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/specials/hinge.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/specials/rollIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/specials/rollOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_entrances/zoomIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_entrances/zoomInDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_entrances/zoomInLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_entrances/zoomInRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_entrances/zoomInUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_exits/zoomOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_exits/zoomOutDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_exits/zoomOutLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_exits/zoomOutRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/animate.css/source/zooming_exits/zoomOutUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/karma.conf.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/lib/jasmine-sinon.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/spec/existing-method-spy-matchers.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/spec/individual-spy-calls.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/spec/jasmine-matchers-compatibility.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/spec/overwritten-jasmine-matchers.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/spec/spy-matchers.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine-sinon/spec/test-stubs.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/.gitmodules" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/.rspec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/Contribute.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/Gemfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/MIT.LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/Release.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/config.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/images/jasmine_favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jasmine-core.gemspec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jasmine_dev.thor" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jsdoc-template/allclasses.tmpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jsdoc-template/allfiles.tmpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jsdoc-template/class.tmpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jsdoc-template/index.tmpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jsdoc-template/publish.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jsdoc-template/static/default.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jsdoc-template/static/header.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jsdoc-template/static/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jsdoc-template/symbol.tmpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jshint/jshint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/jshint/run.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/example/SpecRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/example/spec/PlayerSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/example/spec/SpecHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/example/src/Player.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/example/src/Song.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/jasmine-html.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/jasmine.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/jasmine.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/json2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/lib/jasmine-core/version.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/console/ConsoleReporterSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/BaseSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/CustomMatchersSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/EnvSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/ExceptionsSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/JsApiReporterSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/MatchersSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/MockClockSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/MultiReporterSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/NestedResultsSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/PrettyPrintSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/QueueSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/ReporterSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/RunnerSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/SpecRunningSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/SpecSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/SpySpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/SuiteSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/UtilSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/core/WaitsForBlockSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/html/HTMLReporterSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/html/MatchersHtmlSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/html/PrettyPrintHtmlSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/html/TrivialReporterSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/jasmine.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/jasmine_self_test_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/node_suite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/runner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/spec_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/tasks/build_distribution_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/tasks/build_github_pages_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/tasks/build_standalone_distribution_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/tasks/build_standalone_runner_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/tasks/count_specs_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/tasks/execute_specs_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/tasks/jshint_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/tasks/release_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/tasks/version_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/templates/runner.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/spec/templates/script_tag.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/console/ConsoleReporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/Block.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/Env.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/JsApiReporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/Matchers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/MultiReporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/NestedResults.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/PrettyPrinter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/Queue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/Reporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/Runner.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/Spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/Suite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/WaitsBlock.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/WaitsForBlock.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/base.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/mock-timeout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/core/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/HtmlReporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/HtmlReporterHelpers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/ReporterView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/SpecView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/SuiteView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/TrivialReporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/_HTMLReporter.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/_TrivialReporter.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/jasmine.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/html/jasmine.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/templates/example_project_jasmine_tags.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/templates/version.js.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/templates/version.rb.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/version.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/src/version.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/docs.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/base.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/build_distribution.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/build_github_pages.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/build_standalone_distribution.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/build_standalone_runner.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/count_specs.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/execute_specs.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/js_hint.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/release.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/sources.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/jasmine/tasks/jasmine_dev/version.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/Changelog.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/assert.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/behavior.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/call.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/collection.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/extend.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/format.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/log_error.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/match.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/mock.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/sandbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/spy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/stub.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/test_case.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/times_in_words.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/typeOf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/event.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/fake_server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/fake_server_with_clock.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/fake_timers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/fake_xdomain_request.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/fake_xml_http_request.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/timers_ie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/xdr_ie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/lib/sinon/util/xhr_ie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinon/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinonjs/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinonjs/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinonjs/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/sinonjs/sinon.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/underscore/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/underscore/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/underscore/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/underscore/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/underscore/underscore-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/underscore/underscore-min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/bower_components/underscore/underscore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/dist/angular-scroll-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/css/animations.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/css/doc_widgets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/css/docs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/css/prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/font/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/font/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/font/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/font/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/font/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/js/angular-bootstrap-prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/js/angular-bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/js/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/js/docs-setup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/js/docs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/js/google-code-prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/js/marked.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/docs/partials/api/angular-scroll-animate.directive.when-visible.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/example/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/example/example-controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/example/example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/example/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-scroll-animate/src/angular-scroll-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-ui-bootstrap/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-ui-bootstrap/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-ui-bootstrap/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-ui-bootstrap/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-ui-bootstrap/ui-bootstrap-csp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-ui-bootstrap/ui-bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular-ui-bootstrap/ui-bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular/angular-csp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular/angular.min.js.gzip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular/angular.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/angular/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/animate-config.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/animate.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/_base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/attention_seekers/bounce.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/attention_seekers/flash.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/attention_seekers/jello.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/attention_seekers/pulse.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/attention_seekers/rubberBand.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/attention_seekers/shake.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/attention_seekers/swing.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/attention_seekers/tada.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/attention_seekers/wobble.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_entrances/bounceIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_entrances/bounceInDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_entrances/bounceInLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_entrances/bounceInRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_entrances/bounceInUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_exits/bounceOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_exits/bounceOutDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_exits/bounceOutLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_exits/bounceOutRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/bouncing_exits/bounceOutUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_entrances/fadeIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_entrances/fadeInDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_entrances/fadeInDownBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_entrances/fadeInLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_entrances/fadeInLeftBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_entrances/fadeInRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_entrances/fadeInRightBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_entrances/fadeInUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_entrances/fadeInUpBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_exits/fadeOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_exits/fadeOutDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_exits/fadeOutDownBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_exits/fadeOutLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_exits/fadeOutLeftBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_exits/fadeOutRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_exits/fadeOutRightBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_exits/fadeOutUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/fading_exits/fadeOutUpBig.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/flippers/flip.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/flippers/flipInX.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/flippers/flipInY.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/flippers/flipOutX.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/flippers/flipOutY.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/lightspeed/lightSpeedIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/lightspeed/lightSpeedOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_entrances/rotateIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_entrances/rotateInDownLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_entrances/rotateInDownRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_entrances/rotateInUpLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_entrances/rotateInUpRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_exits/rotateOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_exits/rotateOutDownLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_exits/rotateOutDownRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_exits/rotateOutUpLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/rotating_exits/rotateOutUpRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/sliding_entrances/slideInDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/sliding_entrances/slideInLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/sliding_entrances/slideInRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/sliding_entrances/slideInUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/sliding_exits/slideOutDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/sliding_exits/slideOutLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/sliding_exits/slideOutRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/sliding_exits/slideOutUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/specials/hinge.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/specials/rollIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/specials/rollOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_entrances/zoomIn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_entrances/zoomInDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_entrances/zoomInLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_entrances/zoomInRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_entrances/zoomInUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_exits/zoomOut.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_exits/zoomOutDown.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_exits/zoomOutLeft.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_exits/zoomOutRight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/node_modules/animate.css/source/zooming_exits/zoomOutUp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/photoshop/geldVerdienen.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/photoshop/huurder.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/photoshop/ongebruikteGoederen.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/startpaginatest/photoshop/verhuurderpsd.psd" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/angular-animate.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/angular-animate.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/angular-file-upload.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/angular-file-upload.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/angular-messages.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/angular-messages.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/angular-route.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/angular-route.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/angular.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/angular.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/httpInterceptor.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/httpInterceptor.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/ng-file-upload-shim.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/ng-file-upload-shim.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/ng-file-upload.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/ng-file-upload.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/socket.io.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/socket.io.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Swoppr/public/js/ext/ui-bootstrap-tpls.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/ui-bootstrap-tpls.js" />
+    <list default="true" id="87491fe2-1133-4208-8d80-4fe5931cfaa4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Swoppr/public/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Swoppr/public/images/kruiwagen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/ToRentCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photoshop/ongebruikteGoederen.psd" afterPath="$PROJECT_DIR$/photoshop/ongebruikteGoederen.psd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/data/models/product.model.js" afterPath="$PROJECT_DIR$/Swoppr/data/models/product.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/app.js" afterPath="$PROJECT_DIR$/Swoppr/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/css/site.min.css" afterPath="$PROJECT_DIR$/Swoppr/public/css/site.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/app.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/app.min.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/app.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/less/mixins.less" afterPath="$PROJECT_DIR$/Swoppr/public/less/mixins.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/less/site.less" afterPath="$PROJECT_DIR$/Swoppr/public/less/site.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/less/variables.less" afterPath="$PROJECT_DIR$/Swoppr/public/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/routes/partials.js" afterPath="$PROJECT_DIR$/Swoppr/routes/partials.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/error.jade" afterPath="$PROJECT_DIR$/Swoppr/views/error.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/index.jade" afterPath="$PROJECT_DIR$/Swoppr/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/login.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/login.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/register.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/register.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/toRent.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/toRent.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade" afterPath="$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade" />
     </list>
     <ignored path="BackendFrontendProjectNMCT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -549,11 +36,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/index.jade">
+      <file leaf-file-name="NavbarCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/NavbarCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08614865">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favicon.ico" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Swoppr/public/images/favicon.ico">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Swoppr/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41165757">
+              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Swoppr/public/less/site.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6341465">
+              <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigation.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Swoppr/public/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.551724">
+              <caret line="71" column="52" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -577,8 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Swoppr/views/partials/profile.jade" />
-        <option value="$PROJECT_DIR$/Swoppr/views/snippets/start/ourSolution.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/fileUpload.js" />
         <option value="$PROJECT_DIR$/Swoppr/data/schemas/swoppr.schema.js" />
         <option value="$PROJECT_DIR$/Swoppr/routes/apiUser.js" />
@@ -609,25 +141,27 @@
         <option value="$PROJECT_DIR$/Swoppr/data/models/user.model.js" />
         <option value="$PROJECT_DIR$/Swoppr/data/models/renting.model.js" />
         <option value="$PROJECT_DIR$/Swoppr/routes/apiFileUpload.js" />
-        <option value="$PROJECT_DIR$/Swoppr/app.js" />
         <option value="$PROJECT_DIR$/Swoppr/node_modules/angular/angular.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/index.jade" />
-        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/data/models/product.model.js" />
         <option value="$PROJECT_DIR$/Swoppr/gulpfile.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/register.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/login.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/less/variables.less" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade" />
-        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/routes/partials.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/dashboard.jade" />
-        <option value="$PROJECT_DIR$/Swoppr/public/js/app.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/toRent.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/error.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/less/mixins.less" />
-        <option value="$PROJECT_DIR$/Swoppr/public/less/site.less" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/ToRentCtrl.js" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/app.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/NavbarCtrl.js" />
+        <option value="$PROJECT_DIR$/Swoppr/public/less/site.less" />
+        <option value="$PROJECT_DIR$/Swoppr/app.js" />
       </list>
     </option>
   </component>
@@ -667,6 +201,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -685,10 +221,142 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swoppr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swoppr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swoppr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swoppr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swoppr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="less" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swoppr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swoppr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -717,16 +385,17 @@
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\BackendFrontendProjectNMCT\Swoppr\public\images" />
+      <recent name="C:\BackendFrontendProjectNMCT\Swoppr\public\js\ext" />
+      <recent name="C:\BackendFrontendProjectNMCT\Swoppr\public\js\factories" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\BackendFrontendProjectNMCT\Swoppr\public\images" />
+      <recent name="C:\BackendFrontendProjectNMCT\photoshop" />
       <recent name="C:\BackendFrontendProjectNMCT\Swoppr\data\models" />
       <recent name="C:\BackendFrontendProjectNMCT\Swoppr\data\schemas" />
       <recent name="C:\BackendFrontendProjectNMCT\documentatie" />
-      <recent name="C:\BackendFrontendProjectNMCT\Swoppr\views\partials" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\BackendFrontendProjectNMCT\Swoppr\public\js\ext" />
-      <recent name="C:\BackendFrontendProjectNMCT\Swoppr\public\js\factories" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.node">
@@ -1049,7 +718,19 @@
       <option name="project" value="LOCAL" />
       <updated>1449847684423</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="html fixes">
+      <created>1449871327805</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1449871327805</updated>
+    </task>
+    <task id="LOCAL-00044" summary="html fixes">
+      <created>1449871435611</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1449871435611</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1067,22 +748,22 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12908325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35536295" sideWeight="0.5769231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31493506" sideWeight="0.61696523" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34415585" sideWeight="0.42307693" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3434453" sideWeight="0.42307693" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3051948" sideWeight="0.7291886" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.49578503" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3051948" sideWeight="0.7291886" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1168,55 +849,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/models/Product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/services/ProductService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/config/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.137931">
-          <caret line="42" column="45" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/routes/apiProduct.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/myArticles.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/vendor/ng-file-upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/vendor/angular-route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/public/js/app.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1298,13 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9318937">
           <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -1424,25 +1049,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/IndexCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1450,31 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4214876">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6859504">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47768596">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/NavbarCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6181818">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1482,7 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1490,7 +1074,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16859505">
           <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1498,23 +1081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="14" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/less/site.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="326" column="23" selection-start-line="326" selection-start-column="23" selection-end-line="326" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.646281">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1522,14 +1088,117 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.69911504">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08614865">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photoshop/verhuurderpsd.psd">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photoshop/ongebruikteGoederen.psd">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photoshop/huurder.psd">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photoshop/geldVerdienen.psd">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/ToRentCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/IndexCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/services/ProductService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.551724">
+          <caret line="71" column="52" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/less/site.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6341465">
+          <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/NavbarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/images/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41165757">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
           <folding />
         </state>
       </provider>

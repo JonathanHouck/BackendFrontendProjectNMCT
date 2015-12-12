@@ -8,17 +8,6 @@
         .controller('PlaceArticleCtrl', ['$rootScope', '$scope', '$http', 'Upload', PlaceArticleCtrl]);
 
     function PlaceArticleCtrl ($rootScope, $scope, $http, Upload) {
-        /*$scope.getUsers = function() {
-            if ($rootScope.user) {
-                $http.get('/api/user/getById/' + $rootScope.user._id)
-                    .success(function(data) {
-                        $scope.products = data.products;
-                });
-            }
-        };
-
-        $scope.getUsers();*/
-
         $scope.uploadFile = function(file) {
             if (file) {
                 file.upload = Upload.upload({
