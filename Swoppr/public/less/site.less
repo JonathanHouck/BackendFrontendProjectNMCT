@@ -495,13 +495,29 @@ main section {
   margin-bottom: 30px;
 }
 
-.cards .row div {
-  max-height: 250px;
-  background-color: #d9d9d9;
+.cards .row a {
+  text-decoration: none;
+  color: @secondary-dark;
 
-  img {
-    margin: 0 auto;
-    position: relative;
-    height: 250px;
+  .thumbnail {
+    overflow: hidden;
+
+    img {
+      height: 250px;
+      background-color: @light-darker;
+    }
+
+    p {
+      margin-top: 5px;
+      color: @dark-lighter;
+    }
+
+    .price {
+      padding-right: 5px;
+      text-align: right;
+      color: @primary;
+    }
   }
 }
+
+
