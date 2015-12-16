@@ -12,4 +12,4 @@ section
                 uib-carousel(interval="myInterval")
                     uib-slide(ng-repeat="slide in slides", active="slide.active")
                         img(src="images/ongebruikteGoederen.png", ng-src="{{slide.image}}")
-                        div: h3 {{slide.text}}
+                        div: h3: a(href="/register") {{slide.text}}

@@ -5,9 +5,136 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('PlaceArticleCtrl', ['$rootScope', '$scope', '$http', 'Upload', PlaceArticleCtrl]);
+        .controller('PlaceArticleCtrl', ['$rootScope', '$scope', '$http', 'Upload', 'uiGmapGoogleMapApi', PlaceArticleCtrl]);
 
-    function PlaceArticleCtrl ($rootScope, $scope, $http, Upload) {
+    function PlaceArticleCtrl ($rootScope, $scope, $http, Upload, GoogleMapApi) {
+
+        GoogleMapApi.then(function(maps) {
+            maps.visualRefresh = true;
+            $scope.defaultBounds = new google.maps.LatLngBounds(
+                new google.maps.LatLng(50.8252383, 3.24815210));
+
+
+            $scope.map.bounds = {
+                northeast: {
+                    latitude:$scope.defaultBounds.getNorthEast().lat(),
+                    longitude:$scope.defaultBounds.getNorthEast().lng()
+                },
+                southwest: {
+                    latitude:$scope.defaultBounds.getSouthWest().lat(),
+                    longitude:-$scope.defaultBounds.getSouthWest().lng()
+
+                }
+            };
+            $scope.searchbox.options.bounds = new google.maps.LatLngBounds($scope.defaultBounds.getNorthEast(), $scope.defaultBounds.getSouthWest());
+        });
+
+        angular.extend($scope, {
+            selected: {
+                options: {
+                    visible:false
+
+                },
+                templateurl:'window.tpl.html',
+                templateparameter: {}
+            },
+            map: {
+                control: {},
+                center: {
+                    latitude: 50.8252383,
+                    longitude: 3.24815210
+                },
+                zoom: 12,
+                dragging: false,
+                bounds: {},
+                markers: [],
+                idkey: 'place_id',
+                events: {
+                    idle: function (map) {
+
+                    },
+                    dragend: function(map) {
+                        //update the search box bounds after dragging the map
+                        var bounds = map.getBounds();
+                        var ne = bounds.getNorthEast();
+                        var sw = bounds.getSouthWest();
+                        $scope.searchbox.options.bounds = new google.maps.LatLngBounds(sw, ne);
+                        //$scope.searchbox.options.visible = true;
+                    }
+                }
+            },
+            searchbox: {
+                template:'searchbox.tpl.html',
+                options: {
+                    autocomplete:true,
+                    types: ['geocode'],
+                    componentRestrictions: {country: 'be'}
+                },
+                events: {
+                    place_changed: function (autocomplete){
+
+                        var place = autocomplete.getPlace();
+
+                        if (place.address_components) {
+
+                            var newMarkers = [];
+                            var bounds = new google.maps.LatLngBounds();
+
+                            var marker = {
+                                id:place.place_id,
+                                place_id: place.place_id,
+                                name: place.address_components[0].long_name,
+                                latitude: place.geometry.location.lat(),
+                                longitude: place.geometry.location.lng(),
+                                options: {
+                                    visible:false
+                                },
+                                templateurl:'window.tpl.html',
+                                templateparameter: place
+                            };
+
+                            newMarkers.push(marker);
+
+                            bounds.extend(place.geometry.location);
+
+                            $scope.map.bounds = {
+                                northeast: {
+                                    latitude: bounds.getNorthEast().lat(),
+                                    longitude: bounds.getNorthEast().lng()
+                                },
+                                southwest: {
+                                    latitude: bounds.getSouthWest().lat(),
+                                    longitude: bounds.getSouthWest().lng()
+                                }
+                            };
+
+                            angular.forEach(newMarkers, function(marker) {
+                                //_.each(newMarkers, function(marker) {
+                                marker.closeClick = function() {
+                                    $scope.selected.options.visible = false;
+                                    marker.options.visble = false;
+
+                                    console.log(marker);
+                                };
+                                marker.onClicked = function() {
+                                    $scope.selected.options.visible = false;
+                                    $scope.selected = marker;
+                                    $scope.selected.options.visible = true;
+                                };
+                            });
+
+                            $scope.map.markers = newMarkers;
+
+                            $scope.location =  place.formatted_address;
+                            console.log(place);
+                        } else {
+                            console.log("do something else with the search string: " + place.name);
+                        }
+                    }
+                }
+            }
+        });
+
         $scope.uploadFile = function(file) {
             if (file) {
                 file.upload = Upload.upload({

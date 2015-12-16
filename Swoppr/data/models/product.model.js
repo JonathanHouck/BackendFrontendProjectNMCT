@@ -8,8 +8,8 @@ var async = require('async');
 var cloudinary = require('cloudinary');
 cloudinary.config({cloud_name: 'swoppr', api_key: '574615225534372', api_secret: 'mNUyKP0jlRPHTgGs_yUeiTod5dw'});
 
-/*//alle images van prodcuten uit de cloud verwijderen
-cloudinary.api.delete_resources_by_tag('product',
+//alle images van prodcuten uit de cloud verwijderen
+/*cloudinary.api.delete_resources_by_tag('product',
     function(result){
         console.log(result);
 });*/
@@ -74,7 +74,7 @@ exports.addProductWithPictureUser = function(req, res) {
                         productName: req.body.productName,
                         pricePerDay: req.body.pricePerDay,
                         description: req.body.description,
-                        url: result.url
+                        url: result.secure_url
                     });
 
                     addProduct(res, user, entry);

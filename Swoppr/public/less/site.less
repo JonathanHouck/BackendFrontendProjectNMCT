@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins.less";
+@import "font-sizes";
 
 html, body {
   height: 100%;
@@ -15,34 +16,13 @@ h1 {
 }
 
 h2 {
-  font-size:(20px);
+  .fontSize(20px);
   text-transform: uppercase;
 }
 
 p[ng-message] {
   margin-top: 5px;
   color: #a94442;
-}
-
-.smallFont {
-  .fontSize(20px);
-}
-
-.smallFontBigger {
-  .fontSize(25px);
-}
-
-.mediumFont {
-  .fontSize(35px);
-  text-transform: none;
-}
-
-.largeFont {
-  .fontSize(50px);
-}
-
-.largestFont {
-  .fontSize(70px);
 }
 
 .btn {
@@ -63,7 +43,6 @@ input[type="submit"]:hover {
 }
 
 main section {
-
   .title-sep {
     background: @primary;
     width: 60px;
@@ -178,6 +157,25 @@ main section {
 
 .intro-header {
   background: @neigbourhoodImg no-repeat bottom center;
+
+  .intro-btn {
+    padding-bottom: 35px;
+
+    a {
+      padding: 10px 15px;
+      border: 1px solid @light;
+      background-color: transparent;
+      color: @light;
+      border-radius: 4px;
+      margin-bottom: 20px;
+
+      &:hover, &:focus {
+        color: @dark;
+        background-color: @light;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .intro-authorize {
@@ -220,8 +218,16 @@ main section {
   }
 }
 
-.carousel-inner img {
-  .centered();
+.carousel-inner {
+
+  img {
+    .centered();
+  }
+
+  a, a:hover, a:focus {
+    color: @dark;
+  }
+
 }
 
 .carousel-control {
