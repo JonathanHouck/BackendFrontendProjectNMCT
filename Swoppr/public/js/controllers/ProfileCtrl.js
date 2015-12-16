@@ -7,9 +7,5 @@
         .controller('ProfileCtrl', ['$scope', '$http', ProfileCtrl]);
 
     function ProfileCtrl ($scope, $http) {
-        $http.get('/api/user/userData')
-            .success(function(data) {
-                $scope.user = data; //Expose the user data to your angular scope
-        });
     }
 }());

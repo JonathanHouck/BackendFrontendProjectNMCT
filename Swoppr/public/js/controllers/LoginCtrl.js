@@ -28,7 +28,7 @@
                     }
                 }
 
-                $http.get('/api/user/userDataNavbar')
+                $http.get('/api/user/userDataNavbar/' + new Date().getTime())
                     .success(function(data) {
                         $rootScope.user = data;
                     });

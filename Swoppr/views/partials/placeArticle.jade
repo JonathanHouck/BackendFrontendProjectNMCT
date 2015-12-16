@@ -7,13 +7,13 @@ div(class="container")
             h1 Plaats artikel
     div(class="row")
         div(class="col-sm-12 col-md-5 ")
-            h3 Vul uw adres in het tekstvak op map in en selecteer het voorgestelde adres
+            p Vul uw adres in het tekstvak op map in en selecteer het voorgestelde adres
             ui-gmap-google-map(center="map.center", zoom="map.zoom", dragging="map.dragging", bounds="map.bounds", events="map.events", options="map.options", pan="true", control="map.control")
                 ui-gmap-search-box(options="searchbox.options", template="searchbox.template", events="searchbox.events", position="searchbox.position")
                 ui-gmap-markers(idkey="map.idkey", models="map.markers", coords="'self'", icon="'icon'", click="'onClicked'")
                 ui-gmap-window(coords="selected", idkey="selected.place_id", templateurl="selected.templateurl", templateparameter="selected.templateparameter", options="selected.options", closeClick='selected.closeClick()', ng-cloak)
         div(class="col-sm-12 col-md-7")
-            h3 Vul de gegevens van het toe te voegen artikel in en klik op opslaan
+            p(class="placeArticleInfo2") Vul de gegevens in en klik op opslaan
             form(class="form-horizontal", name="placeArticleForm")
                 div(class="form-group", ng-class="{'has-error': placeArticleForm.productName.$dirty && placeArticleForm.productName.$invalid, 'has-success': placeArticleForm.productName.$dirty && !placeArticleForm.productName.$invalid}")
                     label(for=productName, class="col-sm-3 control-label text-left") Naam

@@ -1,0 +1,13 @@
+.intro-header, .intro-authorize
+{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.cards .row div img {
+    -o-object-fit: contain;
+    object-fit: contain;
+}

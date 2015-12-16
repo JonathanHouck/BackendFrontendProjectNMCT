@@ -22,7 +22,7 @@ router.post('/newUser', function(req, res) {
     return swopprCtrl.createUser(req, res);
 });
 
-router.get('/userDataNavbar', function(req, res) {
+router.get('/userDataNavbar/:datetime', function(req, res) {
     if(req.isAuthenticated()) {
         return res.json(req.user);
     } else {

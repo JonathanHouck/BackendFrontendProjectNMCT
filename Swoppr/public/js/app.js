@@ -69,7 +69,7 @@
             //userdata ophalen voor navbar
 
             if (!$rootScope.user) {
-                $http.get('/api/user/userDataNavbar')
+                $http.get('/api/user/userDataNavbar/' + new Date().getTime())
                     .success(function(data) {
                         $rootScope.user = data;
                     });
