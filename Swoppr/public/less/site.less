@@ -1,6 +1,5 @@
-@import "variables.less";
 @import "mixins.less";
-@import "font-sizes";
+@import "variables.less";
 
 html, body {
   height: 100%;
@@ -502,9 +501,61 @@ main section {
   .thumbnail {
     overflow: hidden;
 
-    img {
-      height: 250px;
+    div {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
       background-color: @light-darker;
+
+      &:hover .mask2 {
+        -webkit-transform:  translateY(0);
+        -moz-transform:     translateY(0);
+        -o-transform:       translateY(0);
+        -ms-transform:      translateY(0);
+        transform:          translateY(0);
+      }
+
+      &:hover img {
+        -webkit-transform:  translateY(100%);
+        -moz-transform:     translateY(100%);
+        -o-transform:       translateY(100%);
+        -ms-transform:      translateY(100%);
+        transform:          translateY(100%);
+      }
+
+      .mask2 {
+        background-color: @light-darker-more;
+        -webkit-transform:  translateY(-100%);
+        -moz-transform:     translateY(-100%);
+        -o-transform:       translateY(-100%);
+        -ms-transform:      translateY(-100%);
+        transform:          translateY(-100%);
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
+        height: 250px;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+      }
+
+      img {
+        height: 250px;
+        background-color: @light-darker;
+        max-width: 100%;
+        overflow: hidden;
+
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
     }
 
     p {
@@ -520,4 +571,8 @@ main section {
   }
 }
 
-
+//ie 10 and above --> object fit fix
+_:-ms-lang(x), .cards .row a .thumbnail div img
+{
+  max-width: none;
+}
