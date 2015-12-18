@@ -48,11 +48,10 @@
                 angular.forEach(response.data, function(p){
                     var product = new Product(
                         p.productName,
-                        p.pricePerDay,
+                        parseInt(p.pricePerDay),
                         p.description,
                         p.url,
-                        p.createdOn,
-                        p.userId
+                        p._id
                     );
 
                     products.push(product);

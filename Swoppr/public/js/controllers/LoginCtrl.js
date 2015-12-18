@@ -37,5 +37,15 @@
                 console.log(response);
             }
         };
+
+        $scope.validate = function(field) {
+            if (field == 1) {
+                if ($scope.loginForm.email.$dirty && $scope.loginForm.email.$invalid) return 'has-error';
+                if ($scope.loginForm.email.$dirty && $scope.loginForm.email.$valid) return "has-success";
+            } else if (field == 2) {
+                if ($scope.loginForm.password.$dirty && $scope.loginForm.password.$invalid) return 'has-error';
+                if ($scope.loginForm.password.$dirty && $scope.loginForm.password.$valid) return "has-success";
+            }
+        };
     }
 }());

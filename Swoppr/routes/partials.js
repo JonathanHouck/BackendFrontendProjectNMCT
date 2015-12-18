@@ -15,8 +15,12 @@ module.exports = function(passport) {
         res.render("partials/index");
     });
 
-    router.get('/toRent', isLoggedIn, function(req, res) {
+    router.get('/toRent', function(req, res) {
         res.render("partials/toRent");
+    });
+
+    router.get('/rentProduct/:id?', isLoggedIn, function(req, res) {
+        res.render("partials/rentProduct");
     });
 
     router.get('/placeArticle',isLoggedIn, function(req, res) {

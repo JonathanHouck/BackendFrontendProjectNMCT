@@ -5,7 +5,11 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('PlaceArticleCtrl', ['$rootScope', '$scope', '$http', 'Upload', 'uiGmapGoogleMapApi', PlaceArticleCtrl]);
+        .controller('PlaceArticleCtrl', ['$rootScope', '$scope', '$http', 'Upload', 'uiGmapGoogleMapApi', PlaceArticleCtrl])
+        .run(['$templateCache', function($templateCache) {
+            $templateCache.put('searchbox.tpl.html', '<input id="pac-input" class="pac-controls" type="text" placeholder="Search">');
+            $templateCache.put('window.tpl.html', '<div ng-controller="WindowCtrl" ng-init="showPlaceDetails(parameter)">{{place.name}}</div>');
+        }]);
 
     function PlaceArticleCtrl ($rootScope, $scope, $http, Upload, GoogleMapApi) {
 
@@ -171,6 +175,24 @@
 
             function errorCallback(response) {
                 console.log(response);
+            }
+        };
+
+        $scope.validate = function(field) {
+            if (field == 1) {
+                if ($scope.placeArticleForm.productName.$dirty && $scope.placeArticleForm.productName.$invalid) return 'has-error';
+                if ($scope.placeArticleForm.productName.$dirty && $scope.placeArticleForm.productName.$valid) return "has-success";
+            } else if (field == 2) {
+                if ($scope.placeArticleForm.pricePerDay.$dirty && $scope.placeArticleForm.pricePerDay.$invalid) return 'has-error';
+                if ($scope.placeArticleForm.pricePerDay.$dirty && $scope.placeArticleForm.pricePerDay.$valid) return "has-success";
+            }  else if (field == 3) {
+                if ($scope.placeArticleForm.description.$dirty && $scope.placeArticleForm.description.$invalid) return 'has-error';
+                if ($scope.placeArticleForm.description.$dirty && $scope.placeArticleForm.description.$valid) return "has-success";
+            } else if (field == 4) {
+                if ($scope.placeArticleForm.picture.$dirty && $scope.placeArticleForm.picture.$invalid) return 'has-error';
+                if ($scope.placeArticleForm.picture.$dirty && $scope.placeArticleForm.picture.$valid) return "has-success";
+            }  else if (field == 5) {
+                if ($scope.placeArticleForm.location.$valid) return "has-success";
             }
         };
     }

@@ -1,15 +1,32 @@
 /**
  * Created by Greg on 04-Dec-15.
  */
-function Product(productName, pricePerDay, description, url, createdOn, userId){
+function Product(productName, pricePerDay, description, url, _id){
     this.productName = productName;
     this.pricePerDay = pricePerDay;
     this.description = description;
     this.url = url;
-    this.createdOn = createdOn;
-    this.userId = userId;
+    this.id = _id;
 }
 
 Product.prototype.toString = function(){
     return this.productName;
+};
+
+Product.prototype.shortDescription = function() {
+    if (!this.description) return "/";
+
+    if (this.description.length < 250) {
+        return this.description;
+    } else {
+        return this.description.substring(0, 250) + " ...";
+    }
+};
+
+Product.prototype.shortProductName = function() {
+    if (this.productName.length < 24) {
+        return this.productName;
+    } else {
+        return this.productName.substring(0, 24) + " ...";
+    }
 };

@@ -41,5 +41,24 @@
                 console.log(response);
             }
         };
+
+        $scope.validate = function(field) {
+            if (field == 1) {
+                if ($scope.registerForm.firstname.$dirty && $scope.registerForm.firstname.$invalid) return 'has-error';
+                if ($scope.registerForm.firstname.$dirty && $scope.registerForm.firstname.$valid) return "has-success";
+            } else if (field == 2) {
+                if ($scope.registerForm.surname.$dirty && $scope.registerForm.surname.$invalid) return 'has-error';
+                if ($scope.registerForm.surname.$dirty && $scope.registerForm.surname.$valid) return "has-success";
+            }  else if (field == 3) {
+                if ($scope.registerForm.email.$dirty && $scope.registerForm.email.$invalid) return 'has-error';
+                if ($scope.registerForm.email.$dirty && $scope.registerForm.email.$valid) return "has-success";
+            } else if (field == 4) {
+                if ($scope.registerForm.password.$dirty && $scope.registerForm.password.$invalid) return 'has-error';
+                if ($scope.registerForm.password.$dirty && $scope.registerForm.password.$valid) return "has-success";
+            }  else if (field == 5) {
+                if ($scope.registerForm.passwordAgain.$dirty && $scope.registerForm.passwordAgain.$invalid) return 'has-error';
+                if ($scope.registerForm.passwordAgain.$dirty && $scope.registerForm.passwordAgain.$valid) return "has-success";
+            }
+        };
     }
 }());

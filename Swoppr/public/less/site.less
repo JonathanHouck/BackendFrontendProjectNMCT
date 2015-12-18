@@ -494,6 +494,10 @@ main section {
   margin-bottom: 30px;
 }
 
+.filter-sort-products .form-container {
+  margin-bottom: 20px;
+}
+
 .cards .row a {
   text-decoration: none;
   color: @secondary-dark;
@@ -542,6 +546,10 @@ main section {
         overflow: hidden;
         top: 0;
         left: 0;
+
+        p {
+          margin-top: 10px;
+        }
       }
 
       img {
@@ -559,8 +567,9 @@ main section {
     }
 
     p {
-      margin-top: 5px;
+      margin: 10px;
       color: @dark-lighter;
+      word-wrap: break-word;
     }
 
     .price {
@@ -569,6 +578,13 @@ main section {
       color: @primary;
     }
   }
+}
+
+.title-header {
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 10px 0 30px;
+    border-bottom: 1px solid @light-darker-more;
 }
 
 //ie 10 and above --> object fit fix

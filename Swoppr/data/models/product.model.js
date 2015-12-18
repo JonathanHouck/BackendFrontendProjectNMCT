@@ -82,7 +82,7 @@ exports.addProductWithPictureUser = function(req, res) {
                 } else {
                     res.json({"error": "Afbeelding uploaden mislukt"});
                 }
-            }, {tags: "product", width: 100, height: 150, crop: 'fit'});
+            }, {tags: "product", width: 253, crop: 'fit'});
         //product toevoegen zonder file
         } else {
 

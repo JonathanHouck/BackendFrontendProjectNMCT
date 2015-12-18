@@ -19,6 +19,10 @@
         }).
         when('/toRent', {
             templateUrl: 'partials/toRent',
+            controller: 'ToRentCtrl'
+        }).
+        when('/rentProduct/:id?', {
+            templateUrl: 'partials/rentProduct',
             controller: '',
             auth: true
         }).
@@ -48,7 +52,7 @@
             controller: 'RegisterCtrl'
         }).
         when('/profile', {
-            templateUrl: '/partials/profile',
+            templateUrl: 'partials/profile',
             controller: 'ProfileCtrl'
         }).
         otherwise({
@@ -63,7 +67,7 @@
         });
     }])
     .
-    run(['$templateCache', '$rootScope', '$location', '$http', '$route', function($templateCache, $rootScope, $location, $http, $route) {
+    run(['$rootScope', '$location', '$http', '$route', function($rootScope, $location, $http, $route) {
         $rootScope.$on( "$routeChangeStart", function(next) {
 
             //userdata ophalen voor navbar
@@ -85,8 +89,5 @@
                 }
             }
         });
-
-        $templateCache.put('searchbox.tpl.html', '<input id="pac-input" class="pac-controls" type="text" placeholder="Search">');
-        $templateCache.put('window.tpl.html', '<div ng-controller="WindowCtrl" ng-init="showPlaceDetails(parameter)">{{place.name}}</div>');
     }]);
 }());

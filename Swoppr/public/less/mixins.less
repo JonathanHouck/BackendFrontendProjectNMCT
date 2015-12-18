@@ -20,11 +20,11 @@
 }
 
 .transformScale(@value) {
-  -moz-transform: (@value);
-  -o-transform: (@value);
-  -ms-transform: scale(@value);
-  -webkit-transform: scale(@value);
-  transform: scale(@value);
+  -moz-transform:     scale(@value);
+  -o-transform:       scale(@value);
+  -ms-transform:      scale(@value);
+  -webkit-transform:  scale(@value);
+  transform:          scale(@value);
 }
 
 .shadow(@defValue: 0, @hShadow: 1px, @vShadow: 15px, @opacity: 0.1) {
@@ -61,5 +61,9 @@
 }
 
 .transitionBtn {
-  transition: all .5s;
+  -webkit-transition:  all .5s;
+  -moz-transition:     all .5s;
+  -o-transition:       all .5s;
+  -ms-transition:      all .5s;
+  transition:          all .5s;
 }

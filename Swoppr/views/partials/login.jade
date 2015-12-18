@@ -7,14 +7,14 @@ div(class="intro intro-authorize")
                     div(class="panel-body")
                         uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)")   {{alert.msg}}
                         form(class="form-horizontal", name="loginForm" ng-submit="login()")
-                            div(class="form-group", ng-class="{'has-error': loginForm.email.$dirty && loginForm.email.$invalid, 'has-success': loginForm.email.$dirty && !loginForm.email.$invalid}")
+                            div(class="form-group", ng-class="validate(1)")
                                 label(for=email, class="col-sm-3 control-label") Emailadres
                                 div(class="col-sm-9")
                                     input(type="email", name="email", id="email", class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="loginForm.email.$error", ng-if="loginForm.email.$touched")
                                     p(ng-message="required") Emailadres is verplicht in te vullen
                                     p(ng-message="email") Gelieve een correct emailadres op te geven
-                            div(class="form-group", ng-class="{'has-error': loginForm.password.$dirty && loginForm.password.$invalid, 'has-success': loginForm.password.$dirty && !loginForm.password.$invalid}")
+                            div(class="form-group", ng-class="validate(2)")
                                 label(for="password", class="col-sm-3 control-label") Wachtwoord
                                 div(class="col-sm-9")
                                     input(type="password", name="password", id="password" class="form-control", placeholder="Bv. swoppr01", ng-model="password", ng-minlength="7", ng-maxlength="50", ng-required="true")

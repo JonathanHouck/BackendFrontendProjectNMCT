@@ -3,40 +3,21 @@
 
 div(class="container")
     div(class="row")
-        div(class="col-sm-12")
+        div(class="col-sm-12 title-header")
             h1 Te verhuren
+    div(class="row filter-sort-products")
+        div(class="col-sm-3")
+            div(class="form-container")
+                input(type="text", placeholder="Zoek product", id="searchProduct", ng-model="searchProduct", class="form-control")
+        div(class="col-sm-2")
+            div(class="form-container")
+                select(id="sortOn", class="form-control", ng-model="sortProperty")
+                    option(value="pricePerDay") Prijs oplopend
+                    option(value="-pricePerDay") Prijs aflopend
+                    option(value="productName") Naam oplopend
+                    option(value="-productName") Naam aflopend
     div(class="row")
         div(class="col-sm-12 cards")
-            div(class="row")
-                div(class="col-sm-4 col-md-3")
-                    a(href="#")
-                        div(class="thumbnail")
-                            div
-                                div(class="mask2") hello
-                                img(src="http://lorempixel.com/300/250/")
-                            p(class="smallFont") Grasmaaier dsdqsfqdsf
-                            p(class="smallFontBigger price") &euro; 5 / dag
-                div(class="col-sm-4 col-md-3")
-                    a(href="#")
-                        div(class="thumbnail")
-                            div
-                                div(class="mask2") hello
-                                img(src="http://lorempixel.com/500/250/")
-                            p(class="smallFont") Grasmaaier dsdqsfqdsf
-                            p(class="smallFontBigger price") &euro; 5 / dag
-                div(class="col-sm-4 col-md-3")
-                    a(href="#")
-                        div(class="thumbnail")
-                            div
-                                div(class="mask2") hello
-                                img(src="http://lorempixel.com/700/300/")
-                            p(class="smallFont") Grasmaaier dsdqsfqdsf
-                            p(class="smallFontBigger price") &euro; 5 / dag
-                div(class="col-sm-4 col-md-3")
-                    a(href="#")
-                        div(class="thumbnail")
-                            div
-                                div(class="mask2") hello
-                                img(src="http://lorempixel.com/350/250/")
-                            p(class="smallFont") Grasmaaier dsdqsfqdsf
-                            p(class="smallFontBigger price") &euro; 5 / dag
+            div(ng-show="products", class="row")
+                div(class="col-sm-4 col-md-3", ng-repeat="p in products | orderBy:sortProperty | filter:searchProduct")
+                    productforrent

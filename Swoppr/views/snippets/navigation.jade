@@ -27,7 +27,7 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                         li: a(href="/profile") Mijn profiel
                         li: a(href="/logout", logout) Uitloggen
                 li(class="mobile-only")
-                    a(href="/profile") Mijn profiel
+                    a(href="/profile", ng-class="getClass('/profile')") Mijn profiel
                 li(class="mobile-only")
                     a(href="/logout") Uitloggen
             ul(class="nav navbar-nav navbar-right", ng-hide="$root.user.local.email")
