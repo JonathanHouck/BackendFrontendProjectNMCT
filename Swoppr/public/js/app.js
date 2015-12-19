@@ -23,7 +23,7 @@
         }).
         when('/rentProduct/:id?', {
             templateUrl: 'partials/rentProduct',
-            controller: '',
+            controller: 'RentProductCtrl',
             auth: true
         }).
         when('/chat/:id?', {

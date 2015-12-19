@@ -4,7 +4,6 @@
 (function() {
     "use strict";
 
-    //we maken een applicatie aan en steken die in app zelf
     angular.module("swoppr")
         .directive("productforrent", productDir)
         .run(['$templateCache', function($templateCache) {

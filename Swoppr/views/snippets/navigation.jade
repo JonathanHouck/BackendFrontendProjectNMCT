@@ -15,7 +15,7 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                 img(src="images/logo_swoppr.png")
                 p Swoppr
         div(id="navbar", class="navbar-collapse collapse", uib-collapse="isCollapsed")
-            ul(class="nav navbar-nav")
+            ul(class="nav navbar-nav", ng-show="$root.user.local.email")
                 li: a(href="/toRent", ng-class="getClass('/toRent')") Te verhuren
                     i(class="underline")
                 li: a(href="/placeArticle", ng-class="getClass('/placeArticle')") Plaats artikel

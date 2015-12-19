@@ -7,11 +7,15 @@
     <list default="true" id="87491fe2-1133-4208-8d80-4fe5931cfaa4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/css/site.min.css" afterPath="$PROJECT_DIR$/Swoppr/public/css/site.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/app.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/app.min.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/app.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/less/mixins.less" afterPath="$PROJECT_DIR$/Swoppr/public/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/directives/productDir.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/directives/productDir.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/vendor/ui-bootstrap-tpls.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/vendor/ui-bootstrap-tpls.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/less/site.less" afterPath="$PROJECT_DIR$/Swoppr/public/less/site.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/layout.jade" afterPath="$PROJECT_DIR$/Swoppr/views/layout.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/rentProduct.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/rentProduct.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/toRent.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/toRent.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade" afterPath="$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/snippets/start/team.jade" afterPath="$PROJECT_DIR$/Swoppr/views/snippets/start/team.jade" />
     </list>
     <ignored path="BackendFrontendProjectNMCT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,21 +36,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="site.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="site.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Swoppr/public/less/site.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17957747">
-              <caret line="521" column="35" selection-start-line="521" selection-start-column="35" selection-end-line="521" selection-end-column="35" />
+            <state vertical-scroll-proportion="-7.018868">
+              <caret line="573" column="20" selection-start-line="573" selection-start-column="20" selection-end-line="573" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mixins.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Swoppr/public/less/mixins.less">
+      <file leaf-file-name="rentProduct.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/rentProduct.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.056604">
-              <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+            <state vertical-scroll-proportion="-7.62069">
+              <caret line="13" column="105" selection-start-line="13" selection-start-column="105" selection-end-line="13" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RentProductCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/RentProductCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11764706">
+              <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Swoppr/public/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToRentCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/ToRentCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -59,9 +95,9 @@
       <list>
         <option value="XSLT Stylesheet" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Jade File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -72,11 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Swoppr/public/less/google-search-box.less" />
-        <option value="$PROJECT_DIR$/Swoppr/views/partials/placeArticle2.jade" />
-        <option value="$PROJECT_DIR$/Swoppr/public/css/google-search-box.css" />
-        <option value="$PROJECT_DIR$/Swoppr/public/less/fonts.less" />
-        <option value="$PROJECT_DIR$/Swoppr/public/less/google-maps-search.less" />
         <option value="$PROJECT_DIR$/Swoppr/public/less/fonts-sizes.less" />
         <option value="$PROJECT_DIR$/Swoppr/public/less/font-sizes.less" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/ProfileCtrl.js" />
@@ -102,27 +133,32 @@
         <option value="$PROJECT_DIR$/Swoppr/views/partials/login.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/register.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/RegisterCtrl.js" />
-        <option value="$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/models/Product.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/services/ProductService.js" />
-        <option value="$PROJECT_DIR$/Swoppr/views/partials/rentProduct.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/profile.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/snippets/product.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/directives/product.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/placeArticle.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/productforrent.jade" />
-        <option value="$PROJECT_DIR$/Swoppr/public/js/app.js" />
-        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/ToRentCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/directives/templates/product.tpl.html" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/app.min.js" />
         <option value="$PROJECT_DIR$/Swoppr/routes/partials.js" />
-        <option value="$PROJECT_DIR$/Swoppr/public/js/directives/productDir.js" />
-        <option value="$PROJECT_DIR$/Swoppr/views/partials/toRent.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/LoginCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/PlaceArticleCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/layout.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/less/mixins.less" />
+        <option value="$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade" />
+        <option value="$PROJECT_DIR$/Swoppr/views/snippets/start/team.jade" />
+        <option value="$PROJECT_DIR$/Swoppr/views/partials/toRent.jade" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/directives/productDir.js" />
         <option value="$PROJECT_DIR$/Swoppr/public/less/site.less" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/rentProduct.js" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/rentProductCtrl.js" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/ToRentCtrl.js" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/app.js" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/vendor/ui-bootstrap-tpls.js" />
+        <option value="$PROJECT_DIR$/Swoppr/views/partials/rentProduct.jade" />
+        <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/RentProductCtrl.js" />
       </list>
     </option>
   </component>
@@ -162,7 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -232,6 +268,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swoppr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="start" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -341,6 +403,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendFrontendProjectNMCT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swoppr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -387,7 +475,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -500,12 +588,6 @@
       <created>1447432528781</created>
       <option name="number" value="Default" />
       <updated>1447432528781</updated>
-    </task>
-    <task id="LOCAL-00002" summary="test delete">
-      <created>1447510555091</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1447510555091</updated>
     </task>
     <task id="LOCAL-00003" summary="gulp + less">
       <created>1447511122680</created>
@@ -795,7 +877,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450480727306</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="ie fix team members&#10;cleaner less --&gt; hover over, overview product items">
+      <created>1450527158664</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1450527158665</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -813,22 +901,22 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15964173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35536295" sideWeight="0.5769231" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5800843" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31060606" sideWeight="0.61696523" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26623377" sideWeight="0.42307693" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.4199157" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30552545" sideWeight="0.7291886" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.49578503" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30552545" sideWeight="0.7291886" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -863,7 +951,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="services greg" />
     <MESSAGE value="login fix" />
     <MESSAGE value="login + logout fix" />
     <MESSAGE value="fontsize fixes" />
@@ -888,7 +975,8 @@
     <MESSAGE value="design toRent" />
     <MESSAGE value="css3 animations for all products + ie10 fix" />
     <MESSAGE value="toRent afgewerkt --&gt; directive voor product, search + css3 animatie" />
-    <option name="LAST_COMMIT_MESSAGE" value="toRent afgewerkt --&gt; directive voor product, search + css3 animatie" />
+    <MESSAGE value="ie fix team members&#10;cleaner less --&gt; hover over, overview product items" />
+    <option name="LAST_COMMIT_MESSAGE" value="ie fix team members&#10;cleaner less --&gt; hover over, overview product items" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -907,42 +995,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Swoppr/routes/partials.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/views/snippets/start/team.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31825274">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/public/css/site.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6585366">
@@ -974,13 +1026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6171171">
-          <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -1068,13 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/rentProduct.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/public/css/animate.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
@@ -1146,13 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/ToRentCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1784108">
-          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/public/js/app.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1174,37 +1205,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/routes/partials.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/directives/productDir.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="156" selection-start-line="10" selection-start-column="156" selection-end-line="10" selection-end-column="156" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/toRent.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1212,7 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1220,7 +1223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,7 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1236,7 +1237,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,31 +1244,170 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/less/mixins.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6275168">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/views/snippets/start/withoutgreg.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/views/snippets/navigation.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6714976">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/views/snippets/start/team.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/public/less/variables.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4150944">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/public/less/mixins.less">
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/directives/productDir.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.056604">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.12820514">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/toRent.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/vendor/ui-bootstrap-tpls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1034484">
+          <caret line="8201" column="134" selection-start-line="8201" selection-start-column="134" selection-end-line="8201" selection-end-column="134" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1450546745997" expanded="true" signature="30535:30933" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="30553:30726" placeholder="..." />
+            <marker date="1450546745997" expanded="false" signature="30612:30624" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="30664:30707" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="30744:30913" placeholder="..." />
+            <marker date="1450546745997" expanded="false" signature="30803:30815" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="30855:30894" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="30995:31039" placeholder="{...}" />
+            <marker date="1450546745997" expanded="true" signature="32028:32467" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="32045:32333" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="32126:32315" placeholder="..." />
+            <marker date="1450546745997" expanded="false" signature="32171:32183" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="32221:32298" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="32539:32570" placeholder="{...}" />
+            <marker date="1450546745997" expanded="true" signature="32631:32675" placeholder="{...}" />
+            <marker date="1450546745997" expanded="true" signature="159428:159886" placeholder="..." />
+            <marker date="1450546745997" expanded="false" signature="159787:159851" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="198818:198963" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="199007:199188" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="199222:199407" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="200670:201458" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="200741:200801" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="200888:200958" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="200990:201447" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="201080:201236" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="201108:201226" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="201280:201427" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="201530:201851" placeholder="{...}" />
+            <marker date="1450546745997" expanded="true" signature="201553:201703" placeholder="[...]" />
+            <marker date="1450546745997" expanded="true" signature="201740:201844" placeholder="{...}" />
+            <marker date="1450546745997" expanded="true" signature="201772:201834" placeholder="{...}" />
+            <marker date="1450546745997" expanded="true" signature="202197:202482" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="202213:202327" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="202239:202317" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="202343:202464" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="202369:202454" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="267053:267064" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="267978:267993" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="269129:269140" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="269699:269714" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="270289:270303" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="270522:270542" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="271864:271875" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="272434:272449" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="279398:279411" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="280236:280249" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="283039:283050" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="283393:283404" placeholder="..." />
+            <marker date="1450546745997" expanded="true" signature="285246:285261" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/ToRentCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/public/less/site.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17957747">
-          <caret line="521" column="35" selection-start-line="521" selection-start-column="35" selection-end-line="521" selection-end-column="35" />
+        <state vertical-scroll-proportion="-7.018868">
+          <caret line="573" column="20" selection-start-line="573" selection-start-column="20" selection-end-line="573" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/views/partials/rentProduct.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.62069">
+          <caret line="13" column="105" selection-start-line="13" selection-start-column="105" selection-end-line="13" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/public/js/controllers/RentProductCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11764706">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
