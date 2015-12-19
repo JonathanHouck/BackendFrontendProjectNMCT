@@ -27,6 +27,14 @@
   transform:          scale(@value);
 }
 
+.transformTranslateY(@value: 0%) {
+  -webkit-transform:  translateY(@value);
+  -moz-transform:     translateY(@value);
+  -o-transform:       translateY(@value);
+  -ms-transform:      translateY(@value);
+  transform:          translateY(@value);
+}
+
 .shadow(@defValue: 0, @hShadow: 1px, @vShadow: 15px, @opacity: 0.1) {
   -moz-box-shadow: @defValue @hShadow @vShadow rgba(0, 0, 0, @opacity);
   -o-box-shadow: @defValue @hShadow @vShadow rgba(0, 0, 0, @opacity);

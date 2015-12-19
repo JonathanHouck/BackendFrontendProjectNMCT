@@ -7,7 +7,7 @@
     angular.module('swoppr')
         .controller('PlaceArticleCtrl', ['$rootScope', '$scope', '$http', 'Upload', 'uiGmapGoogleMapApi', PlaceArticleCtrl])
         .run(['$templateCache', function($templateCache) {
-            $templateCache.put('searchbox.tpl.html', '<input id="pac-input" class="pac-controls" type="text" placeholder="Search">');
+            $templateCache.put('searchbox.tpl.html', '<input id="pac-input" class="pac-controls" type="text" placeholder="Adres zoeken">');
             $templateCache.put('window.tpl.html', '<div ng-controller="WindowCtrl" ng-init="showPlaceDetails(parameter)">{{place.name}}</div>');
         }]);
 
