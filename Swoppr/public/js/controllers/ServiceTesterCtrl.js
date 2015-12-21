@@ -7,7 +7,7 @@
         .controller('ServiceTesterCtrl', ['$scope', 'ProductService', 'RentingService', 'UserService', ServiceTesterCtrl]);
 
     function ServiceTesterCtrl ($scope, ProductService, RentingService, UserService) {
-        var productId = "5661cae440d7dfb819343c88";
+        var productId = "566c664944382cb42f5edd4b";
         var productId2 = "5661da9afd0fbe340fcf50fe";
         var productToDeleteId = "5661e0a474c36f0c277234cb";
         var idUser = "565df548facad7f403384e3b";

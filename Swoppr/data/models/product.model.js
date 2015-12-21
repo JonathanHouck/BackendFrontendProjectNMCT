@@ -14,7 +14,7 @@ cloudinary.config({cloud_name: 'swoppr', api_key: '574615225534372', api_secret:
         console.log(result);
 });*/
 
-exports.getProductByName = function(req, res, name) {
+/*exports.getProductByName = function(req, res, name) {
     swoppr.userModel.findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
             if (err) {
@@ -25,12 +25,12 @@ exports.getProductByName = function(req, res, name) {
             var product = userWithProducts.products.id(id);
             res.json(product);
         });
-};
+};*/
 
 exports.getProductById = function(req, res, id) {
     swoppr.userModel.findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
-            if (err) {
+            if (err || !userWithProducts) {
                 res.json({"error": "productId niet gevonden"});
                 return ;
             }
@@ -82,7 +82,7 @@ exports.addProductWithPictureUser = function(req, res) {
                 } else {
                     res.json({"error": "Afbeelding uploaden mislukt"});
                 }
-            }, {tags: "product", width: 253, crop: 'fit'});
+            }, {tags: "product", height: 250, crop: 'fit'});
         //product toevoegen zonder file
         } else {
 

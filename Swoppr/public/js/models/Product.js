@@ -1,13 +1,14 @@
 /**
  * Created by Greg on 04-Dec-15.
  */
-function Product(productName, pricePerDay, description, url, _id){
+function Product(_id, productName, pricePerDay, description, url){
+    this.id = _id;
     this.productName = productName;
     this.pricePerDay = pricePerDay;
     this.description = description;
     this.url = url;
-    this.id = _id;
 }
+
 
 Product.prototype.toString = function(){
     return this.productName;

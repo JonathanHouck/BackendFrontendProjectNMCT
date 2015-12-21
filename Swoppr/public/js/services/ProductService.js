@@ -18,26 +18,32 @@
             });
         };
 
-        var byIdUser = function(userId){
-            var url = '/api/product/getByIdUser/'+userId;
+        var byIdUser = function(productId){
+            var url = '/api/product/getByIdUser/' + productId;
             return $http.get(url).then(function(response) {
-                var user = new User();
-                user.firstname = response.data.firstname;
-                user.lastname = response.data.lastname;
-                user.emailadres = response.data.local.email;
+
+                if(response.data.error) {
+                    return "error";
+                }
 
                 var p = response.data.product;
                 var product = new Product(
+                    p._id,
                     p.productName,
-                    p.pricePerDay,
+                    parseInt(p.pricePerDay),
                     p.description,
-                    p.url,
-                    p.createdOn,
-                    p.userId
+                    p.url
                 );
 
-                user.products = product;
-                return user;
+                var UserOneProduct = new User(
+                    response.data._id,
+                    response.data.firstname,
+                    response.data.surname,
+                    response.data.local.email,
+                    product
+                );
+
+                return UserOneProduct;
             });
         };
 
@@ -47,11 +53,11 @@
                 var products = [];
                 angular.forEach(response.data, function(p){
                     var product = new Product(
+                        p._id,
                         p.productName,
                         parseInt(p.pricePerDay),
                         p.description,
-                        p.url,
-                        p._id
+                        p.url
                     );
 
                     products.push(product);

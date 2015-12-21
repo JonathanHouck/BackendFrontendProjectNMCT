@@ -16,7 +16,9 @@ div(class="container")
                     option(value="-pricePerDay") Prijs aflopend
                     option(value="productName") Naam oplopend
                     option(value="-productName") Naam aflopend
-    div(class="row")
+    div(class="row", ng-hide="products[0]")
+        img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
+    div(class="row", ng-show="products[0]")
         div(class="col-sm-12 cards")
             div(ng-show="products", class="row")
                 div(class="col-sm-4 col-md-3", ng-repeat="p in products | orderBy:sortProperty | filter:searchProduct")

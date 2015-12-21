@@ -484,9 +484,17 @@ main section {
   }
 }
 
-.form-horizontal .text-left {
-  text-align: left;
+.form-horizontal  {
+  .text-left {
+    text-align: left;
+  }
+
+  label {
+    font-weight: normal;
+  }
 }
+
+
 
 .images-container {
   height: 250px;
@@ -567,12 +575,21 @@ main section {
     border-bottom: 1px solid @light-darker-more;
 }
 
-.detailLeft {
-  div:first-child {
+.detailProduct {
+  > div:first-child > div:first-child {
     text-align: center;
     background-color: @light-darker;
     margin-bottom: 10px;
+    height: 250px;
   }
+
+  .row {
+    margin-bottom: 20px;
+  }
+}
+
+.loader {
+  margin: 50px;
 }
 
 //ie 10 and above --> object fit fix
