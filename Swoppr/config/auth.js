@@ -3,7 +3,6 @@
  */
 
 module.exports = {
-
     'facebookAuth' : {
         'clientID' 		: '560423207447815',
         'clientSecret' 	: '8574add925ccdf1858e89be3b756dc4c',
@@ -21,5 +20,4 @@ module.exports = {
         'clientSecret' 	: 'mpyQV-vArQgaJlVjGAR2kO95',
         'callbackURL' 	: 'http://localhost:3000/partials/auth/google/callback'
     }
-
 };
