@@ -25,9 +25,9 @@ Product.prototype.shortDescription = function() {
 };
 
 Product.prototype.shortProductName = function() {
-    if (this.productName.length < 24) {
+    if (this.productName.length < 17) {
         return this.productName;
     } else {
-        return this.productName.substring(0, 24) + " ...";
+        return this.productName.substring(0, 17) + " ...";
     }
 };

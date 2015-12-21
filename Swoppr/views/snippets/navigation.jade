@@ -29,7 +29,7 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                 li(class="mobile-only")
                     a(href="/profile", ng-class="getClass('/profile')") Mijn profiel
                 li(class="mobile-only")
-                    a(href="/logout") Uitloggen
+                    a(href="/logout", logout) Uitloggen
             ul(class="nav navbar-nav navbar-right", ng-hide="$root.user.local.email")
                 li
                     a(href="/login", ng-class="getClass('/login')") Inloggen

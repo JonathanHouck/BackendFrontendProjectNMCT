@@ -27,12 +27,14 @@
                 }
 
                 var p = response.data.product;
+                var url = p.url ? p.url : '/';
+
                 var product = new Product(
                     p._id,
                     p.productName,
                     parseInt(p.pricePerDay),
                     p.description,
-                    p.url
+                    url
                 );
 
                 var UserOneProduct = new User(
@@ -52,6 +54,7 @@
             return $http.get(url).then(function(response) {
                 var products = [];
                 angular.forEach(response.data, function(p){
+
                     var product = new Product(
                         p._id,
                         p.productName,

@@ -86,6 +86,13 @@ main section {
   }
 
   .navbar-title {
+    color: @primary;
+
+    &:hover, &:focus {
+      text-decoration: none;
+      color: @primary-dark;
+    }
+
     img {
       float: left;
       width: 50px;
@@ -344,6 +351,10 @@ main section {
   }
 }
 
+.placeArticleInfo2 {
+  margin: 20px 0 10px 0;
+}
+
 @media (min-width: 768px) {
   .navbar-default {
     background: @light-darker;
@@ -432,6 +443,10 @@ main section {
     .navbar-title {
       display: none;
     }
+
+    .placeArticleInfo2 {
+      margin: 0 0 30px 0;
+    }
   }
 
   .intro {
@@ -484,6 +499,12 @@ main section {
   }
 }
 
+@media (min-width: 992px) {
+  .placeArticleInfo2 {
+    margin: 0 0 30px 0;
+  }
+}
+
 .form-horizontal  {
   .text-left {
     text-align: left;
@@ -498,10 +519,6 @@ main section {
 
 .images-container {
   height: 250px;
-}
-
-.placeArticleInfo2 {
-  margin-bottom: 30px;
 }
 
 .filter-sort-products .form-container {
@@ -579,19 +596,23 @@ main section {
   > div:first-child > div:first-child {
     text-align: center;
     background-color: @light-darker;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     height: 250px;
   }
 
   .row {
     margin-bottom: 20px;
   }
+
+  .input-group {
+    padding: 0 15px;
+  }
+
 }
 
 .loader {
   margin: 50px;
 }
-
 //ie 10 and above --> object fit fix
 _:-ms-lang(x), .cards .row a .thumbnail div img
 {

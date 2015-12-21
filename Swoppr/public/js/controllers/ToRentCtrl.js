@@ -22,7 +22,5 @@
         ProductService.all().then(onGetProductsSuccesfull, onGetProductsError);
 
         $scope.sortProperty = "pricePerDay";
-
-
     }
 }());

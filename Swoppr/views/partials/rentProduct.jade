@@ -7,12 +7,12 @@ div(class="container", ng-show="user == 'error'") Geen product gevonden
 div(class="container", ng-show="user.id")
     div(class="row")
         div(class="col-sm-12 title-header")
-            h1 {{user.products.productName}} - {{user.products.pricePerDay}}/dag
+            h1 {{user.products.productName}} - &euro;{{user.products.pricePerDay}}/dag
     div(class="row detailProduct")
         div(class="col-sm-12 col-md-6")
             div(class="row")
-                img(ng-show="user.products.url", src="{{user.products.url}}")
-                img(ng-hide="user.products.url", src="images/noImageFound.png")
+                img(ng-hide="user.products.url == '/'", src="{{user.products.url}}")
+                img(ng-show="user.products.url == '/'", src="images/noImageFound.png")
             div(class="row")
                 div(class="col-sm-3") Beschrijving:
                 div(class="col-sm-9") {{user.products.description}}
@@ -43,5 +43,10 @@ div(class="container", ng-show="user.id")
             div(class="row")
                 div(class="col-sm-3") Totale prijs:
                 div(class="col-sm-9") &euro; {{totalPrice}}
+            div(class="row")
+                div(class="col-sm-offset-3 col-sm-9")
+                    input(type="submit", value="Vehuren", class="btn")
+
+
 
 
