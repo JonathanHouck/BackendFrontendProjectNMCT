@@ -20,6 +20,7 @@ div(class="container", ng-show="user.id")
                 div(class="col-sm-3") Verhuurt door:
                 div(class="col-sm-9") {{user.firstname}} {{user.surname}}
         div(class="col-sm-12 col-md-6 form-horizontal")
+            uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)") {{alert.msg}}
             div(class="row")
                 div(class="col-sm-12")
                     h2 Artikel verhuren
@@ -45,8 +46,4 @@ div(class="container", ng-show="user.id")
                 div(class="col-sm-9") &euro; {{totalPrice}}
             div(class="row")
                 div(class="col-sm-offset-3 col-sm-9")
-                    input(type="submit", value="Vehuren", class="btn")
-
-
-
-
+                    input(type="submit", value="Vehuren", class="btn", ng-click="rentProduct()")

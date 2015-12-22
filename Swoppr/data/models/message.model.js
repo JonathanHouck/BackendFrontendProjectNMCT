@@ -7,7 +7,7 @@ var swoppr = require('../schemas/swoppr.schema.js');
 exports.getMessagesByRentingId = function(req, res, rentingid) {
     swoppr.messageModel.find({"_renting": rentingid})
         .exec(function(err, messages) {
-            if (err) {
+            if (err || !messages) {
                 res.json({"error": "rentingid niet gevonden"});
                 return ;
             }

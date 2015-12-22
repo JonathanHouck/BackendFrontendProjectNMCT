@@ -50,7 +50,7 @@
         };
 
         var all = function(){
-            var url =   '/api/product/getAll/';
+            var url = '/api/product/getAll/';
             return $http.get(url).then(function(response) {
                 var products = [];
                 angular.forEach(response.data, function(p){

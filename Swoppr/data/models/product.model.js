@@ -44,7 +44,7 @@ exports.getProductByIdUser = function(req, res, id) {
     swoppr.userModel
         .findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
-            if (err) {
+            if (err || !userWithProducts) {
                 res.json({"error": "productId niet gevonden"});
                 return ;
             }
@@ -62,7 +62,7 @@ exports.getProductByIdUser = function(req, res, id) {
 exports.addProductWithPictureUser = function(req, res) {
     swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
         if (err || !user) {
-            res.json({"message": "userId niet gevonden"});
+            res.json({"error": "userId niet gevonden"});
             return ;
         }
 

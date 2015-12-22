@@ -13,6 +13,12 @@
 
     function PlaceArticleCtrl ($rootScope, $scope, $http, Upload, GoogleMapApi) {
 
+        $scope.alerts = [];
+
+        $scope.closeAlert = function(index) {
+            $scope.alerts.splice(index, 1);
+        };
+
         GoogleMapApi.then(function(maps) {
             maps.visualRefresh = true;
             $scope.defaultBounds = new google.maps.LatLngBounds(
@@ -169,6 +175,10 @@
                 if (resp.data) {
                     if (resp.data.ok) {
                         $rootScope.user.products.push(resp.data.ok);
+                    }
+
+                    if (resp.data.error) {
+                        $scope.alerts.push({type: 'danger', msg: resp.data.error});
                     }
                 }
             }

@@ -74,8 +74,9 @@ exports.getAllRentings = function (req, res, id, byWichId) {
 
             //alle rentings overlopen
             async.each(rentings, iteratorRentings, function(err) {
-                if (err) {
+                if (err || !rentings) {
                     res.json({"error": "Ophalen rentings mislukt"});
+                    return;
                 }
 
                 res.json(rentingsOutput);
@@ -116,7 +117,10 @@ function getRenterFromAndProduct(renting, callback) {
 
     function cbProductWithRenterFrom(err, renterFrom) {
 
-        if(err) callback("renterFrom bestaat niet", "getRenterFromWithProduct");
+        if(err || !renterFrom) {
+            callback("renterFrom bestaat niet", "getRenterFromWithProduct");
+            return;
+        }
 
         product = renterFrom.products.id(renting._product);
 
@@ -141,7 +145,10 @@ function getRenterTo(renting, callback) {
 
     function cbRenterTo(err, user) {
 
-        if(err) callback("renterTo bestaat niet", "getRenterFrom");
+        if(err || !user) {
+            callback("renterTo bestaat niet", "getRenterFrom");
+            return;
+        }
 
         if (user.products) {
             delete user.products;
@@ -153,29 +160,33 @@ function getRenterTo(renting, callback) {
 }
 
 exports.addRentingUser = function(req, res) {
-
-    var productExists = false;
-
     //controle product van de renter bestaat
     async.series([
         function(callback) {
             swoppr.userModel.findById(req.body.renterFrom)
                 .exec(function(err, renterFrom) {
-                    if(err) callback("renterFrom bestaat niet", "checkRenterWithProduct");
+                    if(err || !renterFrom) {
+                        callback("renterFrom bestaat niet", "checkRenterWithProduct");
+                        return;
+                    }
 
                     product = renterFrom.products.id(req.body.productId);
 
                     if (!product) {
-                        if(err) callback("product bestaat niet", "checkRenterWithProduct");
+                        callback("product bestaat niet", "checkRenterWithProduct");
+                        return;
                     }
 
                     callback(null, "checkRenterWithProduct");
             });
         },
         function(callback) {
-            swoppr.userModel.findById(req.body.renterId, function(err, user) {
-                if (err) callback("renterId bestaat niet", "checkRenter");
-                else callback(null, "checkRenter");
+            swoppr.userModel.findById(req.body.renterTo, function(err, user) {
+                if (err || !user) {
+                    callback("renterId bestaat niet", "checkRenter");
+                } else {
+                    callback(null, "checkRenter");
+                }
             });
         }
 
@@ -189,7 +200,10 @@ exports.addRentingUser = function(req, res) {
             _renterFrom: req.body.renterFrom,
             _renterTo: req.body.renterTo,
             _product: req.body.productId,
-            daysToRent: req.body.daysToRent
+            fromDate: req.body.fromDate,
+            toDate: req.body.toDate,
+            daysToRent: req.body.daysToRent,
+            totalPrice: req.body.totalPrice
         });
 
         entry.save(function(err) {

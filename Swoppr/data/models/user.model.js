@@ -26,7 +26,7 @@ exports.getUserById = function(req, res, id) {
         .findById(id)
         .lean()
         .exec(function(err, user) {
-            if (err) {
+            if (err || !user) {
                 res.json({"error": "UserId niet gevonden"});
                 return ;
             }
@@ -40,7 +40,7 @@ exports.getAllUsersWithProducts = function(req, res) {
         .find()
         .exec(function(err, users) {
 
-        if(err) {
+        if(err || !users) {
             res.json({"error": "Geen users gevonden"});
             return ;
         }
@@ -72,7 +72,7 @@ exports.getAll = function(req, res) {
     swoppr.userModel
         .find()
         .exec(function(err, users) {
-            if(err) {
+            if(err || !users) {
                 res.json({"error": "Geen users gevonden"});
                 return ;
             }

@@ -76,7 +76,7 @@
 
         var add = function(renting){
             var url =   '/api/renting/newRenting/';
-            $http.pos(url, renting).then(function(response) {
+            return $http.post(url, renting).then(function(response) {
                 return response; //Expose the user data to your angular scope
             });
         };

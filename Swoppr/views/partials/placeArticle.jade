@@ -14,6 +14,7 @@ div(class="container")
                 ui-gmap-window(coords="selected", idkey="selected.place_id", templateurl="selected.templateurl", templateparameter="selected.templateparameter", options="selected.options", closeClick='selected.closeClick()', ng-cloak)
         div(class="col-sm-12 col-md-7")
             p(class="placeArticleInfo2") Vul de gegevens in en klik op opslaan
+            uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)") {{alert.msg}}
             form(class="form-horizontal", name="placeArticleForm")
                 div(class="form-group", ng-class="validate(1)")
                     label(for=productName, class="col-sm-3 control-label text-left") Naam

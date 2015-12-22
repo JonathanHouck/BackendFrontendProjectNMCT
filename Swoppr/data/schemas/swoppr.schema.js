@@ -9,9 +9,12 @@ var rentingSchema = new Schema({
     _renterFrom: {type: Schema.Types.ObjectId, ref: 'User'},
     _renterTo: {type: Schema.Types.ObjectId, ref: 'User'},
     _product: {type: Schema.Types.ObjectId, ref: 'Product'},
-    //fromDate: { type: Date},
-    daysToRent: Number//,
-    //Approved: Boolean
+    fromDate: { type: Date},
+    toDate: { type: Date},
+    daysToRent: Number,
+    totalPrice: Number,
+    //Approved: Boolean,
+    createdOn: { type: Date, default: Date.now }
 }, {collection: 'Rentings'});
 
 var productSchema = new Schema({

@@ -5,8 +5,8 @@ div(class="intro intro-authorize")
                 div(class="panel")
                     div(class="panel-heading"): h2 Inloggen
                     div(class="panel-body")
-                        uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)")   {{alert.msg}}
-                        form(class="form-horizontal", name="loginForm" ng-submit="login()")
+                        uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)") {{alert.msg}}
+                        form(class="form-horizontal", name="loginForm", ng-submit="login()")
                             div(class="form-group", ng-class="validate(1)")
                                 label(for=email, class="col-sm-3 control-label") Emailadres
                                 div(class="col-sm-9")
