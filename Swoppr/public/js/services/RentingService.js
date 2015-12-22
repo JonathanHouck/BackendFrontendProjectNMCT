@@ -5,12 +5,11 @@
     "use strict";
 
     var RentingService = function($http){
-
         var byId = function(id){
             var url = '/api/renting/getById/'+id;
             return $http.get(url).then(function(response) {
                 var r = response.data;
-                var renting = new Renting(
+                var renting = new Renting (
                     r.renterFrom,
                     r.renterTo,
                     r.product,

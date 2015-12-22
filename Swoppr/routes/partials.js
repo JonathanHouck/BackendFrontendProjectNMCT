@@ -14,7 +14,7 @@ module.exports = function(passport) {
         res.render("partials/index");
     });
 
-    router.get('/toRent', function(req, res) {
+    router.get('/toRent', isLoggedIn, function(req, res) {
         res.render("partials/toRent");
     });
 
@@ -80,7 +80,7 @@ module.exports = function(passport) {
         })(req, res);
     });
 
-     router.get('/profile', function(req, res) {
+     router.get('/profile', isLoggedIn, function(req, res) {
          res.render("partials/profile", {
             user : req.user
          });

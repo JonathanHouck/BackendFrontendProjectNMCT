@@ -4,9 +4,9 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('LoginCtrl', ['$rootScope', '$scope', '$http', LoginCtrl]);
+        .controller('LoginCtrl', ['$rootScope', '$scope', '$http', 'UserService', LoginCtrl]);
 
-    function LoginCtrl ($rootScope, $scope, $http) {
+    function LoginCtrl ($rootScope, $scope, $http, UserService) {
 
         $scope.alerts = [];
 
@@ -15,27 +15,29 @@
         };
 
         $scope.login = function() {
-            $http
-                .post('/partials/login', {
-                    email: this.email,
-                    password: this.password
-                }).then(successCallback, errorCallback);
 
-            function successCallback(response) {
+            function successLogin(response) {
                 if (response.data) {
                     if (response.data.error) {
                         $scope.alerts.push({type: 'danger', msg: response.data.error});
                     }
                 }
 
-                $http.get('/api/user/userDataNavbar/' + new Date().getTime())
-                    .success(function(data) {
-                        $rootScope.user = data;
-                    });
+                function successUserData(response) {
+                    $rootScope.user = response.data;
+                }
+
+                function errorUserData(response) {
+                    console.log(response);
+                }
+
+                UserService.userData().then(successUserData, errorUserData);
             }
-            function errorCallback(response) {
+            function errorLogin(response) {
                 console.log(response);
             }
+
+            UserService.login({email: this.email, password: this.password}).then(successLogin, errorLogin);
         };
 
         $scope.validate = function(field) {

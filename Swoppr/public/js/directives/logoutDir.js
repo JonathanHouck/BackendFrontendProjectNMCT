@@ -4,18 +4,24 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .directive('logout', ['$rootScope', '$http', logoutDir]);
+        .directive('logout', ['$rootScope', 'UserService', logoutDir]);
 
-    function logoutDir ($rootScope, $http) {
+    function logoutDir ($rootScope, UserService) {
         return {
             restrict: 'A',
-            link: function(scope, element, attrs) {
+            link: function(scope, element) {
                 element.on('click', function(e) {
                     e.preventDefault();
-                    $http.post('partials/logout')
-                        .success(function(data) {
-                            $rootScope.user = "";
-                        });
+
+                    function successLogout(response) {
+                        $rootScope.user = "";
+                    }
+
+                    function errorLogout(response) {
+                        console.log(response);
+                    }
+
+                    UserService.logout().then(successLogout, errorLogout);
                 });
             }
         };

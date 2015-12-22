@@ -58,7 +58,7 @@ div(class="container")
                         p(ng-message="required") Locatie is verplicht, gelieve jouw adres te zoeken op de map
                 div(class="form-group")
                     div(class="col-sm-offset-3 col-sm-9")
-                        input(type="submit", value="Te huur stellen", ng-disabled="placeArticleForm.$invalid", ng-click="uploadFile(picture)", class="btn")
+                        input(type="submit", value="Te huur stellen", ng-disabled="placeArticleForm.$invalid", ng-click="addProduct(picture)", class="btn")
     div(class="row")
         div(class="col-sm-12")
             div(ng-repeat="p in $root.user.products")

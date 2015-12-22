@@ -6,9 +6,40 @@
     "use strict";
 
     var UserService = function($http){
+        var login = function(credentials) {
+            var url = '/partials/login';
+            return $http.post(url, credentials)
+                .then(function(response) {
+                    return response;
+                });
+        };
+
+        var register = function(userData) {
+            var url = '/partials/register';
+            return $http.post(url, userData)
+                .then(function(response) {
+                    return response;
+                });
+        };
+
+        var logout = function() {
+            var url = '/partials/logout';
+            return $http.post(url)
+                .then(function(response) {
+                    return response;
+                });
+        };
+
+        var userData = function() {
+            var url = '/api/user/userDataNavbar/' + new Date().getTime();
+            return $http.get(url)
+                .then(function(response) {
+                    return response;
+            });
+        };
 
         var byId = function(id){
-            var url =   '/api/user/getById/'+id;
+            var url = '/api/user/getById/'+id;
             return $http.get(url)
                 .then(function(response) {
                     var u = response.data;
@@ -70,6 +101,10 @@
 
 
         return {
+            login: login,
+            register: register,
+            logout: logout,
+            userData: userData,
             byId : byId,
             AllWithProducts : AllWithProducts,
             add : add,

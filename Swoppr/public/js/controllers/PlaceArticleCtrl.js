@@ -5,14 +5,13 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('PlaceArticleCtrl', ['$rootScope', '$scope', '$http', 'Upload', 'uiGmapGoogleMapApi', PlaceArticleCtrl])
+        .controller('PlaceArticleCtrl', ['$rootScope', '$scope', 'ProductService', 'uiGmapGoogleMapApi', PlaceArticleCtrl])
         .run(['$templateCache', function($templateCache) {
             $templateCache.put('searchbox.tpl.html', '<input id="pac-input" class="pac-controls" type="text" placeholder="Adres zoeken">');
             $templateCache.put('window.tpl.html', '<div ng-controller="WindowCtrl" ng-init="showPlaceDetails(parameter)">{{place.name}}</div>');
         }]);
 
-    function PlaceArticleCtrl ($rootScope, $scope, $http, Upload, GoogleMapApi) {
-
+    function PlaceArticleCtrl ($rootScope, $scope, ProductService, GoogleMapApi) {
         $scope.alerts = [];
 
         $scope.closeAlert = function(index) {
@@ -145,47 +144,29 @@
             }
         });
 
-        $scope.uploadFile = function(file) {
-            if (file) {
-                file.upload = Upload.upload({
-                    url: '/api/product/newProduct',
-                    file: file,
-                    data: {
-                        userId: $rootScope.user._id,
-                        productName: $scope.productName,
-                        pricePerDay: $scope.pricePerDay,
-                        description: $scope.description
-                    }
-                }).then(function(resp) {
-                    if (resp.data.ok) {
-                        $rootScope.user.products.push(resp.data.ok);
-                    }
-                });
-            } else {
-                $http
-                    .post('/api/product/newProduct', {
-                        userId: $rootScope.user._id,
-                        productName: $scope.productName,
-                        pricePerDay: $scope.pricePerDay,
-                        description: $scope.description
-                    }).then(successCallback, errorCallback);
-            }
-
-            function successCallback(resp) {
-                if (resp.data) {
-                    if (resp.data.ok) {
-                        $rootScope.user.products.push(resp.data.ok);
+        $scope.addProduct = function(file) {
+            function successAddProduct(response) {
+                if (response.data) {
+                    if (response.data.ok) {
+                        $rootScope.user.products.push(response.data.ok);
                     }
 
-                    if (resp.data.error) {
-                        $scope.alerts.push({type: 'danger', msg: resp.data.error});
+                    if (response.data.error) {
+                        $scope.alerts.push({type: 'danger', msg: response.data.error});
                     }
                 }
             }
 
-            function errorCallback(response) {
+            function errorAddProduct(response) {
                 console.log(response);
             }
+
+            ProductService.add(file, {
+                userId: $rootScope.user._id,
+                productName: $scope.productName,
+                pricePerDay: $scope.pricePerDay,
+                description: $scope.description
+            }).then(successAddProduct, errorAddProduct);
         };
 
         $scope.validate = function(field) {

@@ -3,7 +3,7 @@
  */
 (function(){
     "use strict";
-    var ProductService = function($http){
+    var ProductService = function($http, Upload) {
 
         var byId = function(id){
             var url =   '/api/product/getById/'+id;
@@ -62,19 +62,27 @@
                         p.description,
                         p.url
                     );
-
                     products.push(product);
                 });
                 return products;
             });
         };
 
-        var add = function(userId, product){
+        var add = function(file, data) {
             var url = '/api/product/newProduct/';
-            product.userId = userId;
-            $http.put(url, product).then(function(response){
-                return response;
-            });
+            if (file) {
+                return file.upload = Upload.upload({
+                    url: url,
+                    file: file,
+                    data: data
+                }).then(function(response) {
+                    return response;
+                });
+            } else {
+                return $http.post(url, data).then(function(response) {
+                    return response;
+                });
+            }
         };
 
         var remove = function(id){
@@ -100,5 +108,5 @@
             update : update
         };
     };
-    angular.module("swoppr").factory("ProductService", ["$http", ProductService]);
+    angular.module("swoppr").factory("ProductService", ["$http", "Upload", ProductService]);
 })();

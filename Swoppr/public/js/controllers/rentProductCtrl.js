@@ -4,9 +4,15 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('RentProductCtrl', ['$scope', '$routeParams', 'ProductService', RentProductCtrl]);
+        .controller('RentProductCtrl', ['$rootScope', '$scope', '$routeParams', '$location', 'ProductService', 'RentingService', RentProductCtrl]);
 
-    function RentProductCtrl($scope, $routeParams, ProductService) {
+    function RentProductCtrl($rootScope, $scope, $routeParams, $location, ProductService, RentingService) {
+
+        $scope.alerts = [];
+
+        $scope.closeAlert = function(index) {
+            $scope.alerts.splice(index, 1);
+        };
 
         $scope.user = [];
 
@@ -81,11 +87,42 @@
         });
 
         $scope.setDaysToRent = function() {
-
             var oneDay = 24*60*60*1000;
             $scope.daysToRent = Math.round(Math.abs(($scope.dt1.getTime() - $scope.dt2.getTime())/(oneDay)));
 
             if ($scope.user.products) $scope.totalPrice = $scope.user.products.pricePerDay * $scope.daysToRent;
+        };
+
+        var onAddRentingSuccessfull = function(resp) {
+            if (resp.data) {
+                if (resp.data.ok) {
+                    $location.path('/toRent');
+                }
+                if (resp.data.error) {
+                    $scope.alerts.push({type: 'danger', msg: resp.data.error});
+                }
+            }
+        };
+
+        var onAddRentingError = function(resp) {
+            console.log(resp);
+        };
+
+        $scope.rentProduct = function() {
+
+            if ($scope.user || $rootScope.user) {
+                var renting = new Renting(
+                    $scope.user.id,
+                    $rootScope.user._id,
+                    $scope.user.products.id,
+                    $scope.dt1,
+                    $scope.dt2,
+                    $scope.daysToRent,
+                    $scope.totalPrice
+                );
+
+                RentingService.add(renting).then(onAddRentingSuccessfull, onAddRentingError);
+            }
         };
     }
 }());

@@ -4,9 +4,9 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('RegisterCtrl', ['$rootScope', '$scope', '$http', RegisterCtrl]);
+        .controller('RegisterCtrl', ['$rootScope', '$scope', '$http', 'UserService', RegisterCtrl]);
 
-    function RegisterCtrl ($rootScope, $scope, $http) {
+    function RegisterCtrl ($rootScope, $scope, $http, UserService) {
 
         $scope.alerts = [];
 
@@ -16,30 +16,34 @@
 
         $scope.register = function() {
 
-            $http
-                .post('/partials/register', {
-                    firstname: this.firstname,
-                    surname: this.surname,
-                    email: this.email,
-                    password: this.password
-                }).then(successCallback, errorCallback);
-
-            function successCallback(response) {
+            function succesRegister(response) {
                 if (response.data) {
                     if (response.data.error) {
                         $scope.alerts.push({type: 'danger', msg: response.data.error});
                     }
                 }
 
-                $http.get('/api/user/userDataNavbar/' + new Date().getTime())
-                    .success(function(data) {
-                        $rootScope.user = data;
-                    });
+                function successUserData(response) {
+                    $rootScope.user = response.data;
+                }
+
+                function errorUserData(response) {
+                    console.log(response);
+                }
+
+                UserService.userData().then(successUserData, errorUserData);
             }
 
-            function errorCallback(response) {
+            function errorRegister(response) {
                 console.log(response);
             }
+
+            UserService.register({
+                firstname: this.firstname,
+                surname: this.surname,
+                email: this.email,
+                password: this.password
+            }).then(succesRegister, errorRegister);
         };
 
         $scope.validate = function(field) {
