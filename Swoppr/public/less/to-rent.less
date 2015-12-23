@@ -1,0 +1,72 @@
+@import "mixins.less";
+@import "variables.less";
+
+.filter-sort-products .form-container {
+  margin-bottom: 20px;
+}
+
+.cards .row a {
+  text-decoration: none;
+  color: @secondary-dark;
+
+  .thumbnail {
+    overflow: hidden;
+
+    div {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      background-color: @light-darker;
+
+      &:hover .mask2 {
+        .transformTranslateY();
+      }
+
+      &:hover img {
+        .transformTranslateY(100%);
+      }
+
+      .mask2 {
+        background-color: @light-darker-more;
+        .transformTranslateY(-100%);
+        .easeInOut(0.3s);
+        height: 250px;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+
+        p {
+          margin-top: 10px;
+        }
+      }
+
+      img {
+        height: 250px;
+        background-color: @light-darker;
+        max-width: 100%;
+        overflow: hidden;
+        .easeInOut(0.3s);
+      }
+    }
+
+    p {
+      margin: 10px;
+      color: @dark-lighter;
+      word-wrap: break-word;
+    }
+
+    .price {
+      padding-right: 5px;
+      text-align: right;
+      color: @primary;
+    }
+  }
+}
+
+//ie 10 and above --> object fit fix
+_:-ms-lang(x), .cards .row a .thumbnail div img
+{
+  max-width: none;
+}

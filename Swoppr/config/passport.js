@@ -2,8 +2,6 @@
  * Created by jonah on 11/20/2015.
  */
 var LocalStrategy    = require('passport-local').Strategy;
-var FacebookStrategy = require('passport-facebook').Strategy;
-var TwitterStrategy  = require('passport-twitter').Strategy;
 var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
 
 var User = require('../data/schemas/swoppr.schema').userModel;
@@ -11,6 +9,8 @@ var User = require('../data/schemas/swoppr.schema').userModel;
 var configAuth = require('./auth'); // use this one for testing
 
 module.exports = function(passport) {
+    "use strict";
+
     passport.serializeUser(function(user, done) {
         done(null, user.id);
     });

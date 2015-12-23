@@ -27,7 +27,9 @@ cloudinary.config({cloud_name: 'swoppr', api_key: '574615225534372', api_secret:
         });
 };*/
 
-exports.getProductById = function(req, res, id) {
+module.exports.getProductById = function(req, res, id) {
+    "use strict";
+
     swoppr.userModel.findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
             if (err || !userWithProducts) {
@@ -40,7 +42,9 @@ exports.getProductById = function(req, res, id) {
         });
 };
 
-exports.getProductByIdUser = function(req, res, id) {
+module.exports.getProductByIdUser = function(req, res, id) {
+    "use strict";
+
     swoppr.userModel
         .findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
@@ -59,7 +63,9 @@ exports.getProductByIdUser = function(req, res, id) {
         });
 };
 
-exports.addProductWithPictureUser = function(req, res) {
+module.exports.addProductWithPictureUser = function(req, res) {
+    "use strict";
+
     swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
         if (err || !user) {
             res.json({"error": "userId niet gevonden"});
@@ -98,6 +104,8 @@ exports.addProductWithPictureUser = function(req, res) {
 };
 
 function addProduct(res, user, entry) {
+    "use strict";
+
     user.products.push(entry);
 
     user.save(function(err) {
@@ -109,33 +117,9 @@ function addProduct(res, user, entry) {
     });
 }
 
-/*exports.addProductUser = function(req, res) {
+module.exports.getAllProducts = function(req, res) {
+    "use strict";
 
-    swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
-        if (err) {
-            res.json({"error": "userId niet gevonden"});
-            return ;
-        }
-
-        var entry = new swoppr.productModel( {
-            productName: req.body.productName,
-            pricePerDay: req.body.pricePerDay,
-            description: req.body.description
-        });
-
-        user.products.push(entry);
-
-        user.save(function(err2) {
-            if (err2) {
-                res.json({"error": "Product toevoegen aan gebruiker mislukt"});
-            }
-        });
-
-        res.json({"ok": "Product toegevoegd"})
-    })
-};*/
-
-exports.getAllProducts = function(req, res) {
     swoppr.userModel.find().exec(function(err, users) {
 
         if(err) {
@@ -183,7 +167,9 @@ exports.getAllProducts = function(req, res) {
     });
 };
 
-exports.editProductUser = function(req, res) {
+module.exports.editProductUser = function(req, res) {
+    "use strict";
+
     swoppr.userModel.findOne({"products._id": req.body.id}).exec(function(err, userWithProduct) {
 
         if (err || userWithProduct === null) {
@@ -204,7 +190,9 @@ exports.editProductUser = function(req, res) {
     });
 };
 
-exports.removeProductUser = function(req, res, id) {
+module.exports.removeProductUser = function(req, res, id) {
+    "use strict";
+
     swoppr.userModel.findOne({"products._id": id}).exec(function(err, userWithProduct) {
         if (err || userWithProduct === null) {
             res.json({"error": "productId niet gevonden"});

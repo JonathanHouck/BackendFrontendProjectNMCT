@@ -4,7 +4,9 @@
 var swoppr = require('../schemas/swoppr.schema.js');
 var async = require('async');
 
-exports.createUser = function(req, res) {
+module.exports.createUser = function(req, res) {
+    "use strict";
+
     var entry = new swoppr.userModel({
         firstname: req.body.firstname,
         surname: req.body.surname,
@@ -21,7 +23,9 @@ exports.createUser = function(req, res) {
     });
 };
 
-exports.getUserById = function(req, res, id) {
+module.exports.getUserById = function(req, res, id) {
+    "use strict";
+
     swoppr.userModel
         .findById(id)
         .lean()
@@ -35,7 +39,9 @@ exports.getUserById = function(req, res, id) {
     });
 };
 
-exports.getAllUsersWithProducts = function(req, res) {
+module.exports.getAllUsersWithProducts = function(req, res) {
+    "use strict";
+
     swoppr.userModel
         .find()
         .exec(function(err, users) {
@@ -68,7 +74,9 @@ exports.getAllUsersWithProducts = function(req, res) {
     });
 };
 
-exports.getAll = function(req, res) {
+module.exports.getAll = function(req, res) {
+    "use strict";
+
     swoppr.userModel
         .find()
         .exec(function(err, users) {

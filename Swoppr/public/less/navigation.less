@@ -1,0 +1,145 @@
+@import "mixins.less";
+@import "variables.less";
+
+.navbar-default {
+  margin-bottom: 0;
+
+  .navbar-toggle {
+    border-color: #f8f8f8;
+
+    &:hover, &:focus {
+      background-color: #f8f8f8;
+    }
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar-title {
+    color: @primary;
+
+    &:hover, &:focus {
+      text-decoration: none;
+      color: @primary-dark;
+    }
+
+    img {
+      float: left;
+      width: 50px;
+      padding-top: 4px;
+    }
+
+    p {
+      padding-left: 65px;
+      line-height: 45px;
+    }
+  }
+
+  .navbar-nav li a.active {
+    color: @primary;
+
+    &:hover, &:focus {
+      color: @primary;
+    }
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-default {
+    background: @light-darker;
+    background: rgba(249, 249, 249, 0.7);
+    margin-bottom: 0;
+    border: none;
+    .shadow();
+
+    .navbar-nav {
+      margin-top: 10px;
+
+      > li {
+        i.underline {
+          background: #1595a3;
+          bottom: 0;
+          display: block;
+          height: 2px;
+          left: 50%;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          .underlineBezier();
+          width: 0;
+        }
+
+        &:hover i.underline {
+          opacity: 1;
+          width: 100%;
+          left: 0;
+        }
+
+        .fa-user {
+          color: @primary;
+
+          &:hover, &:focus {
+            color: @primary;
+          }
+        }
+
+        > a {
+          padding-bottom: 30px;
+          color: @dark-lighter;
+
+          &:hover, &:focus {
+            color: @dark-lighter;
+          }
+        }
+      }
+
+      .dropdown {
+        display: block;
+
+        &:hover {
+          .dropdown-menu {
+            display: block;
+          }
+        }
+
+        .dropdown-menu {
+          border-color: @light-darker;
+
+          li a {
+            padding: 15px 20px;
+
+            &:hover {
+              background-color: @secondary-light;
+            }
+          }
+        }
+      }
+
+      .mobile-only {
+        display: none;
+      }
+    }
+
+    .navbar-brand {
+      padding-top: 10px;
+      display: block;
+
+      img {
+        width: 60px;
+      }
+    }
+
+    .navbar-title {
+      display: none;
+    }
+  }
+}

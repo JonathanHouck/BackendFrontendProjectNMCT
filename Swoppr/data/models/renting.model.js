@@ -8,7 +8,9 @@ var async = require('async');
 // --> indien renterFrom --> _renterFrom finden
 // --> indien renterTo --> _renterTo finden
 
-exports.getRentingById = function (req, res, id) {
+module.exports.getRentingById = function (req, res, id) {
+    "use strict";
+
     swoppr.rentingModel
         .findById(id)
         .lean()
@@ -43,7 +45,8 @@ exports.getRentingById = function (req, res, id) {
         });
 };
 
-exports.getAllRentings = function (req, res, id, byWichId) {
+module.exports.getAllRentings = function (req, res, id, byWichId) {
+    "use strict";
 
     var byWichIdObj;
 
@@ -112,6 +115,8 @@ exports.getAllRentings = function (req, res, id, byWichId) {
 };
 
 function getRenterFromAndProduct(renting, callback) {
+    "use strict";
+
     swoppr.userModel.findById(renting._renterFrom)
         .exec(cbProductWithRenterFrom);
 
@@ -122,7 +127,7 @@ function getRenterFromAndProduct(renting, callback) {
             return;
         }
 
-        product = renterFrom.products.id(renting._product);
+        var product = renterFrom.products.id(renting._product);
 
         if (!product) {
             if(err) callback("product bestaat niet", "getRenterFromWithProduct");
@@ -139,6 +144,8 @@ function getRenterFromAndProduct(renting, callback) {
 }
 
 function getRenterTo(renting, callback) {
+    "use strict";
+
     swoppr.userModel.findById(renting._renterTo)
         .lean()
         .exec(cbRenterTo);
@@ -159,7 +166,9 @@ function getRenterTo(renting, callback) {
     }
 }
 
-exports.addRentingUser = function(req, res) {
+module.exports.addRentingUser = function(req, res) {
+    "use strict";
+
     //controle product van de renter bestaat
     async.series([
         function(callback) {
@@ -170,7 +179,7 @@ exports.addRentingUser = function(req, res) {
                         return;
                     }
 
-                    product = renterFrom.products.id(req.body.productId);
+                    var product = renterFrom.products.id(req.body.productId);
 
                     if (!product) {
                         callback("product bestaat niet", "checkRenterWithProduct");

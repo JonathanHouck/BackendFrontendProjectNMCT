@@ -1,0 +1,258 @@
+@import "mixins.less";
+@import "variables.less";
+
+main section {
+  .title-sep {
+    background: @primary;
+    width: 60px;
+    height: 2px;
+    display: block;
+    .centered();
+  }
+
+  .hide-for-animation {
+    visibility: hidden;
+  }
+
+  width: 100%;
+  padding: 75px 0;
+
+  &:nth-child(1) {
+    margin-bottom: 50px;
+  }
+
+  &:nth-child(2n) {
+    background-color: @light-darker;
+  }
+
+  .container .row:first-child {
+    margin-bottom: 25px;
+  }
+}
+
+.intro {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  text-align: center;
+  color: @light;
+  .cover();
+
+  .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+
+    .container {
+      margin-bottom: 150px;
+      margin-top: 50px;
+      padding-bottom: 20px;
+
+      .intro-text {
+        padding: 15px 0;
+      }
+
+      .brand-heading {
+        text-transform: uppercase;
+        display: none;
+      }
+
+      .row div {
+        background: @secondary-dark;
+        background:rgba(0,0,0,0.4);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.intro-header {
+  background: @neigbourhoodImg no-repeat bottom center;
+
+  .intro-btn {
+    padding-bottom: 35px;
+
+    a {
+      padding: 10px 15px;
+      border: 1px solid @light;
+      background-color: transparent;
+      color: @light;
+      border-radius: 4px;
+      margin-bottom: 20px;
+
+      &:hover, &:focus {
+        color: @dark;
+        background-color: @light;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.features {
+  .fa {
+    border: solid 3px #dedede;
+    .borderBox();
+    border-radius: 50%;
+    color: #1595a3;
+    .transformScale(0.3s);
+    .square(50px);
+    text-align: center;
+    padding-top: 12px;
+
+    &:hover {
+      background-color: @secondary-light;
+    }
+  }
+
+  .row {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.carousel-inner {
+
+  img {
+    .centered();
+  }
+
+  a, a:hover, a:focus {
+    color: @dark;
+  }
+
+}
+
+.carousel-control {
+  display: none;
+}
+
+.carousel-indicators {
+  bottom: -40px;
+
+  li, li.active {
+    background-color: @primary-light;
+    width: 40px;
+    height: 7px;
+    border-radius: 0;
+    border: none;
+    margin: 0 5px;
+  }
+
+  li.active {
+    background-color: @primary;
+  }
+}
+
+.team-member {
+  margin-bottom: 25px;
+
+  .picture {
+    background-color: @light-darker;
+    border: 7px solid @secondary-light;
+    .borderBox();
+    overflow: hidden;
+    position: relative;
+    width: 225px;
+    height: 225px;
+    .centered();
+    border-radius: 50%;
+
+    &:hover {
+      img {
+        .easeInOut(0.4s);
+        .transformScale(0);
+        opacity: 0;
+      }
+
+      .mask {
+        .easeInOut(0.4s);
+        opacity: 1;
+
+        .team-member-icons {
+          .easeInOut(0.8s);
+          .transformScale(1);
+        }
+      }
+    }
+
+    img {
+      .centered();
+      .easeInOut(0.8s);
+      .transformScale(1);
+      opacity: 1;
+    }
+
+    .mask {
+      .easeInOut(0.8s);
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      border-radius: 50%;
+      .square(100%);
+
+      .team-member-icons {
+        .easeInOut(0.4s);
+        .transformScale(0);
+        display: table;
+        .centered(90px);
+
+        a {
+          background-color: @secondary;
+          border-radius: 50%;
+          display: block;
+          float: left;
+          height: 34px;
+          line-height: 32px;
+          margin: 0 5px;
+          width: 34px;
+
+          i {
+            color: @light;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .intro {
+    .intro-body .container {
+      .brand-heading {
+        display: block;
+      }
+      .smallFont {
+        .fontSize(25px);
+      }
+    }
+  }
+
+  .features {
+    .title {
+      color: @secondary-dark;
+    }
+
+    .left {
+      .title {
+        text-align: right;
+      }
+      .fa {
+        float: right;
+        margin: 5px 0 0 20px;
+      }
+    }
+
+    .right {
+      .title {
+        text-align: left;
+      }
+      .fa {
+        float: left;
+        margin: 5px 20px 0 0;
+      }
+    }
+  }
+}

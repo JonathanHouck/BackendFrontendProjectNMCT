@@ -71,13 +71,15 @@
         var add = function(file, data) {
             var url = '/api/product/newProduct/';
             if (file) {
-                return file.upload = Upload.upload({
+                var result = file.upload = Upload.upload({
                     url: url,
                     file: file,
                     data: data
                 }).then(function(response) {
                     return response;
                 });
+
+                return result;
             } else {
                 return $http.post(url, data).then(function(response) {
                     return response;

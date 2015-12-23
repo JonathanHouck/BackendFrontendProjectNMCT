@@ -22,7 +22,7 @@ module.exports = function(passport) {
         res.render("partials/rentProduct");
     });
 
-    router.get('/placeArticle',isLoggedIn, function(req, res) {
+    router.get('/placeArticle', isLoggedIn, function(req, res) {
         res.render("partials/placeArticle");
     });
 

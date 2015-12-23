@@ -9,6 +9,8 @@
  */
 
 module.exports = (function (configURL, database) {
+    "use strict";
+
     //var mongoose = database;
     var db = database.connect(configURL);// connecteer de database
 

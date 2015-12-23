@@ -4,7 +4,9 @@
 
 var swoppr = require('../schemas/swoppr.schema.js');
 
-exports.getMessagesByRentingId = function(req, res, rentingid) {
+module.exports.getMessagesByRentingId = function(req, res, rentingid) {
+    "use strict";
+
     swoppr.messageModel.find({"_renting": rentingid})
         .exec(function(err, messages) {
             if (err || !messages) {
@@ -16,7 +18,8 @@ exports.getMessagesByRentingId = function(req, res, rentingid) {
         });
 };
 
-exports.addMessageToRenting = function(req, res, rentingid) {
+module.exports.addMessageToRenting = function(req, res, rentingid) {
+    "use strict";
 
     console.log(rentingid + req.body.name + req.body.content);
 
