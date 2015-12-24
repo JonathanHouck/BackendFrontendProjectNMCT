@@ -1,14 +1,16 @@
 /**
  * Created by Greg on 04-Dec-15.
  */
-function Product(_id, productName, pricePerDay, description, url){
+function Product(_id, productName, pricePerDay, description, url, place, longitude, latitude){
     this.id = _id;
     this.productName = productName;
     this.pricePerDay = pricePerDay;
     this.description = description;
     this.url = url;
+    this.place = place;
+    this.longitude = longitude;
+    this.latitude = latitude;
 }
-
 
 Product.prototype.toString = function(){
     return this.productName;

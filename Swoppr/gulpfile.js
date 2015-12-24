@@ -29,11 +29,11 @@ gulp.task("default", function() {
     });
 
     var jsWatcher = gulp.watch(['./public/js/scroll-animate/**/*.js',
+                                './public/js/models/**/*',
                                 './public/js/app.js',
                                 './public/js/controllers/**/*.js',
                                 './public/js/directives/**/*',
-                                './public/js/services/**/*',
-                                './public/js/models/**/*'], ['js']
+                                './public/js/services/**/*'], ['js']
                                 );
     jsWatcher.on('change', function(event) {
         console.log(event.path + " changed");
@@ -55,11 +55,11 @@ gulp.task("default", function() {
 
 gulp.task("js",function (){
     gulp.src(['./public/js/scroll-animate/**/*.js',
+            './public/js/models/**/*',
             './public/js/app.js',
             './public/js/controllers/**/*.js',
             './public/js/directives/**/*.js',
-            './public/js/services/**/*',
-            './public/js/models/**/*'])
+            './public/js/services/**/*'])
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
         //.pipe(sourcemaps.init())

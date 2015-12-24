@@ -19,11 +19,10 @@ div(class="container")
                 div(class="form-group", ng-class="validate(1)")
                     label(for=productName, class="col-sm-3 control-label text-left") Naam
                     div(class="col-sm-9")
-                        input(type="text", name="productName", id="productName", class="form-control", placeholder="Bv. Grasmaaier", ng-model="productName", ng-minlength="2", ng-maxlength="50", ng-required="true")
+                        input(type="text", name="productName", id="productName", class="form-control", placeholder="Bv. Grasmaaier", ng-model="productName", ng-maxlength="50", ng-required="true")
                     div(class="col-sm-9 col-sm-offset-3", ng-messages="placeArticleForm.productName.$error", ng-if="placeArticleForm.productName.$touched")
-                        p(ng-message="required") Voornaam is verplicht in te vullen
-                        p(ng-message="minlength") Voornaam is te kort
-                        p(ng-message="maxlength") Voornaam is te lang
+                        p(ng-message="required") Naam is verplicht in te vullen
+                        p(ng-message="maxlength") Naam is te lang
                 div(class="form-group row", ng-class="validate(2)")
                     label(for=pricePerDay, class="col-sm-3 control-label text-left") Prijs per dag (in euro)
                     div(class="col-sm-9")
@@ -53,7 +52,7 @@ div(class="container")
                 div(class="form-group", ng-class="validate(5)")
                     label(for=location, class="col-sm-3 control-label text-left") Adres
                     div(class="col-sm-9")
-                        input(type="text", name="location", id="location", class="form-control", placeholder="Typ jouw adres in het tekstveld op de map" ng-model="location", ng-required="true", readonly="true")
+                        input(type="text", name="location", id="location", class="form-control", placeholder="Typ jouw adres in het tekstveld op de map", ng-model="location", ng-required="true", readonly="true")
                     div(class="col-sm-9 col-sm-offset-3", ng-messages="placeArticleForm.location.$error", ng-if="placeArticleForm.location.$touched")
                         p(ng-message="required") Locatie is verplicht, gelieve jouw adres te zoeken op de map
                 div(class="form-group")

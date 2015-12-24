@@ -27,6 +27,11 @@
             controller: 'RentProductCtrl',
             auth: true
         }).
+        when('/detailRenting/:id?', {
+            templateUrl: 'partials/detailRenting',
+            controller: 'DetailRentingCtrl',
+            auth: true
+        }).
         when('/chat/:id?', {
             templateUrl: 'partials/chat',
             controller: 'ChatioCtrl'
@@ -71,12 +76,12 @@
     .
     run(['$rootScope', '$location', '$http', '$route', 'UserService', function($rootScope, $location, $http, $route, UserService) {
         $rootScope.$on( "$routeChangeStart", function(next) {
-            function succesUserData(response) {
-                if (response.data) {
-                    if (response.data.error) {
+            function succesUserData(data) {
+                if (data) {
+                    if (data.error) {
                         $rootScope.user = "";
                     } else {
-                        $rootScope.user = response.data;
+                        $rootScope.user = data;
                     }
                 }
             }

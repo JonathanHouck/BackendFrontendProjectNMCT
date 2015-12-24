@@ -34,7 +34,19 @@
             var url = '/api/user/userDataNavbar/' + new Date().getTime();
             return $http.get(url)
                 .then(function(response) {
-                    return response;
+                    if(response.data.error) {
+                        return "error";
+                    }
+
+                    var u = response.data;
+                    return new User(
+                        u._id,
+                        u.firstname,
+                        u.surname,
+                        u.local,
+                        u.google,
+                        u.products
+                    );
             });
         };
 
@@ -42,10 +54,14 @@
             var url = '/api/user/getById/'+id;
             return $http.get(url)
                 .then(function(response) {
+                    if(response.data.error) {
+                        return "error";
+                    }
+
                     var u = response.data;
                     return new User(
-                        u.lastname,
                         u.firstname,
+                        u.surname,
                         u.local.email,
                         u.products,
                         u.createdOn
@@ -57,11 +73,15 @@
             var url = '/api/user/getAllUsersWithProducts';
             return $http.get(url)
                 .then(function(response) {
+                    if(response.data.error) {
+                        return "error";
+                    }
+
                     var users = [];
                     angular.forEach(response.data, function(u){
                         var user = new User(
-                            u.lastname,
                             u.firstname,
+                            u.surname,
                             u.local.email,
                             u.products,
                             u.createdOn
@@ -76,11 +96,15 @@
             var url =   '/api/user/getAll/';
             return $http.get(url)
                 .then(function(response) {
+                    if(response.data.error) {
+                        return "error getting all users";
+                    }
+
                     var users = [];
                     angular.forEach(response.data, function(u){
                         var user = new User(
-                            u.lastname,
                             u.firstname,
+                            u.surname,
                             u.local.email,
                             u.products,
                             u.createdOn

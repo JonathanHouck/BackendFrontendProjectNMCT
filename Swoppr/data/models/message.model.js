@@ -14,29 +14,35 @@ module.exports.getMessagesByRentingId = function(req, res, rentingid) {
                 return ;
             }
 
-            res.json(messages);
+            res.json({"ok": messages});
         });
 };
 
-module.exports.addMessageToRenting = function(req, res, rentingid) {
+module.exports.addMessage = function(req, res, rentingid) {
     "use strict";
 
-    console.log(rentingid + req.body.name + req.body.content);
+    swoppr.rentingModel
+        .findById(req.body.rentingId)
+        .exec(function(err, renting) {
+            if (err || !renting) {
+                res.json({"error": "RentingId niet gevonden"});
+                return ;
+            }
 
-    var entry = new swoppr.messageModel({
-        _renting: rentingid,
-        name: req.body.name,
-        content: req.body.content
-    });
+            var entry = new swoppr.messageModel({
+                _renting: rentingid,
+                _sender: req.body.senderId,
+                name: req.body.name,
+                content: req.body.content
+            });
 
-    entry.save(function(err) {
-        if (err) {
-            console.log(err);
-            res.json({"error": "Toevoegen message mislukt"});
-            return;
-        }
+            entry.save(function(err) {
+                if (err) {
+                    res.json({"error": "Toevoegen message mislukt"});
+                    return;
+                }
 
-        //res.json({"ok": "renting toegevoegd"})
-        res.json(entry.toObject());
-    });
+                res.json({"ok": entry});
+            });
+        });
 };

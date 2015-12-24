@@ -11,12 +11,10 @@ body {
 
 h1 {
   .fontSize(25px);
-  text-transform: uppercase;
 }
 
 h2 {
   .fontSize(20px);
-  text-transform: uppercase;
 }
 
 div[ng-view] {
@@ -36,4 +34,36 @@ div[ng-view] {
   padding-bottom: 10px;
   margin: 10px 0 30px;
   border-bottom: 1px solid @light-darker-more;
+}
+
+
+.detailProduct {
+  .row {
+    margin-bottom: 20px;
+  }
+}
+
+.detailRenting {
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .messages {
+    max-height: 480px;
+    overflow-y: scroll;
+
+    .message {
+      border-bottom: 1px solid @light-darker;
+      margin-bottom: 15px;
+
+      p:first-child {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      p:nth-child(3) {
+        color: @secondary-dark;
+      }
+    }
+  }
 }

@@ -4,8 +4,6 @@ module.exports = function (io) {
 
         console.log("socket was connected");
 
-        //socket.emit("showThis", "this is from the server");
-
         socket.on("join renting", function (rentid) {
             socket.join(rentid);
         });

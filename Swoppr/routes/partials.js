@@ -22,6 +22,10 @@ module.exports = function(passport) {
         res.render("partials/rentProduct");
     });
 
+    router.get('/detailRenting/:id?', isLoggedIn, function(req, res) {
+        res.render("partials/detailRenting");
+    });
+
     router.get('/placeArticle', isLoggedIn, function(req, res) {
         res.render("partials/placeArticle");
     });
@@ -39,7 +43,7 @@ module.exports = function(passport) {
          if (!req.body.email || !req.body.password) {
              return res.json({ error: 'Email and Password required' });
          }
-         passport.authenticate('local-login', function(err, user, info) {
+         passport.authenticate('local-login', function(err, user) {
              if (err) {
                  return res.json(err);
              }

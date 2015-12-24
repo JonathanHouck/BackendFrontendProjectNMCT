@@ -10,9 +10,9 @@ router.get('/:rentingid', function(req, res) {
     return swopprCtrl.getMessagesByRentingId(req, res, rentingid);
 });
 
-router.post('/:rentingid', function(req, res) {
-    var rentingid = req.params.rentingid;
-    return swopprCtrl.addMessageToRenting(req, res, rentingid);
+router.post('/:rentingId', function(req, res){
+    var rentingid = req.params.rentingId;
+    return swopprCtrl.addMessage(req, res, rentingid);
 });
 
 module.exports = router;

@@ -21,7 +21,6 @@ module.exports.getRentingById = function (req, res, id) {
             }
 
             async.series([
-
                 //renterFrom en product ophalen
                 function(callback) {
                     getRenterFromAndProduct(renting, callback);
@@ -33,7 +32,7 @@ module.exports.getRentingById = function (req, res, id) {
                     getRenterTo(renting, callback);
                 }
 
-                //info renting opgehaald, renting toevoegen aan rentings
+            //info renting opgehaald, renting toevoegen aan rentings
             ], function(err, results) {
 
                 if (err) {
@@ -220,7 +219,7 @@ module.exports.addRentingUser = function(req, res) {
                 res.json({"error": "Renting toevoegen mislukt"});
             }
 
-            res.json({"ok": "Renting toegevoegd"});
+            res.json({"ok": entry});
         });
     });
 };

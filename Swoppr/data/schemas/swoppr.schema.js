@@ -26,45 +26,34 @@
         pricePerDay: String,
         description: String,
         url: String,
+        place: String,
+        longitude: String,
+        latitude: String,
         createdOn: { type: Date, default: Date.now }
     });
 
     var userSchema = new Schema({
         firstname: String,
         surname: String,
-        emailadres: String,
         products: [productSchema],
-        createdOn: { type: Date, default: Date.now },
-
         local            : {
             email        : String,
             password     : String
-        },
-        facebook         : {
-            id           : String,
-            token        : String,
-            email        : String,
-            name         : String
-        },
-        twitter          : {
-            id           : String,
-            token        : String,
-            displayName  : String,
-            username     : String
         },
         google           : {
             id           : String,
             token        : String,
             email        : String,
             name         : String
-        }
+        },
+        createdOn: { type: Date, default: Date.now }
     }, {collection: 'Users'});
 
     var messageSchema = new Schema({
-        //_renting: {type: Schema.Types.ObjectId, ref: 'Renting'},
-        _renting: String,
-        content: String,
+        _renting: {type: Schema.Types.ObjectId, ref: 'Renting'},
+        _sender: {type: Schema.Types.ObjectId, ref: 'User'},
         name: String,
+        content: String,
         createdOn: { type: Date, default: Date.now }
     }, {collection: 'Messages'});
 

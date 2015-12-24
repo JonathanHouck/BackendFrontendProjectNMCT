@@ -1,0 +1,50 @@
+div(class="container")
+    div(class="row")
+        div(class="col-sm-12 title-header")
+            h1 Detail te vehuren artikel
+    div(class="row detailRenting")
+        div(class="col-sm-6 col-md-4")
+            h2 Detailgegevens verhuring
+            div(class="row")
+                div(class="col-xs-6") Aantal dagen:
+                div(class="col-xs-6") {{renting.daysToRent}}
+            div(class="row")
+                div(class="col-xs-6") Prijs per dag:
+                div(class="col-xs-6") &euro; {{renting.renterFrom.product.pricePerDay}}
+            div(class="row section")
+                div(class="col-xs-6") Totale prijs:
+                div(class="col-xs-6") &euro; {{renting.totalPrice}}
+            div(class="row")
+                div(class="col-xs-6") Verhuurder:
+                div(class="col-xs-6") {{renting.renterFrom.toString()}}
+            div(class="row section")
+                div(class="col-xs-6") Huurder:
+                div(class="col-xs-6") {{renting.renterTo.toString()}}
+            div(class="row section")
+                div(class="col-xs-6") Totale prijs:
+                div(class="col-xs-6") &euro; {{renting.totalPrice}}
+            div(class="row")
+                div(class="col-xs-6") Verhuren van:
+                div(class="col-xs-6") {{renting.fromDate | date:"MM/dd/yyyy"}}
+            div(class="row section")
+                div(class="col-xs-6") Verhuren tot:
+                div(class="col-xs-6") {{renting.toDate | date:"MM/dd/yyyy"}}
+            div(class="row")
+                div(class="col-xs-6") Locatie:
+                div(class="col-xs-6") {{renting.renterFrom.product.place}}
+        div(class="col-sm-6 col-md-8")
+            h2(ng-show="whoRents == 'renterFrom'") Chat met de huurder
+            h2(ng-show="whoRents == 'renterTo'") Chat met de verhuurder
+            div(class="messages")
+                div(class="message", ng-repeat="m in messages")
+                    p {{m.name}}
+                    p {{m.content}}
+                    p {{m.createdOn}}
+            form(class="form-horizontal", name="chat", ng-submit="addMessage()")
+                div(class="form-group")
+                    textarea(cols="30", rows="2", name="content", ng-model="content", placeholder="Jouw bericht", class="form-control", ng-required="true", ng-maxlength="120")
+                    div(ng-messages="chat.message.$error", ng-if="chat.message.$touched")
+                        p(ng-message="required") Bericht is verplicht in te vullen
+                        p(ng-message="maxlength") Bericht is te lang
+                div(class="form-group")
+                    input(type="submit", value="Stuur bericht", class="btn", ng-disabled="chat.$invalid")

@@ -8,28 +8,13 @@ var async = require('async');
 var cloudinary = require('cloudinary');
 cloudinary.config({cloud_name: 'swoppr', api_key: '574615225534372', api_secret: 'mNUyKP0jlRPHTgGs_yUeiTod5dw'});
 
-//alle images van prodcuten uit de cloud verwijderen
+//alle images van producten uit de cloud verwijderen
 /*cloudinary.api.delete_resources_by_tag('product',
     function(result){
         console.log(result);
 });*/
 
-/*exports.getProductByName = function(req, res, name) {
-    swoppr.userModel.findOne({"products._id": id})
-        .exec(function(err, userWithProducts) {
-            if (err) {
-                res.json({"error": "productId niet gevonden"});
-                return ;
-            }
-
-            var product = userWithProducts.products.id(id);
-            res.json(product);
-        });
-};*/
-
 module.exports.getProductById = function(req, res, id) {
-    "use strict";
-
     swoppr.userModel.findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
             if (err || !userWithProducts) {
@@ -42,9 +27,7 @@ module.exports.getProductById = function(req, res, id) {
         });
 };
 
-module.exports.getProductByIdUser = function(req, res, id) {
-    "use strict";
-
+exports.getProductByIdUser = function(req, res, id) {
     swoppr.userModel
         .findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
@@ -54,6 +37,7 @@ module.exports.getProductByIdUser = function(req, res, id) {
             }
 
             var product = userWithProducts.products.id(id);
+            product = product.toObject();
 
             userWithProducts = userWithProducts.toObject();
             delete userWithProducts.products;
@@ -64,8 +48,6 @@ module.exports.getProductByIdUser = function(req, res, id) {
 };
 
 module.exports.addProductWithPictureUser = function(req, res) {
-    "use strict";
-
     swoppr.userModel.findOne({_id: req.body.userId}, function(err, user) {
         if (err || !user) {
             res.json({"error": "userId niet gevonden"});
@@ -80,7 +62,10 @@ module.exports.addProductWithPictureUser = function(req, res) {
                         productName: req.body.productName,
                         pricePerDay: req.body.pricePerDay,
                         description: req.body.description,
-                        url: result.secure_url
+                        url: result.secure_url,
+                        place: req.body.place,
+                        longitude: req.body.longitude,
+                        latitude: req.body.latitude
                     });
 
                     addProduct(res, user, entry);
@@ -89,13 +74,18 @@ module.exports.addProductWithPictureUser = function(req, res) {
                     res.json({"error": "Afbeelding uploaden mislukt"});
                 }
             }, {tags: "product", height: 250, crop: 'fit'});
+
+            req.files = null;
         //product toevoegen zonder file
         } else {
 
             var entry = new swoppr.productModel({
                 productName: req.body.productName,
                 pricePerDay: req.body.pricePerDay,
-                description: req.body.description
+                description: req.body.description,
+                place: req.body.place,
+                longitude: req.body.longitude,
+                latitude: req.body.latitude
             });
 
             addProduct(res, user, entry);
@@ -104,8 +94,6 @@ module.exports.addProductWithPictureUser = function(req, res) {
 };
 
 function addProduct(res, user, entry) {
-    "use strict";
-
     user.products.push(entry);
 
     user.save(function(err) {
@@ -117,9 +105,7 @@ function addProduct(res, user, entry) {
     });
 }
 
-module.exports.getAllProducts = function(req, res) {
-    "use strict";
-
+exports.getAllProducts = function(req, res) {
     swoppr.userModel.find().exec(function(err, users) {
 
         if(err) {
@@ -167,9 +153,7 @@ module.exports.getAllProducts = function(req, res) {
     });
 };
 
-module.exports.editProductUser = function(req, res) {
-    "use strict";
-
+exports.editProductUser = function(req, res) {
     swoppr.userModel.findOne({"products._id": req.body.id}).exec(function(err, userWithProduct) {
 
         if (err || userWithProduct === null) {
@@ -190,9 +174,7 @@ module.exports.editProductUser = function(req, res) {
     });
 };
 
-module.exports.removeProductUser = function(req, res, id) {
-    "use strict";
-
+exports.removeProductUser = function(req, res, id) {
     swoppr.userModel.findOne({"products._id": id}).exec(function(err, userWithProduct) {
         if (err || userWithProduct === null) {
             res.json({"error": "productId niet gevonden"});

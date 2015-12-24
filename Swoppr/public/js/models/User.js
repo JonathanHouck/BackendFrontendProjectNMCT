@@ -1,15 +1,15 @@
 /**
  * Created by Greg on 04-Dec-15.
  */
-function User(_id, firstname, surname ,emailadres, products, createdOn){
+function User(_id, firstname, surname, local, google, products){
     this.id = _id;
     this.firstname = firstname;
     this.surname = surname;
-    this.emailadres = emailadres;
+    this.local = local;
+    this.google = google;
     this.products = products;
-    this.createdOn = createdOn;
 }
 
 User.prototype.toString = function(){
-    return this.firstname + " " + this.lastname;
+    return this.firstname + " " + this.surname;
 };

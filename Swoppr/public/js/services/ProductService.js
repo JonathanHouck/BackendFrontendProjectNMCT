@@ -8,6 +8,10 @@
         var byId = function(id){
             var url =   '/api/product/getById/'+id;
             return $http.get(url).then(function(response) {
+                if(response.data.error) {
+                    return "error";
+                }
+
                 var p = response.data;
                 return new Product(
                     p.productName,
@@ -34,27 +38,34 @@
                     p.productName,
                     parseInt(p.pricePerDay),
                     p.description,
-                    url
+                    url,
+                    p.place,
+                    p.longitude,
+                    p.latitude
                 );
 
-                var UserOneProduct = new User(
-                    response.data._id,
-                    response.data.firstname,
-                    response.data.surname,
-                    response.data.local.email,
+                var u = response.data;
+                var User = new UserWithoutCredentials(
+                    u._id,
+                    u.firstname,
+                    u.surname,
+                    u.local.email,
                     product
                 );
 
-                return UserOneProduct;
+                return User;
             });
         };
 
         var all = function(){
             var url = '/api/product/getAll/';
             return $http.get(url).then(function(response) {
+                if(response.data.error) {
+                    return "error";
+                }
+
                 var products = [];
                 angular.forEach(response.data, function(p){
-
                     var product = new Product(
                         p._id,
                         p.productName,

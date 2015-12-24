@@ -23,12 +23,12 @@
                     }
                 }
 
-                function successUserData(response) {
-                    $rootScope.user = response.data;
+                function successUserData(data) {
+                    $rootScope.user = data;
                 }
 
-                function errorUserData(response) {
-                    console.log(response);
+                function errorUserData(data) {
+                    console.log(data);
                 }
 
                 UserService.userData().then(successUserData, errorUserData);

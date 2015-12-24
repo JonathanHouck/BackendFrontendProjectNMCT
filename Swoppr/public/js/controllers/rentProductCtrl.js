@@ -16,12 +16,12 @@
 
         $scope.user = [];
 
-        var onGetUserWithProductSuccesfull = function(response) {
-            $scope.user = response;
+        var onGetUserWithProductSuccesfull = function(data) {
+            $scope.user = data;
         };
 
         var onGetUserWithProductError = function(err) {
-            console.log("error getting user with products");
+            console.log("error getting user with product");
         };
 
         var productId = $routeParams.id;
@@ -90,7 +90,7 @@
             var oneDay = 24*60*60*1000;
             $scope.daysToRent = Math.round(Math.abs(($scope.dt1.getTime() - $scope.dt2.getTime())/(oneDay)));
 
-            if ($scope.user.products) $scope.totalPrice = $scope.user.products.pricePerDay * $scope.daysToRent;
+            if ($scope.user.product) $scope.totalPrice = $scope.user.product.pricePerDay * $scope.daysToRent;
         };
 
         var onAddRentingSuccessfull = function(resp) {
@@ -113,8 +113,8 @@
             if ($scope.user || $rootScope.user) {
                 var renting = new Renting(
                     $scope.user.id,
-                    $rootScope.user._id,
-                    $scope.user.products.id,
+                    $rootScope.user.id,
+                    $scope.user.product.id,
                     $scope.dt1,
                     $scope.dt2,
                     $scope.daysToRent,

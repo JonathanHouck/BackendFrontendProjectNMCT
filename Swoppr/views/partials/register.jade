@@ -10,18 +10,16 @@ div(class="intro intro-authorize")
                             div(class="form-group", ng-class="validate(1)")
                                 label(for=firstname, class="col-sm-3 control-label") Voornaam
                                 div(class="col-sm-9")
-                                    input(type="text", name="firstname", id="firstname", class="form-control", placeholder="Bv. Jonathan", ng-model="firstname", ng-minlength="2", ng-maxlength="50", ng-required="true")
+                                    input(type="text", name="firstname", id="firstname", class="form-control", placeholder="Bv. Jonathan", ng-model="firstname", ng-maxlength="50", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.firstname.$error", ng-if="registerForm.firstname.$touched")
                                     p(ng-message="required") Voornaam is verplicht in te vullen
-                                    p(ng-message="minlength") Voornaam is te kort
                                     p(ng-message="maxlength") Voornaam is te lang
                             div(class="form-group", ng-class="validate(2)")
                                 label(for=surname, class="col-sm-3 control-label") Achternaam
                                 div(class="col-sm-9")
-                                    input(type="text", name="surname", id="surname", class="form-control", placeholder="Bv. Jonathan", ng-model="surname", ng-minlength="2", ng-maxlength="50", ng-required="true")
+                                    input(type="text", name="surname", id="surname", class="form-control", placeholder="Bv. Jonathan", ng-model="surname", ng-maxlength="50", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.surname.$error", ng-if="registerForm.surname.$touched")
                                     p(ng-message="required") Familienaam is verplicht in te vullen
-                                    p(ng-message="minlength") Familienaam is te kort
                                     p(ng-message="maxlength") Familienaam is te lang
                             div(class="form-group", ng-class="validate(3)")
                                 label(for=email, class="col-sm-3 control-label") Emailadres

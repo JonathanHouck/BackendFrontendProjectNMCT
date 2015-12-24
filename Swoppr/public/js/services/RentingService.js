@@ -8,12 +8,50 @@
         var byId = function(id){
             var url = '/api/renting/getById/'+id;
             return $http.get(url).then(function(response) {
+
+                if(response.data.error) {
+                    return "error";
+                }
+
+                var p = response.data.renterFrom.product;
+                var product = new Product(
+                    p._id,
+                    p.productName,
+                    parseInt(p.pricePerDay),
+                    p.description,
+                    p.url,
+                    p.place,
+                    p.longitude,
+                    p.latitude
+                );
+
+                var rf = response.data.renterFrom;
+                var renterFrom = new UserWithoutCredentials(
+                    rf._id,
+                    rf.firstname,
+                    rf.surname,
+                    rf.local.email,
+                    product
+                );
+
+                var rt = response.data.renterTo;
+                var renterTo = new UserWithoutCredentials(
+                    rt._id,
+                    rt.firstname,
+                    rt.surname,
+                    rt.local.email
+                );
+
                 var r = response.data;
                 var renting = new Renting (
-                    r.renterFrom,
-                    r.renterTo,
-                    r.product,
-                    r.daysToRent);
+                    r._id,
+                    renterFrom,
+                    renterTo,
+                    r.fromDate,
+                    r.toDate,
+                    r.daysToRent,
+                    r.totalPrice
+                );
 
                 return renting;
             });
@@ -22,6 +60,10 @@
         var byUser = function(userId){
             var url =   '/api/renting/getAllRentingsRenterTo/'+userId;
             return $http.get(url).then(function(response) {
+                if(response.data.error) {
+                    return "error";
+                }
+
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
@@ -40,6 +82,10 @@
         var byRenter = function(userId){
             var url =   '/api/renting/getAllRentingsRenterFrom/'+userId;
             return $http.get(url).then(function(response) {
+                if(response.data.error) {
+                    return "error";
+                }
+
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
@@ -58,6 +104,10 @@
         var byProduct = function(id){
             var url =   '/api/renting/getAllRentingsProduct/' + id;
             return $http.get(url).then(function(response) {
+                if(response.data.error) {
+                    return "error";
+                }
+
                 var rentings = [];
                 angular.forEach(response.data, function(r){
                     var renting = new Renting(
