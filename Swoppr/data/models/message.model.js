@@ -32,7 +32,8 @@ module.exports.addMessage = function(req, res, rentingid) {
                 _renting: rentingid,
                 _sender: req.body.senderId,
                 name: req.body.name,
-                content: req.body.content
+                content: req.body.content,
+                createdOn: req.body.createdOn
             });
 
             entry.save(function(err) {

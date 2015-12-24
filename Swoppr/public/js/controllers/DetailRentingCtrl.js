@@ -8,10 +8,6 @@
         .controller('DetailRentingCtrl', ['$rootScope', '$scope', '$routeParams', 'RentingService', 'ChatService', DetailRentingCtrl]);
 
     function DetailRentingCtrl($rootScope, $scope, $routeParams, RentingService, ChatService) {
-
-        $scope.renting = [];
-        $scope.messages = [];
-
         //renting ophalen
         var onGetRentingSuccesfull = function(renting) {
             if ($rootScope.user.id == renting.renterFrom.id) {
@@ -22,9 +18,19 @@
                 $scope.renting = renting;
             } else {
                 $scope.whoRents = 'noAccess';
+                return;
             }
 
-            $scope.renting = renting;
+            var onGetMessagesSuccesfull = function(messages) {
+                $scope.messages = messages;
+            };
+
+            var onGetMessagesError = function(messages) {
+                console.log("error getting message");
+            };
+
+            ChatService.getMessages(rentingId).then(onGetMessagesSuccesfull, onGetMessagesError);
+
         };
 
         //messages ophalen
@@ -34,16 +40,6 @@
 
         var rentingId = $routeParams.id;
         RentingService.byId(rentingId).then(onGetRentingSuccesfull, onGetRentingError);
-
-        var onGetMessagesSuccesfull = function(messages) {
-            $scope.messages = messages;
-        };
-
-        var onGetMessagesError = function(messages) {
-            console.log("error getting message");
-        };
-
-        ChatService.getMessages(rentingId).then(onGetMessagesSuccesfull, onGetMessagesError);
 
         var socket = io.connect();
 
@@ -59,12 +55,13 @@
                 rentingId,
                 $scope.user.id,
                 $scope.user.toString(),
-                $scope.content
+                $scope.content,
+                Date.now() + 60 * 60000
             );
 
-            var onAddMessageSuccessfull = function(renting) {
-                $scope.messages.push(renting);
-                socket.emit("newMessage", {rentid: rentingId, message: renting});
+            var onAddMessageSuccessfull = function(message) {
+                $scope.messages.push(message);
+                socket.emit("newMessage", {rentid: rentingId, message: message});
             };
 
             var onAddMessageError = function(err) {

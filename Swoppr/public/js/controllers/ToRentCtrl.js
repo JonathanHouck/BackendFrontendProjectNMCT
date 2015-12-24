@@ -9,8 +9,6 @@
 
     function ToRentCtrl($scope, ProductService) {
 
-        $scope.products = [];
-
         var onGetProductsSuccesfull = function(response) {
             $scope.products = response;
         };

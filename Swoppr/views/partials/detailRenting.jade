@@ -1,8 +1,11 @@
 div(class="container")
     div(class="row")
         div(class="col-sm-12 title-header")
-            h1 Detail te vehuren artikel
-    div(class="row detailRenting")
+            h1(ng-hide="whoRents == 'noAccess'") Detail te vehuren artikel
+            h1(ng-show="whoRents == 'noAccess'") Geen toegang tot verhuring
+    div(class="row", ng-hide="renting || messages || whoRents == 'noAccess'")
+        img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
+    div(class="row detailRenting", ng-show="renting && messages && whoRents != 'noAccess'")
         div(class="col-sm-6 col-md-4")
             h2 Detailgegevens verhuring
             div(class="row")
@@ -36,10 +39,10 @@ div(class="container")
             h2(ng-show="whoRents == 'renterFrom'") Chat met de huurder
             h2(ng-show="whoRents == 'renterTo'") Chat met de verhuurder
             div(class="messages")
-                div(class="message", ng-repeat="m in messages")
+                div(class="message", ng-repeat="m in messages | orderBy: '-createdOn'")
                     p {{m.name}}
                     p {{m.content}}
-                    p {{m.createdOn}}
+                    p {{m.createdOn | date:'d MMMM yyyy - HH:mm' : 'UTC'}}
             form(class="form-horizontal", name="chat", ng-submit="addMessage()")
                 div(class="form-group")
                     textarea(cols="30", rows="2", name="content", ng-model="content", placeholder="Jouw bericht", class="form-control", ng-required="true", ng-maxlength="120")

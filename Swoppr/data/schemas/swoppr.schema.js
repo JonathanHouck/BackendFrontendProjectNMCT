@@ -18,7 +18,7 @@
         daysToRent: Number,
         totalPrice: Number,
         //Approved: Boolean,
-        createdOn: { type: Date, default: Date.now }
+        createdOn: { type: Date, default: Date.now() + 60 * 60000 }
     }, {collection: 'Rentings'});
 
     var productSchema = new Schema({
@@ -29,7 +29,7 @@
         place: String,
         longitude: String,
         latitude: String,
-        createdOn: { type: Date, default: Date.now }
+        createdOn: { type: Date, default: Date.now() + 60 * 60000 }
     });
 
     var userSchema = new Schema({
@@ -46,7 +46,7 @@
             email        : String,
             name         : String
         },
-        createdOn: { type: Date, default: Date.now }
+        createdOn: { type: Date, default: Date.now() + 60 * 60000 }
     }, {collection: 'Users'});
 
     var messageSchema = new Schema({
@@ -54,7 +54,7 @@
         _sender: {type: Schema.Types.ObjectId, ref: 'User'},
         name: String,
         content: String,
-        createdOn: { type: Date, default: Date.now }
+        createdOn: { type: Date}
     }, {collection: 'Messages'});
 
 // generating a hash

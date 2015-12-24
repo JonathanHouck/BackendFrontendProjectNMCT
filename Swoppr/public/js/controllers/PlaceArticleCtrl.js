@@ -50,10 +50,10 @@
             map: {
                 control: {},
                 center: {
-                    latitude: 50.8252383,
-                    longitude: 3.24815210
+                    latitude: 51.052568,
+                    longitude: 3.1701058
                 },
-                zoom: 12,
+                zoom: 9,
                 dragging: false,
                 bounds: {},
                 markers: [],
