@@ -1,11 +1,12 @@
 div(class="container")
     div(class="row")
         div(class="col-sm-12 title-header")
-            h1(ng-hide="whoRents == 'noAccess'") Detail te vehuren artikel
+            h1(ng-show="whoRents == 'renterFrom' || whoRents == 'renterFrom'") Detail te vehuren artikel
             h1(ng-show="whoRents == 'noAccess'") Geen toegang tot verhuring
-    div(class="row", ng-hide="renting || messages || whoRents == 'noAccess'")
+            h1(ng-show="whoRents == 'noRenting'") Verhuring niet gevonden
+    div(class="row", ng-hide="renting || messages || whoRents == 'noAccess' || whoRents == 'noRenting'")
         img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
-    div(class="row detailRenting", ng-show="renting && messages && whoRents != 'noAccess'")
+    div(class="row detailRenting", ng-show="renting && messages && whoRents != 'noAccess' && whoRents != 'noRenting'")
         div(class="col-sm-6 col-md-4")
             h2 Detailgegevens verhuring
             div(class="row")

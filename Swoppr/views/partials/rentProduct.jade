@@ -1,12 +1,16 @@
 //
    Created by jonah on 12/18/2015.
 
-div(class="container", ng-hide="user.id || user == 'error'")
+div(class="container", ng-hide="user.id || user == 'error' || user == 'sameRenter'")
     img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
 div(class="container", ng-show="user == 'error'")
     div(class="row")
         div(class="col-sm-12 title-header")
             h1 Geen product gevonden
+div(class="container", ng-show="user == 'sameRenter'")
+    div(class="row")
+        div(class="col-sm-12 title-header")
+            h1 Het is onmogelijk om een product van jezelf te verhuren
 div(class="container", ng-show="user.id")
     div(class="row")
         div(class="col-sm-12 title-header")

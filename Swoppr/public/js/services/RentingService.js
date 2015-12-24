@@ -43,7 +43,7 @@
                 );
 
                 var r = response.data;
-                var renting = new Renting (
+                var renting = new RentingWithUsers (
                     r._id,
                     renterFrom,
                     renterTo,
@@ -124,7 +124,7 @@
         };
 
         var add = function(renting){
-            var url =   '/api/renting/newRenting/';
+            var url =  '/api/renting/newRenting/';
             return $http.post(url, renting).then(function(response) {
                 return response; //Expose the user data to your angular scope
             });

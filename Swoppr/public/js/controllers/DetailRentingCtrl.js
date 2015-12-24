@@ -10,7 +10,12 @@
     function DetailRentingCtrl($rootScope, $scope, $routeParams, RentingService, ChatService) {
         //renting ophalen
         var onGetRentingSuccesfull = function(renting) {
-            if ($rootScope.user.id == renting.renterFrom.id) {
+            if (typeof renting === "string") {
+                if (renting == "error") {
+                    $scope.whoRents = 'noRenting';
+                    return;
+                }
+            } else if ($rootScope.user.id == renting.renterFrom.id) {
                 $scope.whoRents = 'renterFrom';
                 $scope.renting = renting;
             } else if ($rootScope.user.id == renting.renterTo.id) {
@@ -30,7 +35,6 @@
             };
 
             ChatService.getMessages(rentingId).then(onGetMessagesSuccesfull, onGetMessagesError);
-
         };
 
         //messages ophalen
