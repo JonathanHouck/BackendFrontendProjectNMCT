@@ -4,9 +4,9 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('RegisterCtrl', ['$rootScope', '$scope', '$http', 'UserService', RegisterCtrl]);
+        .controller('RegisterCtrl', ['$rootScope', '$scope', 'UserService', RegisterCtrl]);
 
-    function RegisterCtrl ($rootScope, $scope, $http, UserService) {
+    function RegisterCtrl ($rootScope, $scope, UserService) {
 
         $scope.alerts = [];
 

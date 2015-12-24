@@ -44,7 +44,7 @@
         };
 
         ChatService.getMessages(rentingId).then(onGetMessagesSuccesfull, onGetMessagesError);
-        
+
         var socket = io.connect();
 
         socket.emit("join renting", rentingId);

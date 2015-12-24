@@ -168,7 +168,7 @@ function getRenterTo(renting, callback) {
 module.exports.addRentingUser = function(req, res) {
     "use strict";
 
-    //controle product van de renter bestaat
+    //controle of product van de renter bestaat
     async.series([
         function(callback) {
             swoppr.userModel.findById(req.body.renterFrom)

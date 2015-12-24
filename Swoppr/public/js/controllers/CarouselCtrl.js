@@ -5,7 +5,7 @@
     'use strict';
 
     angular.module('swoppr')
-        .controller('CarouselCtrl', CarouselCtrl);
+        .controller('CarouselCtrl', ['$scope', CarouselCtrl]);
 
     function CarouselCtrl($scope) {
         //$scope.myInterval = 5000;

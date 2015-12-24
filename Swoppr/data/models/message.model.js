@@ -20,9 +20,8 @@ module.exports.getMessagesByRentingId = function(req, res, rentingid) {
 
 module.exports.addMessage = function(req, res, rentingid) {
     "use strict";
-
     swoppr.rentingModel
-        .findById(req.body.rentingId)
+        .findById(rentingid)
         .exec(function(err, renting) {
             if (err || !renting) {
                 res.json({"error": "RentingId niet gevonden"});

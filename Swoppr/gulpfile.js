@@ -28,11 +28,11 @@ gulp.task("default", function() {
         console.log(event.path + " changed");
     });
 
-    var jsWatcher = gulp.watch(['./public/js/scroll-animate/**/*.js',
-                                './public/js/models/**/*',
+    var jsWatcher = gulp.watch(['./public/js/models/**/*',
                                 './public/js/app.js',
                                 './public/js/controllers/**/*.js',
                                 './public/js/directives/**/*',
+                                './public/js/factories/**/*',
                                 './public/js/services/**/*'], ['js']
                                 );
     jsWatcher.on('change', function(event) {
@@ -54,11 +54,11 @@ gulp.task("default", function() {
 });
 
 gulp.task("js",function (){
-    gulp.src(['./public/js/scroll-animate/**/*.js',
-            './public/js/models/**/*',
+    gulp.src(['./public/js/models/**/*',
             './public/js/app.js',
             './public/js/controllers/**/*.js',
             './public/js/directives/**/*.js',
+            './public/js/factories/**/*',
             './public/js/services/**/*'])
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
@@ -80,7 +80,7 @@ gulp.task("backendJs", function() {
             './gulpfile.js'], ['backendJs'])
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
-        .pipe(notify({message: 'backendjs built'}));
+        .pipe(notify({message: 'backendJs built'}));
 });
 
 gulp.task("css", function() {

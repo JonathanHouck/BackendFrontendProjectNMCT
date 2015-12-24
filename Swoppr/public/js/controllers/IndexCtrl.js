@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('IndexCtrl', IndexCtrl);
+        .controller('IndexCtrl', ['$scope', IndexCtrl]);
 
     function IndexCtrl ($scope) {
         $scope.fadeIn = function ($el) {

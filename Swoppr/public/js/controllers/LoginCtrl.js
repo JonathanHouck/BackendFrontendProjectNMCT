@@ -4,9 +4,9 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('LoginCtrl', ['$rootScope', '$scope', '$http', 'UserService', LoginCtrl]);
+        .controller('LoginCtrl', ['$rootScope', '$scope', 'UserService', LoginCtrl]);
 
-    function LoginCtrl ($rootScope, $scope, $http, UserService) {
+    function LoginCtrl ($rootScope, $scope, UserService) {
 
         $scope.alerts = [];
 
