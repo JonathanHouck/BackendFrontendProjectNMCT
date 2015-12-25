@@ -27,6 +27,11 @@
             controller: 'RentProductCtrl',
             auth: true
         }).
+        when('/detailProduct/:id?', {
+            templateUrl: 'partials/detailProduct',
+            controller: 'DetailProductCtrl',
+            auth: true
+        }).
         when('/detailRenting/:id?', {
             templateUrl: 'partials/detailRenting',
             controller: 'DetailRentingCtrl',

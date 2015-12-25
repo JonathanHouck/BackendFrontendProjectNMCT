@@ -1,0 +1,29 @@
+div(class="container", ng-hide="user.id || user == 'error'")
+    img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
+div(class="container", ng-show="user == 'error'")
+    div(class="row")
+        div(class="col-sm-12 title-header")
+            h1 Geen product gevonden
+div(class="container", ng-if="user.id")
+    div(class="row")
+        div(class="col-sm-12 title-header")
+            h1 {{user.product.productName}} - &euro;{{user.product.pricePerDay}}/dag
+    div(class="row detailProduct")
+        div(class="col-sm-12 col-md-6")
+            div(class="row")
+                img(ng-hide="user.product.url == '/'", src="{{user.product.url}}")
+                img(ng-show="user.product.url == '/'", src="images/noImageFound.png")
+            div(class="row")
+                div(class="col-sm-3") Beschrijving:
+                div(class="col-sm-9") {{user.product.description}}
+            div(class="row")
+                div(class="col-sm-3") Verhuurt door:
+                div(class="col-sm-9") {{user.toString()}}
+            div(class="row")
+                a(href="rentProduct/{{user.product.id}}" class="btn btn-default redirect") Verhuur product
+        div(class="col-sm-12 col-md-6")
+            ui-gmap-google-map(center="map.center", zoom="map.zoom", draggable="true", options="options")
+                ui-gmap-marker(coords="marker.coords", options="marker.options", events="marker.events", idkey="marker.id")
+            div(class="row")
+                div(class="col-sm-3") Locatie:
+                div(class="col-sm-9") {{user.product.place}}

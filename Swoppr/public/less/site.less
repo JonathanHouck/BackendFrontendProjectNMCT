@@ -9,6 +9,14 @@ body {
   .sansSerif();
 }
 
+a {
+  color: @primary;
+
+  &:hover, &:focus {
+    color: @primary-dark;
+  }
+}
+
 h1 {
   .fontSize(25px);
 }
@@ -66,4 +74,8 @@ div[ng-view] {
       }
     }
   }
+}
+
+.angular-google-map {
+  margin-bottom: 20px;
 }

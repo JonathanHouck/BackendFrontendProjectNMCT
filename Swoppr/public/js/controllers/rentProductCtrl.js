@@ -16,15 +16,20 @@
 
         $scope.user = [];
 
+        var productId = $routeParams.id;
         var onGetUserWithProductSuccesfull = function(data) {
-            $scope.user = data;
+
+            if ($rootScope.user.id == data.id) {
+                $location.path("detailProduct/" + productId);
+            } else {
+                $scope.user = data;
+            }
         };
 
         var onGetUserWithProductError = function(err) {
             console.log("error getting user with product");
         };
 
-        var productId = $routeParams.id;
         ProductService.byIdUser(productId).then(onGetUserWithProductSuccesfull, onGetUserWithProductError);
 
         $scope.setDates = function() {

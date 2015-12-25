@@ -6,13 +6,18 @@ p[ng-message] {
   color: #a94442;
 }
 
-input[type="submit"] {
+.btn {
   background-color: @primary-light;
   width: 100%;
+
+  &:hover, &:focus {
+    background-color: @primary-light-darker;
+  }
 }
 
-input[type="submit"]:hover {
-  background-color: @primary-light-darker;
+.redirect {
+  border: none;
+  margin-left: 15px;
 }
 
 .form-horizontal  {
@@ -98,7 +103,7 @@ input[type="submit"]:hover {
     margin-left: 20px;
   }
 
-  input[type="submit"] {
+  .btn {
     width: auto;
   }
 }
