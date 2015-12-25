@@ -38,14 +38,29 @@
                         return "error";
                     }
 
+                    var products = [];
                     var u = response.data;
+                    angular.forEach(u.products, function(p) {
+                        var product = new Product(
+                            p._id,
+                            p.productName,
+                            parseInt(p.pricePerDay),
+                            p.description,
+                            p.url,
+                            p.place,
+                            p.longitude,
+                            p.latitude
+                        );
+                        products.push(product);
+                    });
+
                     return new User(
                         u._id,
                         u.firstname,
                         u.surname,
                         u.local,
                         u.google,
-                        u.products
+                        products
                     );
             });
         };
@@ -69,7 +84,7 @@
                 });
         };
 
-        var AllWithProducts = function(){
+        var AllWithProducts = function() {
             var url = '/api/user/getAllUsersWithProducts';
             return $http.get(url)
                 .then(function(response) {

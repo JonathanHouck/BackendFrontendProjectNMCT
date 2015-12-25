@@ -18,7 +18,11 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
             ul(class="nav navbar-nav", ng-show="$root.user.local.email")
                 li: a(href="/toRent", ng-class="getClass('/toRent')") Te verhuren
                     i(class="underline")
-                li: a(href="/placeArticle", ng-class="getClass('/placeArticle')") Plaats artikel
+                li: a(href="/placeProduct", ng-class="getClass('/placeProduct')") Plaats artikel
+                    i(class="underline")
+                li: a(href="/myProducts", ng-class="getClass('/myProducts')") Mijn artikelen
+                    i(class="underline")
+                li: a(href="/myRentings", ng-class="getClass('/myRentings')") Mijn verhuringen
                     i(class="underline")
             ul(class="nav navbar-nav navbar-right", ng-show="$root.user.local.email")
                 li(class="dropdown")

@@ -1,13 +1,10 @@
-//
-   Created by jonah on 12/4/2015
-
 div(class="container")
     div(class="row")
         div(class="col-sm-12 title-header")
             h1 Plaats artikel
     div(class="row")
         div(class="col-sm-12 col-md-5 ")
-            p Vul uw adres in het tekstvak op map in en selecteer het voorgestelde adres
+            p Vul uw ophaalplaats in het tekstvak op map in en selecteer het voorgestelde adres
             ui-gmap-google-map(center="map.center", zoom="map.zoom", dragging="map.dragging", bounds="map.bounds", events="map.events", options="map.options", pan="true", control="map.control")
                 ui-gmap-search-box(options="searchbox.options", template="searchbox.template", events="searchbox.events", position="searchbox.position")
                 ui-gmap-markers(idkey="map.idkey", models="map.markers", coords="'self'", icon="'icon'", click="'onClicked'")
@@ -50,14 +47,14 @@ div(class="container")
                             p(ng-message="minRatio") De breedte van de afbeelding moet gelijk of hoger zijn de de hoogte
                             p(ng-message="maxRatio") Gelieve een afbeelding te selecteren die minder breed is
                 div(class="form-group", ng-class="validate(5)")
-                    label(for=location, class="col-sm-3 control-label text-left") Adres
+                    label(for=location, class="col-sm-3 control-label text-left") Ophaalplaats
                     div(class="col-sm-9")
                         input(type="text", name="location", id="location", class="form-control", placeholder="Typ jouw adres in het tekstveld op de map", ng-model="location", ng-required="true", readonly="true")
                     div(class="col-sm-9 col-sm-offset-3", ng-messages="placeArticleForm.location.$error", ng-if="placeArticleForm.location.$touched")
                         p(ng-message="required") Locatie is verplicht, gelieve jouw adres te zoeken op de map
                 div(class="form-group")
                     div(class="col-sm-offset-3 col-sm-9")
-                        input(type="submit", value="Te huur stellen", ng-disabled="placeArticleForm.$invalid", ng-click="addProduct(picture)", class="btn")
+                        input(type="submit", value="Te huur stellen", ng-disabled="placeArticleForm.$invalid", ng-click="addProduct(picture)", class="btn redirect")
     div(class="row")
         div(class="col-sm-12")
             div(ng-repeat="p in $root.user.products")

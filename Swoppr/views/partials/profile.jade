@@ -1,5 +1,4 @@
-main
-    div(class="container")
+div(class="container")
         div(class="row")
             div(class="col-sm-12 title-header")
                 h1 Mijn profiel
@@ -23,6 +22,6 @@ main
                         tr
                             td Name
                             td {{ $root.user.google.name }}
-                    a(redir, href="/partials/unlink/google", class="btn btn-danger") Ontkoppel login
+                    a(redir, href="/partials/unlink/google", class="btn btn-default redirect") Ontkoppel login
                 div(ng-hide="$root.user.google.token")
-                    a(redir, href="/partials/connect/google", class="btn btn-primary") Koppel login
+                    a(redir, href="/partials/connect/google", class="btn btn-default redirect") Koppel login

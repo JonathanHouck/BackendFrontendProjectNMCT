@@ -8,13 +8,12 @@
         .controller('ToRentCtrl', ['$scope', 'ProductService', ToRentCtrl]);
 
     function ToRentCtrl($scope, ProductService) {
-
         var onGetProductsSuccesfull = function(response) {
             $scope.products = response;
         };
 
         var onGetProductsError = function(err) {
-            console.log("error getting products");
+            console.log(err);
         };
 
         ProductService.all().then(onGetProductsSuccesfull, onGetProductsError);

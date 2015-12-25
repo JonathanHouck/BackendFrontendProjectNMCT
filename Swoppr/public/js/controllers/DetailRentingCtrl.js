@@ -30,8 +30,8 @@
                 $scope.messages = messages;
             };
 
-            var onGetMessagesError = function(messages) {
-                console.log("error getting message");
+            var onGetMessagesError = function(err) {
+                console.log(err);
             };
 
             ChatService.getMessages(rentingId).then(onGetMessagesSuccesfull, onGetMessagesError);
@@ -66,10 +66,12 @@
             var onAddMessageSuccessfull = function(message) {
                 $scope.messages.push(message);
                 socket.emit("newMessage", {rentid: rentingId, message: message});
+
+                $scope.content = "";
             };
 
             var onAddMessageError = function(err) {
-                console.log("error adding message");
+                console.log(err);
             };
 
             ChatService.addMessage(newMessage, rentingId).then(onAddMessageSuccessfull, onAddMessageError);

@@ -45,14 +45,18 @@
             templateUrl: 'partials/ServiceTester',
             controller: "ServiceTesterCtrl"
         }).
-        when('/placeArticle', {
-            templateUrl: 'partials/placeArticle',
-            controller: 'PlaceArticleCtrl',
+        when('/placeProduct', {
+            templateUrl: 'partials/placeProduct',
+            controller: 'PlaceProductCtrl',
             auth: true
         }).
-        when('/myArticles', {
-            templateUrl: 'partials/myArticles',
+        when('/myProducts', {
+            templateUrl: 'partials/myProducts',
             controller: ''
+        }).
+        when('/myRentings', {
+            templateUrl: 'partials/myRentings',
+            controller: 'myRentingsCtrl'
         }).
         when('/login', {
             templateUrl: 'partials/login',

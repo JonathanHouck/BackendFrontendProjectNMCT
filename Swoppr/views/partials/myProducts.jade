@@ -1,0 +1,22 @@
+div(class="container")
+    div(class="row")
+        div(class="col-sm-12")
+            h1 Mijn artikelen
+    div(class="row")
+        div(class="col-sm-12")
+           div(class="table-responsive")
+               table(class="table table-hover")
+                tr
+                    th: a(href="#", ng-click="sortType = 'productName'; sortReverse = !sortReverse") Naam
+                    th: a(href="#", ng-click="sortType = 'pricePerDay'; sortReverse = !sortReverse") Prijs/dag
+                    th: a(href="#", ng-click="sortType = 'place'; sortReverse = !sortReverse")  Ophaalplaats
+                    th
+                    th
+                    th
+                tr(ng-repeat=("p in $root.user.products | orderBy:sortType:sortReverse"))
+                    td {{p.productName}}
+                    td {{p.pricePerDay}}
+                    td {{p.place}}
+                    td: a(href="/detailProduct/{{p.id}}") Detail
+                    td Bewerk
+                    td Verwijder

@@ -26,12 +26,24 @@ module.exports = function(passport) {
         res.render("partials/detailProduct");
     });
 
+    router.get('/myProducts', function(req, res) {
+        res.render("partials/myProducts");
+    });
+
+    router.get('/myRentings', function(req, res) {
+        res.render("partials/myRentings");
+    });
+
+    router.get('/detailProduct/:id?', isLoggedIn, function(req, res) {
+        res.render("partials/detailProduct");
+    });
+
     router.get('/detailRenting/:id?', isLoggedIn, function(req, res) {
         res.render("partials/detailRenting");
     });
 
-    router.get('/placeArticle', isLoggedIn, function(req, res) {
-        res.render("partials/placeArticle");
+    router.get('/placeProduct', isLoggedIn, function(req, res) {
+        res.render("partials/placeProduct");
     });
 
     router.post('/logout', function(req, res) {

@@ -5,13 +5,13 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('PlaceArticleCtrl', ['$rootScope', '$scope', '$location', 'ProductService', 'uiGmapGoogleMapApi', PlaceArticleCtrl])
+        .controller('PlaceProductCtrl', ['$rootScope', '$scope', '$location', 'ProductService', 'uiGmapGoogleMapApi', PlaceProductCtrl])
         .run(['$templateCache', function($templateCache) {
-            $templateCache.put('searchbox.tpl.html', '<input id="pac-input" class="pac-controls" type="text" placeholder="Adres zoeken">');
+            $templateCache.put('searchbox.tpl.html', '<input id="pac-input" class="pac-controls" type="text" placeholder="Adres zoeken" autofocus="autofocus">');
             $templateCache.put('window.tpl.html', '<div ng-controller="WindowCtrl" ng-init="showPlaceDetails(parameter)">{{place.name}}</div>');
         }]);
 
-    function PlaceArticleCtrl ($rootScope, $scope, $location, ProductService, GoogleMapApi) {
+    function PlaceProductCtrl ($rootScope, $scope, $location, ProductService, GoogleMapApi) {
         $scope.alerts = [];
 
         $scope.closeAlert = function(index) {
@@ -134,8 +134,6 @@
 
                             $scope.map.markers = newMarkers;
                             $scope.location =  place.formatted_address;
-                        } else {
-                            console.log("do something else with the search string: " + place.name);
                         }
                     }
                 }

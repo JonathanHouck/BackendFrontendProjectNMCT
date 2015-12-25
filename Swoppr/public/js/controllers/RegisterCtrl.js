@@ -27,8 +27,8 @@
                     $rootScope.user = data;
                 }
 
-                function errorUserData(data) {
-                    console.log(data);
+                function errorUserData(err) {
+                    console.log(err);
                 }
 
                 UserService.userData().then(successUserData, errorUserData);

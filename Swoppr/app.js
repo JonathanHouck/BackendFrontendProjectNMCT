@@ -14,7 +14,6 @@ var apiUser = require('./routes/apiUser.js');
 var apiRenting = require('./routes/apiRenting.js');
 var apiChat = require('./routes/apiChat.js');
 
-//eventueel nog verplaatsen
 var app = express();
 require('./config/passport')(passport); // pass passport for configuration
 

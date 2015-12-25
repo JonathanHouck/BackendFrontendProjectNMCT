@@ -1,6 +1,3 @@
-//
-   Created by jonah on 11/13/2015.
-
 div(class="container")
     div(class="row")
         div(class="col-sm-12 title-header")
@@ -18,8 +15,6 @@ div(class="container")
                     option(value="-productName") Naam aflopend
     div(class="row", ng-hide="products")
         img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
-    div(class="row", ng-show="products")
-        div(class="col-sm-12 cards")
-            div(ng-show="products", class="row")
-                div(class="col-sm-4 col-md-3", ng-repeat="p in products | orderBy:sortProperty | filter:searchProduct")
-                    productforrent
+    div(class="row cards", ng-show="products")
+        div(class="col-sm-4 col-md-3", ng-repeat="p in products | orderBy:sortProperty | filter:searchProduct")
+            productforrent
