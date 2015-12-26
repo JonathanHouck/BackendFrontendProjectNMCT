@@ -56,7 +56,7 @@
         }).
         when('/myRentings', {
             templateUrl: 'partials/myRentings',
-            controller: 'myRentingsCtrl'
+            controller: 'MyRentingsCtrl'
         }).
         when('/editRenting/:id', {
             templateUrl: 'partials/editRenting',
