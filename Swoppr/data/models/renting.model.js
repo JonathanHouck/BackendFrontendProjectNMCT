@@ -232,7 +232,37 @@ module.exports.removeRentingById = function(req, res, id) {
             return ;
         }
 
-        res.json({"ok": id});
+        swoppr.messageModel
+            .find({"_renting": id}).remove().exec(function(err, result) {
+                if (err) {
+                    res.json({"error": "fout bij verwijderen messages"});
+                    return;
+                }
 
+                res.json({"ok": id});
+            });
+    });
+};
+
+module.exports.editRenting = function(req, res) {
+    swoppr.rentingModel.findById(req.body.id).exec(function(err, renting) {
+
+        if (err || !renting) {
+            res.json({"error": "productId niet gevonden"});
+            return ;
+        }
+
+        if (req.body.fromDate) renting.fromDate = req.body.fromDate;
+        if (req.body.toDate) renting.toDate = req.body.toDate;
+        if (req.body.daysToRent) renting.daysToRent = req.body.daysToRent;
+        if (req.body.totalPrice) renting.totalPrice = req.body.totalPrice;
+
+        renting.save(function(err) {
+            if (err) {
+                res.json({"error": "Fout bij opslaan vehuring"});
+            }
+
+            res.json({"ok": renting});
+        });
     });
 };

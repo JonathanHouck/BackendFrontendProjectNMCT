@@ -29,10 +29,13 @@ div(class="container")
                 div(class="col-xs-6") &euro; {{renting.totalPrice}}
             div(class="row")
                 div(class="col-xs-6") Verhuren van:
-                div(class="col-xs-6") {{renting.fromDate | date:"MM/dd/yyyy"}}
+                div(class="col-xs-6") {{renting.fromDate | date:"dd/MM/yyyy"}}
             div(class="row section")
                 div(class="col-xs-6") Verhuren tot:
-                div(class="col-xs-6") {{renting.toDate | date:"MM/dd/yyyy"}}
+                div(class="col-xs-6") {{renting.toDate | date:"dd/MM/yyyy"}}
+            div(class="row section")
+                div(class="col-xs-6") Naam product:
+                div(class="col-xs-6"): a(href="detailProduct/{{renting.renterFrom.product.id}}") {{renting.renterFrom.product.productName}}
             div(class="row")
                 div(class="col-xs-6") Locatie:
                 div(class="col-xs-6") {{renting.renterFrom.product.place}}
@@ -44,7 +47,7 @@ div(class="container")
                 div(class="message", ng-repeat="m in messages | orderBy: '-createdOn'")
                     p {{m.name}}
                     p {{m.content}}
-                    p {{m.createdOn | date:'d MMMM yyyy - HH:mm' : 'UTC'}}
+                    p {{m.createdOn | date:'dd/MM/yyyy - HH:mm' : 'UTC'}}
             form(class="form-horizontal", name="chat", ng-submit="addMessage()")
                 div(class="form-group")
                     textarea(cols="30", rows="2", name="content", ng-model="content", placeholder="Jouw bericht", autofocus="autofocus", class="form-control", ng-required="true", ng-maxlength="120")

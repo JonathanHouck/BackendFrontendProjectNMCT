@@ -115,16 +115,15 @@
 
         $scope.rentProduct = function() {
 
-            if ($scope.user || $rootScope.user) {
-                var renting = new Renting(
-                    $scope.user.id,
-                    $rootScope.user.id,
-                    $scope.user.product.id,
-                    $scope.dt1,
-                    $scope.dt2,
-                    $scope.daysToRent,
-                    $scope.totalPrice
-                );
+            if ($rootScope.user && $scope.user) {
+                var renting = new Renting();
+                renting.renterFrom = $scope.user.id;
+                renting.renterTo = $rootScope.user.id;
+                renting.productId = $scope.user.product.id;
+                renting.fromDate = $scope.dt1;
+                renting.toDate = $scope.dt2;
+                renting.daysToRent = $scope.daysToRent;
+                renting.totalPrice = $scope.totalPrice;
 
                 RentingService.add(renting).then(onAddRentingSuccessfull, onAddRentingError);
             }

@@ -20,11 +20,11 @@ div(class="container")
                         th
                     tr(ng-repeat=("r in $root.rentingsRenterFrom | orderBy:sortType1:sortReverse1"))
                         td: a(href="/detailProduct/{{r.renterFrom.product.id}}") {{r.renterFrom.product.productName}}
-                        td {{r.fromDate | date:"MM/dd/yyyy"}} - {{r.toDate | date:"MM/dd/yyyy"}}
+                        td {{r.fromDate | date:"dd/MM/yyyy"}} - {{r.toDate | date:"dd/MM/yyyy"}}
                         td &euro; {{r.totalPrice}}
                         td {{r.renterTo.firstname}} {{r.renterTo.surname}}
                         td: a(href="/detailRenting/{{r.id}}"): i(class="fa fa-info-circle smallFont")
-                        td: a(href="#"): i(class="fa fa-pencil smallFont")
+                        td: a(href="/editRenting/{{r.id}}"): i(class="fa fa-pencil smallFont")
                         td: a(href="#", ng-click="open(r.id, r.renterFrom.product.productName, 'renting.renterFrom')"): i(class="fa fa-trash smallFont")
         div(class="col-sm-12")
             h2 Artikelen die ik huur
@@ -41,9 +41,9 @@ div(class="container")
                         th
                     tr(ng-repeat=("r in $root.rentingsRenterTo | orderBy:sortType2:sortReverse2"))
                         td: a(href="/detailProduct/{{r.renterFrom.product.id}}") {{r.renterFrom.product.productName}}
-                        td {{r.fromDate | date:"MM/dd/yyyy"}} - {{r.toDate | date:"MM/dd/yyyy"}}
+                        td {{r.fromDate | date:"dd/MM/yyyy"}} - {{r.toDate | date:"dd/MM/yyyy"}}
                         td &euro; {{r.totalPrice}}
                         td {{r.renterFrom.firstname}} {{r.renterFrom.surname}}
                         td: a(href="/detailRenting/{{r.id}}"): i(class="fa fa-info-circle smallFont")
-                        td: a(href="#"): i(class="fa fa-pencil smallFont")
+                        td: a(href="/editRenting/{{r.id}}"): i(class="fa fa-pencil smallFont")
                         td: a(href="#", ng-click="open(r.id, r.renterFrom.product.productName, 'renting.renterTo')"): i(class="fa fa-trash smallFont")

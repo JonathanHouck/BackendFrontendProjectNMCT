@@ -17,21 +17,24 @@
 
                 if (response.data.ok) {
                     var rentingToDelete;
+                    var indexRentingToDelete;
 
                     //kijken uit welke $rootScope de renting verwijderd moet worden
                     if (who == "renting.renterFrom") {
                         rentingToDelete = $filter('filter')($rootScope.rentingsRenterFrom, function(r) {
                             return r.id === response.data.ok;
                         })[0];
+                        indexRentingToDelete = $rootScope.rentingsRenterTo.indexOf(rentingToDelete);
 
-                        $rootScope.rentingsRenterFrom.splice(rentingToDelete, 1);
+                        $rootScope.rentingsRenterFrom.splice(indexRentingToDelete, 1);
 
                     } else if (who == "renting.renterTo") {
                         rentingToDelete = $filter('filter')($rootScope.rentingsRenterTo, function(r) {
                             return r.id === response.data.ok;
                         })[0];
+                        indexRentingToDelete = $rootScope.rentingsRenterTo.indexOf(rentingToDelete);
 
-                        $rootScope.rentingsRenterTo.splice(rentingToDelete, 1);
+                        $rootScope.rentingsRenterTo.splice(indexRentingToDelete, 1);
                     }
                 }
 

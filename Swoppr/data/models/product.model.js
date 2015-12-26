@@ -93,7 +93,7 @@ module.exports.addProductWithPictureUser = function(req, res) {
     });
 };
 
-function addProduct(res, user, entry) {
+/*function addProduct(res, user, entry) {
     user.products.push(entry);
 
     user.save(function(err) {
@@ -103,12 +103,12 @@ function addProduct(res, user, entry) {
             res.json({"ok": entry});
         }
     });
-}
+}*/
 
 module.exports.getAllProducts = function(req, res) {
     swoppr.userModel.find().exec(function(err, users) {
 
-        if(err) {
+        if(err || !users) {
             res.json({"error": "Geen users gevonden"});
             return ;
         }
@@ -156,7 +156,7 @@ module.exports.getAllProducts = function(req, res) {
 module.exports.editProductUser = function(req, res) {
     swoppr.userModel.findOne({"products._id": req.body.id}).exec(function(err, userWithProduct) {
 
-        if (err || userWithProduct === null) {
+        if (err || !userWithProduct) {
             res.json({"error": "productId niet gevonden"});
             return ;
         }
@@ -176,7 +176,7 @@ module.exports.editProductUser = function(req, res) {
 
 module.exports.removeProductUser = function(req, res, id) {
     swoppr.userModel.findOne({"products._id": id}).exec(function(err, userWithProduct) {
-        if (err || userWithProduct === null) {
+        if (err || !userWithProduct) {
             res.json({"error": "productId niet gevonden"});
             return ;
         }

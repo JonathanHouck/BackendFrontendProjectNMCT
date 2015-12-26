@@ -34,6 +34,10 @@ module.exports = function(passport) {
         res.render("partials/myRentings");
     });
 
+    router.get('/editRenting/:id?', function(req, res) {
+        res.render("partials/editRenting");
+    });
+
     router.get('/detailProduct/:id?', isLoggedIn, function(req, res) {
         res.render("partials/detailProduct");
     });

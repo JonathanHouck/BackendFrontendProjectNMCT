@@ -1,0 +1,50 @@
+div(class="container")
+    div(class="row")
+        div(class="col-sm-12 title-header")
+            h1(ng-show="whoRents == 'renterTo'") Bewerk te verhuren artikel
+            h1(ng-show="whoRents == 'noAccess'") Geen toegang tot verhuring
+            h1(ng-show="whoRents == 'noRenting'") Verhuring niet gevonden
+    div(class="row", ng-hide="renting || whoRents == 'noAccess' || whoRents == 'noRenting'")
+        img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
+    div(class="row detailProduct", ng-show="renting && whoRents != 'noAccess' && whoRents != 'noRenting'")
+        div(class="col-sm-12 col-md-6")
+            div(class="row")
+                img(ng-hide="renting.renterFrom.product.url == '/'", src="{{renting.renterFrom.product.url}}")
+                img(ng-show="renting.renterFrom.product.url == '/'", src="images/noImageFound.png")
+            div(class="row")
+                div(class="col-sm-3") Beschrijving:
+                div(class="col-sm-9") {{renting.renterFrom.product.description}}
+            div(class="row")
+                div(class="col-sm-3") Verhuurt door:
+                div(class="col-sm-9") {{renting.renterFrom.toString()}}
+            div(class="row")
+                div(class="col-sm-3") Locatie:
+                div(class="col-sm-9"): a(href="detailProduct/{{renting.renterFrom.product.id}}") {{renting.renterFrom.product.place}}
+        div(class="col-sm-12 col-md-6 form-horizontal")
+            uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)") {{alert.msg}}
+            div(class="row")
+                div(class="col-sm-12")
+                    h2 Artikel verhuren
+            div(class="row")
+                label(for=dateFrom, class="col-sm-3 control-label text-left") Huren van:
+                div(class="input-group col-sm-9")
+                    input(type="text", id="dateFrom", class="form-control", uib-datepicker-popup="dd/MM/yyyy", ng-model="renting.fromDate", is-open="renting.fromDate.status.opened", min-date="renting.fromDate.minDate", datepicker-options="dateOptions", ng-required="true", close-text="Close")
+                    span(class="input-group-btn")
+                        button(type="button", class="btn btn-default", ng-click="renting.fromDate.open($event)")
+                            i(class="fa fa-calendar")
+            div(class="row")
+                label(for=dateTo, class="col-sm-3 control-label text-left") Huren tot:
+                div(class="input-group col-sm-9")
+                    input(type="text", id="dateTo", class="form-control", uib-datepicker-popup="dd/MM/yyyy", ng-model="renting.toDate", is-open="renting.toDate.status.opened", min-date="renting.toDate.minDate", datepicker-options="dateOptions",  ng-required="true", close-text="Close")
+                    span(class="input-group-btn")
+                        button(type="button", class="btn btn-default", ng-click="renting.toDate.open($event)")
+                            i(class="fa fa-calendar")
+            div(class="row")
+                div(class="col-sm-3") Aantal dagen:
+                div(class="col-sm-9") {{renting.daysToRent}}
+            div(class="row")
+                div(class="col-sm-3") Totale prijs:
+                div(class="col-sm-9") &euro; {{renting.totalPrice}}
+            div(class="row")
+                div(class="col-sm-offset-3 col-sm-9")
+                    input(type="submit", value="Bewerk", class="btn redirect", ng-click="editRenting()")

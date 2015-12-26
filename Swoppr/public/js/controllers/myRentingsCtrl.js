@@ -9,47 +9,53 @@
 
     function myRentingsCtrl($rootScope, $scope, $uibModal, RentingService) {
 
-        $rootScope.$watch('user.id', function() {
-            var getRentingsByRenterFromSuccessfull = function(renting) {
-                $rootScope.rentingsRenterFrom = renting;
-            };
+        $rootScope.$watch('user', function() {
 
-            var getRentingsByRenterFromError = function(err) {
-                console.log(err);
-            };
+            $rootScope.rentingsRenterFrom = [];
+            $rootScope.rentingsRenterTo = [];
 
-            RentingService.byRenterFrom($rootScope.user.id).then(getRentingsByRenterFromSuccessfull, getRentingsByRenterFromError);
+            if ($rootScope.user) {
+                var getRentingsByRenterFromSuccessfull = function(renting) {
+                    $rootScope.rentingsRenterFrom = renting;
+                };
 
-            var getRentingsByRenterToSuccessfull = function(renting) {
-                $rootScope.rentingsRenterTo = renting;
-            };
+                var getRentingsByRenterFromError = function(err) {
+                    console.log(err);
+                };
 
-            var getRentingsByRenterToError = function(err) {
-                console.log(err);
-            };
+                RentingService.byRenterFrom($rootScope.user.id).then(getRentingsByRenterFromSuccessfull, getRentingsByRenterFromError);
 
-            RentingService.byRenterTo($rootScope.user.id).then(getRentingsByRenterToSuccessfull, getRentingsByRenterToError);
+                var getRentingsByRenterToSuccessfull = function(renting) {
+                    $rootScope.rentingsRenterTo = renting;
+                };
 
-            $scope.animationsEnabled = true;
+                var getRentingsByRenterToError = function(err) {
+                    console.log(err);
+                };
 
-            $scope.open = function (id, product, who) {
-                var modalInstance = $uibModal.open({
-                    animation: $scope.animationsEnabled,
-                    templateUrl: '../templates/myModalContent.html',
-                    controller: 'ModalInstanceCtrl',
-                    resolve: {
-                        id: function () {
-                            return id;
-                        },
-                        product: function() {
-                            return product;
-                        },
-                        who: function() {
-                            return who;
+                RentingService.byRenterTo($rootScope.user.id).then(getRentingsByRenterToSuccessfull, getRentingsByRenterToError);
+
+                $scope.animationsEnabled = true;
+
+                $scope.open = function (id, product, who) {
+                    var modalInstance = $uibModal.open({
+                        animation: $scope.animationsEnabled,
+                        templateUrl: '../templates/myModalContent.html',
+                        controller: 'ModalInstanceCtrl',
+                        resolve: {
+                            id: function () {
+                                return id;
+                            },
+                            product: function() {
+                                return product;
+                            },
+                            who: function() {
+                                return who;
+                            }
                         }
-                    }
-                });
-            };
+                    });
+                };
+            }
         });
     }
 }());

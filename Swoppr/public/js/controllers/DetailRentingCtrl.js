@@ -39,7 +39,7 @@
 
         //messages ophalen
         var onGetRentingError = function(err) {
-            console.log("error getting renting");
+            console.log(err);
         };
 
         var rentingId = $routeParams.id;

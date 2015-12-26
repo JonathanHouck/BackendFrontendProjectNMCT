@@ -58,6 +58,10 @@
             templateUrl: 'partials/myRentings',
             controller: 'myRentingsCtrl'
         }).
+        when('/editRenting/:id', {
+            templateUrl: 'partials/editRenting',
+            controller: 'EditRentingCtrl'
+        }).
         when('/login', {
             templateUrl: 'partials/login',
             controller: 'LoginCtrl'
@@ -68,7 +72,6 @@
         }).
         when('/profile', {
             templateUrl: 'partials/profile',
-            controller: 'ProfileCtrl',
             auth: true
         }).
         otherwise({

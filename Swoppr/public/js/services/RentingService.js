@@ -118,7 +118,7 @@
             });
         };
 
-        var byProduct = function(id){
+        /*var byProduct = function(id){
             var url =   '/api/renting/getAllRentingsProduct/' + id;
             return $http.get(url).then(function(response) {
                 if(response.data.error) {
@@ -138,10 +138,17 @@
                 });
                 return rentings;
             });
-        };
+        };*/
 
         var add = function(renting){
             var url =  '/api/renting/newRenting/';
+            return $http.post(url, renting).then(function(response) {
+                return response; //Expose the user data to your angular scope
+            });
+        };
+
+        var edit = function(renting){
+            var url =  '/api/renting/editRenting/';
             return $http.post(url, renting).then(function(response) {
                 return response; //Expose the user data to your angular scope
             });
@@ -168,10 +175,9 @@
             byId : byId,
             byRenterFrom : byRenterFrom,
             byRenterTo : byRenterTo,
-            byProduct : byProduct,
             add : add,
+            edit: edit,
             remove : remove
-            //update : update
         };
     };
     angular.module("swoppr").factory("RentingService", ["$http", RentingService]);
