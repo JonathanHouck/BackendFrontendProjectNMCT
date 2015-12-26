@@ -5,9 +5,9 @@
     'use strict';
 
     angular.module('swoppr')
-        .controller('myRentingsCtrl', ['$rootScope', '$scope', '$uibModal', 'RentingService', myRentingsCtrl]);
+        .controller('MyRentingsCtrl', ['$rootScope', '$scope', '$uibModal', 'RentingService', MyRentingsCtrl]);
 
-    function myRentingsCtrl($rootScope, $scope, $uibModal, RentingService) {
+    function MyRentingsCtrl($rootScope, $scope, $uibModal, RentingService) {
 
         $rootScope.$watch('user', function() {
 
