@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87491fe2-1133-4208-8d80-4fe5931cfaa4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/EditRentingCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Swoppr/views/partials/editRenting.jade" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/ProfileCtrl.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/data/models/product.model.js" afterPath="$PROJECT_DIR$/Swoppr/data/models/product.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/data/models/renting.model.js" afterPath="$PROJECT_DIR$/Swoppr/data/models/renting.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/app.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/app.min.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/app.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/DetailRentingCtrl.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/DetailRentingCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/ModalInstanceCtrl.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/ModalInstanceCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/myRentingsCtrl.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/myRentingsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/controllers/rentProductCtrl.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/controllers/rentProductCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/models/Renting.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/models/Renting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/services/RentingService.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/services/RentingService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/routes/apiRenting.js" afterPath="$PROJECT_DIR$/Swoppr/routes/apiRenting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/routes/partials.js" afterPath="$PROJECT_DIR$/Swoppr/routes/partials.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/detailRenting.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/detailRenting.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/myRentings.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/myRentings.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/views/partials/rentProduct.jade" afterPath="$PROJECT_DIR$/Swoppr/views/partials/rentProduct.jade" />
     </list>
     <ignored path="BackendFrontendProjectNMCT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -672,12 +654,6 @@
       <option name="number" value="Default" />
       <updated>1447432528781</updated>
     </task>
-    <task id="LOCAL-00019" summary="Rentings updated">
-      <created>1448397911547</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1448397911547</updated>
-    </task>
     <task id="LOCAL-00020" summary="start validatie + projectdossier verder aangevult">
       <created>1448723845845</created>
       <option name="number" value="00020" />
@@ -966,7 +942,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451142325488</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="edit renting">
+      <created>1451171020212</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1451171020212</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TodoView">
@@ -984,6 +966,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13066386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.267316" sideWeight="0.58587986" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31060606" sideWeight="0.61696523" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
@@ -992,7 +975,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30444205" sideWeight="0.7291886" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1034,7 +1016,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login and errors fixed, without growl" />
     <MESSAGE value="number and images validation" />
     <MESSAGE value="jshint backend" />
     <MESSAGE value="html fixes" />
@@ -1059,7 +1040,8 @@
     <MESSAGE value="detail product + redirect" />
     <MESSAGE value="my products en my rentings + sort" />
     <MESSAGE value="delete renting" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete renting" />
+    <MESSAGE value="edit renting" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit renting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
