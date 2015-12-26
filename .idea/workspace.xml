@@ -654,12 +654,6 @@
       <option name="number" value="Default" />
       <updated>1447432528781</updated>
     </task>
-    <task id="LOCAL-00020" summary="start validatie + projectdossier verder aangevult">
-      <created>1448723845845</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1448723845845</updated>
-    </task>
     <task id="LOCAL-00021" summary="aanpassing projectdossier">
       <created>1448727489392</created>
       <option name="number" value="00021" />
@@ -948,7 +942,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451171020212</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="edit renting">
+      <created>1451171074445</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1451171074445</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView">
