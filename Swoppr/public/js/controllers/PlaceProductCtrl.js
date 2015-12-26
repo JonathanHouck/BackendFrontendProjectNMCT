@@ -5,11 +5,7 @@
 (function () {
     'use strict';
     angular.module('swoppr')
-        .controller('PlaceProductCtrl', ['$rootScope', '$scope', '$location', 'ProductService', 'uiGmapGoogleMapApi', PlaceProductCtrl])
-        .run(['$templateCache', function($templateCache) {
-            $templateCache.put('searchbox.tpl.html', '<input id="pac-input" class="pac-controls" type="text" placeholder="Adres zoeken" autofocus="autofocus">');
-            $templateCache.put('window.tpl.html', '<div ng-controller="WindowCtrl" ng-init="showPlaceDetails(parameter)">{{place.name}}</div>');
-        }]);
+        .controller('PlaceProductCtrl', ['$rootScope', '$scope', '$location', 'ProductService', 'uiGmapGoogleMapApi', PlaceProductCtrl]);
 
     function PlaceProductCtrl ($rootScope, $scope, $location, ProductService, GoogleMapApi) {
         $scope.alerts = [];
@@ -44,7 +40,7 @@
                     visible:false
 
                 },
-                templateurl:'window.tpl.html',
+                templateurl: '../templates/window.html',
                 templateparameter: {}
             },
             map: {
@@ -73,7 +69,7 @@
                 }
             },
             searchbox: {
-                template:'searchbox.tpl.html',
+                template: '../templates/searchbox.html',
                 options: {
                     autocomplete:true,
                     types: ['geocode'],

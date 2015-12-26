@@ -27,7 +27,7 @@ module.exports.getProductById = function(req, res, id) {
         });
 };
 
-exports.getProductByIdUser = function(req, res, id) {
+module.exports.getProductByIdUser = function(req, res, id) {
     swoppr.userModel
         .findOne({"products._id": id})
         .exec(function(err, userWithProducts) {
@@ -105,7 +105,7 @@ function addProduct(res, user, entry) {
     });
 }
 
-exports.getAllProducts = function(req, res) {
+module.exports.getAllProducts = function(req, res) {
     swoppr.userModel.find().exec(function(err, users) {
 
         if(err) {
@@ -153,7 +153,7 @@ exports.getAllProducts = function(req, res) {
     });
 };
 
-exports.editProductUser = function(req, res) {
+module.exports.editProductUser = function(req, res) {
     swoppr.userModel.findOne({"products._id": req.body.id}).exec(function(err, userWithProduct) {
 
         if (err || userWithProduct === null) {
@@ -174,7 +174,7 @@ exports.editProductUser = function(req, res) {
     });
 };
 
-exports.removeProductUser = function(req, res, id) {
+module.exports.removeProductUser = function(req, res, id) {
     swoppr.userModel.findOne({"products._id": id}).exec(function(err, userWithProduct) {
         if (err || userWithProduct === null) {
             res.json({"error": "productId niet gevonden"});

@@ -14,6 +14,11 @@ router.get('/getById/:id', function(req, res) {
     return swopprCtrl.getRentingById(req, res, id);
 });
 
+router.get('/removeById/:id', function(req, res) {
+    var id = req.params.id;
+    return swopprCtrl.removeRentingById(req, res, id);
+});
+
 router.get('/getAllRentingsRenterFrom/:id', function(req, res) {
     var id = req.params.id;
     return swopprCtrl.getAllRentings(req, res, id, 1);

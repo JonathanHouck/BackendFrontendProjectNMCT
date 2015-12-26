@@ -10,8 +10,8 @@
     function DetailProductCtrl($scope, $routeParams, ProductService) {
         $scope.user = [];
 
-        var onGetUserWithProductSuccesfull = function(data) {
-            $scope.user = data;
+        var onGetUserWithProductSuccesfull = function(user) {
+            $scope.user = user;
 
             $scope.map = {center: {latitude: $scope.user.product.latitude, longitude: $scope.user.product.longitude }, zoom: 16 };
             $scope.marker = {
@@ -25,7 +25,7 @@
         };
 
         var onGetUserWithProductError = function(err) {
-            console.log("error getting user with product");
+            console.log(err);
         };
 
         var productId = $routeParams.id;

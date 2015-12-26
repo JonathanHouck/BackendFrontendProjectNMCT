@@ -147,14 +147,14 @@
             });
         };
 
-        //var remove = function(){
-        //    var url =   '/api/renting/getById/'+id;
-        //    $http.get(url)
-        //        .then(function(response) {
-        //            return response; //Expose the user data to your angular scope
-        //        });
-        //};
-        //
+        var remove = function(id){
+            var url =   '/api/renting/removeById/'+id;
+            return $http.get(url)
+                .then(function(response) {
+                    return response; //Expose the user data to your angular scope
+                });
+        };
+
         //
         //var update = function(){
         //    var url =   '/api/renting/getById/'+id;
@@ -169,8 +169,8 @@
             byRenterFrom : byRenterFrom,
             byRenterTo : byRenterTo,
             byProduct : byProduct,
-            add : add
-            //remove : remove,
+            add : add,
+            remove : remove
             //update : update
         };
     };

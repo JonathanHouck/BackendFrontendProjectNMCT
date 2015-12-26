@@ -17,6 +17,6 @@ div(class="container")
                     td {{p.productName}}
                     td {{p.pricePerDay}}
                     td {{p.place}}
-                    td: a(href="/detailProduct/{{p.id}}") Detail
-                    td Bewerk
-                    td Verwijder
+                    td: a(href="/detailProduct/{{p.id}}"): i(class="fa fa-info-circle smallFont")
+                    td: a(href="#"): i(class="fa fa-pencil smallFont")
+                    td: a(href="#"): i(class="fa fa-trash smallFont")

@@ -5,13 +5,13 @@
     'use strict';
 
     angular.module('swoppr')
-        .controller('myRentingsCtrl', ['$rootScope', '$scope', 'RentingService', myRentingsCtrl]);
+        .controller('myRentingsCtrl', ['$rootScope', '$scope', '$uibModal', 'RentingService', myRentingsCtrl]);
 
-    function myRentingsCtrl($rootScope, $scope, RentingService) {
+    function myRentingsCtrl($rootScope, $scope, $uibModal, RentingService) {
 
-        if($rootScope.user) {
+        $rootScope.$watch('user.id', function() {
             var getRentingsByRenterFromSuccessfull = function(renting) {
-                $scope.rentingsRenterFrom = renting;
+                $rootScope.rentingsRenterFrom = renting;
             };
 
             var getRentingsByRenterFromError = function(err) {
@@ -21,7 +21,7 @@
             RentingService.byRenterFrom($rootScope.user.id).then(getRentingsByRenterFromSuccessfull, getRentingsByRenterFromError);
 
             var getRentingsByRenterToSuccessfull = function(renting) {
-                $scope.rentingsRenterTo = renting;
+                $rootScope.rentingsRenterTo = renting;
             };
 
             var getRentingsByRenterToError = function(err) {
@@ -29,6 +29,27 @@
             };
 
             RentingService.byRenterTo($rootScope.user.id).then(getRentingsByRenterToSuccessfull, getRentingsByRenterToError);
-        }
+
+            $scope.animationsEnabled = true;
+
+            $scope.open = function (id, product, who) {
+                var modalInstance = $uibModal.open({
+                    animation: $scope.animationsEnabled,
+                    templateUrl: '../templates/myModalContent.html',
+                    controller: 'ModalInstanceCtrl',
+                    resolve: {
+                        id: function () {
+                            return id;
+                        },
+                        product: function() {
+                            return product;
+                        },
+                        who: function() {
+                            return who;
+                        }
+                    }
+                });
+            };
+        });
     }
 }());

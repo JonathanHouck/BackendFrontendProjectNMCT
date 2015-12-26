@@ -27,7 +27,7 @@
         };
 
         var onGetUserWithProductError = function(err) {
-            console.log("error getting user with product");
+            console.log(err);
         };
 
         ProductService.byIdUser(productId).then(onGetUserWithProductSuccesfull, onGetUserWithProductError);
@@ -101,7 +101,7 @@
         var onAddRentingSuccessfull = function(resp) {
             if (resp.data) {
                 if (resp.data.ok) {
-                    $location.path('/toRent');
+                    $location.path('/detailRenting/' + resp.data.ok._id);
                 }
                 if (resp.data.error) {
                     $scope.alerts.push({type: 'danger', msg: resp.data.error});
@@ -109,8 +109,8 @@
             }
         };
 
-        var onAddRentingError = function(resp) {
-            console.log(resp);
+        var onAddRentingError = function(err) {
+            console.log(err);
         };
 
         $scope.rentProduct = function() {

@@ -223,3 +223,16 @@ module.exports.addRentingUser = function(req, res) {
         });
     });
 };
+
+module.exports.removeRentingById = function(req, res, id) {
+    swoppr.rentingModel
+        .findById(id).remove().exec(function(err, result) {
+        if (err) {
+            res.json({"error": "rentingId niet gevonden"});
+            return ;
+        }
+
+        res.json({"ok": id});
+
+    });
+};
