@@ -1,7 +1,7 @@
 /**
  * Created by Greg on 04-Dec-15.
  */
-function Product(_id, productName, pricePerDay, description, url, place, longitude, latitude){
+function Product(_id, productName, pricePerDay, description, url, place, longitude, latitude, isDeleted){
     this.id = _id;
     this.productName = productName;
     this.pricePerDay = pricePerDay;
@@ -10,6 +10,7 @@ function Product(_id, productName, pricePerDay, description, url, place, longitu
     this.place = place;
     this.longitude = longitude;
     this.latitude = latitude;
+    this.isDeleted = isDeleted;
 }
 
 Product.prototype.toString = function(){

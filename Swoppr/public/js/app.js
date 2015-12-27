@@ -52,7 +52,7 @@
         }).
         when('/myProducts', {
             templateUrl: 'partials/myProducts',
-            controller: ''
+            controller: 'MyProductsCtrl'
         }).
         when('/myRentings', {
             templateUrl: 'partials/myRentings',

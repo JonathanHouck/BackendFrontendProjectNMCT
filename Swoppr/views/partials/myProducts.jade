@@ -14,9 +14,9 @@ div(class="container")
                     th
                     th
                 tr(ng-repeat=("p in $root.user.products | orderBy:sortType:sortReverse"))
-                    td {{p.productName}}
-                    td {{p.pricePerDay}}
-                    td {{p.place}}
-                    td: a(href="/detailProduct/{{p.id}}"): i(class="fa fa-info-circle smallFont")
-                    td: a(href="#"): i(class="fa fa-pencil smallFont")
-                    td: a(href="#"): i(class="fa fa-trash smallFont")
+                    td(ng-show="p.isDeleted == false") {{p.productName}}
+                    td(ng-show="p.isDeleted == false") {{p.pricePerDay}}
+                    td(ng-show="p.isDeleted == false") {{p.place}}
+                    td(ng-show="p.isDeleted == false"): a(href="/detailProduct/{{p.id}}"): i(class="fa fa-info-circle smallFont")
+                    td(ng-show="p.isDeleted == false"): a(href="#"): i(class="fa fa-pencil smallFont")
+                    td(ng-show="p.isDeleted == false"): a(href="#", ng-click="open(p.id, p.productName, 'product')"): i(class="fa fa-trash smallFont")

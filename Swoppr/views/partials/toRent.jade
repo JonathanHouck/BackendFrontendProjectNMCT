@@ -16,5 +16,5 @@ div(class="container")
     div(class="row", ng-hide="products")
         img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
     div(class="row cards", ng-show="products")
-        div(class="col-sm-4 col-md-3", ng-repeat="p in products | orderBy:sortProperty | filter:searchProduct")
-            productforrent
+        div(ng-repeat="p in products | orderBy:sortProperty | filter:searchProduct")
+            productforrent(class="col-sm-4 col-md-3")

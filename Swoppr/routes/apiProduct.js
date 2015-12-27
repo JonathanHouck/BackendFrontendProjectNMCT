@@ -20,9 +20,9 @@ router.get('/getAll', function(req, res) {
    return swopprCtrl.getAllProducts(req, res);
 });
 
-router.get('/removeProductUser/:id', function(req, res) {
+router.get('/removeById/:id', function(req, res) {
     var id = req.params.id;
-    return swopprCtrl.removeProductUser(req, res, id);
+    return swopprCtrl.softDeleteProduct(req, res, id);
 });
 
 router.post('/newProduct', multipartyMiddleware, function(req, res) {

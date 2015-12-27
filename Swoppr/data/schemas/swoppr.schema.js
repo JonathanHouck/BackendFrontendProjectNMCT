@@ -17,7 +17,6 @@
         toDate: { type: Date},
         daysToRent: Number,
         totalPrice: Number,
-        //Approved: Boolean,
         createdOn: { type: Date, default: Date.now() + 60 * 60000 }
     }, {collection: 'Rentings'});
 
@@ -29,6 +28,7 @@
         place: String,
         longitude: String,
         latitude: String,
+        isDeleted: {type: Boolean, default: false},
         createdOn: { type: Date, default: Date.now() + 60 * 60000 }
     });
 

@@ -93,7 +93,7 @@ module.exports.addProductWithPictureUser = function(req, res) {
     });
 };
 
-/*function addProduct(res, user, entry) {
+function addProduct(res, user, entry) {
     user.products.push(entry);
 
     user.save(function(err) {
@@ -103,7 +103,7 @@ module.exports.addProductWithPictureUser = function(req, res) {
             res.json({"ok": entry});
         }
     });
-}*/
+}
 
 module.exports.getAllProducts = function(req, res) {
     swoppr.userModel.find().exec(function(err, users) {
@@ -153,7 +153,7 @@ module.exports.getAllProducts = function(req, res) {
     });
 };
 
-module.exports.editProductUser = function(req, res) {
+/*module.exports.editProductUser = function(req, res) {
     swoppr.userModel.findOne({"products._id": req.body.id}).exec(function(err, userWithProduct) {
 
         if (err || !userWithProduct) {
@@ -172,9 +172,30 @@ module.exports.editProductUser = function(req, res) {
             res.json({"ok": "Product gewijzigd"});
         });
     });
+};*/
+
+module.exports.softDeleteProduct = function(req, res, id) {
+    swoppr.userModel.findOne({"products._id": id})
+        .exec(function(err, userWithProduct) {
+
+        if (err || !userWithProduct) {
+            res.json({"error": "productId niet gevonden"});
+            return ;
+        }
+
+        userWithProduct.products.id(id).isDeleted = true;
+
+        userWithProduct.save(function(err) {
+            if (err) {
+                res.json({"error": "Fout bij soft deleten product"});
+            }
+
+            res.json({"ok": id});
+        });
+    });
 };
 
-module.exports.removeProductUser = function(req, res, id) {
+/*module.exports.removeProductUser = function(req, res, id) {
     swoppr.userModel.findOne({"products._id": id}).exec(function(err, userWithProduct) {
         if (err || !userWithProduct) {
             res.json({"error": "productId niet gevonden"});
@@ -192,4 +213,4 @@ module.exports.removeProductUser = function(req, res, id) {
         });
 
     });
-};
+};*/

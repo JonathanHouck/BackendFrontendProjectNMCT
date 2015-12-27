@@ -1,7 +1,7 @@
 /**
  * Created by Greg on 04-Dec-15.
  */
-function User(_id, firstname, surname, local, google, products){
+function UserWithCredentials(_id, firstname, surname, local, google, products){
     this.id = _id;
     this.firstname = firstname;
     this.surname = surname;
@@ -10,6 +10,6 @@ function User(_id, firstname, surname, local, google, products){
     this.products = products;
 }
 
-User.prototype.toString = function(){
+UserWithCredentials.prototype.toString = function(){
     return this.firstname + " " + this.surname;
 };

@@ -1,9 +1,20 @@
-div(class="container", ng-hide="user.id || user == 'error'")
+div(class="container", ng-hide="user.id || user == 'error' || user == 'deleted' || ownProduct")
     img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
 div(class="container", ng-show="user == 'error'")
     div(class="row")
         div(class="col-sm-12 title-header")
-            h1 Geen product gevonden
+            h1 Geen artikel gevonden
+div(class="container", ng-show="user == 'deleted'")
+    div(class="row")
+        div(class="col-sm-12 title-header")
+            h1 Artikel is verwijderd
+div(class="container", ng-show="ownProduct")
+    div(class="row")
+        div(class="col-sm-12 title-header")
+            h1 Eigen artikel
+    div(class="row")
+        div(class="col-sm-12")
+            a(href="detailProduct/{{ownProduct}}", class="btn btn-default redirect") Detail artikel
 div(class="container", ng-show="user.id")
     div(class="row")
         div(class="col-sm-12 title-header")

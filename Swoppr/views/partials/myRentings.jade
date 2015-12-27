@@ -2,9 +2,9 @@ div(class="container")
     div(class="row")
         div(class="col-sm-12")
             h1 Mijn verhuringen
-    div(class="row", ng-hide="$root.rentingsRenterFrom || $root.rentingsRenterTo")
+    div(class="row", ng-hide="$root.rentingsRenterFrom && $root.rentingsRenterTo")
         img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
-    div(class="row", ng-show="$root.rentingsRenterFrom || $root.rentingsRenterTo")
+    div(class="row", ng-show="$root.rentingsRenterFrom && $root.rentingsRenterTo")
         div(class="col-sm-12")
             h2 Artikelen die ik verhuur
         div(class="col-sm-12")

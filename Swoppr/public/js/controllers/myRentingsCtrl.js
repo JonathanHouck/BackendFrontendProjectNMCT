@@ -10,10 +10,6 @@
     function MyRentingsCtrl($rootScope, $scope, $uibModal, RentingService) {
 
         $rootScope.$watch('user', function() {
-
-            $rootScope.rentingsRenterFrom = [];
-            $rootScope.rentingsRenterTo = [];
-
             if ($rootScope.user) {
                 var getRentingsByRenterFromSuccessfull = function(renting) {
                     $rootScope.rentingsRenterFrom = renting;

@@ -41,20 +41,23 @@
                     var products = [];
                     var u = response.data;
                     angular.forEach(u.products, function(p) {
-                        var product = new Product(
-                            p._id,
-                            p.productName,
-                            parseInt(p.pricePerDay),
-                            p.description,
-                            p.url,
-                            p.place,
-                            p.longitude,
-                            p.latitude
-                        );
-                        products.push(product);
+                        if (p.isDeleted == false) {
+                            var product = new Product(
+                                p._id,
+                                p.productName,
+                                parseInt(p.pricePerDay),
+                                p.description,
+                                p.url,
+                                p.place,
+                                p.longitude,
+                                p.latitude,
+                                p.isDeleted
+                            );
+                            products.push(product);
+                        }
                     });
 
-                    return new User(
+                    return new UserWithCredentials(
                         u._id,
                         u.firstname,
                         u.surname,
@@ -62,6 +65,7 @@
                         u.google,
                         products
                     );
+
             });
         };
 
@@ -74,7 +78,7 @@
                     }
 
                     var u = response.data;
-                    return new User(
+                    return new UserWithCredentials(
                         u.firstname,
                         u.surname,
                         u.local.email,
@@ -94,7 +98,7 @@
 
                     var users = [];
                     angular.forEach(response.data, function(u){
-                        var user = new User(
+                        var user = new UserWithCredentials(
                             u.firstname,
                             u.surname,
                             u.local.email,
@@ -117,7 +121,7 @@
 
                     var users = [];
                     angular.forEach(response.data, function(u){
-                        var user = new User(
+                        var user = new UserWithCredentials(
                             u.firstname,
                             u.surname,
                             u.local.email,
