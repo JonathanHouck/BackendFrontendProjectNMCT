@@ -41,7 +41,7 @@
                     var products = [];
                     var u = response.data;
                     angular.forEach(u.products, function(p) {
-                        if (p.isDeleted == false) {
+                        if (p.isDeleted === false) {
                             var product = new Product(
                                 p._id,
                                 p.productName,

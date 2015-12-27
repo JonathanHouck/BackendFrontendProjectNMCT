@@ -69,7 +69,7 @@
 
                 var products = [];
                 angular.forEach(response.data, function(p){
-                    if (p.isDeleted == false) {
+                    if (p.isDeleted === false) {
                         var product = makeProduct(p);
                         products.push(product);
                     }
@@ -81,13 +81,14 @@
         var add = function(file, data) {
             var url = '/api/product/newProduct/';
             if (file) {
-                return file.upload = Upload.upload({
+                var uploader = file.upload = Upload.upload({
                     url: url,
                     file: file,
                     data: data
                 }).then(function(response) {
                     return response;
                 });
+                return uploader;
             } else {
                 return $http.post(url, data).then(function(response) {
                     return response;
