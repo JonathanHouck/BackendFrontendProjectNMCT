@@ -2,7 +2,8 @@
  * Created by Greg on 14-Dec-15.
  */
 var supertest = require("supertest");
-var should = require("should");
+var should = require("chai").should;
+var expect = require('chai').expect;
 var request = require('supertest');
 var mongoose = require('mongoose');
 var express = require('express');
@@ -11,50 +12,75 @@ var express = require('express');
 var server = supertest.agent('http://localhost:3000');
 
 mongoose.connect('mongodb://johna:swoppr@ds053774.mongolab.com:53774/swoppr');
-    var productID = "5680abf1e7fa2d5022412575";
-    var userID = "5680a63424095d780d70b2e5";
-    var secondUserID = "567bfe4208c315042dd9590b";
-    var rentingID = "5680b57fb534a2542c1d2fcf";
+var productID = "5680abf1e7fa2d5022412575";
+var userID = "5680f6e9b53a93dc06509766";
+var secondUserID = "567bfe4208c315042dd9590b";
+var rentingID = "5680b57fb534a2542c1d2fcf";
+
 // UNIT test begin
 describe("Api", function() {
     describe("Products", function () {
+
+        it("getById should return a product", function (done) {
+            server
+                .get('/api/product/getById/' + productID)
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res){
+                    checkProduct(res.body);
+                    done();
+                });
+        });
         it("getAll should return an array of products",function(done){
             server
                 .get("/api/product/getAll/")
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res) {
+                    checkProduct(res.body[0]);
+                    done();
+                });
         });
 
-        it("getById should return an array of products", function (done) {
+        it("getByIdUser should return a user", function (done) {
             server
-                .get('/api/product/getById/' + productID)
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
-        });
-
-        it("getByIdUser should return a an array of products", function (done) {
-            server
-                .get('/api/product/getByIdUser/'+userID)
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
+                .get('/api/product/getByIdUser/'+productID)
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res) {
+                    checkUser(res.body, true);
+                    done();
+                });
         });
     });
+
     describe("Users", function () {
+        it("getById should return a user", function (done) {
+            server
+                .get('/api/user/getById/'+userID)
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res) {
+                    checkUser(res.body);
+                    done();
+                });
+        });
 
         it("getAll should return an array of users", function (done) {
             server
                 .get('/api/user/getAll/')
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res) {
+                    checkUser(res.body[0], false);
+                    done();
+                });
         });
 
 
-        it("gatAllUsersWithProducts should return an array of users", function (done) {
+        it("getAllUsersWithProducts should return an array of users", function (done) {
             server
                 .get('/api/user/getAllUsersWithProducts/')
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
-        });
-
-        it("getById should return a user", function (done) {
-            server
-                .get('/api/user/getById/'+userID)
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res) {
+                    checkUser(res.body[0], false);
+                    done();
+                });
         });
     });
 
@@ -62,26 +88,77 @@ describe("Api", function() {
         it("getById should return a renting", function (done) {
             server
                 .get('/api/renting/getById/'+rentingID)
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res) {
+                    checkRenting(res.body);
+                    done();
+                });
         });
 
         it("getAllRentingsRenterTo should return an array of rentings", function (done) {
             server
                 .get('/api/renting/getAllRentingsRenterTo/'+secondUserID)
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res) {
+                    checkRenting(res.body[0]);
+                    done();
+                });
         });
 
-        it("getAllRentingsRenterFrom should return an array og rentings", function (done) {
+        it("getAllRentingsRenterFrom should return an array of rentings", function (done) {
             server
                 .get('/api/renting/getAllRentingsRenterFrom/'+userID)
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res) {
+                    checkRenting(res.body[0]);
+                    done();
+                });
 
         });
 
         it("getAllRentingsProduct should return an array of rentings", function (done) {
             server
                 .get('/api/renting/getAllRentingsProduct/'+productID)
-                .expect('Content-Type', 'application/json; charset=utf-8', done);
+                .expect('Content-Type', 'application/json')
+                .end(function(err, res) {
+                    checkRenting(res.body[0]);
+                    done();
+                });
         });
     });
 });
+
+
+var checkProduct = function(item){
+    expect(item).to.have.property("latitude");
+    expect(item).to.have.property("longitude");
+    expect(item).to.have.property("place");
+    expect(item).to.have.property("publicid");
+    expect(item).to.have.property("url");
+    expect(item).to.have.property("description");
+    expect(item).to.have.property("pricePerDay");
+    expect(item).to.have.property("productName");
+    expect(item).to.have.property("createdOn");
+};
+
+var checkUser = function(item, byproduct){
+    expect(item).to.have.property("surname");
+    expect(item).to.have.property("firstname");
+    expect(item).to.have.property("createdOn");
+    expect(item).to.have.property("local");
+    expect(item.local).to.have.property("password");
+    expect(item.local).to.have.property("email");
+    if(byproduct) expect(item).to.have.property("product");
+    else expect(item).to.have.property("products");
+};
+
+
+var checkRenting = function(item){
+    expect(item).to.have.property("renterFrom");
+    expect(item).to.have.property("renterTo");
+    expect(item).to.have.property("fromDate");
+    expect(item).to.have.property("toDate");
+    expect(item).to.have.property("daysToRent");
+    expect(item).to.have.property("totalPrice");
+    expect(item).to.have.property("createdOn");
+};
