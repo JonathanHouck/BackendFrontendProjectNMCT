@@ -54,6 +54,10 @@
             templateUrl: 'partials/myProducts',
             controller: 'MyProductsCtrl'
         }).
+        when('/editProduct/:id', {
+            templateUrl: 'partials/editProduct',
+            controller: 'EditProductCtrl'
+        }).
         when('/myRentings', {
             templateUrl: 'partials/myRentings',
             controller: 'MyRentingsCtrl'

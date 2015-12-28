@@ -30,6 +30,10 @@ module.exports = function(passport) {
         res.render("partials/myProducts");
     });
 
+    router.get('/editProduct/:id?', function(req, res) {
+        res.render("partials/editProduct");
+    });
+
     router.get('/myRentings', function(req, res) {
         res.render("partials/myRentings");
     });
@@ -119,7 +123,7 @@ module.exports = function(passport) {
     router.get('/auth/google/callback',
         passport.authenticate('google', {
             successRedirect : '/profile',
-            failureRedirect : '/'
+            failureRedirect : '/register'
     }));
 
     // send to google to do the authentication

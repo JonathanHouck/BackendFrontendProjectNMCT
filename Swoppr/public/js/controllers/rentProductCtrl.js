@@ -20,7 +20,13 @@
         var onGetUserWithProductSuccesfull = function(data) {
 
             if ($rootScope.user.id == data.id) {
-                $location.path("detailProduct/" + productId);
+                $scope.ownProduct = productId;
+            } else if (data.product) {
+                if (data.product.isDeleted === true) {
+                    $scope.user = "deleted";
+                } else {
+                    $scope.user = data;
+                }
             } else {
                 $scope.user = data;
             }
@@ -84,8 +90,7 @@
             startingDay: 1
         };
 
-        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-        $scope.format = $scope.formats[0];
+        $scope.format = 'dd/MM/yyyy';
 
         $scope.$watch('user', function() {
             $scope.setDaysToRent();
@@ -114,7 +119,6 @@
         };
 
         $scope.rentProduct = function() {
-
             if ($rootScope.user && $scope.user) {
                 var renting = new Renting();
                 renting.renterFrom = $scope.user.id;

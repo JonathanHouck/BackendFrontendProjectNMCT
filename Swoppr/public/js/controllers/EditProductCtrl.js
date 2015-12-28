@@ -1,24 +1,37 @@
 /**
- * Created by jonah on 12/4/2015.
+ * Created by jonah on 12/27/2015.
  */
-
 (function () {
     'use strict';
-    angular.module('swoppr')
-        .controller('PlaceProductCtrl', ['$rootScope', '$scope', '$location', 'ProductService', 'uiGmapGoogleMapApi', PlaceProductCtrl]);
 
-    function PlaceProductCtrl ($rootScope, $scope, $location, ProductService, GoogleMapApi) {
+    angular.module('swoppr')
+        .controller('EditProductCtrl', ['$scope', '$routeParams', '$location', 'ProductService', 'uiGmapGoogleMapApi', EditProductCtrl]);
+
+    function EditProductCtrl($scope, $routeParams, $location, ProductService, GoogleMapApi) {
+
         $scope.alerts = [];
 
         $scope.closeAlert = function(index) {
             $scope.alerts.splice(index, 1);
         };
 
+        $scope.user = [];
+
+        var onGetUserWithProductSuccesfull = function(user) {
+            $scope.user = user;
+        };
+
+        var onGetUserWithProductError = function(err) {
+            console.log(err);
+        };
+
+        var productId = $routeParams.id;
+        ProductService.byIdUser(productId).then(onGetUserWithProductSuccesfull, onGetUserWithProductError);
+
         GoogleMapApi.then(function(maps) {
             maps.visualRefresh = true;
             $scope.defaultBounds = new google.maps.LatLngBounds(
                 new google.maps.LatLng(50.8252383, 3.24815210));
-
 
             $scope.map.bounds = {
                 northeast: {
@@ -129,18 +142,20 @@
                             });
 
                             $scope.map.markers = newMarkers;
-                            $scope.location =  place.formatted_address;
+
+                            $scope.user.product.longitude = newMarkers[0].longitude;
+                            $scope.user.product.latitude = newMarkers[0].latitude;
+                            $scope.user.product.place =  place.formatted_address;
                         }
                     }
                 }
             }
         });
 
-        function successAddProduct(response) {
+        function successEditProduct(response) {
             if (response.data) {
                 if (response.data.ok) {
-                    $rootScope.user.products.push(response.data.ok);
-                    $location.path("/detailProduct/" + response.data.ok._id);
+                    $location.path("/detailProduct/" + response.data.ok);
                 }
 
                 if (response.data.error) {
@@ -149,46 +164,41 @@
             }
         }
 
-        function errorAddProduct(response) {
+        function errorEditProduct(response) {
             console.log(response);
         }
 
-
-        $rootScope.$watch("user", function() {
-            if ($rootScope.user) {
-                $scope.addProduct = function(file) {
-                    ProductService.add(file, {
-                        userId: $rootScope.user.id,
-                        productName: $scope.productName,
-                        pricePerDay: $scope.pricePerDay,
-                        description: $scope.description,
-                        place: $scope.location,
-                        longitude: $scope.map.markers[0].longitude,
-                        latitude: $scope.map.markers[0].latitude
-                    }).then(successAddProduct, errorAddProduct);
-                };
-            }
-        });
+        $scope.editProduct = function(file) {
+            ProductService.edit(file, {
+                productId: $scope.user.product.id,
+                productName: $scope.user.product.productName,
+                pricePerDay: $scope.user.product.pricePerDay,
+                description: $scope.user.product.description,
+                url: $scope.user.product.url,
+                publicid: $scope.user.product.publicid,
+                place: $scope.user.product.place,
+                longitude: $scope.user.product.longitude,
+                latitude: $scope.user.product.latitude
+            }).then(successEditProduct, errorEditProduct);
+        };
 
         $scope.validate = function(field) {
-
-            if($scope.placeArticleForm)
-
-            if (field == 1) {
-                if ($scope.placeArticleForm.productName.$dirty && $scope.placeArticleForm.productName.$invalid) return 'has-error';
-                if ($scope.placeArticleForm.productName.$dirty && $scope.placeArticleForm.productName.$valid) return "has-success";
-            } else if (field == 2) {
-                if ($scope.placeArticleForm.pricePerDay.$dirty && $scope.placeArticleForm.pricePerDay.$invalid) return 'has-error';
-                if ($scope.placeArticleForm.pricePerDay.$dirty && $scope.placeArticleForm.pricePerDay.$valid) return "has-success";
-            }  else if (field == 3) {
-                if ($scope.placeArticleForm.description.$dirty && $scope.placeArticleForm.description.$invalid) return 'has-error';
-                if ($scope.placeArticleForm.description.$dirty && $scope.placeArticleForm.description.$valid) return "has-success";
-            } else if (field == 4) {
-                if ($scope.placeArticleForm.picture.$dirty && $scope.placeArticleForm.picture.$invalid) return 'has-error';
-                if ($scope.placeArticleForm.picture.$dirty && $scope.placeArticleForm.picture.$valid) return "has-success";
-            }  else if (field == 5) {
-                if ($scope.placeArticleForm.location.$valid) return "has-success";
-            }
+            if($scope.editProductForm)
+                if (field == 1) {
+                    if ($scope.editProductForm.productName.$dirty && $scope.editProductForm.productName.$invalid) return 'has-error';
+                    if ($scope.editProductForm.productName.$dirty && $scope.editProductForm.productName.$valid) return "has-success";
+                } else if (field == 2) {
+                    if ($scope.editProductForm.pricePerDay.$dirty && $scope.editProductForm.pricePerDay.$invalid) return 'has-error';
+                    if ($scope.editProductForm.pricePerDay.$dirty && $scope.editProductForm.pricePerDay.$valid) return "has-success";
+                }  else if (field == 3) {
+                    if ($scope.editProductForm.description.$dirty && $scope.editProductForm.description.$invalid) return 'has-error';
+                    if ($scope.editProductForm.description.$dirty && $scope.editProductForm.description.$valid) return "has-success";
+                } else if (field == 4) {
+                    if ($scope.editProductForm.picture.$dirty && $scope.editProductForm.picture.$invalid) return 'has-error';
+                    if ($scope.editProductForm.picture.$dirty && $scope.editProductForm.picture.$valid) return "has-success";
+                }  else if (field == 5) {
+                    if ($scope.editProductForm.location.$valid) return "has-success";
+                }
         };
     }
 }());

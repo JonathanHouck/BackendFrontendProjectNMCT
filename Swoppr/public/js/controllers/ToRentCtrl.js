@@ -8,6 +8,8 @@
         .controller('ToRentCtrl', ['$scope', 'ProductService', ToRentCtrl]);
 
     function ToRentCtrl($scope, ProductService) {
+        $scope.sortProperty = "pricePerDay";
+
         var onGetProductsSuccesfull = function(response) {
             $scope.products = response;
         };
@@ -17,7 +19,5 @@
         };
 
         ProductService.all().then(onGetProductsSuccesfull, onGetProductsError);
-
-        $scope.sortProperty = "pricePerDay";
     }
 }());

@@ -1,12 +1,13 @@
 /**
  * Created by Greg on 04-Dec-15.
  */
-function Product(_id, productName, pricePerDay, description, url, place, longitude, latitude, isDeleted){
+function Product(_id, productName, pricePerDay, description, url, publicid, place, longitude, latitude, isDeleted){
     this.id = _id;
     this.productName = productName;
     this.pricePerDay = pricePerDay;
     this.description = description;
     this.url = url;
+    this.publicid = publicid;
     this.place = place;
     this.longitude = longitude;
     this.latitude = latitude;

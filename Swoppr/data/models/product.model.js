@@ -63,6 +63,7 @@ module.exports.addProductWithPictureUser = function(req, res) {
                         pricePerDay: req.body.pricePerDay,
                         description: req.body.description,
                         url: result.secure_url,
+                        publicid: result.public_id,
                         place: req.body.place,
                         longitude: req.body.longitude,
                         latitude: req.body.latitude
@@ -103,6 +104,82 @@ function addProduct(res, user, entry) {
             res.json({"ok": entry});
         }
     });
+}
+
+module.exports.editProductWithPictureUser = function(req, res) {
+    swoppr.userModel.findOne({"products._id": req.body.productId}, function(err, userWithProduct) {
+        if (err || !userWithProduct) {
+            res.json({"error": "productId niet gevonden"});
+            return ;
+        }
+
+        if (req.files) {
+            //eerst nog afbeelding verwijdern
+            //als er een public id is --> overwriten, anders nieuwe uploaden
+
+            var file = req.files.file;
+            if (req.body.publicid) {
+                cloudinary.uploader.upload(file.path, function(result) {
+                    if (result) {
+                        userWithProduct = setUserWithProduct(req, result, userWithProduct);
+                        editProduct(req, res, userWithProduct);
+                    } else {
+                        res.json({"error": "Afbeelding uploaden mislukt"});
+                    }
+                }, {tags: "product", height: 250, crop: 'fit', public_id: req.body.publicid, overwrite: true});
+            } else {
+                cloudinary.uploader.upload(file.path, function(result) {
+                    if (result) {
+                        userWithProduct = setUserWithProduct(req, result, userWithProduct);
+                        editProduct(req, res, userWithProduct);
+                    } else {
+                        res.json({"error": "Afbeelding uploaden mislukt"});
+                    }
+                }, {tags: "product", height: 250, crop: 'fit'});
+            }
+
+            req.files = null;
+        //product toevoegen zonder file
+        } else {
+            var productId = req.body.productId;
+
+            if (req.body.url) userWithProduct.products.id(productId).url = req.body.url;
+            if (req.body.publicid) userWithProduct.products.id(productId).publicid = req.body.publicid;
+            if (req.body.productName) userWithProduct.products.id(productId).productName = req.body.productName;
+            if (req.body.pricePerDay) userWithProduct.products.id(productId).pricePerDay = req.body.pricePerDay;
+            if (req.body.description) userWithProduct.products.id(productId).description = req.body.description;
+            if (req.body.place) userWithProduct.products.id(productId).place = req.body.place;
+            if (req.body.longitude) userWithProduct.products.id(productId).longitude = req.body.longitude;
+            if (req.body.latitude) userWithProduct.products.id(productId).latitude = req.body.latitude;
+
+            editProduct(req, res, userWithProduct);
+        }
+    });
+};
+
+function editProduct(req, res, userWithProduct) {
+    userWithProduct.save(function(err) {
+        if (err) {
+            res.json({"error": "Product bewerken van gebruiker mislukt"});
+        } else {
+            res.json({"ok": userWithProduct.products.id(req.body.productId)._id});
+        }
+    });
+}
+
+function setUserWithProduct(req, result, userWithProduct) {
+    var productId = req.body.productId;
+
+    userWithProduct.products.id(productId).url = result.secure_url;
+    userWithProduct.products.id(productId).publicid = result.public_id;
+    if (req.body.productName) userWithProduct.products.id(productId).productName = req.body.productName;
+    if (req.body.pricePerDay) userWithProduct.products.id(productId).pricePerDay = req.body.pricePerDay;
+    if (req.body.description) userWithProduct.products.id(productId).description = req.body.description;
+    if (req.body.place) userWithProduct.products.id(productId).place = req.body.place;
+    if (req.body.longitude) userWithProduct.products.id(productId).longitude = req.body.longitude;
+    if (req.body.latitude) userWithProduct.products.id(productId).latitude = req.body.latitude;
+
+    return userWithProduct;
 }
 
 module.exports.getAllProducts = function(req, res) {

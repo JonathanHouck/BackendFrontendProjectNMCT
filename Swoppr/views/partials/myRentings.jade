@@ -2,15 +2,15 @@ div(class="container")
     div(class="row")
         div(class="col-sm-12")
             h1 Mijn verhuringen
-    div(class="row", ng-hide="$root.rentingsRenterFrom && $root.rentingsRenterTo")
+    div(class="row", ng-show="$root.rentingsRenterFrom == 'loading' || $root.rentingsRenterTo == 'loading'")
         img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
-    div(class="row", ng-show="$root.rentingsRenterFrom && $root.rentingsRenterTo")
+    div(class="row", ng-hide="$root.rentingsRenterFrom == 'loading' || $root.rentingsRenterTo == 'loading'")
         div(class="col-sm-12")
             h2 Artikelen die ik verhuur
         div(class="col-sm-12")
             div(class="table-responsive")
                 table(class="table table-hover")
-                    tr(ng-show="$root.rentingsRenterFrom.length")
+                    tr(ng-show="$root.rentingsRenterFrom.length && $root.rentingsRenterFrom != 'loading'")
                         th: a(href="#", ng-click="sortType1 = 'renterFrom.product.productName'; sortReverse1 = !sortReverse1") Naam artikel
                         th: a(href="#", ng-click="sortType1 = 'fromDate'; sortReverse1 = !sortReverse1") Huurperiode
                         th: a(href="#", ng-click="sortType1 = 'totalPrice'; sortReverse1 = !sortReverse1") Totale prijs
@@ -24,7 +24,6 @@ div(class="container")
                         td &euro; {{r.totalPrice}}
                         td {{r.renterTo.firstname}} {{r.renterTo.surname}}
                         td: a(href="/detailRenting/{{r.id}}"): i(class="fa fa-info-circle smallFont")
-                        td: a(href="/editRenting/{{r.id}}"): i(class="fa fa-pencil smallFont")
                         td: a(href="#", ng-click="open(r.id, r.renterFrom.product.productName, 'renting.renterFrom')"): i(class="fa fa-trash smallFont")
                 p(ng-hide="$root.rentingsRenterFrom.length") Geen artikelen gevonden
         div(class="col-sm-12")
@@ -32,7 +31,7 @@ div(class="container")
         div(class="col-sm-12")
             div(class="table-responsive")
                 table(class="table table-hover")
-                    tr(ng-show="$root.rentingsRenterTo.length")
+                    tr(ng-show="$root.rentingsRenterTo.length && $root.rentingsRenterTo != 'loading'")
                         th: a(href="#", ng-click="sortType2 = 'renterFrom.product.productName'; sortReverse2 = !sortReverse2") Naam artikel
                         th: a(href="#", ng-click="sortType2 = 'fromDate'; sortReverse2 = !sortReverse2") Huurperiode
                         th: a(href="#", ng-click="sortType2 = 'totalPrice'; sortReverse2 = !sortReverse2") Totale prijs

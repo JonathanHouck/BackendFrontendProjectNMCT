@@ -10,6 +10,6 @@ function UserWithCredentials(_id, firstname, surname, local, google, products){
     this.products = products;
 }
 
-UserWithCredentials.prototype.toString = function(){
+UserWithCredentials.prototype.toString = function() {
     return this.firstname + " " + this.surname;
 };

@@ -48,6 +48,7 @@
                                 parseInt(p.pricePerDay),
                                 p.description,
                                 p.url,
+                                p.publicid,
                                 p.place,
                                 p.longitude,
                                 p.latitude,

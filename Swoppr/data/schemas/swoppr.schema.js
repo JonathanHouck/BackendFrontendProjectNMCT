@@ -25,6 +25,7 @@
         pricePerDay: String,
         description: String,
         url: String,
+        publicid: String,
         place: String,
         longitude: String,
         latitude: String,
@@ -57,12 +58,12 @@
         createdOn: { type: Date}
     }, {collection: 'Messages'});
 
-// generating a hash
+    // generating a hash
     userSchema.methods.generateHash = function(password) {
         return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
     };
 
-// checking if password is valid
+    // checking if password is valid
     userSchema.methods.validPassword = function(password) {
         return bcrypt.compareSync(password, this.local.password);
     };

@@ -149,7 +149,9 @@ module.exports = function(passport) {
 
                             return done(null, user);
                         } else {
-                            var newUser          = new User();
+                            return done(null, null);
+
+                            /*var newUser          = new User();
 
                             newUser.google.id    = profile.id;
                             newUser.google.token = token;
@@ -160,7 +162,7 @@ module.exports = function(passport) {
                                 if (err)
                                     throw err;
                                 return done(null, newUser);
-                            });
+                            });*/
                         }
                     });
 

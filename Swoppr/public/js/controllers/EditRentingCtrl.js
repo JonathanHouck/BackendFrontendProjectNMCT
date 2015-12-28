@@ -1,10 +1,6 @@
 /**
  * Created by jonah on 12/26/2015.
  */
-/**
- * Created by jonah on 12/23/2015.
- */
-
 (function () {
     'use strict';
     angular.module('swoppr')
@@ -78,8 +74,7 @@
                     startingDay: 1
                 };
 
-                $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-                $scope.format = $scope.formats[0];
+                $scope.format = 'dd/MM/yyyy';
 
                 $scope.$watch('renting.renterFrom', function() {
                     $scope.setDaysToRent();

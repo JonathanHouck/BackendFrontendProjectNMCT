@@ -2,11 +2,13 @@ div(class="container")
     div(class="row")
         div(class="col-sm-12")
             h1 Mijn artikelen
-    div(class="row")
+    div(class="row", ng-show="$root.user.products == 'loading'")
+        img(class="loader", src="images/loader.gif", title="Wacht ..." ,alt="Wacht ...")
+    div(class="row", ng-hide="$root.user.products == 'loading'")
         div(class="col-sm-12")
            div(class="table-responsive")
                table(class="table table-hover")
-                tr(ng-show="$root.user.products.length")
+                tr(ng-show="$root.user.products.length && $root.user.products != 'loading'")
                     th: a(href="#", ng-click="sortType = 'productName'; sortReverse = !sortReverse") Naam
                     th: a(href="#", ng-click="sortType = 'pricePerDay'; sortReverse = !sortReverse") Prijs/dag
                     th: a(href="#", ng-click="sortType = 'place'; sortReverse = !sortReverse")  Ophaalplaats
@@ -18,6 +20,6 @@ div(class="container")
                     td(ng-show="p.isDeleted == false") {{p.pricePerDay}}
                     td(ng-show="p.isDeleted == false") {{p.place}}
                     td(ng-show="p.isDeleted == false"): a(href="/detailProduct/{{p.id}}"): i(class="fa fa-info-circle smallFont")
-                    td(ng-show="p.isDeleted == false"): a(href="#"): i(class="fa fa-pencil smallFont")
+                    td(ng-show="p.isDeleted == false"): a(href="/editProduct/{{p.id}}"): i(class="fa fa-pencil smallFont")
                     td(ng-show="p.isDeleted == false"): a(href="#", ng-click="open(p.id, p.productName, 'product')"): i(class="fa fa-trash smallFont")
                p(ng-hide="$root.user.products.length") Geen artikelen gevonden

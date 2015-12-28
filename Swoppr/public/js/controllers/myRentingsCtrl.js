@@ -8,6 +8,11 @@
         .controller('MyRentingsCtrl', ['$rootScope', '$scope', '$uibModal', 'RentingService', MyRentingsCtrl]);
 
     function MyRentingsCtrl($rootScope, $scope, $uibModal, RentingService) {
+        $rootScope.rentingsRenterFrom = "loading";
+        $rootScope.rentingsRenterTo = "loading";
+
+        $scope.sortType1 = "renterFrom.product.productName";
+        $scope.sortType2 = "renterFrom.product.productName";
 
         $rootScope.$watch('user', function() {
             if ($rootScope.user) {
@@ -23,6 +28,7 @@
 
                 var getRentingsByRenterToSuccessfull = function(renting) {
                     $rootScope.rentingsRenterTo = renting;
+
                 };
 
                 var getRentingsByRenterToError = function(err) {

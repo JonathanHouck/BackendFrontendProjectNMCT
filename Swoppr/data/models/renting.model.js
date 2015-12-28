@@ -260,9 +260,9 @@ module.exports.editRenting = function(req, res) {
         renting.save(function(err) {
             if (err) {
                 res.json({"error": "Fout bij opslaan vehuring"});
+            } else {
+                res.json({"ok": renting});
             }
-
-            res.json({"ok": renting});
         });
     });
 };

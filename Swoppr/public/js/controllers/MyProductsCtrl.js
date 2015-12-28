@@ -5,9 +5,29 @@
     'use strict';
 
     angular.module('swoppr')
-        .controller('MyProductsCtrl', ['$rootScope', '$scope', '$uibModal', MyProductsCtrl]);
+        .controller('MyProductsCtrl', ['$rootScope', '$scope', '$uibModal', 'UserService', MyProductsCtrl]);
 
-    function MyProductsCtrl($rootScope, $scope, $uibModal) {
+    function MyProductsCtrl($rootScope, $scope, $uibModal, UserService) {
+
+        $scope.sortType = "productName";
+
+        $rootScope.user.products = "loading";
+
+        function succesUserData(data) {
+            if (data) {
+                if (data.error) {
+                    $rootScope.user.products = "";
+                } else {
+                    $rootScope.user.products = data.products;
+                }
+            }
+        }
+
+        function errorUserData(response) {
+            console.log(response);
+        }
+
+        UserService.userData().then(succesUserData, errorUserData);
 
         $rootScope.$watch('user', function() {
             if ($rootScope.user) {

@@ -11,17 +11,18 @@
         $scope.user = [];
 
         var onGetUserWithProductSuccesfull = function(user) {
+
             $scope.user = user;
-
-            $scope.map = {center: {latitude: $scope.user.product.latitude, longitude: $scope.user.product.longitude }, zoom: 16 };
-            $scope.marker = {
-                id: 0,
-                coords: {
-                    latitude: $scope.user.product.latitude,
-                    longitude: $scope.user.product.longitude
-                }
-            };
-
+            if ($scope.user != "error") {
+                $scope.map = {center: {latitude: $scope.user.product.latitude, longitude: $scope.user.product.longitude }, zoom: 16 };
+                $scope.marker = {
+                    id: 0,
+                    coords: {
+                        latitude: $scope.user.product.latitude,
+                        longitude: $scope.user.product.longitude
+                    }
+                };
+            }
         };
 
         var onGetUserWithProductError = function(err) {

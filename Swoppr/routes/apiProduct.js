@@ -20,17 +20,17 @@ router.get('/getAll', function(req, res) {
    return swopprCtrl.getAllProducts(req, res);
 });
 
-router.get('/removeById/:id', function(req, res) {
-    var id = req.params.id;
-    return swopprCtrl.softDeleteProduct(req, res, id);
-});
-
 router.post('/newProduct', multipartyMiddleware, function(req, res) {
     return swopprCtrl.addProductWithPictureUser(req, res);
 });
 
-router.post('/editProductUser', function(req, res) {
-    return swopprCtrl.editProductUser(req, res);
+router.post('/editProduct', multipartyMiddleware, function(req, res) {
+    return swopprCtrl.editProductWithPictureUser(req, res);
+});
+
+router.get('/removeById/:id', function(req, res) {
+    var id = req.params.id;
+    return swopprCtrl.softDeleteProduct(req, res, id);
 });
 
 module.exports = router;

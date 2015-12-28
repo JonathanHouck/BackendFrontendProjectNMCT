@@ -14,6 +14,7 @@
                 parseInt(p.pricePerDay),
                 p.description,
                 url,
+                p.publicid,
                 p.place,
                 p.longitude,
                 p.latitude,
@@ -96,17 +97,28 @@
             }
         };
 
+        var edit = function(file, data) {
+            var url = '/api/product/editProduct/';
+            if (file) {
+                var uploader = file.upload = Upload.upload({
+                    url: url,
+                    file: file,
+                    data: data
+                }).then(function(response) {
+                    return response;
+                });
+                return uploader;
+            } else {
+                return $http.post(url, data).then(function(response) {
+                    return response;
+                });
+            }
+        };
+
         var remove = function(id){
             var url =  '/api/product/removeById/'+id;
             return $http.get(url).then(function(response) {
                 return response;
-            });
-        };
-
-        var update = function(){
-            var url =   '/api/product/editProductUser/';
-            return $http.post(url) .then(function(response) {
-                return response; //Expose the user data to your angular scope
             });
         };
 
@@ -115,8 +127,8 @@
             byIdUser : byIdUser,
             all : all,
             add : add,
-            remove : remove,
-            update : update
+            edit : edit,
+            remove : remove
         };
     };
     angular.module("swoppr").factory("ProductService", ["$http", "Upload", ProductService]);
