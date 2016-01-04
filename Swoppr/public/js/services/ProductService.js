@@ -11,7 +11,7 @@
             return new Product(
                 p._id,
                 p.productName,
-                parseInt(p.pricePerDay),
+                p.pricePerDay,
                 p.description,
                 url,
                 p.publicid,

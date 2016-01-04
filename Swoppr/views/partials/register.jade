@@ -2,7 +2,7 @@ div(class="intro intro-authorize")
     div(class="intro-body")
         div(class="container")
             div(class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2")
-                div(class="panel")
+                div(class="panel register")
                     div(class="panel-heading"): h2 Sluit u bij ons aan
                     div(class="panel-body")
                         uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)") {{alert.msg}}

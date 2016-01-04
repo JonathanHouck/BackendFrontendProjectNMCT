@@ -12,10 +12,10 @@ var express = require('express');
 var server = supertest.agent('http://localhost:3000');
 
 mongoose.connect('mongodb://johna:swoppr@ds053774.mongolab.com:53774/swoppr');
-var productID = "5680abf1e7fa2d5022412575";
-var userID = "5680f6e9b53a93dc06509766";
-var secondUserID = "567bfe4208c315042dd9590b";
-var rentingID = "5680b57fb534a2542c1d2fcf";
+var productID = "568aa02977a91d08332cf9a7";
+var userID = "5680a63424095d780d70b2e5";
+var secondUserID = "568a9446f454e9600d669c1a";
+var rentingID = "568aa05377a91d08332cf9a8";
 
 // UNIT test begin
 describe("Api", function() {

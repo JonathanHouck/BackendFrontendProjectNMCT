@@ -12,7 +12,7 @@ MessagesRepo = (function() {
         Message.find({"_renting": rentingid})
             .exec(function(err, messages) {
                 if (err || !messages) {
-                    res.json({"error": "rentingid niet gevonden"});
+                    res.json({"error": "rentingid not found"});
                     return ;
                 }
 
@@ -21,12 +21,11 @@ MessagesRepo = (function() {
     };
 
     var addMessage = function(req, res, rentingid) {
-        "use strict";
         Renting
             .findById(rentingid)
             .exec(function(err, renting) {
                 if (err || !renting) {
-                    res.json({"error": "RentingId niet gevonden"});
+                    res.json({"error": "RentingId not found"});
                     return ;
                 }
 
@@ -53,7 +52,7 @@ MessagesRepo = (function() {
         model: Message,
         getMessagesByRentingId: getMessagesByRentingId,
         addMessage: addMessage
-    }
+    };
 })();
 
 module.exports = MessagesRepo;

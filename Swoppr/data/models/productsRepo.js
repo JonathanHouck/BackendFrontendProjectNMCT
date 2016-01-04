@@ -269,7 +269,7 @@ ProductsRepo = (function() {
         editProductWithPictureUser: editProductWithPictureUser,
         getAllProducts: getAllProducts,
         softDeleteProduct: softDeleteProduct
-    }
+    };
 })();
 
 module.exports = ProductsRepo;

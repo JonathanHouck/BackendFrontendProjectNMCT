@@ -82,6 +82,11 @@ module.exports = function(passport) {
                             newUser.firstname = req.body.firstname;
                             newUser.surname = req.body.surname;
                             newUser.local.email    = email;
+
+                            if(password.length < 7) {
+                                return done(null, { error: 'Wachtwoord mag niet langer zijn dan 7 karakter' });
+                            }
+
                             newUser.local.password = newUser.generateHash(password);
 
                             newUser.save(function(err) {

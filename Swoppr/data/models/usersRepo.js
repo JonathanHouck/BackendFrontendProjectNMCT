@@ -90,7 +90,7 @@ UsersRepo = (function() {
         getUserById: getUserById,
         getAllUsersWithProducts: getAllUsersWithProducts,
         getAll: getAll
-    }
+    };
 })();
 
 module.exports = UsersRepo;
