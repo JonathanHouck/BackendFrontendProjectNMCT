@@ -129,7 +129,7 @@
                             });
 
                             $scope.map.markers = newMarkers;
-                            $scope.location =  place.formatted_address;
+                            $scope.place =  place.formatted_address;
                         }
                     }
                 }
@@ -162,7 +162,7 @@
                         productName: $scope.productName,
                         pricePerDay: $scope.pricePerDay,
                         description: $scope.description,
-                        place: $scope.location,
+                        place: $scope.place,
                         longitude: $scope.map.markers[0].longitude,
                         latitude: $scope.map.markers[0].latitude
                     }).then(successAddProduct, errorAddProduct);
@@ -172,22 +172,22 @@
 
         $scope.validate = function(field) {
 
-            if($scope.placeArticleForm)
+            if($scope.placeProductForm)
 
             if (field == 1) {
-                if ($scope.placeArticleForm.productName.$dirty && $scope.placeArticleForm.productName.$invalid) return 'has-error';
-                if ($scope.placeArticleForm.productName.$dirty && $scope.placeArticleForm.productName.$valid) return "has-success";
+                if ($scope.placeProductForm.productName.$dirty && $scope.placeProductForm.productName.$invalid) return 'has-error';
+                if ($scope.placeProductForm.productName.$dirty && $scope.placeProductForm.productName.$valid) return "has-success";
             } else if (field == 2) {
-                if ($scope.placeArticleForm.pricePerDay.$dirty && $scope.placeArticleForm.pricePerDay.$invalid) return 'has-error';
-                if ($scope.placeArticleForm.pricePerDay.$dirty && $scope.placeArticleForm.pricePerDay.$valid) return "has-success";
+                if ($scope.placeProductForm.pricePerDay.$dirty && $scope.placeProductForm.pricePerDay.$invalid) return 'has-error';
+                if ($scope.placeProductForm.pricePerDay.$dirty && $scope.placeProductForm.pricePerDay.$valid) return "has-success";
             }  else if (field == 3) {
-                if ($scope.placeArticleForm.description.$dirty && $scope.placeArticleForm.description.$invalid) return 'has-error';
-                if ($scope.placeArticleForm.description.$dirty && $scope.placeArticleForm.description.$valid) return "has-success";
+                if ($scope.placeProductForm.description.$dirty && $scope.placeProductForm.description.$invalid) return 'has-error';
+                if ($scope.placeProductForm.description.$dirty && $scope.placeProductForm.description.$valid) return "has-success";
             } else if (field == 4) {
-                if ($scope.placeArticleForm.picture.$dirty && $scope.placeArticleForm.picture.$invalid) return 'has-error';
-                if ($scope.placeArticleForm.picture.$dirty && $scope.placeArticleForm.picture.$valid) return "has-success";
+                if ($scope.placeProductForm.picture.$dirty && $scope.placeProductForm.picture.$invalid) return 'has-error';
+                if ($scope.placeProductForm.picture.$dirty && $scope.placeProductForm.picture.$valid) return "has-success";
             }  else if (field == 5) {
-                if ($scope.placeArticleForm.location.$valid) return "has-success";
+                if ($scope.placeProductForm.place.$valid) return "has-success";
             }
         };
     }

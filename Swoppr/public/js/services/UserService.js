@@ -78,7 +78,7 @@
                         return "error";
                     }
 
-                    var u = response.data;
+                    var u = response.data.ok;
                     return new UserWithCredentials(
                         u.firstname,
                         u.surname,
@@ -121,7 +121,7 @@
                     }
 
                     var users = [];
-                    angular.forEach(response.data, function(u){
+                    angular.forEach(response.data.ok, function(u) {
                         var user = new UserWithCredentials(
                             u.firstname,
                             u.surname,
@@ -136,7 +136,7 @@
         };
 
         var add = function(user){
-            var url =   '/api/user/newUser/';
+            var url =  '/api/user/newUser/';
             $http.post(url, user)
                 .then(function(response) {
                     return response; //Expose the user data to your angular scope

@@ -26,7 +26,7 @@ describe("Api", function() {
                 .get('/api/product/getById/' + productID)
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res){
-                    checkProduct(res.body);
+                    checkProduct(res.body.ok);
                     done();
                 });
         });
@@ -35,7 +35,7 @@ describe("Api", function() {
                 .get("/api/product/getAll/")
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res) {
-                    checkProduct(res.body[0]);
+                    checkProduct(res.body.ok[0]);
                     done();
                 });
         });
@@ -45,7 +45,7 @@ describe("Api", function() {
                 .get('/api/product/getByIdUser/'+productID)
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res) {
-                    checkUser(res.body, true);
+                    checkUser(res.body.ok, true);
                     done();
                 });
         });
@@ -57,7 +57,7 @@ describe("Api", function() {
                 .get('/api/user/getById/'+userID)
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res) {
-                    checkUser(res.body);
+                    checkUser(res.body.ok);
                     done();
                 });
         });
@@ -67,7 +67,7 @@ describe("Api", function() {
                 .get('/api/user/getAll/')
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res) {
-                    checkUser(res.body[0], false);
+                    checkUser(res.body.ok[0], false);
                     done();
                 });
         });
@@ -78,7 +78,7 @@ describe("Api", function() {
                 .get('/api/user/getAllUsersWithProducts/')
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res) {
-                    checkUser(res.body[0], false);
+                    checkUser(res.body.ok[0], false);
                     done();
                 });
         });
@@ -90,7 +90,7 @@ describe("Api", function() {
                 .get('/api/renting/getById/'+rentingID)
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res) {
-                    checkRenting(res.body);
+                    checkRenting(res.body.ok);
                     done();
                 });
         });
@@ -100,7 +100,7 @@ describe("Api", function() {
                 .get('/api/renting/getAllRentingsRenterTo/'+secondUserID)
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res) {
-                    checkRenting(res.body[0]);
+                    checkRenting(res.body.ok[0]);
                     done();
                 });
         });
@@ -110,7 +110,7 @@ describe("Api", function() {
                 .get('/api/renting/getAllRentingsRenterFrom/'+userID)
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res) {
-                    checkRenting(res.body[0]);
+                    checkRenting(res.body.ok[0]);
                     done();
                 });
 
@@ -121,7 +121,7 @@ describe("Api", function() {
                 .get('/api/renting/getAllRentingsProduct/'+productID)
                 .expect('Content-Type', 'application/json')
                 .end(function(err, res) {
-                    checkRenting(res.body[0]);
+                    checkRenting(res.body.ok[0]);
                     done();
                 });
         });

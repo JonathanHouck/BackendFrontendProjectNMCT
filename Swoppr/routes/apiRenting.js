@@ -3,39 +3,39 @@
  */
 var express = require('express');
 var router = express.Router();
-var swopprCtrl = require('../data/models/renting.model');
+var RentingsRepo = require('../data/models/rentingsRepo');
 
 router.post('/newRenting', function(req, res) {
-    return swopprCtrl.addRentingUser(req, res);
+    return RentingsRepo.addRentingUser(req, res);
 });
 
 router.get('/getById/:id', function(req, res) {
     var id = req.params.id;
-    return swopprCtrl.getRentingById(req, res, id);
+    return RentingsRepo.getRentingById(req, res, id);
 });
 
 router.post('/editRenting', function(req, res) {
-    return swopprCtrl.editRenting(req, res);
+    return RentingsRepo.editRenting(req, res);
 });
 
 router.get('/removeById/:id', function(req, res) {
     var id = req.params.id;
-    return swopprCtrl.removeRentingById(req, res, id);
+    return RentingsRepo.removeRentingById(req, res, id);
 });
 
 router.get('/getAllRentingsRenterFrom/:id', function(req, res) {
     var id = req.params.id;
-    return swopprCtrl.getAllRentings(req, res, id, 1);
+    return RentingsRepo.getAllRentings(req, res, id, 1);
 });
 
 router.get('/getAllRentingsRenterTo/:id', function(req, res) {
     var id = req.params.id;
-    return swopprCtrl.getAllRentings(req, res, id, 2);
+    return RentingsRepo.getAllRentings(req, res, id, 2);
 });
 
 router.get('/getAllRentingsProduct/:id', function(req, res) {
     var id = req.params.id;
-    return swopprCtrl.getAllRentings(req, res, id, 3);
+    return RentingsRepo.getAllRentings(req, res, id, 3);
 });
 
 module.exports = router;

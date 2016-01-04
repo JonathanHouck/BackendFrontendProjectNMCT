@@ -4,7 +4,7 @@
 var LocalStrategy    = require('passport-local').Strategy;
 var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
 
-var User = require('../data/schemas/swoppr.schema').userModel;
+var User = require('../data/models/user');
 
 var configAuth = require('./auth'); // use this one for testing
 

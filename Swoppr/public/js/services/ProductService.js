@@ -29,7 +29,7 @@
                     return "error";
                 }
 
-                var p = response.data;
+                var p = response.data.ok;
                 return new Product(
                     p.productName,
                     p.pricePerDay,
@@ -47,10 +47,10 @@
                     return "error";
                 }
 
-                var p = response.data.product;
+                var p = response.data.ok.product;
                 var product = makeProduct(p);
 
-                var u = response.data;
+                var u = response.data.ok;
                 return new UserWithoutCredentials(
                     u._id,
                     u.firstname,
@@ -69,7 +69,7 @@
                 }
 
                 var products = [];
-                angular.forEach(response.data, function(p){
+                angular.forEach(response.data.ok, function(p){
                     if (p.isDeleted === false) {
                         var product = makeProduct(p);
                         products.push(product);

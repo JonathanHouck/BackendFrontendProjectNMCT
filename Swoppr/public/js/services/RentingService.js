@@ -5,7 +5,6 @@
     "use strict";
 
     var RentingService = function($http){
-
         function makeProduct(p) {
             return new Product(
                 p._id,
@@ -13,9 +12,11 @@
                 parseInt(p.pricePerDay),
                 p.description,
                 p.url,
+                p.publicid,
                 p.place,
                 p.longitude,
-                p.latitude
+                p.latitude,
+                p.isDeleted
             );
         }
 
@@ -58,16 +59,18 @@
                     return "error";
                 }
 
-                var p = response.data.renterFrom.product;
+                var data = response.data.ok;
+
+                var p = data.renterFrom.product;
                 var product = makeProduct(p);
 
-                var rf = response.data.renterFrom;
+                var rf = data.renterFrom;
                 var renterFrom = makeRenterFrom(rf, product);
 
-                var rt = response.data.renterTo;
+                var rt = data.renterTo;
                 var renterTo = makeRenterTo(rt);
 
-                var r = response.data;
+                var r = data;
                 return makeRenting(r, renterFrom, renterTo);
             });
         };
@@ -80,7 +83,7 @@
                 }
 
                 var rentings = [];
-                angular.forEach(response.data, function(r){
+                angular.forEach(response.data.ok, function(r){
                     var p = r.renterFrom.product;
                     var product = makeProduct(p);
 
@@ -103,7 +106,7 @@
                 }
 
                 var rentings = [];
-                angular.forEach(response.data, function(r){
+                angular.forEach(response.data.ok, function(r){
                     var p = r.renterFrom.product;
                     var product = makeProduct(p);
 
@@ -161,15 +164,6 @@
                     return response; //Expose the user data to your angular scope
                 });
         };
-
-        //
-        //var update = function(){
-        //    var url =   '/api/renting/getById/'+id;
-        //    $http.get(url)
-        //        .then(function(response) {
-        //            return response; //Expose the user data to your angular scope
-        //        });
-        //};
 
         return {
             byId : byId,
