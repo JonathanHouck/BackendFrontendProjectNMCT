@@ -4,8 +4,8 @@
             <p>Beschrijving:</p>
             <p>{{p.shortDescription()}}</p>
         </div>
-            <img ng-hide="p.url == '/'" src="{{p.url}}" />
-            <img ng-show="p.url == '/'" src="images/noImageFound.png" />
+            <img ng-hide="p.url == '/'" src="{{p.url}}" alt="{{p.productName}}" />
+            <img ng-show="p.url == '/'" src="images/noImageFound.png" alt="Geen afbeelding gevonden" />
         </div>
         <p class='smallFont'>{{p.shortProductName()}}</p>
         <p class='smallFontBigger price'> &euro; {{p.pricePerDay}} / dag</p>

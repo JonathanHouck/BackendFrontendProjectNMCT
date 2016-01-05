@@ -11,8 +11,8 @@ div(class="container", ng-if="user.id")
     div(class="row detailProduct")
         div(class="col-sm-12 col-md-6")
             div(class="row")
-                img(ng-hide="user.product.url == '/'", src="{{user.product.url}}")
-                img(ng-show="user.product.url == '/'", src="images/noImageFound.png")
+                img(ng-hide="user.product.url == '/'", src="{{user.product.url}}", alt="{{user.product.productName}}")
+                img(ng-show="user.product.url == '/'", src="images/noImageFound.png", alt="Geen afbeelding gevonden")
             div(class="row")
                 div(class="col-sm-3") Beschrijving:
                 div(class="col-sm-9") {{user.product.description}}
