@@ -35,7 +35,7 @@ div(class="container")
                 div(class="col-xs-6") {{renting.toDate | date:"dd/MM/yyyy"}}
             div(class="row section")
                 div(class="col-xs-6") Naam product:
-                div(class="col-xs-6"): a(href="detailProduct/{{renting.renterFrom.product.id}}") {{renting.renterFrom.product.productName}}
+                div(class="col-xs-6"): a(href="detailProduct/{{renting.renterFrom.product.id}}", title="Detail artikel") {{renting.renterFrom.product.productName}}
             div(class="row")
                 div(class="col-xs-6") Locatie:
                 div(class="col-xs-6") {{renting.renterFrom.product.place}}

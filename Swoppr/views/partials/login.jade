@@ -10,23 +10,23 @@ div(class="intro intro-authorize")
                             div(class="form-group", ng-class="validate(1)")
                                 label(for=email, class="col-sm-3 control-label") Emailadres
                                 div(class="col-sm-9")
-                                    input(type="email", name="email", id="email", class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email", ng-required="true")
+                                    input(type="email", name="email", id="email", title="Emailadres", class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="loginForm.email.$error", ng-if="loginForm.email.$touched")
                                     p(ng-message="required") Emailadres is verplicht in te vullen
                                     p(ng-message="email") Gelieve een correct emailadres op te geven
                             div(class="form-group", ng-class="validate(2)")
                                 label(for="password", class="col-sm-3 control-label") Wachtwoord
                                 div(class="col-sm-9")
-                                    input(type="password", name="password", id="password" class="form-control", placeholder="Bv. swoppr01", ng-model="password", ng-minlength="7", ng-maxlength="50", ng-required="true")
+                                    input(type="password", name="password", id="password", title="Wachtwoord", class="form-control", placeholder="Bv. swoppr01", ng-model="password", ng-minlength="7", ng-maxlength="50", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="loginForm.password.$error", ng-if="loginForm.password.$touched")
                                     p(ng-message="required") Wachtwoord is verplicht in te vullen
                                     p(ng-message="minlength") Wachtwoord moet minimaal uit 7 karakters bestaan
                                     p(ng-message="maxlength") Wachtwoord moet maximaal uit 50 karakters bestaan
                             div(class="form-group")
                                 div(class="col-sm-offset-3 col-sm-1 authenticatebtn")
-                                    input(type="submit", ng-disabled="loginForm.$invalid", value="Log in" class="btn redirect")
+                                    input(type="submit", value="Log in", title="Log in", class="btn redirect", ng-disabled="loginForm.$invalid")
                                 div(class="col-sm-6 otherAction notRegistered")
-                                    p: a(href="/register") Geen account? Registreer nu.
+                                    p: a(href="/register", title="Geen account? Registreer nu") Geen account? Registreer nu.
                                 div(class="col-sm-1")
-                                    a(redir, href='/partials/auth/google', class="googleplus largeFont")
+                                    a(redir, href='/partials/auth/google', title="Login met Google Plus" class="googleplus largeFont")
                                         div(class="fa fa-google-plus-square")

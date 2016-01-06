@@ -9,35 +9,35 @@ nav(class="navbar navbar-default", ng-controller="NavbarCtrl")
                 span(class="icon-bar")
                 span(class="icon-bar")
                 span(class="icon-bar")
-            a(href="/", class="navbar-brand")
+            a(href="/", class="navbar-brand", title="Startpagina")
                 img(src="images/logo_swoppr.png")
             a(href="/", class="navbar-title")
-                img(src="images/logo_swoppr.png")
+                img(src="images/logo_swoppr.png", title="Startpagina")
                 p Swoppr
         div(id="navbar", class="navbar-collapse collapse", uib-collapse="isCollapsed")
             ul(class="nav navbar-nav", ng-show="$root.user.local.email")
-                li: a(href="/toRent", ng-class="getClass('/toRent')") Te verhuren
+                li: a(href="/toRent", title="Te verhuren", ng-class="getClass('/toRent')") Te verhuren
                     i(class="underline")
-                li: a(href="/placeProduct", ng-class="getClass('/placeProduct')") Plaats artikel
+                li: a(href="/placeProduct", title="Plaats artikel", ng-class="getClass('/placeProduct')") Plaats artikel
                     i(class="underline")
-                li: a(href="/myProducts", ng-class="getClass('/myProducts')") Mijn artikelen
+                li: a(href="/myProducts", title="Mijn producten", ng-class="getClass('/myProducts')") Mijn artikelen
                     i(class="underline")
-                li: a(href="/myRentings", ng-class="getClass('/myRentings')") Mijn verhuringen
+                li: a(href="/myRentings", title="Mijn verhuringen", ng-class="getClass('/myRentings')") Mijn verhuringen
                     i(class="underline")
             ul(class="nav navbar-nav navbar-right", ng-show="$root.user.local.email")
                 li(class="dropdown")
                     a(href="/profile", class="fa fa-user mediumFont dropdown-toggle")
                     ul(class="dropdown-menu")
-                        li: a(href="/profile") Mijn profiel
-                        li: a(href="/logout", logout) Uitloggen
+                        li: a(href="/profile", title="Mijn profiel") Mijn profiel
+                        li: a(href="/logout", title="Uitloggen", logout) Uitloggen
                 li(class="mobile-only")
                     a(href="/profile", ng-class="getClass('/profile')") Mijn profiel
                 li(class="mobile-only")
-                    a(href="/logout", logout) Uitloggen
+                    a(href="/logout", title="Uitloggen", logout) Uitloggen
             ul(class="nav navbar-nav navbar-right", ng-hide="$root.user.local.email")
                 li
-                    a(href="/login", ng-class="getClass('/login')") Inloggen
+                    a(href="/login", title="Uitloggen", ng-class="getClass('/login')") Inloggen
                         i(class="underline")
                 li
-                    a(href="/register", ng-class="getClass('/register')") Registreer
+                    a(href="/register", title="Registreren" ng-class="getClass('/register')") Registreer
                     i(class="underline")

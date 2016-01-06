@@ -16,14 +16,14 @@ div(class="container")
                 div(class="form-group", ng-class="validate(1)")
                     label(for=productName, class="col-sm-3 control-label text-left") Naam
                     div(class="col-sm-9")
-                        input(type="text", name="productName", id="productName", class="form-control", placeholder="Bv. Grasmaaier", ng-model="productName", ng-maxlength="50", ng-required="true")
+                        input(type="text", name="productName", id="productName", title="Naam" class="form-control", placeholder="Bv. Grasmaaier", ng-model="productName", ng-maxlength="50", ng-required="true")
                     div(class="col-sm-9 col-sm-offset-3", ng-messages="placeProductForm.productName.$error", ng-if="placeProductForm.productName.$touched")
                         p(ng-message="required") Naam is verplicht in te vullen
                         p(ng-message="maxlength") Naam is te lang
                 div(class="form-group row", ng-class="validate(2)")
                     label(for=pricePerDay, class="col-sm-3 control-label text-left") Prijs per dag (in euro)
                     div(class="col-sm-9")
-                        input(type="number", name="pricePerDay", id="pricePerDay", class="form-control", placeholder="Tip: 100 Swoppers kosten 10 euro", ng-model="pricePerDay", min="1", max="10000", ng-required="true")
+                        input(type="number", name="pricePerDay", id="pricePerDay", title="Prijs per dag", class="form-control", placeholder="Tip: 100 Swoppers kosten 10 euro", ng-model="pricePerDay", min="1", max="10000", ng-required="true")
                     div(class="col-sm-9 col-sm-offset-3", ng-messages="placeProductForm.pricePerDay.$error", ng-if="placeProductForm.pricePerDay.$touched")
                         p(ng-message="required") Swoppers per dag is verplicht in te vullen
                         p(ng-message="number") Gelieve een nummer in te voeren
@@ -32,15 +32,15 @@ div(class="container")
                 div(class="form-group", ng-class="validate(3)")
                     label(for=description, class="col-sm-3 control-label text-left") Beschrijving
                     div(class="col-sm-9")
-                        textarea(name="description", id="description", ng-model="description", class="form-control", placeholder="Korte, duidelijke beschrijving van het artikel", ng-minlength="20", ng-maxlength="500", ng-required="true")
+                        textarea(name="description", id="description", title="Beschrijving", class="form-control", placeholder="Korte, duidelijke beschrijving van het artikel", ng-model="description", ng-minlength="20", ng-maxlength="500", ng-required="true")
                     div(class="col-sm-9 col-sm-offset-3", ng-messages="placeProductForm.description.$error", ng-if="placeProductForm.description.$touched")
                         p(ng-message="required") Beschrijving is verplicht in te vullen
                         p(ng-message="minlength") Beschrijving is te kort
                         p(ng-message="maxlength") Beschrijving is te lang
                 div(class="form-group", ng-class="validate(4)")
-                    label(for="picture", class="col-sm-3 control-label text-left") Afbeelding opladen
+                    label(for="picture", class="col-sm-3 control-label text-left") Nieuwe afbeelding
                     div(class="col-sm-9")
-                        input(type="file", ngf-select, ng-model="picture", name="picture", id="picture", accept="image/*", ngf-max-size="2MB", ngf-min-ratio="1:1", ngf-max-ratio="16:9", ngf-min-height="250")
+                        input(type="file", ngf-select, name="picture", id="picture", title="Nieuwe afbeelding", accept="image/*", ng-model="picture", ngf-max-size="2MB", ngf-min-ratio="1:1", ngf-max-ratio="16:9", ngf-min-height="250")
                         div(class="col-sm-9 col-sm-offset-3", ng-messages="placeProductForm.picture.$error", ng-if="placeProductForm.picture.$touched")
                             p(ng-message="maxSize") Afbeelding mag maximaal 2MB groot zijn
                             p(ng-message="minHeight") De hoogte van de afbeelding moet maximaal 250 pixels zijn
@@ -49,12 +49,12 @@ div(class="container")
                 div(class="form-group", ng-class="validate(5)")
                     label(for=place, class="col-sm-3 control-label text-left") Ophaalplaats
                     div(class="col-sm-9")
-                        input(type="text", name="place", id="place", class="form-control", placeholder="Typ jouw adres in het tekstveld op de map", ng-model="place", ng-required="true", readonly="true")
+                        input(type="text", name="place", id="place", title="Ophaalplaats", class="form-control", placeholder="Typ jouw adres in het tekstveld op de map", ng-model="place", ng-required="true", readonly="true")
                     div(class="col-sm-9 col-sm-offset-3", ng-messages="placeProductForm.place.$error", ng-if="placeProductForm.place.$touched")
                         p(ng-message="required") Locatie is verplicht, gelieve jouw adres te zoeken op de map
                 div(class="form-group")
                     div(class="col-sm-offset-3 col-sm-9")
-                        input(type="submit", value="Te huur stellen", ng-disabled="placeProductForm.$invalid", ng-click="addProduct(picture)", class="btn redirect")
+                        input(type="submit", value="Te huur stellen", title="Te huur stellen" ng-disabled="placeProductForm.$invalid", ng-click="addProduct(picture)", class="btn redirect")
     div(class="row")
         div(class="col-sm-12")
             div(ng-repeat="p in $root.user.products")

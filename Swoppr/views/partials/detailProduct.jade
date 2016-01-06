@@ -11,8 +11,8 @@ div(class="container", ng-if="user.id")
     div(class="row detailProduct")
         div(class="col-sm-12 col-md-6")
             div(class="row")
-                img(ng-hide="user.product.url == '/'", src="{{user.product.url}}", alt="{{user.product.productName}}")
-                img(ng-show="user.product.url == '/'", src="images/noImageFound.png", alt="Geen afbeelding gevonden")
+                img(ng-hide="user.product.url == '/'", src="{{user.product.url}}", alt="{{user.product.productName}}", title="{{user.product.productName}}")
+                img(ng-show="user.product.url == '/'", src="images/noImageFound.png", alt="Geen afbeelding gevonden", title="Geen afbeelding gevonden")
             div(class="row")
                 div(class="col-sm-3") Beschrijving:
                 div(class="col-sm-9") {{user.product.description}}
@@ -23,7 +23,7 @@ div(class="container", ng-if="user.id")
             div(class="row", ng-show="user.product.isDeleted == true")
                 div(class="col-sm-3") Status
                 div(class="col-sm-9") Verwijderd
-            a(href="rentProduct/{{user.product.id}}", class="btn btn-default redirect", ng-hide="$root.user.id == user.id || user.product.isDeleted == true") Verhuur product
+            a(href="rentProduct/{{user.product.id}}", class="btn btn-default redirect", title="Verhuur artikel", ng-hide="$root.user.id == user.id || user.product.isDeleted == true") Verhuur product
         div(class="col-sm-12 col-md-6")
             ui-gmap-google-map(center="map.center", zoom="map.zoom", draggable="true", options="options")
                 ui-gmap-marker(coords="marker.coords", options="marker.options", events="marker.events", idkey="marker.id")

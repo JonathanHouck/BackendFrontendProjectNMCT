@@ -14,7 +14,7 @@ div(class="container", ng-show="ownProduct")
             h1 Eigen artikel
     div(class="row")
         div(class="col-sm-12")
-            a(href="detailProduct/{{ownProduct}}", class="btn btn-default redirect") Detail artikel
+            a(href="detailProduct/{{ownProduct}}", title="Detail product", class="btn btn-default redirect") Detail artikel
 div(class="container", ng-show="user.id")
     div(class="row")
         div(class="col-sm-12 title-header")
@@ -32,7 +32,7 @@ div(class="container", ng-show="user.id")
                 div(class="col-sm-9") {{user.toString()}}
             div(class="row")
                 div(class="col-sm-3") Locatie:
-                div(class="col-sm-9"): a(href="detailProduct/{{user.product.id}}") {{user.product.place}}
+                div(class="col-sm-9"): a(href="detailProduct/{{user.product.id}}", title="Detail product") {{user.product.place}}
         div(class="col-sm-12 col-md-6 form-horizontal")
             uib-alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="closeAlert($index)") {{alert.msg}}
             div(class="row")
@@ -41,14 +41,14 @@ div(class="container", ng-show="user.id")
             div(class="row")
                 label(for=dateFrom, class="col-sm-3 control-label text-left") Huren van:
                 div(class="input-group col-sm-9")
-                    input(type="text", id="dateFrom", class="form-control", uib-datepicker-popup="{{format}}", ng-model="dt1", is-open="dt1.status.opened", min-date="dt1.minDate", datepicker-options="dateOptions", ng-required="true", close-text="Close")
+                    input(type="text", id="dateFrom", title="Huren van", class="form-control", uib-datepicker-popup="{{format}}", ng-model="dt1", is-open="dt1.status.opened", min-date="dt1.minDate", datepicker-options="dateOptions", ng-required="true", close-text="Close")
                     span(class="input-group-btn")
                         button(type="button", class="btn btn-default", ng-click="dt1.open($event)")
                             i(class="fa fa-calendar")
             div(class="row")
                 label(for=dateTo, class="col-sm-3 control-label text-left") Huren tot:
                 div(class="input-group col-sm-9")
-                    input(type="text", id="dateTo", class="form-control", uib-datepicker-popup="{{format}}", ng-model="dt2", is-open="dt2.status.opened", min-date="dt2.minDate", datepicker-options="dateOptions", ng-required="true", close-text="Close")
+                    input(type="text", id="dateTo", title="Huren tot", class="form-control", uib-datepicker-popup="{{format}}", ng-model="dt2", is-open="dt2.status.opened", min-date="dt2.minDate", datepicker-options="dateOptions", ng-required="true", close-text="Close")
                     span(class="input-group-btn")
                         button(type="button", class="btn btn-default", ng-click="dt2.open($event)")
                             i(class="fa fa-calendar")
@@ -60,4 +60,4 @@ div(class="container", ng-show="user.id")
                 div(class="col-sm-9") &euro; {{totalPrice}}
             div(class="row")
                 div(class="col-sm-offset-3 col-sm-9")
-                    input(type="submit", value="Vehuren", class="btn redirect", ng-click="rentProduct()")
+                    input(type="submit", value="Vehuren", title="Verhuren", class="btn redirect", ng-click="rentProduct()")

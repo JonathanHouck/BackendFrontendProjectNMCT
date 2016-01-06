@@ -11,5 +11,5 @@ section
             div(class="col-sm-12", ng-controller="CarouselCtrl")
                 uib-carousel(interval="myInterval")
                     uib-slide(ng-repeat="slide in slides", active="slide.active")
-                        img(src="images/ongebruikteGoederen.png", ng-src="{{slide.image}}")
-                        div: h3: a(href="/register") {{slide.text}}
+                        img(src="images/ongebruikteGoederen.png", ng-src="{{slide.image}}", alt="{{slide.title}}", title="{{slide.title}}")
+                        div: h3: a(href="/register", title="Registreren") {{slide.text}}

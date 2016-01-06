@@ -10,28 +10,28 @@ div(class="intro intro-authorize")
                             div(class="form-group", ng-class="validate(1)")
                                 label(for=firstname, class="col-sm-3 control-label") Voornaam
                                 div(class="col-sm-9")
-                                    input(type="text", name="firstname", id="firstname", class="form-control", placeholder="Bv. Jonathan", ng-model="firstname", ng-maxlength="50", ng-required="true")
+                                    input(type="text", name="firstname", id="firstname", title="Voornaam", class="form-control", placeholder="Bv. Jonathan", ng-model="firstname", ng-maxlength="50", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.firstname.$error", ng-if="registerForm.firstname.$touched")
                                     p(ng-message="required") Voornaam is verplicht in te vullen
                                     p(ng-message="maxlength") Voornaam is te lang
                             div(class="form-group", ng-class="validate(2)")
-                                label(for=surname, class="col-sm-3 control-label") Achternaam
+                                label(for=surname, class="col-sm-3 control-label") Familienaam
                                 div(class="col-sm-9")
-                                    input(type="text", name="surname", id="surname", class="form-control", placeholder="Bv. Jonathan", ng-model="surname", ng-maxlength="50", ng-required="true")
+                                    input(type="text", name="surname", id="surname", title="Familienaam" class="form-control", placeholder="Bv. Jonathan", ng-model="surname", ng-maxlength="50", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.surname.$error", ng-if="registerForm.surname.$touched")
                                     p(ng-message="required") Familienaam is verplicht in te vullen
                                     p(ng-message="maxlength") Familienaam is te lang
                             div(class="form-group", ng-class="validate(3)")
                                 label(for=email, class="col-sm-3 control-label") Emailadres
                                 div(class="col-sm-9")
-                                    input(type="email", name="email", id="email", class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email", ng-required="true")
+                                    input(type="email", name="email", id="email", title="Emailadres" class="form-control", placeholder="Bv. jonathan@swoppr.be", ng-model="email", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.email.$error", ng-if="registerForm.email.$touched")
                                     p(ng-message="required") Emailadres is verplicht in te vullen
                                     p(ng-message="email") Gelieve een correct emailadres op te geven
                             div(class="form-group", ng-class="validate(4)")
                                 label(for="password", class="col-sm-3 control-label") Wachtwoord
                                 div(class="col-sm-9")
-                                    input(type="password" name="password", id="password" class="form-control", placeholder="Bv. swoppr01", ng-model="password", ng-minlength="7", ng-maxlength="50", ng-required="true")
+                                    input(type="password" name="password", id="password", title="Wachtwoord", class="form-control", placeholder="Bv. swoppr01", ng-model="password", ng-minlength="7", ng-maxlength="50", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.password.$error", ng-if="registerForm.password.$touched")
                                     p(ng-message="required") Wachtwoord is verplicht in te vullen
                                     p(ng-message="minlength") Wachtwoord moet minimaal uit 7 karakters bestaan
@@ -39,7 +39,7 @@ div(class="intro intro-authorize")
                             div(class="form-group", ng-class="validate(5)")
                                 label(for="passwordAgain", class="col-sm-3 control-label") Wachtwoord hertypen
                                 div(class="col-sm-9")
-                                    input(type="password", name="passwordAgain", id="passwordAgain", class="form-control", placeholder="Bv. swoppr01", ng-model="passwordAgain", ng-minlength="7", ng-maxlength="50", ng-required="true", compare-to="password")
+                                    input(type="password", name="passwordAgain", id="passwordAgain", title="Wachtwoord hertypen", class="form-control", placeholder="Bv. swoppr01", ng-model="passwordAgain", ng-minlength="7", ng-maxlength="50", ng-required="true", compare-to="password")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.passwordAgain.$error", ng-if="registerForm.passwordAgain.$touched")
                                     p(ng-message="required") Wachtwoord is verplicht in te vullen
                                     p(ng-message="minlength") Wachtwoord moet minimaal uit 7 karakters bestaan
@@ -47,6 +47,6 @@ div(class="intro intro-authorize")
                                     p(ng-message="compareTo") Herhaalde wachtwoord is niet gelijk aan het wachtwoord
                             div(class="form-group")
                                 div(class="col-sm-offset-3 col-sm-2 authenticatebtn")
-                                    input(type="submit", ng-disabled="registerForm.$invalid", value="Registreer", class="btn redirect")
+                                    input(type="submit", value="Registreer", title="Registreer", class="btn redirect", ng-disabled="registerForm.$invalid")
                                 div(class="col-sm-6 otherAction")
-                                    p: a(href="/login") Reeds geregistreerd? Log in.
+                                    p: a(href="/login", title="Reeds geregistreerd? Log in") Reeds geregistreerd? Log in.

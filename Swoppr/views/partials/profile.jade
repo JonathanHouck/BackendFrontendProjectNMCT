@@ -22,6 +22,6 @@ div(class="container")
                         tr
                             td Name
                             td {{ $root.user.google.name }}
-                    a(redir, href="/partials/unlink/google", class="btn btn-default redirect") Ontkoppel login
+                    a(redir, href="/partials/unlink/google", class="btn btn-default redirect", title="Ontkoppel login") Ontkoppel login
                 div(ng-hide="$root.user.google.token")
-                    a(redir, href="/partials/connect/google", class="btn btn-default redirect") Koppel login
+                    a(redir, href="/partials/connect/google", class="btn btn-default redirect", title="Koppel login") Koppel login
