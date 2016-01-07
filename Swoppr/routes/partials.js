@@ -144,14 +144,6 @@ module.exports = function(passport) {
         });
     });
 
-    router.get('/chat/:id?', function(req, res) {
-        res.render("partials/chat");
-    });
-
-    router.get('/ServiceTester', function(req, res) {
-        res.render("partials/ServiceTester");
-    });
-
     return router;
 };
 

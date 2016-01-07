@@ -37,14 +37,6 @@
             controller: 'DetailRentingCtrl',
             auth: true
         }).
-        when('/chat/:id?', {
-            templateUrl: 'partials/chat',
-            controller: 'ChatioCtrl'
-        }).
-        when('/ServiceTester', {
-            templateUrl: 'partials/ServiceTester',
-            controller: "ServiceTesterCtrl"
-        }).
         when('/placeProduct', {
             templateUrl: 'partials/placeProduct',
             controller: 'PlaceProductCtrl',

@@ -1,7 +1,7 @@
 @import "mixins.less";
 @import "variables.less";
 
-.filter-sort-products .form-container {
+.filter-sort-products > div > .form-container {
   margin-bottom: 20px;
 }
 
@@ -19,11 +19,11 @@
       text-align: center;
       background-color: @light-darker;
 
-      &:hover .mask2 {
+      &:hover > .mask2 {
         .transformTranslateY();
       }
 
-      &:hover img {
+      &:hover > img {
         .transformTranslateY(100%);
       }
 

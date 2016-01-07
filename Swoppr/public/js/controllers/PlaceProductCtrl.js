@@ -139,7 +139,6 @@
         function successAddProduct(response) {
             if (response.data) {
                 if (response.data.ok) {
-                    $rootScope.user.products.push(response.data.ok);
                     $location.path("/detailProduct/" + response.data.ok._id);
                 }
 
