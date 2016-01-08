@@ -1,0 +1,24 @@
+{ 
+    "_id" : ObjectId("568fcaf03b83999813e1169d"), 
+    "_renterFrom" : ObjectId("568fa37bc554d0401296a5fa"), 
+    "_renterTo" : ObjectId("5680a63424095d780d70b2e5"), 
+    "_product" : ObjectId("568fc6ab47b13a1100cf0d8a"), 
+    "fromDate" : ISODate("2016-01-08T14:42:52.538+0000"), 
+    "toDate" : ISODate("2016-01-09T14:42:52.538+0000"), 
+    "daysToRent" : NumberInt(1), 
+    "totalPrice" : NumberInt(11), 
+    "createdOn" : ISODate("2016-01-08T15:42:06.827+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568fcde954b3a5110042cf56"), 
+    "_renterFrom" : ObjectId("568fa37bc554d0401296a5fa"), 
+    "_renterTo" : ObjectId("5680a63424095d780d70b2e5"), 
+    "_product" : ObjectId("568fc83a47b13a1100cf0d8d"), 
+    "fromDate" : ISODate("2016-01-18T14:55:27.897+0000"), 
+    "toDate" : ISODate("2016-01-24T14:55:27.897+0000"), 
+    "daysToRent" : NumberInt(6), 
+    "totalPrice" : NumberInt(30), 
+    "createdOn" : ISODate("2016-01-08T15:54:56.758+0000"), 
+    "__v" : NumberInt(0)
+}

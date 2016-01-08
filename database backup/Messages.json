@@ -1,0 +1,72 @@
+{ 
+    "_id" : ObjectId("568ec1904e40fc1100eaa5f1"), 
+    "_renting" : ObjectId("568ec0ce4e40fc1100eaa5df"), 
+    "_sender" : ObjectId("5680a63424095d780d70b2e5"), 
+    "name" : "Jonathan Houck", 
+    "content" : "ja eigenlijk :p", 
+    "createdOn" : ISODate("2016-01-07T20:50:42.940+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ec1a04e40fc1100eaa5f2"), 
+    "_renting" : ObjectId("568ec0ce4e40fc1100eaa5df"), 
+    "_sender" : ObjectId("568ec02d4e40fc1100eaa5dd"), 
+    "name" : "Greg Ameye", 
+    "content" : "de gwne chats zin ossan vanonder e :p", 
+    "createdOn" : ISODate("2016-01-07T20:50:57.225+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ec1a24e40fc1100eaa5f3"), 
+    "_renting" : ObjectId("568ec0ce4e40fc1100eaa5df"), 
+    "_sender" : ObjectId("5680a63424095d780d70b2e5"), 
+    "name" : "Jonathan Houck", 
+    "content" : "mja anders moet ie rechtstreeks na beneden scrollen", 
+    "createdOn" : ISODate("2016-01-07T20:51:00.908+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ec1c54e40fc1100eaa5f4"), 
+    "_renting" : ObjectId("568ec0ce4e40fc1100eaa5df"), 
+    "_sender" : ObjectId("568ec02d4e40fc1100eaa5dd"), 
+    "name" : "Greg Ameye", 
+    "content" : "idd", 
+    "createdOn" : ISODate("2016-01-07T20:51:33.968+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ec1e84e40fc1100eaa5f5"), 
+    "_renting" : ObjectId("568ec0ce4e40fc1100eaa5df"), 
+    "_sender" : ObjectId("5680a63424095d780d70b2e5"), 
+    "name" : "Jonathan Houck", 
+    "content" : "lik fb is vanondr", 
+    "createdOn" : ISODate("2016-01-07T20:52:09.514+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ec1f34e40fc1100eaa5f6"), 
+    "_renting" : ObjectId("568ec0ce4e40fc1100eaa5df"), 
+    "_sender" : ObjectId("5680a63424095d780d70b2e5"), 
+    "name" : "Jonathan Houck", 
+    "content" : "automatisch  gescrollt", 
+    "createdOn" : ISODate("2016-01-07T20:52:21.082+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ed573a7c5b611007f4601"), 
+    "_renting" : ObjectId("568aa05377a91d08332cf9a8"), 
+    "_sender" : ObjectId("5680a63424095d780d70b2e5"), 
+    "name" : "Jonathan Houck", 
+    "content" : "alert(\"hello\");", 
+    "createdOn" : ISODate("2016-01-07T22:15:33.289+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568fcdfa54b3a5110042cf57"), 
+    "_renting" : ObjectId("568fcde954b3a5110042cf56"), 
+    "_sender" : ObjectId("5680a63424095d780d70b2e5"), 
+    "name" : "Jonathan Houck", 
+    "content" : "Zou ik jullie tuinslang mogen uitlenen?", 
+    "createdOn" : ISODate("2016-01-08T15:55:56.382+0000"), 
+    "__v" : NumberInt(0)
+}

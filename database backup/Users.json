@@ -1,0 +1,181 @@
+{ 
+    "_id" : ObjectId("568a90d979943b28222fac38"), 
+    "surname" : "Spriet", 
+    "firstname" : "Nick", 
+    "createdOn" : ISODate("2016-01-04T16:17:21.066+0000"), 
+    "local" : {
+        "password" : "$2a$08$vm8yH53LkV4myU9ovFimy.bd17xtaAqWIVnbD1hag3x6uryotNzCy", 
+        "email" : "nick.spriet@student.howest.be"
+    }, 
+    "products" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568a9446f454e9600d669c1a"), 
+    "surname" : "Schoutetten", 
+    "firstname" : "Siebert", 
+    "createdOn" : ISODate("2016-01-04T16:47:59.805+0000"), 
+    "local" : {
+        "password" : "$2a$08$Gu7VlDgDCtVQD7AKt7HyDOChXs2M.Z46MdQxUJP0ZsmWI3PqgfgF6", 
+        "email" : "sieber.schoutteten@student.howest.be"
+    }, 
+    "products" : [
+
+    ], 
+    "__v" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("568e8bd8fb037b1100ceb531"), 
+    "surname" : "Deprez", 
+    "firstname" : "Lienert", 
+    "local" : {
+        "password" : "$2a$08$V1tpjF49Wb/jEbBCdjJtgOdsFIZyc2j8kCY9BI/6Q/ga3rACjLiEq", 
+        "email" : "lienert.deprez@hotmail.com"
+    }, 
+    "createdOn" : ISODate("2016-01-07T16:01:28.734+0000"), 
+    "products" : [
+
+    ], 
+    "__v" : NumberInt(3)
+}
+{ 
+    "_id" : ObjectId("5680a63424095d780d70b2e5"), 
+    "surname" : "Houck", 
+    "firstname" : "Jonathan", 
+    "createdOn" : ISODate("2015-12-28T04:01:40.976+0000"), 
+    "local" : {
+        "password" : "$2a$08$SvPQlB2zXV.R02CElHiUY.YvfeTTiTsgWDa51mSf6n46xhXTrgiAu", 
+        "email" : "jonathan.houck@student.howest.be"
+    }, 
+    "products" : [
+        {
+            "_id" : ObjectId("568fc93ee920cf1100d01714"), 
+            "latitude" : "51.04484409999999", 
+            "longitude" : "2.647950000000037", 
+            "place" : "Bulskampstraat 27, 8630 Veurne, Belgium", 
+            "publicid" : "ncifcjoapda8dgyfr1lb", 
+            "url" : "https://res.cloudinary.com/swoppr/image/upload/v1452263742/ncifcjoapda8dgyfr1lb.jpg", 
+            "description" : "Verwijder meteen de bladeren uit je gazon", 
+            "pricePerDay" : NumberInt(16), 
+            "productName" : "Bladblazer", 
+            "createdOn" : ISODate("2016-01-08T15:33:56.164+0000"), 
+            "isDeleted" : false
+        }
+    ], 
+    "__v" : NumberInt(23), 
+    "google" : {
+        "email" : "jona.houck@gmail.com", 
+        "id" : "109619263994912257035", 
+        "name" : "Jonathan Houck", 
+        "token" : "ya29.XwJMAyDj2OSbjPt1fOBiEldIX5BzWK_5HKO1Z1Dyxy4fANBk9c_d5TM5BumQ4WyhE8kihoM"
+    }
+}
+{ 
+    "_id" : ObjectId("568aa0eb113eeadc19b1b069"), 
+    "surname" : "Couchez", 
+    "firstname" : "Adriaan", 
+    "createdOn" : ISODate("2016-01-04T17:42:01.817+0000"), 
+    "local" : {
+        "password" : "$2a$08$FGTCX8Gxzg7ga3bb.795leIf81SnaEPHkBaqPXK33cDK/ae2ok/jS", 
+        "email" : "adriaan.couchez@student.howest.be"
+    }, 
+    "products" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ebca64e40fc1100eaa5c6"), 
+    "surname" : "D", 
+    "firstname" : "Lienert", 
+    "createdOn" : ISODate("2016-01-07T20:12:27.871+0000"), 
+    "local" : {
+        "password" : "$2a$08$patTQ.PjW3W7Wlx47fuWF.A/guu.lykPFEBs/RP8rtBlIKCsOU3cW", 
+        "email" : "lienert.deprez@hotmale.com"
+    }, 
+    "products" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("568ec02d4e40fc1100eaa5dd"), 
+    "surname" : "Ameye", 
+    "firstname" : "Greg", 
+    "createdOn" : ISODate("2016-01-07T20:12:27.871+0000"), 
+    "local" : {
+        "password" : "$2a$08$zMX5kGIxIFz0iPvQ97A0GOIkS/6dYqUDHuafkQqp7DToDYL.kVJfq", 
+        "email" : "gregoire_ameye@hotmail.be"
+    }, 
+    "products" : [
+
+    ], 
+    "__v" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("568fa37bc554d0401296a5fa"), 
+    "surname" : "nmct", 
+    "firstname" : "docent", 
+    "createdOn" : ISODate("2016-01-08T12:53:47.205+0000"), 
+    "local" : {
+        "password" : "$2a$08$RA05HAevZW0wkVTDEvHao./8ym9mZ10dU.vdzhzGb5eyxqh.EJzHO", 
+        "email" : "docent@nmct"
+    }, 
+    "products" : [
+        {
+            "_id" : ObjectId("568fc6ab47b13a1100cf0d8a"), 
+            "latitude" : "50.8252349", 
+            "longitude" : "3.2503408000000036", 
+            "place" : "Graaf Karel de Goedelaan 5, 8500 Kortrijk, Belgium", 
+            "publicid" : "iqlzsly04r6mjxujaumf", 
+            "url" : "https://res.cloudinary.com/swoppr/image/upload/v1452263083/iqlzsly04r6mjxujaumf.jpg", 
+            "description" : "Boormachine inclusief boortjes", 
+            "pricePerDay" : NumberInt(11), 
+            "productName" : "Boormachine", 
+            "createdOn" : ISODate("2016-01-08T15:19:56.759+0000"), 
+            "isDeleted" : false
+        }, 
+        {
+            "_id" : ObjectId("568fc71747b13a1100cf0d8b"), 
+            "latitude" : "50.8252349", 
+            "longitude" : "3.2503408000000036", 
+            "place" : "Graaf Karel de Goedelaan 5, 8500 Kortrijk, Belgium", 
+            "publicid" : "itaqw0iyowwsjhr4tgjk", 
+            "url" : "https://res.cloudinary.com/swoppr/image/upload/v1452263191/itaqw0iyowwsjhr4tgjk.jpg", 
+            "description" : "Hakt moeiteloos blokken voor bij het haardvuur", 
+            "pricePerDay" : NumberInt(6), 
+            "productName" : "Bijl", 
+            "createdOn" : ISODate("2016-01-08T15:19:56.759+0000"), 
+            "isDeleted" : false
+        }, 
+        {
+            "_id" : ObjectId("568fc7b047b13a1100cf0d8c"), 
+            "latitude" : "50.8252349", 
+            "longitude" : "3.2503408000000036", 
+            "place" : "Graaf Karel de Goedelaan 5, 8500 Kortrijk, Belgium", 
+            "publicid" : "j817s2cyowypsbcf9axb", 
+            "url" : "https://res.cloudinary.com/swoppr/image/upload/v1452263343/j817s2cyowypsbcf9axb.jpg", 
+            "description" : "Met deze grasmaaier staat je gazon altijd strak", 
+            "pricePerDay" : NumberInt(21), 
+            "productName" : "Grasmaaier", 
+            "createdOn" : ISODate("2016-01-08T15:19:56.759+0000"), 
+            "isDeleted" : false
+        }, 
+        {
+            "_id" : ObjectId("568fc83a47b13a1100cf0d8d"), 
+            "latitude" : "50.8252349", 
+            "longitude" : "3.2503408000000036", 
+            "place" : "Graaf Karel de Goedelaan 5, 8500 Kortrijk, Belgium", 
+            "publicid" : "ip1wtq9eod1p8wjtkeis", 
+            "url" : "https://res.cloudinary.com/swoppr/image/upload/v1452263482/ip1wtq9eod1p8wjtkeis.jpg", 
+            "description" : "Essentieel voor beter sproei werk, in goede staat.", 
+            "pricePerDay" : NumberInt(5), 
+            "productName" : "Tuinslang", 
+            "createdOn" : ISODate("2016-01-08T15:19:56.759+0000"), 
+            "isDeleted" : false
+        }
+    ], 
+    "__v" : NumberInt(4)
+}
