@@ -62,10 +62,10 @@ gulp.task("js",function (){
             './public/js/services/**/*'])
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
-        //.pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(concat("app.min.js"))
-        //.pipe(uglify())
-        //.pipe(sourcemaps.write())
+        .pipe(uglify())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('.//public/js'))
         .pipe(notify({message: 'js built'}));
 });
@@ -93,7 +93,7 @@ gulp.task("css", function() {
         .pipe(csslint.reporter("junit-xml"))
         .pipe(csslint.reporter(customReporter))
         .pipe(csslint.reporter("fail"))
-        //.pipe(cssMinifier())
+        .pipe(cssMinifier())
         .pipe(concat("site.min.css"))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest("./public/css"))
