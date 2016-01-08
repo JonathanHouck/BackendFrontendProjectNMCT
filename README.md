@@ -1,7 +1,5 @@
-# BackendFrontendProjectNMCT
-Verhuurplatform voor consumenten
+# Verhuurplatform voor consumenten
 
-Vooraleer opstarten project eerst npm packages installeren
+Commando's op project te runnen
 
-cd swoppr
-npm install
+cd swoppr --> npm install --> npm start
