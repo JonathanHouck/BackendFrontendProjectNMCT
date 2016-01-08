@@ -199,7 +199,7 @@ RentingsRepo = (function() {
                 return ;
             }
 
-            var valid = checkDatesAndTotalPrice(renterFromDb.toObject(), req, res);
+            var valid = checkDatesAndTotalPrice(renterFromDb, req, res);
 
             if (valid) {
                 var entry = new Renting( {
@@ -266,7 +266,7 @@ RentingsRepo = (function() {
                 return;
             }
 
-            var valid = checkDatesAndTotalPrice(renterFrom.toObject(), req, res);
+            var valid = checkDatesAndTotalPrice(renterFrom, req, res);
 
             if (valid) {
                 rentingDb.fromDate = req.body.fromDate;
@@ -296,7 +296,8 @@ RentingsRepo = (function() {
                 return false;
             }
 
-            var totalPriceCorrect = renterFrom.products[0].pricePerDay * req.body.daysToRent;
+
+            var totalPriceCorrect = renterFrom.products.id(req.body.productId).pricePerDay * req.body.daysToRent;
             if (totalPriceCorrect != req.body.totalPrice) {
                 res.json({"error": "totalPrice not correct"});
                 return false;
