@@ -20,7 +20,6 @@ var rentingID = "568aa05377a91d08332cf9a8";
 // UNIT test begin
 describe("Api", function() {
     describe("Products", function () {
-
         it("getById should return a product", function (done) {
             server
                 .get('/api/product/getById/' + productID)

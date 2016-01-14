@@ -17,7 +17,7 @@ div(class="intro intro-authorize")
                             div(class="form-group", ng-class="validate(2)")
                                 label(for=surname, class="col-sm-3 control-label") Familienaam
                                 div(class="col-sm-9")
-                                    input(type="text", name="surname", id="surname", title="Familienaam" class="form-control", placeholder="Bv. Jonathan", ng-model="surname", ng-maxlength="50", ng-required="true")
+                                    input(type="text", name="surname", id="surname", title="Familienaam" class="form-control", placeholder="Bv. Houck", ng-model="surname", ng-maxlength="50", ng-required="true")
                                 div(class="col-sm-9 col-sm-offset-3", ng-messages="registerForm.surname.$error", ng-if="registerForm.surname.$touched")
                                     p(ng-message="required") Familienaam is verplicht in te vullen
                                     p(ng-message="maxlength") Familienaam is te lang

@@ -92,6 +92,10 @@ main > section {
 }
 
 .features {
+  .fadeInLeft {
+    margin-bottom: 25px;
+  }
+
   .fa {
     border: solid 3px #dedede;
     border-radius: 50%;
@@ -99,6 +103,8 @@ main > section {
     .transformScale(0.3s);
     text-align: center;
     padding-top: 12px;
+    .borderBox();
+    .square(50px);
 
     &:hover {
       background-color: @secondary-light;
@@ -240,7 +246,6 @@ main > section {
       .fa {
         float: right;
         margin: 5px 0 0 20px;
-        .square(50px);
       }
     }
 
@@ -251,7 +256,6 @@ main > section {
       .fa {
         float: left;
         margin: 5px 20px 0 0;
-        .square(50px);
       }
     }
   }
