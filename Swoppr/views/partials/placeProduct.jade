@@ -21,7 +21,7 @@ div(class="container")
                         p(ng-message="required") Naam is verplicht in te vullen
                         p(ng-message="maxlength") Naam is te lang
                 div(class="form-group row", ng-class="validate(2)")
-                    label(for=pricePerDay, class="col-sm-3 control-label text-left") Prijs per dag (in euro)
+                    label(for=pricePerDay, class="col-sm-3 control-label text-left") Prijs per dag (in &euro;)
                     div(class="col-sm-9")
                         input(type="number", name="pricePerDay", id="pricePerDay", title="Prijs per dag", class="form-control", placeholder="Tip: 100 Swoppers kosten 10 euro", ng-model="pricePerDay", min="1", max="10000", ng-required="true")
                     div(class="col-sm-9 col-sm-offset-3", ng-messages="placeProductForm.pricePerDay.$error", ng-if="placeProductForm.pricePerDay.$touched")
