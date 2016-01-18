@@ -22,5 +22,9 @@ describe("Product Model", function(){
            expect(product.latitude).toEqual(201);
            expect(product.isDeleted).toEqual(false);
        });
+
+        it("toString() should return the product name", function(){
+            expect(product.toString()).toEqual(product.productName);
+        });
     });
 });
