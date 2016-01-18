@@ -1,27 +1,23 @@
 /**
  * Created by Greg on 18-Jan-16.
 // */
-//describe('MyCtrl', function () {
-//    var scope,
-//        controller;
+//describe('PasswordController', function() {
+//    beforeEach(module('app'));
 //
-//    /**
-//     * Created by Greg on 18-Jan-16.
-//     */
-//    beforeEach(inject(function($rootScope, $controller, dataSvc){
-//        scope=$rootScope.$new();
-//        mockDataSvc=dataSvc;
-//        spyOn(mockDataSvc,'save').andCallThrough();
-//        firstController = $controller('FirstController', {
-//            $scope: scope,
-//            dataSvc: mockDataSvc
-//        });
+//    var $controller;
+//
+//    beforeEach(inject(function(_$controller_){
+//        // The injector unwraps the underscores (_) from around the parameter names when matching
+//        $controller = _$controller_;
 //    }));
 //
-//
-//    it('should have assigned right pattern to numberPattern', function(){
-//        expect(scope.numberPattern).toBeDefined();
-//        expect(scope.numberPattern.test("100")).toBe(true);
-//        expect(scope.numberPattern.test("100aa")).toBe(false);
-//    })//
-
+//    describe('$scope.grade', function() {
+//        it('sets the strength to "strong" if the password length is >8 chars', function() {
+//            var $scope = {};
+//            var controller = $controller('PasswordController', { $scope: $scope });
+//            $scope.password = 'longerthaneightchars';
+//            $scope.grade();
+//            expect($scope.strength).toEqual('strong');
+//        });
+//    });
+//});
