@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87491fe2-1133-4208-8d80-4fe5931cfaa4" name="Default" comment="models tests">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/public/js/services/ProductService.js" afterPath="$PROJECT_DIR$/Swoppr/public/js/services/ProductService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/tests/SpecRunner.html" afterPath="$PROJECT_DIR$/Swoppr/tests/SpecRunner.html" />
+    <list default="true" id="87491fe2-1133-4208-8d80-4fe5931cfaa4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine-html.js" afterPath="$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine-html.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine.js" afterPath="$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BackendFrontendProjectNMCT.iws" />
@@ -36,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jasmine-html.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine-html.js">
+      <file leaf-file-name="jasmine.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07392996">
-              <caret line="28275" column="14" selection-start-line="28275" selection-start-column="14" selection-end-line="28275" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.93410856">
+              <caret line="29455" column="363" selection-start-line="29455" selection-start-column="363" selection-end-line="29455" selection-end-column="363" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -68,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Swoppr/views/snippets/start/header.jade" />
         <option value="$PROJECT_DIR$/Swoppr/views/partials/detailProduct.jade" />
         <option value="$PROJECT_DIR$/Swoppr/public/js/controllers/CarouselCtrl.js" />
         <option value="$PROJECT_DIR$/Swoppr/views/snippets/start/situations.jade" />
@@ -117,8 +115,9 @@
         <option value="$PROJECT_DIR$/Swoppr/public/js/services/ProductService.js" />
         <option value="$PROJECT_DIR$/test" />
         <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine-html.js" />
         <option value="$PROJECT_DIR$/Swoppr/tests/SpecRunner.html" />
+        <option value="$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine-html.js" />
+        <option value="$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine.js" />
       </list>
     </option>
   </component>
@@ -391,12 +390,6 @@
       <created>1447432528781</created>
       <option name="number" value="Default" />
       <updated>1447432528781</updated>
-    </task>
-    <task id="LOCAL-00044" summary="html fixes">
-      <created>1449871435611</created>
-      <option name="number" value="00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1449871435611</updated>
     </task>
     <task id="LOCAL-00045" summary="favicon + menu active fix">
       <created>1449936974835</created>
@@ -686,7 +679,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453078002773</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="models tests">
+      <created>1453079766121</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1453079766122</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1159,6 +1158,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine-html.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.301557">
+          <caret line="335" column="0" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Swoppr/tests/SpecRunner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.192308">
@@ -1167,10 +1176,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine-html.js">
+    <entry file="file://$PROJECT_DIR$/Swoppr/tests/lib/jasmine-2.3.4/jasmine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07392996">
-          <caret line="28275" column="14" selection-start-line="28275" selection-start-column="14" selection-end-line="28275" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.93410856">
+          <caret line="29455" column="363" selection-start-line="29455" selection-start-column="363" selection-end-line="29455" selection-end-column="363" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
