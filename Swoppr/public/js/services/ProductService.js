@@ -1,9 +1,11 @@
 /**
  * Created by Greg on 24-Nov-15.
  */
+
+var ProductService;
 (function(){
     "use strict";
-    var ProductService = function($http, Upload) {
+    ProductService = function($http, Upload) {
 
         function makeProduct(p) {
             var url = p.url ? p.url : '/';
