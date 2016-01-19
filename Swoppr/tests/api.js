@@ -132,8 +132,8 @@ var checkProduct = function(item){
     expect(item).to.have.property("latitude");
     expect(item).to.have.property("longitude");
     expect(item).to.have.property("place");
-    expect(item).to.have.property("publicid");
-    expect(item).to.have.property("url");
+    //expect(item).to.have.property("publicid");
+    //expect(item).to.have.property("url");
     expect(item).to.have.property("description");
     expect(item).to.have.property("pricePerDay");
     expect(item).to.have.property("productName");
