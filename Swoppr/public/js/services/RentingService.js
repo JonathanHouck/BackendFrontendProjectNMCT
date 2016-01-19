@@ -1,10 +1,9 @@
 /**
  * Created by Greg on 24-Nov-15.
  */
-(function(){
     "use strict";
 
-    var RentingService = function($http){
+    var RentingService = (function($http){
         function makeProduct(p) {
             return new Product(
                 p._id,
@@ -173,7 +172,5 @@
             edit: edit,
             remove : remove
         };
-    };
+    })();
     angular.module("swoppr").factory("RentingService", ["$http", RentingService]);
-})();
-

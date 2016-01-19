@@ -4,7 +4,6 @@
 
 var product = new Product(1,"name", 200, "description", "url", 2, "place", 200,201,false);
 describe("Product Model", function(){
-    describe("Properties", function(){
         it("should be defined", function(){
             expect(product).toBeDefined();
         });
@@ -26,5 +25,12 @@ describe("Product Model", function(){
         it("toString() should return the product name", function(){
             expect(product.toString()).toEqual(product.productName);
         });
-    });
+
+        it("shortDescription() should return the description with max 250 characters", function(){
+            expect(product.shortDescription().length).toBeLessThan(254);
+        });
+
+        it("shortProductName() should return the description with max 17 characters", function(){
+            expect(product.shortProductName().length).toBeLessThan(21);
+        });
 });

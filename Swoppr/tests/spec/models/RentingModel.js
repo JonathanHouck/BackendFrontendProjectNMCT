@@ -5,7 +5,6 @@
 var renting = new Renting(1,"renter1", "user1", 200, "20 oktober", "30 oktober", 2, 200);
 
 describe("RentingModel", function(){
-    describe("Properties", function(){
         it("should be defined", function(){
             expect(renting).toBeDefined();
         });
@@ -24,5 +23,4 @@ describe("RentingModel", function(){
         it("toString() should return the renter", function(){
             expect(renting.toString()).toEqual(renting.renterFrom);
         });
-    });
 });

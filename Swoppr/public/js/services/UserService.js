@@ -2,10 +2,9 @@
  * Created by Greg on 24-Nov-15.
  */
 
-(function(){
     "use strict";
 
-    var UserService = function($http){
+    var UserService = (function($http){
         var login = function(credentials) {
             var url = '/partials/login';
             return $http.post(url, credentials)
@@ -154,6 +153,5 @@
             add : add,
             all : all
         };
-    };
+    })();
     angular.module("swoppr").factory("UserService", ["$http", UserService]);
-})();

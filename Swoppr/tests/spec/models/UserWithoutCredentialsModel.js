@@ -5,7 +5,6 @@
 var userWithoutCredentials = new UserWithoutCredentials(1,"Greg", "Ameye", "Greg@ameye.com", product);
 
 describe("UserWithoutCredentials Model", function(){
-    describe("Properties", function(){
         it("should be defined", function(){
             expect(userWithoutCredentials).toBeDefined();
         });
@@ -21,5 +20,4 @@ describe("UserWithoutCredentials Model", function(){
         it("toString() should return the renter", function(){
             expect(userWithoutCredentials.toString()).toEqual(userWithoutCredentials.firstname + " "+userWithCredentials.surname);
         });
-    });
 });

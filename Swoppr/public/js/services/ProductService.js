@@ -3,9 +3,8 @@
  */
 
 
-(function(){
     "use strict";
-    var ProductService = function($http, Upload) {
+    var ProductService = (function($http, Upload) {
 
         function makeProduct(p) {
             var url = p.url ? p.url : '/';
@@ -132,6 +131,6 @@
             edit : edit,
             remove : remove
         };
-    };
+        })();
+
     angular.module("swoppr").factory("ProductService", ["$http", "Upload", ProductService]);
-})();

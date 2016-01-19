@@ -1,33 +1,31 @@
 /**
  * Created by Greg on 18-Jan-16.
  */
-describe("Product Service Test", function () {
+describe("Renting Service Test", function () {
     var service;
     beforeEach(function() {
-        service = ProductService;
+        service = RentingService;
     });
-
     it("should be able to call a service", function () {
         expect(service).toBeDefined();
     });
-
     it("should contain a byId method", function () {
         expect(service).toHaveMethod("byId");
     });
 
-    it("should contain a byIdUser method", function () {
-        expect(service).toHaveMethod("byIdUser");
+    it("should contain a byRenterFrom method", function () {
+        expect(service).toHaveMethod("byRenterFrom");
     });
 
-    it("should contain an all method", function () {
-        expect(service).toHaveMethod("all");
+    it("should contain a byRenterTo method", function () {
+        expect(service).toHaveMethod("byRenterTo");
     });
 
     it("should contain an add method", function () {
         expect(service).toHaveMethod("add");
     });
 
-    it("should contain na edit method", function () {
+    it("should contain an edit method", function () {
         expect(service).toHaveMethod("edit");
     });
 

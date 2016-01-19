@@ -1,10 +1,9 @@
 /**
  * Created by jonah on 12/24/2015.
  */
-(function(){
     "use strict";
 
-    var MessageService = function($http) {
+    var MessageService = (function($http) {
 
         var getMessages = function(rentingId) {
             var url = '/api/chat/' + rentingId;
@@ -53,6 +52,5 @@
             getMessages: getMessages,
             addMessage : addMessage
         };
-    };
+    })();
     angular.module("swoppr").factory("ChatService", ["$http", MessageService]);
-})();
